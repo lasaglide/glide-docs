@@ -1,0 +1,155 @@
+---
+title: " Math Column"
+description: "Perform instant calculations using the data in your app."
+---
+
+#  Math Column
+
+Perform instant calculations using the data in your app.
+
+### Math Column Video
+
+### Math Body Intro
+
+The **Math Column** allows you to perform instant calculations on the data in your table, from basic arithmetic functions to more complex ones. You can then show the output by displaying it in various components in your app.
+
+## Creating a Math Column
+
+
+
+### Adding Math Column Arcade
+
+### Math Body Text 1
+
+1. In the [Data Editor](/getting-started/introduction-to-the-data-editor), open the table you want to edit.
+2. Add a new column by clicking the plus (**+**) symbol to the right of the table.- New columns added with the plus button will always appear on the right. If you'd like to add a column somewhere else in your data, you can select the dropdown menu on an existing column and choose **Add column right. **You can also click and drag columns to rearrange them. 
+3. Name the column.
+4. For **Type**, search for **Math **or navigate to **Computed -> Math. **
+5. Write your calculation or formula in the **Configuration** field. You can use regular text for this. For example, "price + shipping" (entered without the quotation marks) is all you need to calculate total cost of both price and shipping. 
+6. Add **Replacements** for every word in your configuration. This lets your app know which columns to pull from for each value. 
+7. You can specify the precision of decimal points, whether to use a group separator, and if you want to display units as part of the calculated result. 
+
+As you start typing in the **Configuration** field, Glide will guess which column you are referring to and add a new replacement. But you can easily change what is being replaced.
+
+You can also replace parts of your formula with other values such as the values from the User Profile table or the value of **Now**, which is very useful for date calculations.
+
+## Supported Calculations
+
+### Simple math
+
+Addition, subtraction, multiplication, division, exponentiation, parenthesis
+
+### Functions
+
+LOG, ABS, MIN, MAX, FLOOR, CEILING, ROUND, TRUNC, ASIN, COS, ACOS, ATAN, MOD, SECOND, MINUTE, HOUR, DAY, MONTH, WEEKDAY, WEEKNUM, YEAR
+
+## Date & Time Math
+
+The Math column can also do calculations with dates and times. For example, subtracting two dates/times produces a duration.
+
+
+
+![Configuring the Date & Time match column.](https://images.ctfassets.net/yreygbm72t08/35ECLaoVBqaXm1mliVbnLr/0282dfe0dcd129d57014aa0e3d91bfac/CleanShot_2024-10-22_at_1_.29.18_2x.png)
+
+
+
+You can use the **Now **value to calculate the time until something will happen or how long ago something was.
+
+1. **Now and a Date **will give you how long ago a date is (if that date is in the past)
+2. **A Date and Now **will give you how long until a particular date (if that date is in the future)
+
+When the output of your math column is a date/time value you will also be able to format it.
+
+
+
+![Formatting the Date & Time Math Column.](https://images.ctfassets.net/yreygbm72t08/7hm4oz1AUcv6agBL4OFfaQ/4d06b86a050191615ce37c21a3636f52/CleanShot_2024-10-22_at_1_.31.08_2x.png)
+
+
+
+### Duration value
+
+In [Google Sheets](/essentials/data-sources/google-sheets), it may not be obvious, but dates are actually stored as numbers. It’s not until cells are formatted as Dates that we can actually read the day, month, year, and time of day from the data.
+
+Date values in Google Sheets are long strings of numbers that represent the number of days since December 31st, 1899. For example, the number 1, when formatted as a date, will display as December 31, 1899.
+
+If you’re working with a value that has a date and time, the Date Value will contain a decimal value that represents the portion of a single day. For example, December 31, 1899 12:00PM would be represented by 1.5 if the cell is formatted as a number.
+
+If you’re working in [Microsoft Excel](/essentials/data-sources/microsoft-excel), the Date Value is calculated one day later than in Google Sheets. That is, in Excel, the number 1 represents January 1, 1900 (and not December 31, 1899).
+
+### Durations using the Math Column in Glide
+
+In Glide, you can use the Math column to calculate the difference, or duration, between dates. By default, Glide will display the duration in this format: HH:MM:SS (Hours:Minutes:Seconds), which is the same format as you’d see in Google Sheets when formatting as a Duration.
+
+
+
+![Configuring the duration in hours](https://images.ctfassets.net/yreygbm72t08/7HouXWUU7GNrHUibZpsVaT/e972d280b361fa085a7be43a98b0ac79/CleanShot_2024-10-22_at_1_.34.25_2x.png)
+
+
+
+If you need this data to be displayed differently,you can use some familiar Math functions. For example, by using the FLOOR function, we can display the duration as the number of days as opposed to hours.
+
+
+
+![Configuring the duration in days](https://images.ctfassets.net/yreygbm72t08/4av5aJiRqNKk4ENANHEVw6/0020f9af9d5bcc406f84596f6ca05dfd/CleanShot_2024-10-22_at_1_.36.29_2x.png)
+
+
+
+## Ways to Use the Math Column
+
+
+
+### Math Column Examples
+
+### Math Body Text 2
+
+Here are some of the most common ways to use the Math column in your apps beyond simple calculation.
+
+### How many days ago/until
+
+As mentioned above, the **Now** value enables you to calculate the duration between now and the past, or now and the future.
+
+The problem with this, though, is that the output is a duration type, which is not necessarily that readable.
+
+You can use **floor()** to reduce this to the number of days since/until another date. You can do this by surrounding your original calculation with **floor**. Now, you can use this value in your app and it will update as time progresses.
+
+
+
+![Using the FLOOR() function](https://images.ctfassets.net/yreygbm72t08/5hT5nHSzPedyLQW3klWVyI/13ef70bf709867a602290604fce5e703/CleanShot_2024-10-22_at_1_.39.30_2x.png)
+
+
+
+### Percentage completed
+
+Let’s say you have a project management app with a list of projects and tasks. When someone completes a task, the completed column is marked **True**.
+
+In the project table, you have a [Relation](/automation/computed-columns/relations) bringing back all the tasks for that project.
+
+First, you create a Rollup using that relation and count all the tasks with the value of true.
+
+
+
+![Creating a Rollup Column that counts all the tasks with the values of TRUE.](https://images.ctfassets.net/yreygbm72t08/1MxVBSZp2aeuuBo34MF5tG/27368b1cfd8805b67f9b2c00cabd6e63/CleanShot_2024-10-22_at_1_.47.30_2x.png)
+
+
+
+Next, you create another Rollup counting all the unique tasks so you have the total number of tasks in that project (completed or uncompleted).
+
+
+
+![Creating a Rollup Column that counts all the unique tasks](https://images.ctfassets.net/yreygbm72t08/2lfqH1mWV2DvBSaq7pRzQc/814c6c7f7bb4ea466140752b7477d68c/CleanShot_2024-10-22_at_1_.49.07_2x.png)
+
+
+
+Finally, you add a math column that calculates the percentage using the formula **Completed/Total*100**. Make sure that **Completed** and **Total** are replaced by the correct columns. You can also change the precision to 1 and add the percentage sign.
+
+
+
+![Adding a Math Column to calculate the percentage.](https://images.ctfassets.net/yreygbm72t08/6jn16h5zgVmBcIpUtM53yu/6b8a54c4d98ac9cd7c3323e04130e7a0/CleanShot_2024-10-22_at_3_.13.49_2x.png)
+
+
+
+
+Now you can add a text component in your app that shows the progress on each project.
+
+
+

@@ -1,0 +1,89 @@
+---
+title: "Column Values"
+description: "Column values are the values contained in your data source tables."
+---
+
+# Column Values
+
+Column values are the values contained in your data source tables.
+
+### Custom Values
+
+### Custom Values Body 1
+
+When you work with [Components](/essentials/components) or [Actions](/automation/actions), you're interacting with values from a column in your table. These are therefore referred to as Column Values.
+
+For example, in this app, each item's name is displayed from the Column Values under the "Item" column found in the [data source](/essentials/data-sources). It also displays the Column Values under the "Picture" column for each item's picture, the Column Value under "Current Inventory" as the Description, and "Warehouse Name" as the Meta.
+
+
+
+![Column values displaying in an app. ](https://images.ctfassets.net/yreygbm72t08/6nGj78SKVmvR2EEjFEALEU/8e14fc3f8583addd4969c5cb1264f2aa/CleanShot_2024-01-03_at_2_.48.45_2x.png)
+
+
+
+In the app below, the title component is displaying a mixture of Column Values and Custom Values.
+
+- The title displays the **Product Name **column value
+- The description displays the **Current Inventory **column value
+- The image is displaying the column value **Product Photo**
+- The meta is displaying the custom value of** Warehouse 2**
+
+
+
+![An app showing custom and column values. ](https://images.ctfassets.net/yreygbm72t08/eApl9oXB5zHfiOxYn9U3o/44475747a575739f7936ddd0000927d6/CleanShot_2024-01-03_at_2_.57.46_2x.png)
+
+
+
+
+
+### Referencing Column Values
+
+## Referencing Column Values
+
+You can mention columns by name much like you would tag a person in a chat or on social media. You can either type `@column-name` or type `@` and select the column from the menu that opens.
+
+
+
+![Referencing Column Values Hero](https://images.ctfassets.net/yreygbm72t08/6NNit9E56ZYMqKed6KJifV/70418c9abdfdda6199dddae48cc53f54/CleanShot_2024-08-22_at_6_.57.30_2x.png)
+
+
+
+Referencing columns this way will display the first value from the column. The values are dynamic, so if the text changes in your data, it will automatically update in the app. You can select multiple columns and mix column data with manual text as needed.
+
+To browse all column options without typing, select the four dots to the right of the Data field in the component settings menu.
+
+### Inline Templates Arcade
+
+### Column Values Body 2
+
+## Column Values in Submission Screens
+
+
+Column values are also used in submission screens. They can be used to send values from the current item to a table that stores submissions.
+
+When you submit a [Form](/use-cases/forms), you ask users to fill in certain data that gets sent to your sheet or table. Sometimes those forms are submitted from collection items that contain relevant data. This is where column values are useful.
+
+For example, the app below is an app for a store. Users can submit a form to ask questions about the item they are looking at.
+
+When they tap **Ask a question** a form is triggered and the submissions go to your submissions table.
+
+
+
+![Ask a Question form example. ](https://images.ctfassets.net/yreygbm72t08/58585Mbl8RQdUXJ3xLHJm/8d27ace4fd4ec04b940cd24bd92136dc/CleanShot_2024-01-03_at_3_.25.11_2x.png)
+
+
+
+You could create multiple **Text fields** in the form that ask the user to input which item they're referring to, but that isn't a great user experience.
+
+Instead, you can pass column values directly from the collection item into the form so that, when a form is submitted, the item's name, price and any other details you choose get submitted with the form.
+
+Here, we can see that your column values are **Name, SKU, Photo, Category Name, Notes, Description, Price, Visible?, and Low Quantity** because those columns in the sheet contain your **Form button**.
+
+
+
+![Column values in a sheet. ](https://images.ctfassets.net/yreygbm72t08/3Eg83ARXhuwH4Gu2BoXt48/2dc9c4af05927b97a2386b2d64c7cf33/CleanShot_2024-01-12_at_3_.33.54_2x.png)
+
+
+
+Add these columns to your form when customizing it and match them with an empty column in your submissions sheet. Then, when your form is submitted, these column values will be passed along with the submission so it's clear which item the form was submitted in.
+

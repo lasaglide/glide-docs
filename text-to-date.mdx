@@ -1,0 +1,98 @@
+---
+title: "Text to Date"
+description: "Transform text into a date."
+---
+
+# Text to Date
+
+Transform text into a date.
+
+### Text to Date Body Text 1
+
+The **Text to Date** feature transforms a text input into a date output. Date outputs contain a full date (day, month, year). They can also include a full time (seconds, minutes, hours) if desired. 
+
+For example, if you set up a text input that describes a date and add no instructions, you'll receive a date result:
+
+**Input: **The fifth day of June in the year two thousand and fifty nine
+
+**Result**: June 5, 2059.
+
+**Text to Date **can extract dates from text and make inferences about a date from text. But you can also ask questions that have an answer in date format. To do this, add instructions that ask the question you want answered. 
+
+For example, if you set up your action this way:
+
+
+**Input:** US Labor Day
+
+
+**Instructions**: What date is this holiday?
+
+**Result**: September 4, 2023 
+
+## Display Options for Text to Date Results
+
+When choosing how to display dates, you have three options: Small, Medium, and Long. This allows you to have flexibility in how much detail you include in the resulting date. 
+
+**Small **will show only numerals (9/1/2023).
+
+**Medium** will show the month written out (September 1, 2023). 
+
+**Long **will include the day of the week for that date (Friday, September 1, 2023).
+
+For time, you can choose to display the time with or without seconds. 
+
+## Adding the Text to Date feature
+
+### In the Data Editor
+
+
+
+### Text to Date Data Editor Arcade
+
+### Text to Date Body 2
+
+1. Open the table where you want to use the **Text to Date **feature.
+2. Add a new basic text column for the **Input**. The input can be any column that contains text, so if you’ve used another action or computed column to create a text result, you can also use that text result as the **Input** source. - New columns added with the plus button will always appear on the right. If you'd like to add a column somewhere else in your data, you can select the dropdown menu on an existing column and choose **Add column right.** You can also click and drag columns to rearrange them.
+3. Add a **Text to Date **column to store the result. Search for "Text to Date” or navigate to **AI → Text to Date**. 
+4. For **Instructions,** enter custom text to create more specificity for your prompt.
+5. For **Input**, use the **Input** column created previously.
+6. **Note:** If the action will be triggered in the Workflow Editor, then add a basic text **Result** column where the result will be stored.
+7. Click on **Done**.
+
+### In the Layout Editor
+
+
+
+### Text to Date Layout Arcade
+
+### Text to Date Body Text 3
+
+1. If you have not yet set up the columns you'll need in the Data Editor, start with the steps above.
+2. Add a component that supports actions such as [Button](/essentials/components/button), [Hint](essentials/components/hint), or [Rich Text](/essentials/components/rich-text). Connect this component with the column where the output is stored.
+3. In the configuration panel on the right, in the **Actions** menu, select the **Text to Number **action.
+4. Name the action and choose an icon.
+5. For **Instructions**, choose the column where the instructions are stored, or enter custom text. 
+6. For **Input**, choose the column where the input text is stored, or enter custom text. 
+7. For **Display, **you can choose to show date & time, date only, or time only. You can also specify the format for the date and time.
+8. To display the text that results from the action, add a [Text Component](/essentials/components/text) and use your **Text to Date** column as the source. This will instantly show the generated date and/or time to your users. 
+9. To enable users to adjust the instructions, add a [Text Entry Component](/essentials/components/entry) pointing to an **Instructions** column with the adjustments you want made.
+10. To enable users to adjust the input, add a [Text Entry Component](/essentials/components/entry) pointing to the **Input** column to be able to change the input.
+
+### In the Workflow Editor
+
+
+
+### Text to Date Action Editor Arcade
+
+### Text to Date Body Text 4
+
+1. If you have not yet set up the columns you'll need in the Data Editor, start with the steps above.
+2. Select the (**+**) plus symbol or the **+ New Workflow** button.
+3. For data source, select the data source of the screen where the action is triggered.
+4. Add **Text to Date** as the first step of the workflow.
+5. For **Instructions,** enter custom text to create more specificity for your prompt.
+6. For the **Input** and **Result** fields, use the **Input** and **Result** columns created previously.
+7. Optionally, add a [Show Notification](/automation/actions/show-notification) action at the end of the workflow to notify the user.
+
+
+

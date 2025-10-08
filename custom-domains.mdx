@@ -1,0 +1,102 @@
+---
+title: "Custom Domains"
+description: "Learn how to configure a custom URL for your app."
+---
+
+# Custom Domains
+
+Learn how to configure a custom URL for your app.
+
+### Custom Domains
+
+### Custom Domains - Block 1
+
+When you publish your app, your app automatically gets hosted at a “glide.page” address. [With some paid Glide plans](https://www.glideapps.com/pricing), you can publish your app to your own custom domain.
+
+For instance, instead of going to a domain like d0sda.glide.page, you can publish your app on your own custom domain—for example, app.glidebakery.com
+
+Glide's custom domain configuration will show you which DNS records you need to set up your custom domain. If you're unsure of this process, follow our guide below or reach out to your domain name provider for support. 
+
+## Purchasing a domain
+
+To set up a custom domain, you first have to own a domain. Your domain can be hosted anywhere. If you already have your own domain hosted with another provider, that's fine. The interface will be different, but the concepts and processes are very similar.
+
+Before getting started with the Glide domain setup wizard, select a domain provider and purchase a domain. 
+
+## Choosing between a subdomain or a normal domain
+
+Once you have your own domain, the next step is to decide if you wish to host your app on a subdomain or on a normal domain, for example:
+
+app.glidebakery.com vs. glidebakery.com
+
+You can swap "app" with anything you want. Note that app.glidebakery.com is a **subdomain **of glidebakery.com To create a page at that domain instead, the url would be glidebakery.com/pagename.
+
+### [BLANK] Custom Domains - Callout 1
+
+If you are using **www.yourdomain.com **and you want your app to also be reachable via **yourdomain.com,** you may need to create two additional custom records, as follows:
+
+**CNAME www.yourdomain.com **to **yourdomain.com**
+
+**CNAME _glideauthid.www.yourdomain.com **to** _glideauthid.yourdomain.com**
+
+**
+**You can also try setting up a redirect. [Learn how here. ](https://www.hostinger.com/tutorials/how-to-redirect-non-www-urls-to-www)**
+**
+
+### Custom Domains - Block 2
+
+## Locate your DNS settings
+
+During setup, Glide will ask you to add some records to your domain's DNS settings. To do this, you need to find the “DNS Records” section in your domain name provider's account or dashboard. This will look different for each domain provider, but here are the general steps:
+
+1. Look for an area that's related to DNS, e.g. Manage DNS, Advanced DNS, etc.
+2. Locate the area or section where you can add “records”.
+
+If you get stuck, contact your domain name provider's support.
+
+
+
+### Custom Domains - Block 3
+
+There are three parts to a record. These are sometimes labeled differently, but most domain providers use the following names:
+
+1. The host
+2. The type
+3. The data
+
+
+
+### Make sure IP address is correct
+
+It is crucial to use the correct IP address when setting up your custom domains. Rather than reusing the IP address from a previous step, ensure the IP is correct each time you use it.
+
+### Custom Domains - Block 4
+
+## Set up with Glide's custom domain wizard
+
+
+
+### Custom Domains - Arcade 1
+
+### Custom Domains - Block 5
+
+Glide's Custom Domain Configuration will help you to add the right records to your domain.
+
+First, publish your app. Then click on the Share Button in Glide, click on Domain, and then click the Configure button to launch the wizard.
+
+The wizard will give you details for the DNS Records that you need to setup on your domain provider's DNS Settings. Simply copy these into your DNS settings and click on **Continue**.
+
+### Value for TTL
+
+If your domain provider requests you to provide a value for TTL (time till live), enter the duration of 1 hour or 3600 if in seconds.
+
+### Custom Domains - Block 6
+
+## Final step: wait!
+
+After adding your records, you're done! Just wait around 30 minutes for the records to propagate. Note that for some domain providers, you may need to wait for 24 hours before your changes take effect.
+
+## Issues When Configuring a Custom Domain
+
+Need more help setting up your custom domain? Check out [our help article]( https://help.glideapps.com/en/articles/9421250-troubleshooting-custom-domains) for common issues and how to troubleshoot. 
+

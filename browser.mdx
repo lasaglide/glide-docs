@@ -1,0 +1,150 @@
+---
+title: "Browser"
+description: "Collect information from your web browser to create new features."
+---
+
+# Browser
+
+Collect information from your web browser to create new features.
+
+### Browser - Block 1
+
+The Browser integration collects information from your web browser to create new features in Glide. 
+
+
+
+### Paid Plan Required
+
+A paid plan is required to use this feature. [Check out our pricing to find the right plan for you. ](https://www.glideapps.com/pricing)
+
+### Browser - Block 2
+
+## Adding the Integration
+
+
+
+### Browser - Arcade 1
+
+### Browser - Block 3
+
+1. In Glide, click the Settings icon in the upper-right corner.
+2. Navigate to the **Integrations** tab and then select **Browser**.
+3. Click the **Add** button.
+
+## Get Webpage Source
+
+The **Get Webpage Source** feature can be used as a computed column or an action. When given a URL, the feature will return the webpage source for that URL as HTML. You can use this feature to pull data from publicly accessible web pages.
+
+### Browser - Warning [BLANK]
+
+Note that this feature cannot pull data from dynamic web pages, like those that use React. 
+
+### Browser - Block 4
+
+### In the Data Editor
+
+
+
+### Browser - Arcade 2
+
+### Browser - Block 5
+
+
+
+1. Open the table where you want to use the **Get Webpage Source** feature.
+2. Add a new [URL column](https://www.glideapps.com/docs/essentials/basic-columns/url) by clicking the (**+**) plus symbol to the right of the table. This will store the URL you pull the source from. - New columns added with the plus button will always appear on the right. If you'd like to add a column somewhere else in your data, you can select the dropdown menu on an existing column and choose **Add column right. **You can also click and drag columns to rearrange them.
+3. Add a **Get Webpage Source** column to store the result. Search for “Get Webpage Source” or navigate to Integrations → Browser → Get Webpage Source.
+4. Select the URL column you created as the **URL **source, or enter a custom value.
+5. The default **Refresh after** rate is 30 days. If you’d like the column to refresh more frequently, enter a time period in seconds. Note that every time the column refreshes and data has changed, it will cost an [update.](https://www.glideapps.com/docs/reference/account/updates)
+
+### In the Layout Editor
+
+
+
+### Browser - Arcade 3
+
+### Browser - Block 6
+
+
+
+1. If you have not already created columns to store the URL and the result, make those columns following the steps above.
+2. Select the component you'd like to add the action to. Remember, this must be a component that supports actions.
+3. Search for the **Get Webpage Source** action or navigate to Integrations -> Browser -> Get Webpage Source.
+4. Name the action.
+5. Choose an icon.
+6. Select the column that contains the **URLs**, or enter custom text.
+7. The default **Refresh after** rate is 30 days. If you’d like the column to refresh more frequently, enter a time period in seconds. Note that every time the column refreshes and data has changed, it will cost an [update](/reference/account/updates).
+8. Choose where to store the resulting **HTML**.
+9. Click away to exit the configuration.
+
+### In the Workflow Editor
+
+
+
+### Browser -Arcade 4
+
+### Browser - Block 7
+
+1. Select the (**+**) plus symbol or the **+ New Workflow** button.
+2. Select as the data source for the action the data source of the screen where the action is triggered.
+3. Search for **Get Webpage Source** or navigate to **Integrations → Browser → Get Webpage Source.**
+4. Select the column that contains the **URLs**, or enter custom text.
+5. The default **Refresh after** rate is 30 days. If you’d like the column to refresh more frequently, enter a time period in seconds. Note that every time the column refreshes and data has changed, it will cost an [update.](https://www.glideapps.com/docs/reference/account/updates)
+6. Choose where to store the resulting **HTML**.
+7. Click away to exit the configuration.
+
+## HTML to URL
+
+The **HTML to URL** feature uses a common technique for rendering HTML in web view, transforming it into a clickable URL.
+
+### In the Data Editor
+
+
+
+### Browser - Arcade 5
+
+### Browser - Block 8
+
+
+
+1. Open the table where you want to use the **HTML to URL** feature.
+2. Add a new text column by clicking the (**+**) plus symbol to the right of the table. This column will store the image you extract text from. This will store the HTML you use as the input for your computed column. - New columns added with the plus button will always appear on the right. If you'd like to add a column somewhere else in your data, you can select the dropdown menu on an existing column and choose **Add column right.** You can also click and drag columns to rearrange them.
+3. Add a **HTML to URL** column to store the result. Search for “HTML to URL” or navigate to Integrations → Browser → HTML to URL.
+4. Select the HTML column you created as the **HTML** source, or enter a custom value.
+
+### In the Layout Editor
+
+
+
+### Browser - Arcade 6
+
+### Browser - Block 9
+
+
+
+1. If you have not already created columns to store the HTML and the result, make those columns following the steps above.
+2. Select the component you'd like to add the action to. Remember, this must be a component that supports actions.
+3. Search for the **HTML to URL** action or navigate to Integrations -> Browser -> HTML to URL.
+4. Name the action.
+5. Choose an icon.
+6. Select the column that contains the **HTML** you want to render, or enter custom text.
+7. Choose where to store the resulting URL.
+8. Click away to exit the configuration.
+
+### In the Workflow Editor
+
+
+
+### Browser - Arcade 7
+
+### Browser - Block 10
+
+1. Select the (**+**) plus symbol or the **+ New Workflow** button.
+2. Select as the data source for the action the data source of the screen where the action is triggered.
+3. Search for **Get Webpage Source** or navigate to **Integrations → Browser → HTML to URL.**
+4. Select the column that contains the **HTML**, or enter custom text.
+5. Choose where to store the resulting **URL**.
+6. Click away to exit the configuration.
+
+
+

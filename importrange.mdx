@@ -1,0 +1,46 @@
+---
+title: "IMPORTRANGE"
+description: "Learn how to import data from other spreadsheets."
+---
+
+# IMPORTRANGE
+
+Learn how to import data from other spreadsheets.
+
+### IMPORTRANGE
+
+### IMPORTRANGE  - Body 1
+
+**IMPORTRANGE** allows you to import specific cell ranges into one Google Sheet from another Google Sheet. Since Glide apps are powered by a single spreadsheet, IMPORTRANGE is useful if you need to bring in data from other documents.
+
+While it’s not 100% reliable, IMPORTRANGE can be valuable when you have data that can’t be stored in the same sheet as your app.
+
+### [BLANK] IMPORTRANGE - Callout 1
+
+IMPORTRANGE won't automatically update your sheet in the background unless your app is on a paid plan with background refresh enabled. Free apps that use the Import range function will only update when the sheet you're importing to is open.
+
+### IMPORTRANGE - Body 2
+
+## Connecting two separate documents with IMPORTRANGE
+
+Say you have a document called Sheet A that powers your app, and it needs to display some data from another document called Sheet B that someone else regularly updates. If you simply copy and paste the data, it will become outdated every time Sheet B is updated unless you manually check for updates, which isn’t a viable long-term solution.
+
+You can solve this problem using IMPORTRANGE. The IMPORTRANGE formula has two parts:
+
+- The spreadsheet URL that you're importing from
+- The range of data that you want to import
+
+In Sheet A, which powers your app, type **=IMPORTRANGE** into the cell where you want the imported data to start from. Then copy the URL from Sheet B and paste it in double quotes inside the formula. So far, your formula should look like this: 
+
+**=IMPORTRANGE(”data_source_spreadsheet_URL”**
+
+Next, hit comma and then open another set of double quotes. Here you'll write your source sheet name followed by an exclamation mark and then the cell range to import. If you want to important everything in columns A to D, your formula will look like this:
+
+**=IMPORTRANGE(”data_source_spreadsheet_URL”, ”Sheet B!A1:D”)**
+
+You may be asked to allow access to this sheet while setting it up. Once you allow access, it will continue to import your data without asking again. Now, any updates in Sheet B's data will automatically update in Sheet A, and you can use this data in your app.
+
+### [BLANK] Deleting data from IMPORTRANGE
+
+All the data being imported is coming from the cell that contains the IMPORTRANGE function or formula. If you type in a cell that's being populated by the formula, or by deleting the top left cell, the data will disappear.
+

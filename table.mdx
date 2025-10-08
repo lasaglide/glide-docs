@@ -1,0 +1,133 @@
+---
+title: "Table"
+description: "Display a list of items in a table layout."
+---
+
+# Table
+
+Display a list of items in a table layout.
+
+### Table Video
+
+### Table - Block 1 (New)
+
+The **Table Component** is a special type of [**Collection Component**](/essentials/components/collection-components) that allows you to display items in a table format with column headings. It is best used for information you want users to be able to view. You should consider using this component when you need to view data side by side, such as for things like budgets, candidate information, or a record of past activities.
+
+When users interact with an item in a Table component, the item's detail screen will open.
+
+The table component has seven column types, as well as an auto detect column that will automatically create a column based on the type of source data. The seven types are:
+
+- **Text: **Display text values from your data, such as locations, names, addresses, and more.
+- **Boolean**: Include boolean toggles that provide an intuitive way for users to capture true/false values.
+- **Image:** Enhance your table’s visual appeal and provide additional context by displaying images inline.
+- **Link:** Integrate clickable links that enable users to access related resources or navigate to external pages.
+- **Button: **Add clickable buttons that enable users to interact with your data and take immediate actions.
+- **Choice:** Allow users to select from predefined options, ensuring simpler and more consistent data input.
+- **Tag: **Categorize your data with color-coded tags for easy organization and visual distinction.
+
+## Adding and Setting Up Table Collections
+
+
+
+### Table - Arcade 1 (New)
+
+### Table - Block 2 (New)
+
+1. In the [**Layout Editor**](notion://www.notion.so/getting-started/intro-to-layout) of your app, click the plus (**+**) symbol to add a new component.
+2. Find **Collections** in the menu and select **Table**.
+3. Choose what [**Data Source**](notion://www.notion.so/essentials/data-source) it should use.
+4. Add a title for the table.
+5. The style will be **Table** by default. If you change this, you will change the component to a different collection style.
+6. Glide will automatically create columns based on the data source you’ve chosen. Column headers will match the column headers in your table in the Data Editor. - To remove a column, click the **x **symbol at the right of the column.
+- To add a column, select **+ Add item** at the bottom of the columns section.
+- Columns can be rearranged by hovering over the left of the column title and dragging by the three dots that appear.
+7. Choose for the design to be **Minimal** or **Striped**. Striped will highlight every other line.
+8. In the options section, you can optionally limit the number of items in your table and specify how many items will appear per page.
+
+## Customizing Each Column in the Table
+
+Each column has additional configuration settings accessed by clicking on the column in the **General →** **Columns** menu.
+
+- **Value** is the source data for that column. This can be a custom value or a value from your data.
+- **Header** is the header title for that column in your table component. By default this will match the column name in the Data Editor, if that is the source for the column.
+- **Type** is autodetected by default but can be adjusted. Available column types are: Text, Boolean, Image, Link, Button, Choice, and Tag.
+- **Design** is where you can adjust the column width. By default this will automatically optimize based on the size of the table. Changing this to **Fixed** allows you to enter select a column size ranging from XS to XL.
+
+Some column types have additional options:
+
+- **Boolean** can allow app users to view (default) or edit. Enabling editing allows users to select and unselect the box in the table.
+
+
+
+![Table - Boolean](https://images.ctfassets.net/yreygbm72t08/5TArdurZEOG2MTEkcotYvY/6cc7706077482aa736a3895a5d48af33/CleanShot_2024-05-08_at_1_.31.13_2x.png)
+
+
+
+- **Link** has a **Display as** option where you can replace the full link with display text. To make this dynamic for every value in your column, consider creating another column in your data with the display text and using that column as the source for this option.
+
+
+
+![Table - Link](https://images.ctfassets.net/yreygbm72t08/1UtM7R4apcRcY0jXxt6FRA/14da4c560f0e0a871f55d457899eb95d/CleanShot_2024-05-08_at_1_.33.38_2x.png)
+
+
+
+- **Button** creates a column of buttons. These can have an icon, though the icon will be the same for every button in the column. You can then configure an Action to run when the button is selected by a user.
+
+
+
+![Table - Button](https://images.ctfassets.net/yreygbm72t08/1Nqzf7eJOFvrn6D2dMvnGV/79f08d85423f9e19490d7fed229a9727/CleanShot_2024-05-08_at_1_.23.12_2x.png)
+
+
+
+- **Choice** can have a data source, values from a column in that data source, and be displayed in a variety of ways. This will create a dropdown menu of choices for the user when selected.
+
+
+
+![Table - Choice](https://images.ctfassets.net/yreygbm72t08/1qyHxcS9S4YqEaAefOX4rI/095502659db2283e276dce06a77cb89c/CleanShot_2024-05-08_at_1_.35.49_2x.png)
+
+
+
+- **Tag** has the option for users to view only or also edit. Tags can have a data source, values, and display values. The colors for tags are automatically generated based on your app's accent color setting. You can set manual colors with hex colors, CSS, or you can create a column of colors in your data and use that column for the manual color setting. This will create a dropdown menu of tag choices for the user when selected.
+
+
+
+![Table - Tag](https://images.ctfassets.net/yreygbm72t08/soNQxx94pF5bCXnC4T0ya/a3bc6c1b10fd1f4d35b6cfa497ad8cb1/CleanShot_2024-05-08_at_1_.38.47_2x.png)
+
+
+
+## Using the Table Collection Component
+
+The Table component can be configured further in the **Options** and **Actions** tabs of the setup menu.
+
+### Table - Arcade 2 (New)
+
+### Table - Block 3 (New)
+
+## Options
+
+All components have [visibility](/use-cases/conditions-filtering-and-visibility), [filter data](/reference/user-experience/filter), and [sort data](/reference/user-experience/sort) options in the configuration menu. A search bar for users can be enabled. This allows user to search for specific alphanumeric values in the table.
+
+Row can be **Grouped by** shared values in a column. If no data is shared, each row will appear in its own group. Headers for the group will automatically be generated by the values in the column.
+
+A search bar can be enabled, placing a search field at the top of the table for users to search values as needed.
+
+[In-app filtering](/reference/user-experience/filter#in-app-filtering) can also be enabled. This allows user to change items displayed in the collection. This filtering will only apply to the user who is viewing your app.
+
+## Actions
+
+ If you’d like users to add items to your Table, you can enable an action in the **Title Bar** above your collection. In the **Actions** tab on the right side of the **Layout Editor**, toggle on **Allow users to add items**. This will create a [Show Form Screen](/show-form-screen) action that you can configure. You can add text to this button by clicking the small pencil icon under the button settings. Similarly, you can allows users to edit and delete items. 
+
+### Allow Deleting with Caution
+
+It’s important to note that if a row is deleted from your Table, it is also deleted from your data source. This includes all the data associated with this row in your data source, not just the columns displayed in the Table.
+
+### Table - Block 4 (New)
+
+Additional actions can be added in three different ways on the Table component.
+
+**Title bar actions** will appear at the top of the component next to the title. The first title bar action will be a button. Any additional title bar actions will appear in a dropdown menu to the right of the first button. Users can open this menu by selecting the three dots.
+
+The **Item click action** will trigger when a user click on a value in the first column of the table.
+
+**Collection item actions** will appear to the right of each row in a three dot menu. When users click the three dots, a menu will open with any collection item actions you’ve created.
+

@@ -1,0 +1,75 @@
+---
+title: "OpenAI Integration Setup"
+description: "Setup an OpenAI integration with Glide"
+---
+
+# OpenAI Integration Setup
+
+Setup an OpenAI integration with Glide
+
+### OpenAI Integration Setup - Block 1
+
+The **OpenAI integration** allows you to leverage the power of artificial intelligence with OpenAI's language models. These models have the ability to comprehend, produce, and interact with text and images.
+
+### OpenAI Usage and Rate Limits
+
+OpenAI [charges for API usage](https://openai.com/pricing) and has [variable rate limits](https://platform.openai.com/docs/guides/rate-limits?context=tier-free). If you [exceed your quota](https://help.openai.com/en/articles/6891831-error-code-429-you-exceeded-your-current-quota-please-check-your-plan-and-billing-details), you will get an error in Glide.
+
+### Adding + Configuring Integration Header
+
+## Adding and Configuring the Action
+
+
+
+### Adding OpenAI Arcade
+
+### OpenAI Integration Setup - Block 2
+
+1. You’ll need to create an account on [OpenAI](https://openai.com/) if you haven’t already.
+2. In [OpenAI](https://openai.com/), head to the [API keys page](https://platform.openai.com/account/api-keys) and create a new API search key. **Once you close the key window, you cannot view the key again. **Save this key in a safe place.
+3. In your Glide app, click the **Settings **icon in the upper-right corner.
+4. Navigate to the Integrations tab and select OpenAI.
+5. Click the **Add **button.
+6. Copy-paste the **OpenAI API key **to finish configuring the integration. It will save automatically.
+
+## Using OpenAI with Glide
+
+There are many features that become available with the OpenAI integration in Glide. For a deep dive into each one and examples about how to use them, check out our OpenAI and Glide guide. Note that some features were deprecated as of December 2023. Existing instances of these features will continue to work, but new instances cannot be created. 
+
+
+
+| Feature | Use case |
+| --- | --- |
+| [Answer Question About a Table](/automation/integrations/openai-and-glide#answer-question-about-a-table) | Question, Source table, Row specifier, Additional context, Model tweaks, Answer |
+| [Generate Image](https://www.glideapps.com/docs/automation/integrations/openai-and-glide#generate-image) | Create images from a text prompt. |
+| [Complete Chat](https://www.glideapps.com/docs/automation/integrations/openai-and-glide#complete-chat) | Bring ChatGPT into your app and use chat history in answers. |
+| [Complete Chat (With History)](https://www.glideapps.com/docs/automation/integrations/openai-and-glide#complete-chat-(with-history)) | Bring ChatGPT into your app. Ignores chat history in answers. |
+| [Speech to Text](https://www.glideapps.com/docs/automation/integrations/openai-and-glide#speech-to-text) | Turn an audio recording into text. |
+| [Text to Speech](https://www.glideapps.com/docs/automation/integrations/openai-and-glide#text-to-speech) | Generate audio from text. |
+
+
+
+
+## Configuring OpenAI Actions
+
+Each OpenAI feature can be configured in different ways, depending on what you want your Glide app to do. Features can be added to the [Data Editor](https://www.glideapps.com/docs/getting-started/introduction-to-the-data-editor), the [Actions Editor](https://www.glideapps.com/docs/getting-started/introduction-to-actions#the-action-editor), or both. Below is a table with an overview of where each feature can be configured. For details about how to configure each one, click the feature to be taken to our [full OpenAI Guide](https://www.glideapps.com/docs/automation/integrations/openai-and-glide).
+
+
+
+| Feature | Fields setup in the Data Editor | Fields setup in an Action |
+| --- | --- | --- |
+| [Answer Question About a Table](/automation/integrations/openai-and-glide#answer-question-about-a-table) | - | Question, Source table, Row specifier, Additional context, Model tweaks, Answer |
+| [Generate Image](https://www.glideapps.com/docs/automation/integrations/openai-and-glide#generate-image) | - | Prompt, Image output |
+| [Complete Chat](https://www.glideapps.com/docs/automation/integrations/openai-and-glide#complete-chat) | Prompt, Message, Model, Model tweaks | Message history, Prompt, Message, Session ID, Model, Model tweaks, Result |
+| [Complete Chat (With History)](https://www.glideapps.com/docs/automation/integrations/openai-and-glide#complete-chat-(with-history)) | - | Message history, Prompt, Message, Session ID, Model, Model tweaks, Result |
+| [Speech to Text](https://www.glideapps.com/docs/automation/integrations/openai-and-glide#speech-to-text) | Audio column, text column | Audio column, text column |
+| [Text to Speech](https://www.glideapps.com/docs/automation/integrations/openai-and-glide#text-to-speech) | - | Audio column, text column |
+
+
+
+
+For detailed setup instructions and examples for each feature, check out our full guide on [OpenAI and Glide](https://www.glideapps.com/docs/automation/integrations/openai-and-glide).
+
+
+
+

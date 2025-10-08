@@ -1,0 +1,83 @@
+---
+title: "User Profiles"
+description: "Define, store, and use data on your app's users."
+---
+
+# User Profiles
+
+Define, store, and use data on your app's users.
+
+### User Profiles Basics
+
+### User Profiles - Block 1
+
+User profiles lets you choose a specific table where data about your users (Name, Email, Image etc) lives. When a user profiles table is set, you can use that data in lots of different ways.
+
+### User privacy
+
+User data in a User Profiles table is very often private and needs to be kept secure. You should therefore add [Row Owners](/row-owners) to your User Profile's table.
+
+
+
+### User Profiles - Block 2
+
+## Setting the user profiles table
+
+By default, Glide will create a user profiles table with **Name**, **Email**, **Photo**, and **Role**. You can add more columns, depending on the properties of your users.
+
+While the default user profiles table is a [Glide Table](/essentials/data-sources/glide-tables), you can create a table in another [data source](/essentials/data-sources) such as Google Sheets to use as the user profiles table instead.
+
+Next, click the tab **User Profile **in the [Layout Editor](/getting-started/intro-to-layout). The right panel will now show User Profile settings. Choose the table with your users and connect the Name, Email and Image to the correct columns. You can also enable or disable the **Allow image upload**.
+
+You can also enable **Edit Form**, which allows users to edit their profile from the User Profile tab. You can also add editing conditions to this feature (read more on this below).
+
+## Using the user profiles table
+
+A user can have many more properties than Name, Email and Photo. These don't have to show in the app, but can be used in many different ways. Below are some basic examples.
+
+### Editing conditions
+
+You may want to give users different levels of access in your app. Take for example, **editors** and **users**. Editors can edit and delete items, whereas users can only view items. You can achieve this by creating a new column in your users table called (for example) "Access Level." Then in this column you can put "Editor" or "Viewer" for each user.
+
+Next, you can add a **condition on editing** which allows only users with Editor in the Access Level column to edit certain items.
+
+### Component visibility
+
+You could also add properties to your User Table which could be used to hide and show components. In this way, you can show certain content to some users and hide it from others.
+
+Instead of using text based conditions, you could create a TRUE or FALSE column. If a user has bought a subscription to your app, you could make this column TRUE and if they haven't, leave it FALSE.
+
+Next, you could set **visibility conditions** on some of your components using this column. This way, you could hide premium content in your app from free users and unlock it for paying customers
+
+### [BLANK] User Profiles - Callout 3
+
+Visibility conditions, hidden tabs, and removed components are not security features—they are merely changes that impact how different users see your app. Do not rely on these changes for your app's security.
+
+### User Profiles - Block 3
+
+### Computed columns
+
+You can also use User Profile data in computed columns like the [Template Column](/automation/computed-columns/template-column). For example, you could create a message that welcomes the user and refers to them by name.
+
+Below, you can see that as you **Preview As** different users, the name in the Template column changes. This column can then be assigned to a [Text component](/essentials/components/text) on a welcome screen.
+
+
+
+### User Profiles - Arcade 1
+
+### [BLANK] User Profiles - Callout 4
+
+If you've enabled User Profiles, you will see the user profile columns in many different places in Glide: **Filters**, **Edit Conditions**, **Component Visibility**, **Conditions**, and **Computed Columns**.
+
+### User Profiles - Block 4
+
+## Roles
+
+Now that you understand User Profiles, check out our guide to [Roles](/roles)—a way to assign different roles to users and build your app around those roles.
+
+## User profile screen
+
+When a user clicks on their profile image in the app menu, they'll be taken to their user profile screen. You can configure this screen with components to show the user their information and allow them to edit the fields you choose. To access this configuration screen in the [Layout Editor](/getting-started/intro-to-layout), click on the **User Profile **tab in the left panel.
+
+
+

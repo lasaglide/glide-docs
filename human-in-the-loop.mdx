@@ -1,0 +1,105 @@
+---
+title: "Human-in-the-loop"
+description: "Pause a workflow until a human completes a review."
+---
+
+# Human-in-the-loop
+
+Pause a workflow until a human completes a review.
+
+### Feature Still in Development
+
+This feature has not yet reached [General Availability](https://www.glideapps.com/docs/reference/account/preview-features), so it will likely continue to change as the Glide team makes improvements. This document will be updated as the feature becomes finalized.
+
+### Human-in-the-loop - Block 1
+
+Human-in-the-loop is a concept in software development that adds a human touchpoint to an otherwise automated process being performed by AI and machine learning systems. Creating Human-in-the-loop actions in Glide requires an element of human interaction before a workflow can continue to the next step. In this way you can create human oversight on any workflow, at any point you choose. 
+
+### Human-in-the-loop - Block 2
+
+## Understanding Human-in-the-loop Action Steps
+
+To add a Human-in-the-loop function to your workflow, you need to add two action steps. They are:
+
+1. Generate a link for the human to review with the **Make a link for the loop** action.
+2. Wait for the human to review before continuing with the **Wait for the loop link call** action.
+
+How the human receives and interacts with the link is up to you. You could send it via the native Glide [Send Email ](/automation/actions/send-email)action or use any of Glide’s [Integrations](/automation/integrations) that send emails, text messages, and more to users that you choose.
+
+## Adding Human-in-the-loop to a Workflow
+
+### Creating a link to the loop
+
+First we need to create the link to send to the human.
+
+### Human-in-the-loop - Block 3
+
+1. In the Data Editor, create a [URL column](/essentials/basic-columns/url) to store the links that will be sent to the human.
+2. In the Workflow Editor, select the workflow you want to add the action to.
+3. Select the plus (+) to add a new step.
+4. Navigate to **Communication → Make a link for the loop.**
+5. Choose the column you created in step one for the **Link URL** field.
+
+### Sending the link to a human
+
+Now we need to send the link we generated to a human. For this example we’ll use Glide’s Send Email action, but you could use any action that allows you to send a custom message to a user.
+
+### Human-in-the-loop - Block 4
+
+1. In the same workflow used above, select the plus (+) to add a new step.
+2. Navigate to **Communication → Send email.**
+3. Fill in the fields as needed. You can use a custom value so the text of the email is always the same, or you can us AI or template columns to generate dynamic email text. [Review the full Send email action setup here.](/automation/actions/send-email)
+4. Be sure to include the link to the loop in the body of the email.
+
+### Waiting for the human to respond
+
+Now we tell the workflow to wait for the human to respond before continuing to the next step.
+
+### Human-in-the-loop - Block 5
+
+1. In the same workflow used above, select the plus (+) to add a new step.
+2. Navigate to **Communication → Wait for the loop link call.**
+3. Select the same **Link URL** column you used previously. This should be the same link you sent to the human for review.
+4. Optionally, decide how long the workflow should wait before moving on without the human. The default wait period is 8 hours. If no response occurs within 8 hours, the loop will time out.
+
+
+
+### Human-in-the-lop - Block 6 (Using Slack for Human-in-the-loop)
+
+## Using Slack for Human-in-the-loop
+
+### Connecting Your Slack Workspace to Glide
+
+If you have not yet connected your Slack workspace to Glide, you’ll need to do that first. If you’ve already done this to use the Slack integration, you may need to reauthenticate.
+
+### Human-in-the-loop - Block 7 (Using Slack for Human-in-the-loop)
+
+1. Open the **Settings** menu in your app and open the **Integrations** menu.
+2. Select **Slack** and then **Add.**
+3. A new window from Slack will open in your web browser.
+4. Choose which Slack workspace you want to connect with Glide. You can change this in the upper right hand corner. - **Note: Only workspace owners can add the Glide app to a Slack workspace.**
+5. Review the permissions to share and select **Install.**
+6. In the Glide settings, choose a name for you bot. If left blank, the name will be the name of your app.
+7. Choose an icon to appear in Slack with the bot send a message. This should be a URL to an image. If left blank, it will be your app’s icon.
+8. Now that you’ve connected Slack to Glide, you’re ready to use Slack actions.
+
+### Setting up the Slack **for Human-in-the-loop**
+
+Once you have the [Slack integration](/automation/integrations/slack) configured for your app, you can also use the **Ask a user to choose an option** action to create a Human-in-the-loop motion in your workflows.
+
+### Human-in-the-loop - Block 8 (Using Slack for Human-in-the-loop)
+
+1. In the **Workflow Editor**, select the workflow you want to work with.
+2. Select the plus (+) to add a new step.
+3. Navigate to **Integrations → Slack → Ask a user to choose an option.**
+4. Specify the **Channel ID** where the Glide bot will post the question. - **Note: You must add the Glide app to the channel in Slack. You can do this in the Slack channel settings, under Automations —> Apps.**
+5. In Glide, enter the message text you want to push to Slack.
+6. Enter the options as a comma separated listed (example: `yes,no`).
+7. Choose a name for the bot. If left blank, the name will be the name of your app.
+8. Choose an icon to appear in Slack when the bot sends a message. This should be a URL to an image. If left blank, it will be your app’s icon.
+9. In the **Results** section, choose where to store the option the user clicked.
+10. Choose where to store the User ID of the person who responded in Slack.
+11. Click away to exit the configuration.
+
+
+

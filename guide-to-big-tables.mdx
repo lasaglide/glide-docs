@@ -1,0 +1,80 @@
+---
+title: "Guide to Big Tables"
+description: "Some ideas to help you get started with Big Tables"
+---
+
+# Guide to Big Tables
+
+Some ideas to help you get started with Big Tables
+
+### Guide to Big Tables - Block 1
+
+If your app needs to scale beyond 25,000 rows of data, Glide Big Tables are the perfect solution. With support for up to 10 million rows, [Big Tables](/big-tables) can let your apps grow without worrying about row limits or storing your data in multiple places.
+
+## Use Cases
+
+### Inventory Apps
+
+Businesses that manage inventory can easily exceed 25,000 products. While some of those products may no longer be available for customers, the business may still want to maintain records of past customers and SKUs.
+
+**Big Tables** lets you can easily create a repository of an entire inventory of products and search for products that your app may no longer reference.
+
+**Configure a Big Table for your Inventory App**
+
+If you’d like to move items from your primary [Data Source](/data-sources) to a Big Table, you have a few options:
+
+- Export your data from the primary data source to a .csv file, then import the data into a Big Table.
+
+
+
+![image - 1](https://images.ctfassets.net/yreygbm72t08/5BDaUCd6uarX6n4aBJ6MLu/449579281e76d939c68d31ede2e12c0c/CleanShot_2024-10-03_at_2_.00.19_2x.png)
+
+
+
+- Use the [Glide API](/getting-started-with-the-glide-api) to add rows to your Big Table.
+
+
+
+![image - 2](https://images.ctfassets.net/yreygbm72t08/4hcZEvcDLuVDZ4iEDSHXdt/be82f2edc67bfe361756346f9d31ccab/CleanShot_2024-10-03_at_2_.03.39_2x.png)
+
+
+
+- Create an [Action](/actions) to add a row to your Big Table based on a user interaction. You could also set this action to remove the row from the primary data source.
+
+
+
+![image - 3](https://images.ctfassets.net/yreygbm72t08/59gFkm0hv1LBbLsJNocH62/0e1bb9d3c24d317d1b76b372aeee7d24/CleanShot_2024-10-03_at_2_.08.27_2x.png)
+
+
+
+### Audit Logs
+
+If your app has many users and you’d like to keep track of their actions while they interact with your app, you can create an audit log. Everything from button clicks to form submissions can be incorporated into a custom audit log using an [**Add Row**](/add-row) action.
+
+While this type of audit log may be informative, it will also use many rows quickly. By using Big Tables for this audit log, you’re able to store and maintain these records for a longer time, giving you more data to analyze and more insight into how your app is being used.
+
+**Configure a Big Table as an Audit Log**
+
+If you have an existing action in your app, you can update it to include an Add Row action. This row can be added to your Big Table, which can include values such as the user’s email address, a timestamp of the interaction, and values from the screen the user is viewing to provide a detailed record of each time the action is performed.
+
+### Historical Archive
+
+Sometimes your app can start small, but over time its data set may grow and approach the 25,000-row limit of regular data sources. If you’d like to preserve all your data without impacting your app’s ability to capture new data, you can move its older data to a Big Table. 
+
+You can do this in two ways:
+
+1. [Export the data](/big-tables) from your primary data source and import it into a Big Table.
+2. Use actions to add rows to a Big Table and delete them from the original table.
+
+**Configure a Big Table as a Historical Archive**
+
+If you expect a new app to capture millions of rows of data, you can start by simultaneously adding data to a regular data source and a Big Table. With this approach, all your data can be found in the Big Table, and you can perform regular maintenance on your primary data source by removing data as needed.
+
+You can do this by adding an [After Submit action](/intro-to-actions) to your form container. You can capture data in the primary data source and the Big Table by including an Add Row action.
+
+
+
+### [BLANK] Guide to Big Tables - Callout 1
+
+[**Forms**](/forms) will automatically add the submitted data to a new row in the selected data source. Forms don’t need an Add Row action on submission unless you need to capture an additional row of data in one of your tables.
+

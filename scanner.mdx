@@ -1,0 +1,61 @@
+---
+title: "Scanner"
+description: "Scan barcodes and QR codes with your Glide app."
+---
+
+# Scanner
+
+Scan barcodes and QR codes with your Glide app.
+
+### Scan Barcode - Block 1
+
+The **Scanner **component empowers app users to scan barcodes or QR codes and save the data in your [data source](/essentials/data-sources). Glide partners with [Dynamsoft](https://www.dynamsoft.com/barcode-reader/overview/) to provide enterprise-grade scanning.
+
+### [BLANK] Barcode Scanning - Callout 1
+
+Barcode and QR code scanning is available for users with Business or Enterprise plans. [Review our plans and pricing ](https://www.glideapps.com/pricing)to find the best fit for you. 
+
+### Scan Barcode - Block 2
+
+If you want to scan many barcodes one right after the other, we recommend the Scanner component, which keeps the user’s camera on and ready to scan. If you only need to scan one barcode at a time, the [Scan Barcode or QR Code action](/automation/actions/scan-barcode-qr-code) turns on the user’s camera only when the action is triggered through a button or other trigger of your choice. 
+
+## Setting up the Barcode Scanner Component
+
+
+
+### Barcode Scanner - Arcade 1
+
+### Scan Barcode - Block 3
+
+1. If you do not already have a column where you will store the data from barcodes or QR codes, open the **Data Editor **and create the column where you will store the scanned barcodes.
+2. In the **Layout Editor**, select the tab you want to edit.
+3. Click on the plus symbol in the **Components** panel.
+4. Select the **Scanner **component.
+5. Drag the component where you want it to appear in your app.
+6. Under **Data,** select the column where you want to store the data from barcodes or QR codes.
+7. In the **Column** field, choose the column you created to store the scanned barcodes.
+8. Under **Scanning Options**, you can configure an action or workflow to trigger on each scan. This will use additional updates depending on which action you choose. 
+
+
+
+### Scan Barcode - Block 4
+
+## Dynamsoft Scanning Technology
+
+The Scanner** **component and [Scan Barcode or QR Code action](/automation/actions/scan-barcode-qr-code) uses Dynamsoft’s scanning technology to scan quickly and accurately at scale. Below are some supported symbologies:
+
+- Linear (1D) Barcodes
+- 2D Barcodes, like QR codes
+- GS1 DataBar
+- Postal Codes
+- Patch Code
+- GS1 Composite Code.
+
+[You can learn more about barcode types and what Dynamsoft supports here.](https://www.dynamsoft.com/barcode-reader/barcode-types/)
+
+## Glide’s Legacy Barcode Scanner
+
+[Glide's legacy scanner](/docs/automation/actions/scan-linear-barcode) was deprecated in August 2023. Apps using our legacy scanner will still have access to the feature. If you’ve saved an action with the barcode scanner as a custom action, you will still be able to use and duplicate that action. Duplicating a button or an app that has the barcode scanner feature will also duplicate that instance of the feature.
+
+If you are working with conditional branches and want to add your existing barcode scanner, that will no longer be possible.
+

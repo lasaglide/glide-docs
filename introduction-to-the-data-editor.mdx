@@ -1,0 +1,130 @@
+---
+title: "Introduction to the Data Editor"
+description: "The Data Editor is where you manage your app's data."
+---
+
+# Introduction to the Data Editor
+
+The Data Editor is where you manage your app's data.
+
+### Introduction to Data
+
+### Introduction to the Data Editor - Block 1
+
+All software is powered by data. Data may sound like an abstract idea, but it's just the information in your software—things like customers, staff, locations, etc.
+
+Databases and spreadsheets are the best way to organize and think about data, and Glide lets anyone build software from spreadsheets and other [Data Sources](/data-sources).
+
+The **Data Editor** is where you manage your app's data. You can add or edit data in the Data Editor itself or in the original data source. Everything stays in sync. At the bottom of any Glide Table you'll see options to import, export, and [Show API ](/essentials/data-sources/getting-started-with-the-glide-api)information. 
+
+## Data Structure
+
+Before you start an app in Glide, consider the structure of your data. In other words: what your app is about.
+
+An Employee Directory may be quite simple and only have two tables: one for **People **and another for **Locations.**
+
+But if you're making an app to help with inventory management, it might be more complex.
+
+You'll probably need tables for:
+
+- **Inventory Items**
+- **Customers**
+- **Suppliers**
+- **Orders**
+
+But maybe there's a delivery aspect to it, in which case you might need tables for:
+
+- **Delivery**
+- **Drivers**
+- **Vehicles**
+- **Warehouse**
+
+You can add new tables whenever you want, but it's worth establishing the most important tables upfront.
+
+Within each table, the first row is the column names, which should describe the properties of your items.
+
+For example, if you're making a team directory for your company, the first row could contain **Title, Phone number, Photo,** and **Email**, because these are the properties that each person has.
+
+After the column names row, every following row should have values in each of those columns.
+
+It's ok to leave cells empty. but if you leave big gaps between rows and columns, Glide may not pick up your data correctly.
+
+## Basic Columns
+
+**Basic Columns** are simple columns that just contain data. They're the same as the ones that live in a data source.
+
+Any new column you make in your data source will become a [**Basic Column**](/basic-columns) in Glide. Glide will look at the data in this column and assign a type to that column.
+
+For example, if you add a **Number Column**, you'll be able to format those numbers. If you add an **Image Column**, we'll show you the image thumbnails, and you can even upload images, add an image from a URL, or pick royalty-free ones from [Pexels](https://www.pexels.com/).
+
+If you want to change the column type, you can click on the dropdown arrow next to the column name, click Edit, and change the column type.
+
+You can create new basic columns at any time with the new column (+) button. These will be added to your data source as well.
+
+## Computed Columns
+
+Apps and websites need to do things that aren't easy or even possible to do with spreadsheets alone, so Computed Columns introduce new concepts on top of spreadsheets that allow you to structure and connect your data in powerful new ways.
+
+For example, the [Distance Column](/distance-to-location) calculates the distance between two locations, and the [Template Column](/template-column) lets you replace parts of your text with unique values for each row.
+
+Read more about the types of [Computed Columns](/computed-columns).
+
+## Adding and Deleting Columns
+
+To add new columns to your sheet or table, click on the (+) icon on the top right side of the Data Editor. You can add different types of columns to your table, depending on your data. You can also use the keyboard shortcut `cmd + shift + return `to add a new column.
+
+To delete a column, click on the dropdown arrow to the right of the column name and click on Delete. Columns that are connected to an external data source like [Google Sheets](/google-sheets) can't be deleted from the Data Editor.
+
+## Renaming Columns
+
+To rename a column, click on the dropdown arrow to the right of the column header and click on Edit. You can edit the column's name from there and even edit other properties such as column type.
+
+## Reordering Columns
+
+You can reorder columns by dragging the column header toward the right or left side as many places as you like until it's where you want it to appear.
+
+## Hide/Show Columns
+
+Columns can be hidden or shown manually by clicking on the **Hide Columns **button in the upper right-hand corner of your table. You can show or hide all columns, or select which columns specifically to show and hide. The option to hide a column is also available if you right click on the column, or use the dropdown arrow to view the column's settings. 
+
+Hidden column settings are user and device specific. Each team member can create their own hidden column views. Hidden column settings will be saved and will appear the same way when the team member reopens the Data Editor on the same device. If the Data Editor is opened on a different device, the columns will need to be hidden again.
+
+## Find Uses
+
+The Find Uses function allows you to locate all the areas in your app where a specific column is in use. You can locate which [Computed Columns](/computed-columns), [Components](/components), and [Screens](/screens) contain your chosen column.
+
+You can locate the Find Uses function from the dropdown arrow of the column you'd like to in your app. In the search results, click on the "go/arrow" button to jump to that specific column, Component, or Screen.
+
+## Column Grouping
+
+You can group columns to better manage them in the Data Editor and in dropdown menus.
+
+To set this up, just rename the columns with the group name, a slash, and then the column name **Group/Column.** For example **Position/Department, Position/Role**, etc.
+
+If your group names have emojis at the start, these will show up instead as the group icon.
+
+## Duplicate Column
+
+To duplicate a column, click on the dropdown arrow to the right of the column name and click on Duplicate. This will allow you to build more efficiently and quickly.
+
+## Data Tab
+
+You can access certain data from areas other than the Data Editor while building or editing your app. 
+
+On the bottom of the left sidebar in the [Layout Area](/intro-to-layout), you'll find the mini **Data Editor**, which we call the **Data Tab**. Instead of showing you all your app's data, the **Data Tab** just shows you the data for the current screen.
+
+The Data Tab is a great tool to have open as you navigate your app and want to:
+
+1. Understand the current screen's data, and
+2. Quickly edit the data or the structure of data on the current screen.
+
+## Keyboard Shortcuts
+
+The following keyboard shortcuts are available in the Data Editor:
+
+- `cmd + return` → new row
+- `cmd + shift + return` → new column
+- `cmd + K` → search
+
+
+

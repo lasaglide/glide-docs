@@ -1,0 +1,140 @@
+---
+title: "Introduction to Data Sources"
+description: "Discover how to connect your data to your Glide app"
+---
+
+# Introduction to Data Sources
+
+Discover how to connect your data to your Glide app
+
+### Introduction to Data
+
+### Introduction to data sources - block 1
+
+Every app you create in Glide is powered by data. If the data source you connect is read and write, Glide and your data remain in two-way sync. This means changes to one are reflected in the other.
+
+## Supported data sources
+
+If you want to keep your data exclusively in Glide, you can build your own tables from scratch in the [Data Editor](/data-editor) using [Glide Tables](/glide-tables). The [Glide Tables API](/using-glide-tables-api) is also available to help you connect your tables with your own applications and automate your data management.
+
+Is your data hosted on another platform? Glide integrates with the following external applications and software:
+
+- [Google Sheets](/docs/google-sheets)
+- [Airtable](/docs/airtable)
+- [Excel files in Microsoft OneDrive or SharePoint](/docs/excel)
+- [BigQuery](/docs/bigquery)
+- [PostgreSQL](/postgresql)
+- [Google Cloud SQL](/google-cloud-sql)
+- [MySQL](/mysql)
+- [SQL Server](/sql-server)
+
+Depending on your plan, you will have access to different data sources. Teams with an [Enterprise plan](https://www.glideapps.com/enterprise) can access additional data sources such as Salesforce, Hubspot, Stripe, and more. 
+
+### Data Sources Table
+
+
+
+|  | Free | Explorer | Maker | Business | Enterprise |
+| --- | --- | --- | --- | --- | --- |
+| Glide Tables | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Google Sheets | ❌ | ❌ | ✅ | ✅ | ✅ |
+| Airtable | ❌ | ❌ | ❌ | ✅ | ✅ |
+| Excel | ❌ | ❌ | ❌ | ✅ | ✅ |
+| Glide Big Tables | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Big Query | ❌ | ❌ | ❌ | ❌ | ✅ |
+| SQL Databases | ❌ | ❌ | ❌ | ❌ | ✅ |
+
+
+
+
+
+
+### [BLANK] Multiple Data Sources Callout
+
+You can add multiple data sources to a single app, connecting many different sources together. To do this, click on the plus (+) icon in the **Tables** panel of the **Data Editor**. From there, you can create new Glide Tables and connect to existing tables in other sources. You can also upload Excel files (.csv) directly into Glide.
+
+### Introduction to data sources - block 2
+
+## Considerations for Choosing a Data Source
+
+While it’s possible to change data sources in Glide apps, doing so may require parts of the app to be rebuilt. We recommend considering your data requirements and making a decision about where to host your data before you start building your app in Glide.
+
+Some data sources are made to hold large-scale volumes of data: SQL and Big Tables, for example. These databases are optimized to be fast when handling high volumes. Other data sources—like AirTable, Google Sheets, and Glide Tables—are not designed to hold this amount of data, and begin to experience performance issues when tasked with more data than they can reasonably process.
+
+Other considerations include whether the data source is both read and write or read only, if the data source has limitations with Glide features, and whether the data is hosted natively in Glide. The table below compares all Glide compatible data sources across these considerations.
+
+
+
+| Data Source | Glide Hosted | Read or Write | High Scale | Uses Updates |
+| --- | --- | --- | --- | --- |
+| Glide Tables | Yes | Read + Write | No | No |
+| Google Sheets | No | Read + Write | No | Yes |
+| Excel | No | Read + Write | No | Yes |
+| AirTable | No | Read + Write | No | Yes |
+| Big Tables | Yes | Read + Write | Yes | No |
+| BigQuery | No | Read Only | Yes | Yes |
+| SQL | No | Read + Write | Yes | Yes |
+
+
+
+
+
+
+### Working with high-scale data sources
+
+High-scale data sources like BigQuery and SQL can require technical knowledge. Before choosing one of these platforms, make sure there’s someone on your team who is comfortable with how these databases work.
+
+### Introduction to data sources - block 3
+
+### Updates and Data Sources
+
+Updates are one of the main ways Glide tracks and charges for usage. When thinking about a data source that can scale with your needs, consider how many updates your workflow might use. In general, changes to data in Glide consume **one update per changed row,** but there are many exceptions to this general principle.
+
+### Introduction to data sources - block 4
+
+Changes to an external data source will use one update per row. These changes could be data adds, edits, deletes, or when data is synced between Glide and your external data source. Querying data, which is a read-only interaction, from high-scale data sources like SQL or BigQuery does not use updates.
+
+[**Glide Basic API**](https://www.glideapps.com/docs/getting-started-with-the-glide-api) and [**Glide Advanced API**](https://www.glideapps.com/docs/using-glide-tables-api) consume updates when they add, edit, delete, and read data as well.
+
+### Limitations of Data Sources
+
+Some data sources have limitations with the way they can be used with Glide. For a full list of limitations for each source, visit that data source page. Common limitations of high-scale data sources include compatibility with aggregations and certain computed columns, like Joined List and Rollup.
+
+## Formatting Data for Glide
+
+Whether you choose to import a spreadsheet or sync data from a cloud-based platform, it’s important to consider how the data is formatted. Things to consider include removing any macros from the data, organizing the data into tables or sheets that can scale, and whether functionality built into the spreadsheet can be replaced with features in your app.
+
+### Macros, Visualizations, and Interface Features
+
+
+
+### Introduction to Data Sources - Arcade 1
+
+### Introduction to data sources - block 5
+
+Some data source tools, like Excel and Google Sheets, allow users to create functionality that behaves like an interface. Sometimes called “macros,” these features involve adding scripts, plugins, or some other kind of functionality over the data in the spreadsheet to create a user interface experience.
+
+**Features like these are designed to work in the data platform where they are created.** For example, an interface or chart created in Google Sheets is unlikely to work when that sheet is imported or synced to another platform. The same is true for macros designed in Excel. Even if this data is exported and then imported into Glide, the macros that were built into the spreadsheet will not translate to Glide.
+
+### Platform-specific formulas and functionality
+
+While all formulas and functionality built into an external data source may not translate over to Glide automatically, it’s typically possible to recreate those functions in the Data Editor. For example, [VLOOKUPS](https://support.microsoft.com/en-us/office/vlookup-function-0bbc8083-26fe-4963-8ab8-93a18ad188a1) in Excel become Relations in Glide. While the VLOOKUP column will not come through to the data editor when a spreadsheet is synced, it can be recreated as a Relation directly in Glide.
+
+### Organizing Tables and Sheets
+
+Data is organized in Tables in Glide. If you have tabs or sheets in your data source, each tab or sheet will become its own table in Glide. It’s best to structure your data in a way that can scale to the potential maximum amount of data you might one day have.
+
+For example, when building a product catalog for a customer portal to handle orders, it makes good sense to have a table for the products and all of their details (images, sku, price, specifications) and a table for the placed orders and their details (customer name and address, total price, invoice). You can then use computed columns, like Relations, to create links between tables. When choosing a data source, you should choose something that can support enough rows for the potential amount of products and orders the app might need to handle at scale.
+
+### [BLANK] Introduction to Data Sources - Callout 4
+
+A good rule of thumb is to keep related data together and avoid duplicating data. For example, a **products **table can hold all the details about every product. A separate **orders **table can hold all the details about placed orders. Creating a new table for each product or each order would be hard to track and work with at scale. 
+
+### Introduction to Data Sources - Block 6
+
+## Creating Data Backups
+
+Regardless of which data sources you use, it's good practice to back up your data. You can build that functionality in Glide in different ways depending on your needs. No matter how you build it, just remember: **Data backups are an essential part of business apps.**
+
+One way to create a data backup is with Glide's free [Generate CSV integration](/generate-csv).
+

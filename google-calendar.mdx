@@ -1,0 +1,108 @@
+---
+title: "Google Calendar"
+description: "Add events to your Google Calendar"
+---
+
+# Google Calendar
+
+Add events to your Google Calendar
+
+### Google Calendar
+
+### Google Calendar - Block 1
+
+The [Google Calendar](https://workspace.google.com/products/calendar/) integration allows your app to send new events directly to your team's calendar and invite other attendees. When your team shares one calendar, it can be useful to configure Glide to add events to your team calendar.
+
+### Don't see the Google Calendar integration?
+
+You may need to upgrade your plan. [Browse Glide's plans and find the right fit for you.](https://www.glideapps.com/pricing)
+
+### Adding + Configuring Integration Header
+
+## Adding and Configuring the Action
+
+
+
+### Adding Google Calendar Arcade
+
+### Google Calendar - Block 2
+
+1. In **Glide**, click the **Settings **icon in the upper-right corner.
+2. Click the **Integrations** tab and then select [Google Calendar](https://workspace.google.com/products/calendar/).
+3. Click **Add.**
+4. Sign into your Google Workspace account and select **Allow **to approve the integration.
+5. Once Glide has access to your Google Calendar, you will be able to add events to calendars connected to your account.
+
+## Features
+
+All features of the Google Calendar action can be added to a [Component](/components) that supports [Actions](/actions) (e.g., a [Button component](/button-components)), added to an action sequence in the [Workflow Editor](/getting-started/introduction-to-workflows#the-workflow-editor), or after a [Form](/forms) is submitted.
+
+### Add calendar event
+
+The **Add calendar event** action allows you to add an event to your Google Calendar. An event title and start time are required, but we recommend also including a duration in minutes (so that an end time is generated).
+
+### Google Cal Add Event Arcade
+
+### Google Calendar - Block 3
+
+1. Select the component you'd like to add the** **action to. Remember, this must be a component that supports actions.
+2. Search for the **Add calendar event **action or navigate to Integrations -> Google Calendar -> Add calendar event.
+3. Name the action.
+4. Choose an icon.
+5. Choose which column will provide the **Event title **field, or enter custom text.
+6. Choose which column will provide the **Start date **field, or enter custom text.
+7. Choose which column will provide the **Duration **field, or enter custom text.
+8. Optionally, you can choose columns or enter custom values for the event description, location, and attendees.
+9. Select which Google Calendar to add the event to from the **Calendar ID **menu.
+10. Decide what updates to send, if any. 
+11. You can also choose a column in Glide to store the resulting Event ID. We recommend doing this so that you can then edit or delete that event with a further action. 
+
+You can create a dynamic event by first creating a [Template column](/template-column) in the [Data Editor](/data-editor) and then setting that column as one of your action’s fields.
+
+### [BLANK] Google Calendar - Callout 2
+
+To add multiple attendees, attendees' emails should be configured as an array. Learn more about [Array Columns here](/make-array).
+
+### Google Calendar - Delete Calendar Event header
+
+### Delete Calendar Event
+
+
+
+### Delete Calendar Event Arcade
+
+### Google Calendar - Block 4
+
+1. If you have not already created a column to store Event IDs, do that first in the Data Editor. 
+2. Select the component you'd like to add the** **action to. Remember, this must be a component that supports actions.
+3. Search for the **Delete calendar event **action or navigate to Integrations -> Google Calendar -> Delete calendar event.
+4. Name the action.
+5. Choose an icon.
+6. Specify the **Event ID** that should be deleted. To make this dynamic, choose the column in your data where you are storing Event IDs.
+7. Adjust the **Calendar ID** if needed.
+8. Click away to exit the configuration.
+
+### Edit calendar event
+
+
+
+### Edit Event Arcade
+
+### Google Calendar Block 5
+
+1. If you have not already created a column to store Event IDs, do that first in the Data Editor. 
+2. Select the component you'd like to add the** **action to. Remember, this must be a component that supports actions.
+3. Search for the **Edit calendar event **action or navigate to Integrations -> Google Calendar -> Edit calendar event.
+4. Name the action.
+5. Choose an icon.
+6. Specify the **Event ID** that should be edited. To make this dynamic, choose the column in your data where you are storing Event IDs.
+7. Adjust the **Calendar ID** if needed.
+8. Fill in the fields that should be changed about the event. To make this responsive to user inputs, select existing that users can edit through forms or other actions.
+9. Click away to exit the configuration.
+
+
+
+### Integrations Learn More Block
+
+To learn more generally about Integrations in Glide, including how they affect your app’s usage, check out our [Introduction to Integrations](/automation/integrations).
+

@@ -1,0 +1,73 @@
+---
+title: "Performance Analysis"
+description: "See how quickly Computed Columns are processing in the Data Editor."
+---
+
+# Performance Analysis
+
+See how quickly Computed Columns are processing in the Data Editor.
+
+### Performance Analysis - Block 1
+
+With the performance analysis tool, you can debug computed columns in data sources to determine how long they take to calculate.
+
+This performance data is calculated per column and also per data source.
+
+## Setting up Performance Analysis
+
+Before you can run the performance analyzer on your apps, the feature needs to be activated for your team:
+
+
+
+### Performance Analysis - Arcade 1
+
+### Performance Analyzer - Block 2
+
+1. Open your team dashboard and navigate to Settings in the bottom left corner.
+2. Scroll down to **Developer Tools.**
+3. Enable **Analyze Table Performance.**
+
+To view performance data for a table:
+
+
+
+### Performance Analyze - Arcade 2
+
+### Performance Analyze - Block 3
+
+
+
+1. Open the app you want to analyze.
+2. Open the **Data Editor** from the top menu bar.
+3. Click the **gauge** icon in the TABLES header.
+4. After the analysis is completed, icons will appear next to table and column names. - Performance analysis only runs on computed columns. Basic columns will not have performance data.
+5. Hover your cursor over an icon to see how long that column or table took to calculate results.
+6. Click **Done** in the Data Editor table menu in the left hand panel to close the tool. Performance data will go away. To view it again, click the **gauge** icon again.
+
+
+
+### [BLANK] Setting up Performance Analysis - Callout 1
+
+NOTE: with more complex apps, the analysis can take a minute or more to complete. If your browser presents a **Page Unresponsive** message, click Wait.
+
+### Performance Analysis - Block 4
+
+## Using the Performance Analysis Tool
+
+There are two different icons you might see when running performance analysis:
+
+- ⚠️ Indicates that the column or table is computing results slowly and is taking longer than 100ms.
+- ✅ Indicates that the column or table doesn't have any performance issues and is below the 100ms threshold.
+
+Hovering over these icon where they appear (either in the Tables menu or on the computed column names) will display different information. On columns, you will see how long the computation took to calculate. On tables, you will see the maximum time any computed column in that table took to calculate. This time may vary slightly if you check multiple times.
+
+## Improving Performance
+
+If you find that a computed column seems too slow, or a warning icon is displayed alerting you to slow processing time, there are several different steps you could try:
+
+1. Check to see if you have computed columns that are dependent on each other, like a chain. Computed columns with dependencies on other computed columns are likely to slow down as they wait for the other columns in the chain to process. Consider consolidating your computed columns to eliminate redundancy.
+2. If the computed column is waiting on data from a webhook or third party platform, it may take longer to process as the table waits to receive a valid response.
+3. Query columns are often the source of performance issues. Consider replacing query columns with Conditional Relations to improve performance speed. [Learn more here.](/docs/automation/computed-columns/query-column#queries-vs-relations)
+
+
+

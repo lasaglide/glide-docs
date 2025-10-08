@@ -1,0 +1,146 @@
+---
+title: "Call API"
+description: "Send and receive data from API endpoints."
+---
+
+# Call API
+
+Send and receive data from API endpoints.
+
+### Call API - Block 1
+
+With **Call API**, you can call any API and return data directly into your app, fast. An [Application Programming Interface (API)](https://www.glideapps.com/blog/introduction-to-apis) allows different apps, websites, and databases to communicate with each other. When you perform an API call, you make a request to an HTTP endpoint. Make your own custom integration to get a ticket status, place an order, or delete a product in another database. The **Call API** feature can be used as a computed column or as an action. 
+
+### Don't see the Call API Integration?
+
+Call API is available for Business and Enterprise plan customers. [Browse our plans to find the right fit for you!](https://www.glideapps.com/pricing)
+
+### Call API - Block 2
+
+## Configuring Call API
+
+All APIs are unique, but most follow the same standard set of rules. Let’s take a look at the most common components of APIs.
+
+### Endpoints
+
+When setting up the Call API feature in Glide, you’ll always need to specify the **Endpoint**. When you go to a website, you type in a URL and then the internet does it’s magic. It finds the webpage for that URL, returns it to you, and displays it on the screen. APIs work in a similar way.  Every API has a URL, or **Endpoint**. However, instead of a webpage being returned, the API will do things and send you data or messages.
+
+Note: If you need to dynamically add data from Glide into the endpoint, you can use a [Template Column](/docs/automation/computed-columns/template-column).
+
+### Methods
+
+There are different types of API requests you can make, and in Glide, this is the **Method**. Sometimes you will make an API call to get data, and other times you may want to delete data. Here are the 5 methods in Glide:
+
+- **GET: **Retrieves existing data. This is the most common API request. You might use a GET request to retrieve a list of values to populate a dropdown list.
+- **POST**: Creates a new record. You might use a POST request when adding a new profile, form submission, or task to a to do list.
+- **PUT**: Replaces an existing record. You might use a PUT request when updating a complete record. Think updating an item listing in a catalog.
+- **PATCH**: Replaces a subset of values in an existing record. This is similar to POST, but only the values you specify are changed. Think updating a status or checking off a to-do item.
+- **DELETE**: Removes a record.
+
+### Query String
+
+When sending an API call, you need to tell the API what records you want to work with. Sometimes this is done in the endpoint. Other times, you pass in what is called a query string. A **Query String** is a set of key-value pairs that are often used for sorting or filtering the data returned. This allows you to do things like update building #9, or only return locations in Paris.
+
+If your API request requires additional query strings, click **+ Add value** to add all your query strings when configuring Call API. You can also include query string data in your HTTP endpoint.
+
+### Headers
+
+**Headers** are properties that can be added to an API call to provide additional context. A common header you might add is `content-type`. This tells the API what format the data in the body is in.
+
+Another common header parameter is `Authorization` which allows the API to detect who is making an API request. Authorization is important because it allows the API to prevent random people from accessing or updating data they do not have access to.
+
+If your API request requires headers, click **+ Add value** to add all your headers when configuring Call API.
+
+### Body
+
+The **Body** of an API is used to send data from your app to the other application you are interacting with. This is where you would insert the information about the contact you are trying to add or the deal that needs to be updated.
+
+Most of the time, the body of the request will be in JSON format. If your API request requires a body, you can add it when configuring Call API.
+
+Note: You can use the [JSON Object column](/automation/integrations/json) to dynamically create JSON for the body from data in your app.
+
+### Secret Values
+
+Often, developers have query strings or headers that have sensitive information they’d like to protect. If you are working with API values and want to hide, or keep secret, some of the data, you can create that value as **secret**. Any custom values you enter will automatically be marked as secret by Glide.
+
+### Refresh After
+
+Every time you make an API request, a computer on the other end has to process the request and send you back a response. Doing this once is no big deal, but doing this thousands of times a minute costs money. This is why APIs enforce quotas. For example: an API may have a rule that you can only call the API 1,000 times a month.
+
+**Refresh After** allows you to specify how often you want to make the API call. This allows you to only call the update once a day, for example. Whatever you set the refresh rate to, Glide will save the latest response for that amount of time. Once that time is up, Glide will send a new API request.
+
+Note that setting a refresh rate does not mean Glide will automatically make the call at that interval. The call will only happen again if there has been some event that makes it clear that data needs to be updated, such as a user interacting with that data in the app, or a developer viewing that data in the Data Editor. If the data is hidden or not in use, it will not update.
+
+It’s a best practice to think about how often the data you are trying to retrieve changes and set your refresh rate accordingly. In Glide, enter your desired refresh rate in minutes. So if you want to only run the API twice a day, you’d set the refresh rate to 720 (60 minutes times 12 hours).
+
+If the** **refresh after field is left blank, data will refresh after 30 days. 
+
+### [BLANK] Call API - Callout 2
+
+Note that Refresh After is only available when using Call API as a computed column.
+
+### Call API - Block 3
+
+## Adding Call API as a Computed Column
+
+
+
+### Call API - Arcade 1
+
+### Call API - Block 4
+
+If you want to make an API request for every row in a table, you can add Call API as a column in the [**Data Editor**](/docs/getting-started/introduction-to-the-data-editor).
+
+1. In the **Data Editor**, open the table you want to edit.
+2. Add a new column by clicking the (**+)** plus symbol to the right of the table.
+3. Give the column a name.
+4. For type, search for **Call API** or navigate to **Integrations → Call API.**
+5. Enter your **Endpoint**. This can be entered manually or come from a column in your data.
+6. Select the **Method**: GET, POST, PUT, PATCH, or DELETE
+7. Add **Query String**, **Headers,** and **Request Body** values as needed. For any manual value you want to add, select **Secret **and enter the custom value.
+8. Add a refresh rate if desired.
+
+## Adding Call API as an Action
+
+If you want to make an API request one item at a time, you can add Call API as an [Action](https://www.glideapps.com/docs/automation/actions).
+
+### In the Layout Editor
+
+
+
+### Call API - Arcade 2
+
+### Call API - Block 5
+
+
+
+1. Click on the plus (**+**) sign in the **Components** panel to add a new component that supports actions, or select an existing component to add an action.
+2. In the **General** tab on the right side of the Layout Editor, navigate to the **Actions** section and search for **Call API** or navigate to **Integrations → Call API.**
+3. Select the icon and title for your action.
+4. Enter your **Endpoint**. This can be entered manually, or come from a column in your data.
+5. Select the **Method**: GET, POST, PUT, PATCH, or DELETE
+6. Add **Query String**, **Headers,** and **Request Body** values as needed. For any manual value you want to add, select **Secret** and enter the custom value.
+7. Select where to store the resulting **Response Body**. This should be a column in your tables.
+8. Add conditions to the action, if desired. These will limit when the action is allowed to trigger.
+9. Click away from the configuration menu. Your settings will save automatically.
+
+### In the Workflow Editor
+
+
+
+### Call API - Arcade 3
+
+### Call API - Block 6
+
+
+
+1. Select the (**+**) plus symbol or the **+ New Workflow **button.
+2. Select as the data source for the action the data source of the screen where the action is triggered.
+3. Search for **Call API** or navigate to **Integrations → Call API.**
+4. Enter your **Endpoint**. This can be entered manually, or come from a column in your data.
+5. Select the **Method**: GET, POST, PUT, PATCH, or DELETE
+6. Add **Query String**, **Headers,** and **Request Body** values as needed. For any manual value you want to add, select **Secret** and enter the custom value.
+7. Select where to store the resulting **Response Body**. This should be a column in your tables.
+
+
+

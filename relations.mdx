@@ -1,0 +1,97 @@
+---
+title: "Relations"
+description: "Create relationships and link rows together."
+---
+
+# Relations
+
+Create relationships and link rows together.
+
+### Introduction to Relations Video
+
+### Relations Body 1
+
+**Relations** create relationships between rows, linking their data across tables.
+
+## About Relations
+
+In a Glide app, every row in your tables represents an item that then appears in the components in your app.
+
+Each **item** has its own **properties**. These are represented as columns in the same table. For example:
+
+- A **Room **can have a: **Number**, **Floor**, **Extension**, **Desks**, **Image**
+- An **Employee **can have a: **Name**, **Number**, **Email**, **Image**
+- A **Product **can have a: **Name**, **SKU**, **Image**, **Price**, **Description**
+
+In some cases, an **item** can contain an **item **from another table. These are represented as columns across multiple tables. For example:
+
+- A **Room **has an **Occupant**
+- An **Employee **has a **Manager **and an **Office**
+- A **Product **has a **Category**
+
+When an item contains other items, they each have their own set of properties and exist as independent rows in tables. They can then be connected by building relations.
+
+## Single vs Multiple Relations
+
+Relations fall into two categories: single relations and multiple relations.
+
+A single relation create a **one-to-one **relationship. This means one item relates to just one other item. For example, a staff member has a location they work from, or a product has one warehouse it's stored in. 
+
+Multiple relations show a **one-to-many** relationship. This is where one item relates to multiple other items. For example, a manager oversees multiple staff members, or a product belongs in multiple categories. 
+
+### Relations Body 6
+
+## Creating relations in Glide
+
+In Glide, you can create relations between values using a **Relation** column. With this column, you specify the type of relation you want—single or multiple. Your app then applies the relation to the values and tables specified.
+
+### Check for matching values
+
+Before adding a **Relation** column, you must first check that the values match in the columns that will be connected. Items cannot be linked together unless they match.
+
+For example, a relation can be created for an employee directory that has a **Staff** table and **a Locations** table. In the **Staff** table, make sure there's a column for the name of the employee's Location.
+In the **Locations** table, make sure there's a column for the name of the location that can be tied to the Staff table.
+
+By connecting this information, you can integrate it into components or even link to their location in their profile.
+
+Even if the columns have different names in each table, the values in them are shared.
+
+After determining that there are matching values, you can build single or multiple relations using the **Relation** column.
+
+## Building Single Relations
+
+
+
+### Adding Relation Column Arcade
+
+### Relations Body 7
+
+To create a single relation:
+
+1. In the [Data Editor](/getting-started/introduction-to-the-data-editor), open the table you want to edit.
+2. Add a new column by clicking the plus symbol to the right of the table.- New columns added with the plus button will always appear on the right. If you'd like to add a column somewhere else in your data, you can select the dropdown menu on an existing column and choose **Add column right. **You can also click and drag columns to rearrange them. 
+3. Name the column.
+4. For **Type**, search for **Relation **or navigate to **Computed -> Relation. **
+5. Specify the values to be matched. Values must match exactly to create a relation. The values in the column will automatically populate when a match is found. If they still appear empty after selecting both columns, the values in the columns do not match and a relation cannot be established.
+6. Click on **Done** to add the new column to the table.
+
+## Building Multiple Relations
+
+To create a multiple relation:
+
+1. In the **Data Editor**, open the table you want to edit.
+2. Add a new column by clicking the plus (+) symbol to the right of the table.- New columns added with the plus button will always appear on the right. If you'd like to add a column somewhere else in your data, you can select the dropdown menu on an existing column and choose **Add column right. **You can also click and drag columns to rearrange them. 
+3. Name the column.
+4. For **Type**, search for **Relation **or navigate to **Computed -> Relation. **
+5. Specify the values to be matched. Values must match exactly to create a relation. The values in the column will automatically populate when a match is found. If they still appear empty after selecting both columns, the values in the columns do not match and a relation cannot be established.
+6. Enable the **Match multiple **option.
+7. Click on **Done** to add the new column to the table.
+
+## Using Relations
+
+The most common use for a **Relation** column in Glide is to display a single related item or list of items. This is done with [Collections](/essentials/components/collection-components).
+
+With that said, you may find more advanced ways to use multiple relations, such as in [Choice Components](/choice-component) or as the source for the data displayed in [Charts](/charts).
+
+### Things in Things
+

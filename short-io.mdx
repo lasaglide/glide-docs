@@ -1,0 +1,113 @@
+---
+title: "Short.io"
+description: "Shorten, personalize, and share fully branded short URLs."
+---
+
+# Short.io
+
+Shorten, personalize, and share fully branded short URLs.
+
+### Short.io - Block 1
+
+[Short.io](https://short.io/) is a service that shortens links using your own domain. With the Short.io integration, you can transform URLs directly.
+
+### Don't see the Short.io integration?
+
+You may need to upgrade your plan. [Browse Glide's plans and find the right fit for you.](https://www.glideapps.com/pricing)
+
+### Adding + Configuring Integration Header
+
+## Adding and Configuring the Action
+
+
+
+### Adding Short.io Arcade
+
+### Short.io - Block 2
+
+1. In **Glide**, click the **Settings **menu.
+2. Find the **Integrations** section and then select [Short.io](https://short.io/).
+3. Click the **Add **button.
+4. You will need your **Short.io API key **to finish configuring the integration.
+5. You can find your Short.io API key in your [Short.io dashboard](https://app.short.io/settings/integrations/api-key). It's usually a 20-character string of letters and numbers starting with `sk_`
+6. **Note: M**ake sure that you do not** **toggle on the "Public key" button. This generated a key starting with `pk_ `which is not the one you need. 
+
+## Shorten URL
+
+The **Shorten URL** feature can be used as an action or as a computed column to shorten a URL.
+
+With this integration, you could turn a long YouTube Link like this **`https://www.youtube.com/watch?v=eqxP0DnJlBI`** into a short link like this **`mysite.com/special-name`**.
+
+- The URL must be publicly accessible for the integration to work.
+
+**Required Inputs**
+
+To make a short URL, you need to provide the `Original URL` you want to shorten and the [Short.io](http://Short.io) `Domain` you want to use.
+
+**Optional Inputs**
+
+You can further customize your the shortened URLs by specifying a custom `Path`, setting a `Title`, `Expiration` Date, `Expired URL` redirect, and `Password` protection.
+
+### A note on expiration dates
+
+Short.io requires the expiration data to be sent as a unix timestamp. [You can generate one here.](https://www.unixtimestamp.com/)
+
+### In the Layout Editor H3
+
+### In the Layout Editor
+
+
+
+### Shorten URL Arcade
+
+### Shorten URL Directions
+
+1. If you have not yet set up a URL column to store the full links and a URL column to store the shortened links, do that first in the Data Editor. 
+2. Select the component you'd like to add the** **action to. Remember, this must be a component that supports actions.
+3. Search for the **Shorten URL **action or navigate to Integrations -> Short.io -> Shorten URL.
+4. Name the action.
+5. Choose an icon.
+6. Add the domain you want to use for the short URL. This should come from your short.io dashboard.
+7. For **Original URL**, add the column where you are storing the full URLs.
+8. The **Path **data will appear at the end of your URL. This can be a custom value or a text column in your data. 
+9. The **Title **will be the name of the link in your short.io dashboard. 
+10. Set up expiration and password information if needed.
+11. Specify which column should store the resulting **Shortened URL. **
+12. Click away from the menu to save your configuration. 
+
+### In the Data Editor
+
+**Shorten URL **can also be used as a computed column. The configuration fields are the same, and the shortened URL will be stored in a new column. 
+
+### short.io example 1
+
+## Use Cases
+
+The integration of [Short.io](http://short.io/) with Glide provides a seamless way to shorten URLs directly within your Glide apps. Here are some practical scenarios for this feature:
+
+1. **Social Media Sharing**: Transform lengthy URLs into concise, branded links, ideal for sharing on various social media platforms.
+2. **Affiliate Links**: Condense and brand affiliate links, enhancing their appeal and credibility to users.
+3. **Collaboration**: Simplify the sharing of documents, forms, and collaborative tools among teams or groups using shortened URLs.
+
+## Example: Shortening Event Registration Links
+
+BetterMore, an wellness event organizer, wants to share event sign-up links on social media, but they get cut off due to character limits. They need concise, branded URLs, so they turn to the **Shorten URL** feature in Glide.
+
+### **Setting Up the Short URL Generation**
+
+
+
+### short.io example 2
+
+After setting up the [Short.io](http://Short.io) integration in Glide, BetterMore adds a column to their event table to  shorten the event page URLs. The **Shorten URL** computed column takes the original URL as an input and returns a shortened url for each event page.
+
+### Adding **the Shortened URLs to Social Media Posts**
+
+With the short URLs now available in their Glide app, the marketing team can easily copy these links for their promotional campaigns. Whether it's a tweet, a Facebook post, or an Instagram story, the shortened URLs not only fit perfectly but also maintain the brand's identity.
+
+The result? A significant uptick in event registrations, cleaner social media posts, and a consistent brand image across all platforms.
+
+### Integrations Learn More Block
+
+To learn more generally about Integrations in Glide, including how they affect your app’s usage, check out our [Introduction to Integrations](/automation/integrations).
+

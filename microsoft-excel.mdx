@@ -1,0 +1,104 @@
+---
+title: "Microsoft Excel"
+description: "Connect your app to Excel Workbooks"
+---
+
+# Microsoft Excel
+
+Connect your app to Excel Workbooks
+
+### 25,000 Row Limit on Spreadsheet Data Sources
+
+Rows from spreadsheet data sources have a **total cap of 25,000 rows across all tables**. If you need more than 25,000 rows of data in a team, consider a high-scale data source like [Big Tables.](https://www.glideapps.com/docs/essentials/data-sources/big-tables) 
+
+### Microsoft Excel - Block 1
+
+Microsoft Excel is one of the most widely used spreadsheet applications in the world. Your app can be integrated with your Excel Workbooks, allowing you to build apps with a data source you're familiar with. Spreadsheets from Excel can be imported with any Glide plan. To sync with Excel, a Business or Enterprise plan is required. [Browse our plans to find the right fit for you. ](https://www.glideapps.com/pricing)
+
+## How to use Excel Workbooks with Glide
+
+There are two ways to use Excel files:
+
+1. Option 1 - Connect to your Excel file (.xlsx or .csv) in your Microsoft OneDrive or SharePoint account.
+2. Option 2 - Upload your Excel file (.xlsx or .csv) to your app.
+
+
+
+### [BLANK] Microsoft Excel - Callout 1
+
+It is recommended to create a copy of your file if you want to maintain its original format. Once connected, a [**Row ID**](/row-id-column) column will be automatically added at the end of every sheet to help keep everything in sync. This column should not be deleted in the original file.
+
+
+
+### Microsoft Excel - Block 2
+
+### Connect to your Excel file in Microsoft OneDrive or SharePoint
+
+Excel files hosted in Microsoft OneDrive and SharePoint can be integrated with Glide. This is especially useful when multiple people need quick access to the original workbook. If this is your first time using an Excel data source, click on the **Connect** button under **Excel** to add your account. Microsoft OneDrive will open in a new tab. You'll be prompted to log in and give Glide access to your files. 
+
+
+
+### Excel Sync Arcade
+
+### Microsoft Excel - Block 3
+
+1. To create a new app, click on **New app** in your dashboard.
+2. Click on **Excel Online** and **Continue.**
+3. Choose your library and select **Choose Library** to continue
+4. Select the Excel data table you want.
+5. Select **Create App.**
+
+
+
+
+### [BLANK] Microsoft Excel  - Callout 3
+
+If your files are in SharePoint instead of OneDrive, click on the **Authorize SharePoint Access** button and grant Glide extra permissions to connect to it.
+
+
+
+
+
+
+### Microsoft Excel - Block 4
+
+When the app is created, a new **Row ID** column is added to each sheet in the file at this time. The sheets in your Excel Workbook are added as individual **Tabs** to the [Layout Editor](/intro-to-layout) and individual **Tables** in the [Data Editor](/data-editor).
+
+### Upload your Excel file
+
+1. To begin, create your app by clicking on **New app **in your dashboard.
+2. Click on **Import a file from your computer**.
+3. Select your file (.xlsx, .csv, or .ods) and click **Continue **or drag and drop** **to create your app.
+
+The sheets in your Excel Workbook will be added as individual Screens to the Layout Editor and individual Tables in the Data Editor.
+
+### [BLANK] Microsoft Excel - Callout 4
+
+Unlike when connecting to OneDrive or SharePoint, Glide does not create a new **Row ID** column when uploading an Excel file.
+
+### Microsoft Excel - Block 5
+
+## How to connect to multiple data sources
+
+After adding your Excel files to your app, you can connect to other data sources as needed. This allows you to sync data across multiple platforms, bringing everything together in one place.
+
+1. Go to the **Data Editor **in your app.
+2. Click on the plus (+) symbol in the **Tables **panel.
+3. Either add a new empty table, import a new Excel file, or choose one of the available options (e.g., [Google Sheets](/google-sheets)) to sync your data.
+
+## Data security for Microsoft OneDrive
+
+If your OneDrive account is managed by your organization, you may need to get an admin to grant additional permissions before you can connect it to your app.
+
+An IT admin will need to approve Glide permissions for you to:
+
+- Sign in and read the user profile
+- Have full access to user files
+- Maintain access to data that has given it access to
+
+[Here's a guide](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/review-admin-consent-requests) for IT admins about how to approve Glide.
+
+### [BLANK] Microsoft Excel  - Callout 5
+
+If your organization is concerned about granting you or other users access to the whole drive, your IT admin could create a Glide-only user account in Microsoft that you can connect to Glide. This way, the necessary files can be shared with only that user. This will firewall Glide to that user's whole drive.
+

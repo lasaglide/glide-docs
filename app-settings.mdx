@@ -1,0 +1,238 @@
+---
+title: "App Settings"
+description: "Update your apps design, privacy, and data settings."
+---
+
+# App Settings
+
+Update your apps design, privacy, and data settings.
+
+### App Settings - Block 1
+
+ **App Settings **is** **where you can customize your app's appearance, integrate with other tools, adjust privacy settings, add user agreements, and much more.
+
+## Name & Icon
+
+
+
+![App Settings - Image 1](https://images.ctfassets.net/yreygbm72t08/182Sux4F7m14e9eCGnedns/77323a41087e39819d7c0bb9531eac4f/CleanShot_2025-03-27_at_5_.09.00_2x.png)
+
+
+
+**Name & Icon** allows you to customize your app's appearance, making it easy for users to recognize and engage with your app. Your app's icon, logo, name, and description play a crucial role in forming the first impression for your users.
+
+- **Icon: **The unique image that represents your app. It appears on your phone's home screen when you save Glide. You can change it by selecting an emoji or uploading your own custom image.
+- **Title:** The title of your app will appear everywhere—as the name of the app, the downloaded app name, in emails, and more. Make sure it's something your users will easily recognize. 
+- **Show**: What appears as the title of your app. You can choose to display nothing, the app's name, your uploaded logo, or both.
+- **Logo**: The logo is displayed in Glide, either next to or replacing the app's title. By default it's empty, but you can add your custom icon here.
+- **Description**: A short explanation of what your app is all about. This description is shown when you share a link to your app, providing users with a quick overview.
+
+
+
+### [BLANK] App Settings - Callout 1
+
+For more ways to customize the brand of your app, check out our [Sign-in Screen](https://www.glideapps.com/docs/reference/ux/sign-in-screen) guide.
+
+### App Settings - Block 2
+
+## Appearance
+
+
+
+![App Settings - Appearance](https://images.ctfassets.net/yreygbm72t08/3edW33pTlvzDsw1KppCKw2/a428b2a1e6b93c6904d1354c04b520dc/CleanShot_2025-03-27_at_5_.44.51_2x.png)
+
+
+
+**Appearance** allows you to customize the visual aspects of your app, giving it a unique look and feel that matches your brand. Let's explore the available options:
+
+- **Accent Color**: This is the color used everywhere in you app—buttons, backgrounds, navigation bar, etc. Choose one of Glide’s handpicked colors or add a custom color tailored to your brand.
+- **Layout**: Choose whether you want the navigation bar to appear at the top or pull out from the left when users access your app on a desktop.
+- **Style**: This sets the background color of your navigation bar. You can choose light, dark, or your app's accent color.
+- **Environment: **Enable dark mode, light mode, or automatically match the user's default setting.
+- **Background Color**: Adjust the default background color of your app to match your style.
+- **Content Width**: Customize how much horizontal space your app occupies on a desktop screen. Choose large to use the entire width, medium to reduce the size and remain centered, or small to use only the center portion of the screen.
+- **Show icons in nav bar**: By enabling this option, each tab's icon will be displayed in the navigation bar when users access your app on a desktop.
+- **Show labels in tab bar**: When this option is checked, each tab's label will be shown below the icon when users access your app on a mobile device.
+- **Custom CSS**: If [your plan](https://www.glideapps.com/pricing) includes it, you can add pixel-perfect design tweaks with Custom CSS.
+
+
+
+### [BLANK] App Settings - Callout 2
+
+If you need to adjust the tabs and screens that appear in your app, check out our [Navigation](/docs/reference/user-experience/navigation) guide. 
+
+### App Settings - Block 3
+
+## Access
+
+
+
+![App Settings - Image 3](https://images.ctfassets.net/yreygbm72t08/fnNxLfzD0FlFpyxN3COXL/65f066af351cae4918b6fce1491e728f/CleanShot_2025-03-27_at_6_.38.24_2x.png)
+
+
+
+**Access** gives you complete control over who can access and interact with your app. You can customize your app's accessibility to meet your needs and the needs of your users.
+
+- **Access**: This is the first line of defense for your app.- **Private**: Make your app exclusive, granting access only to people you handpick and invite.
+- **Public**: If you want your app to be open for everyone, choose this option. Anyone with the app's link can access it.
+- **Users**: Control who can sign in to your app and create a profile.- **Anyone**: Anyone can create a profile on the app.
+- **Users in the users table**: Limit sign-in to users already listed in your app’s [user profile](/reference/security-and-user-data/user-profiles) table.
+- **[My Team Name] team**: Restrict sign-in capabilities to members of your [Glide team](https://www.glideapps.com/docs/reference/account/teams).
+- **Allowed email domain(s)**: Specify an email domain that can sign in. This is useful for apps intended for specific organizations or groups. This domain can be entered with the format `domain.com`. The @ symbol is not required. 
+- **All emails in table**: Similar to "Users in the users table," but your list of allowed emails is stored in another table.
+
+### Authentication
+
+
+
+![App Settings - Image 4](https://images.ctfassets.net/yreygbm72t08/5gRlgILb0DtMEhfOTYnsZE/4c4b8d0e33e5abbad16a8220a2e972d8/CleanShot_2025-03-27_at_7_.06.47_2x.png)
+
+
+
+Customize how users authenticate themselves and sign in to your app. 
+
+
+
+### implications for Phone Numbers or Emails 
+
+If you select an integration to send PINs to users, then users will **not **be able to edit email or phone number information from the layout view in your live app as a security precaution. This information can still be edited in the Data Editor. 
+
+### App Settings - Block 3.5 
+
+- **PIN Emails from Glide**: Users enter their email and receive a one-time PIN for sign-in. You can choose to include a magic link in the email, allowing users to access the app directly without entering the PIN in Glide.
+- **Sign-in with Google**: Enables users to sign in more quickly using their Google Account.
+- **Pin texts from Twilio:** Enabling pins via SMS will send users their sign-in PIN via text message. To enable this option, you will need to have [a Twilio account](https://www.twilio.com/en-us) and add [the Twilio integration](/automation/integrations/twilio) to Glide. You will also need to configure the Twilio pin settings to use the phone number column from the User Profile table. If users do not have a phone number entered or the text fails for any reason, then an email PIN will be sent. If existing users had not previously input their phone number to the user profile, then the phone number can be added manually in the Data Editor. When users sign in to the app, they will still be asked to provide their email address, but a verification PIN will come via SMS. 
+- **PIN Emails from Gmail**: Like PIN Emails from Glide, users will enter their email and receive a one-time PIN for sign in. If enabled, you can choose to send these emails from a Gmail account, rather than directly through Glide. To enable this option, you will need to connect a Google account to use for sending the PIN emails. 
+- **PIN Emails from Microsoft: **Like PIN Emails from Glide, users will enter their email and receive a one-time PIN for sign in. If enabled, you can choose to send these emails from an Outlook account, rather than directly through Glide. To enable this option, you will need to connect a Microsoft account to use for sending the PIN emails. 
+- **SSO (Single sign-on)**: Allows sign-in with your company's existing authentication system. Learn more about [SSO here](/docs/automation/integrations/single-sign-on).
+
+### **Access Requests**
+
+If your app allows sign in for specific user groups, you can enable access requests. Visitors not in your approved list can request access from the login screen, and you can approve or deny their requests. If enabled, users will request access through this workflow:
+
+1. User requests access after entering email address.
+2. Admin gets an email with a button to grant access.
+3. Admin clicks **Grant app access**, which adds the email address to the Users table.
+4. An email is sent to the user informing them access has been granted
+5. Clicking the **Open App** button in the email does not require the user to sign-in again.
+
+
+
+### [BLANK] App Settings - Callout 3
+
+For more details on private vs. public apps and user access, check out our [Users](https://www.glideapps.com/docs/guides/core/users) guide. 
+
+### App Settings - Block 4
+
+## Integrations
+
+
+
+![App Settings - Image 4](https://images.ctfassets.net/yreygbm72t08/6d3WOy42uf7c4mDTXU6iEa/7816f11972c88d6a126abe9c8a764c3c/CleanShot_2025-03-27_at_6_.42.47_2x.png)
+
+
+
+**Integrations** enhance the capabilities of your Glide app by connecting it with essential business tools. These integrations offer powerful functionality, serving as actions, computed columns, widgets, or analytics providers, all ready to use in just minutes.
+
+Here you can:
+
+- Explore the complete list of available Glide integrations.
+- Review the actions that come with each integration.
+- Add new integrations to your app.
+- Update the settings for any added integration.
+- Remove existing integrations.
+
+
+
+### [BLANK] App Settings - Callout 4
+
+For an in-depth guide on incorporating integrations into your app, check out [Introduction to Integrations](https://www.glideapps.com/docs/reference/integrations/1.introduction-to-integrations)**.**
+
+### App Settings - Block 5
+
+## **User Data**
+
+Choose between using **Email Anonymization** (virtual addresses) or collecting real user email addresses.
+
+- **Delete User Data:** Erase data for a specific user by entering their email address. Effectively manage user data and comply with privacy requirements and [Delete User Data](/reference/security-and-user-data/delete-user-data) requests.
+
+### **Cookies**
+
+App-level cookies in Glide allow users to stay logged in between sessions. If you set the cookies to `Ask user consent for authentication cookie `and the user declines, they will be asked to sign in each time they access the app.
+
+[Read more about cookies in our full guide. ](/essentials/security-and-user-data/cookies-in-glide)
+
+
+
+### [BLANK] App Settings - Callout 5
+
+For best practices on keeping your apps safe and secure, check out our guide to [Security and User Data](/essentials/security-and-user-data).
+
+### App Settings - Block 6
+
+## Sign-In Screen
+
+
+
+![App Settings - Image 5](https://images.ctfassets.net/yreygbm72t08/7GghvvqHI1XYP6iW5si8xt/e5ad51d1ff8db2124b780d660369a33d/CleanShot_2025-03-27_at_6_.47.37_2x.png)
+
+
+
+**Sign-In Screen** lets you make a great first impression and establish your brand identity right from the start of the user interaction. Here's how you can customize it to align with your brand:
+
+- **Greeting**: Personalize the initial greeting message to create a warm and inviting environment. At Glide, we keep it simple with “Welcome to Glide.”
+- **Description**: Guide your users through the sign-in process with a brief description or instruction, like "Please sign in with your email.”
+- **Sign In Logo**: Upload your brand's logo, which will appear on the sign-in screen.
+- **Background**: Personalize the background image of the sign-in screen to create the perfect backdrop for your brand.
+
+
+
+### [BLANK] App Settings - Callout 6
+
+To further enhance the user experience, check out our [Sign-in Screen](https://www.glideapps.com/docs/reference/ux/sign-in-screen) guide for more customization options.
+
+### App Settings - Block 7
+
+## User Agreements
+
+
+
+![App Settings - Image 7](https://images.ctfassets.net/yreygbm72t08/3I3pLYgm5qdjqv8FbZhRvL/228d2c7c9719ef6108e78b8d4cce09c3/CleanShot_2025-03-27_at_6_.49.50_2x.png)
+
+
+
+**User Agreements** enable you to include terms and conditions that users must accept before logging into your app. Here's what you can do in this section:
+
+- Enable the agreements checkbox to show on the sign-in screen.
+- Customize the agreement message displayed next to the checkbox.
+- Add links to the specific agreements you want your users to agree to.
+
+
+
+### [BLANK] App Settings - Callout 7
+
+For more ways to customize the sign-in screen of your app, check out our [Sign-in Screen](/docs/reference/ux/sign-in-screen) guide.
+
+### App Settings - Block 8
+
+## Data
+
+
+
+![App Settings - Image 7](https://images.ctfassets.net/yreygbm72t08/2FhuzXnkNYDFHNyJCInbCf/6807a25349f43a2b29a090979d3480bd/CleanShot_2025-03-27_at_6_.51.12_2x.png)
+
+
+
+**Data** provides access to advanced features related to the data behind your app, allowing you to fine-tune data syncing and export options. Here's a brief overview of the advanced data features:
+
+- **Sync Mode:** Choose how your app syncs with data sources using two options:- **Normal: **Your app syncs whenever users add, edit, or change data.
+- **Extra:** In addition to the Normal setting, your app syncs every few minutes while users are active. Note that all syncs in this mode count as [Updates](/reference/account/updates), even if no data has changed.
+- **Data Sources:** Manage your app's connection to a Google Sheet.
+- **Data Export:** Export app data for convenient backup or analysis outside the app.
+
+
+
+### [BLANK] App Settings - Callout 8
+
+For a better understanding of how Glide interacts with data, check out our [Data Refresh Guide](/docs/reference/user-experience/data-refresh).
+

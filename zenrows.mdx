@@ -1,0 +1,94 @@
+---
+title: "ZenRows"
+description: "Extract content from a given URL."
+---
+
+# ZenRows
+
+Extract content from a given URL.
+
+### Zenrows - Block 1
+
+[ZenRows](https://zenrows.com/) provides web scraping and automation tools that allow you to extract data from any website. With it, you can fetch content, screenshots, and structured data from web pages into your Glide app.
+
+### Don't see the ZenRows Integration?
+
+You may need to upgrade your plan. [Browse Glide's plans and find the right fit for you.](https://www.glideapps.com/pricing)
+
+### Zenrows - Block 2
+
+## **Adding the Integration**
+
+To start using the ZenRows integration, you first need to add it to your project. You will need a [ZenRows](https://www.zenrows.com/) account if you don’t already have one.
+
+### Zenrows - Arcade 1
+
+### Zenrows - Block 3
+
+1. In Glide, click the Settings icon in the upper-right corner.
+2. Navigate to the **Integrations** tab and select ZenRows.
+3. Click the **Add to app** button.
+4. Copy your ZenRows API key from the Universal Scraper API dashboard.
+5. Click away to exit the configuration.
+
+## Get Page Content Action
+
+The **Get Page Content** action retrieves the HTML content from the webpage URL you provide using your connected ZenRows account. The action returns the complete HTML markup of that webpage, including all tags, attributes, and text that appears on that page. The action can also render JavaScript on web pages to capture dynamically loaded content.
+
+The action can be added to a column in the [Data Editor](/getting-started/introduction-to-the-data-editor), a [Component](/essentials/components) that supports [Actions](/getting-started/introduction-to-actions) (e.g., a [Button component](/essentials/components/button)), or added to a workflow in the [Workflow Editor](/getting-started/introduction-to-workflows#the-workflow-editor).
+
+### Zenrows - Data Editor Title
+
+### **In the Data Editor**
+
+
+
+### Zenrows - Arcade 2
+
+### Zenrows - Block 6
+
+1. Open the table where you want to use the **Get Page Content** feature.
+2. Add a new URL column by clicking the (**+**) plus symbol to the right of the table. This will store the URL you pull the source from. - New columns added with the plus button will always appear on the right. If you'd like to add a column somewhere else in your data, you can select the dropdown menu on an existing column and choose **Add column right**. You can also click and drag columns to rearrange them.
+3. Add a **Get Page Content** column to store the result. Search for “Get Page Content” or navigate to Integrations → ZenRows → Get Page Content.
+4. Select the URL column you created as the **URL** source, or enter a custom value.
+5. Enable advanced features if needed.
+6. Click **Save** to exit the configuration.
+
+### **In the Layout Editor**
+
+
+
+### Zenrows - Arcade 3
+
+### Zenrows - Block 7
+
+1. If you have not already created columns to store the URL and the result, make those columns following the steps above.
+2. Select the component you'd like to add the action to. Remember, this must be a component that supports actions.
+3. Search for the **Get Page Content** action or navigate to Integrations -> ZenRows -> Get Page Content.
+4. Name the action.
+5. Choose an icon.
+6. Select the column that contains the **URL**, or enter custom text.
+7. Select which column to store the Page Content.
+8. Enable advanced features if needed.
+9. Click away to exit the configuration.
+
+### **In the Workflow Editor**
+
+
+
+### Zenrows - Arcade 4
+
+### Zenrows - Block 8
+
+1. If you have not already created columns to store the URL and the result, make those columns following the steps above.
+2. Select the (**+**) plus symbol or the **+ New Workflow** button.
+3. Choose a trigger. - For [App Interaction Workflows](/automation/workflows/user-interaction), select as the data source for the action the data source of the screen where the action is triggered.
+- For other trigger types, create a loop and select the data source where you want to store the metadata.
+4. Search for the **Get Page Content** action or navigate to Integrations -> ZenRows -> Get Page Content.
+5. Select the column that contains the **URL**, or enter custom text.
+6. Select which column to store the Page Content.
+7. Enable advanced features if needed.
+8. Click away to exit the configuration.
+
+To learn more generally about Integrations in Glide, including how they affect your app’s usage, check out our [Introduction to Integrations](/automation/integrations).
+

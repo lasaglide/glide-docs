@@ -1,0 +1,57 @@
+---
+title: "Scan Barcode or QR Code"
+description: "Scan barcodes or QR codes and log the values to your table."
+---
+
+# Scan Barcode or QR Code
+
+Scan barcodes or QR codes and log the values to your table.
+
+### Barcode Scan Action
+
+### Scan Barcode - Block 1
+
+The **Scan Barcode or QR Code** action allows users to scan barcode and QR codes with your app and store the scanned values directly in your data. It can be used as an action in the components of your app (like [Buttons](/essentials/components/button) and [Collections](/essentials/components/collection-components)) or triggered along with other actions as part of a [Workflow.](/getting-started/introduction-to-workflows)
+
+If you want to scan many barcodes one right after the other, we recommend the [Scanner component,](/essentials/components/scanner) which keeps the user’s camera on and ready to scan. Each scan will use 5 updates.
+
+### [BLANK] Scan Barcode - Callout 1
+
+The Scan Barcode and QR Code action is available for customers with Business and Enterprise plans. [Browse our plans to find the right fit for you.](https://www.glideapps.com/pricing)
+
+### Scan Barcode - Block 2
+
+Glide uses [Dynamsoft](https://www.dynamsoft.com/) to process barcode scans. [Click here to read more about which barcode types are supported.](https://www.dynamsoft.com/barcode-reader/barcode-types/)
+
+## Setting up the Scan Barcode Action
+
+### In the Layout Editor
+
+
+
+### Scan Barcode - Arcade 1
+
+### Scan Barcode - Block 3
+
+1. If you haven’t yet made a column in your data to store the scanned barcode values, make that column in the data editor. We recommend using a **text** column, or a **URL** column if you’re scanning URL values.
+2. Click on the plus (+) sign in the **Components** panel and select the **Component** you want to trigger the action.
+3. In the **General** tab on the right side of the Layout Editor, navigate to the **Actions** section and search for the **Scan Barcode or QR Code **action.
+4. Select the icon and descriptive text to use in your app.
+5. Select which column you want to save the scanned values to.
+
+### In the Workflow Editor
+
+
+
+### Scan Barcode - Arcade 2
+
+### Scan Barcode - Block 4
+
+1. If you haven’t yet made a column in your data to store the scanned barcode values, make that column in the data editor. We recommend using a **text** column, or a **URL** column if you’re scanning URL values.
+2. Select the **+ New Workflow** button. If you have existing actions, click on the plus (+) sign in the left panel.- To add new actions to an existing flow, hover just underneath an existing step and click the plus button.
+3. Select the **data source** for your action.
+4. Search for **Scan barcode or QR Code**.
+5. Select which column you want to save the scanned values to.
+
+
+

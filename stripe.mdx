@@ -1,0 +1,100 @@
+---
+title: "Stripe"
+description: "Send an invoice with Stripe"
+---
+
+# Stripe
+
+Send an invoice with Stripe
+
+### Stripe
+
+### Stripe - Block 1
+
+[Stripe](https://stripe.com/) is a leading payment processing platform that simplifies online transactions and enables businesses to accept payments effortlessly. With the "Send Invoice" integration in Glide, you can generate and send invoices to customers within your app.
+
+### Don't see the Stripe integration?
+
+You may need to upgrade your plan. [Browse Glide's plans and find the right fit for you.](https://www.glideapps.com/pricing)
+
+### Adding + Configuring Integration Header
+
+## Adding and Configuring the Action
+
+
+
+### Adding Stripe Arcade
+
+### Stripe - Block 2
+
+1. In Glide, click the Settings icon in the upper-right corner.
+2. Navigate to the [Integrations](/introduction-to-integrations) tab and then select [Stripe](https://stripe.com/).
+3. Click the **Add to app **button.
+4. Next, log into your [Stripe Account](https://dashboard.stripe.com/apikeys) to get your API Key.
+5. Select **Create secret key, **give it a **Name**, and copy your new Stripe API key.
+6. Back in Glide, enter this **API Key **in your Stripe Integration settings.
+
+## Send Invoice
+
+The Stripe integration **Send Invoice** action allows you to create and send invoices to customers right from your app. This feature can be added inside a component that supports actions or added to a workflow in the [Workflow Editor](/getting-started/introduction-to-workflows#the-workflow-editor). 
+
+### **Required Inputs**
+
+To create an invoice, you need to provide the following information: `Email`, `Total`, and `Currency`.
+
+Make sure to specify the smallest unit of currency for the total amount. For instance, if you want to create an invoice for $14.25, you would input 1425, as 1425 cents is 14.25 dollars.
+
+You can review a full list of support currencies [here](https://stripe.com/docs/currencies).
+
+### **Optional Inputs**
+
+If you want to connect this invoice with your existing Stripe data, you can also include the `Product ID`, `Price ID`, or `Customer ID`.
+
+These IDs can be found in your Stripe [Products](https://dashboard.stripe.com/products) and [Customers](https://dashboard.stripe.com/customers) sections.
+
+### **Outputs**
+
+Once the invoice is successfully created, Stripe will provide you with the resulting `Invoice ID`, `Price ID`, and `Product ID`. These details can be stored in Glide for future reference.
+
+To view your invoices, make a clickable link using the Invoice ID:
+
+1. Save the Invoice ID you get from Stripe
+2. Make a new [Template Column](/template-column)
+3. Use this link: `https://dashboard.stripe.com/invoices/{your_invoice_id}`
+
+### Setting up the Send invoice action
+
+
+
+### Send invoice arcade
+
+### Stripe - Block 3
+
+1. If you have not yet set up columns in your data to store Product, Customer, Invoice, and Price IDs, we recommend doing that first if you plan to use any of those values. 
+2. Select the component you'd like to add the** **action to. Remember, this must** **be a component that supports actions.
+3. Search for the **Send invoice **action or navigate to Integrations -> Stripe -> Send invoice.
+4. Name the action.
+5. Choose an icon.
+6. Enter the required fields: Recipient email, total, and currency. 
+7. Enter manual values or specify columns from your data for any of the optional fields you want to use to link your data with your Stripe account. These optional fields are **Product ID, Price ID, **and **Customer ID. **
+8. Stripe will return an **Invoice ID**, **Price ID**, and **Product ID**. Choose where you'd like to store this data.
+9. Click away to exit the configuration.
+
+
+
+### Stripe Use Cases
+
+## Use Cases
+
+The Stripe integration allows you send invoices from your app. Here are a few ways businesses are using the Stripe integration to invoice their customers:
+
+1. **Freelance Services**: Automatically send invoices for specialized or additional services offered within the app.
+2. **Membership Fees**: Generate invoices for annual or monthly membership fees for businesses with a subscription model.
+3. **Custom Orders**: Instantly craft invoices tailored to unique orders or specific customer requests.
+
+
+
+### Integrations Learn More Block
+
+To learn more generally about Integrations in Glide, including how they affect your app’s usage, check out our [Introduction to Integrations](/automation/integrations).
+

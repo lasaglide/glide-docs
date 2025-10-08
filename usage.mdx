@@ -1,0 +1,160 @@
+---
+title: "Usage"
+description: "Track app usage across your team with the usage dashboard."
+---
+
+# Usage
+
+Track app usage across your team with the usage dashboard.
+
+### Usage - Block 1
+
+The **Usage** dashboard provides usage details across all apps within a team. This dashboard can be found in the lower left corner of the [Glide Dashboard](/getting-started/quick-start/glide-dashboard).
+
+
+
+![Usage - Image 1](https://images.ctfassets.net/yreygbm72t08/4MUpVnAilygsGqWTLwNLgh/3c340fc2d84352ab07bccf1667f8eed2/CleanShot_2024-01-22_at_12_.41.13_2x.png)
+
+
+
+By default, the usage dashboard will show usage data from the current billing period across all apps in the team. If you have more than one app, you can filter the dashboard to show a particular app. To review usage for the previous billing cycle, select the **Current usage cycle** dropdown and change to **Previous usage cycle.**
+
+## **Usage Quotas by Plan**
+
+Usage quotas for updates and users differ by plan. Note that free plans have no updates, because Glide Tables do not consume updates. Free plans only allow for 10 [personal users](/essentials/users/personal-users). These quotas cannot be increased by enabling unlimited usage.
+
+For all other plans, update and user quotas, as well as costs for unlimited usage, are below. For plans paid yearly, the cost to add users is slightly cheaper. 
+
+### Explorer
+
+
+
+|  | **Included** | **Cost****/increment** |
+| --- | --- | --- |
+| **Users** | 100 personal | N/A |
+| **Updates** | 250 | $0.02/update |
+
+
+
+
+### Maker
+
+
+
+|  | **Included** | **Cost/increment** |
+| --- | --- | --- |
+| **Users** | Unlimited personal | N/A |
+| **Updates** | 500 | $0.02/update |
+
+
+
+
+### Business
+
+
+
+|  | **Included** | **Cost/increment/monthly** | **Cost/increment/yearly** |
+| --- | --- | --- | --- |
+| **Users** | 30 | $6/user | $5/user |
+| **Updates** | 5,000 | $0.02/update | $0.02/update |
+
+
+
+
+
+
+### [BLANK] Usage - Warning 1
+
+Need more usage than what your plan allows? You can upgrade your plan from the [Billing](/reference/account/billing) screen. If you need more than what the Business plan can offer, [consider the Enterprise plan](https://www.glideapps.com/enterprise). 
+
+### Usage - Block 2
+
+## Users
+
+On the top left of the dashboard you will see your team’s user quotas and usage. Users are anyone who signs into or uses any of the apps in a team during a given monthly billing period. Included users are unique active users across all apps, counted monthly. By default users are shown for all apps in the team. To filter results by app, choose which app you'd like to review from the dropdown menu on the upper left. 
+
+
+
+![Usage - Image 2](https://images.ctfassets.net/yreygbm72t08/4zttMnyF68uIrxiPnV17N4/55ad21ba80c6ef9aad4b0abcb2b69b3a/CleanShot_2024-01-22_at_12_.43.57_2x.png)
+
+
+
+To see a list of all active users, select **View all** in the users section of the dashboard. This will open a window that shows the user email, date and time of most recent login, and what kind of user this person is being counted as.
+
+## Updates
+
+On the right you can see [updates](/reference/account/updates) used across all apps, as well as how close you are to reaching the updates limit on your plan. Clicking on an app name will change the usage dashboard to show only usage for that app. You can then review how updates are being consumed within an app.
+
+
+
+![Usage - Image 4](https://images.ctfassets.net/yreygbm72t08/LTCIENtPcDYtbb6OAk3iQ/ddda143b900f8ae35c62036ad70192cb/CleanShot_2024-01-22_at_12_.51.48_2x.png)
+
+
+
+In general, most features of Glide consume **one update per changed row,** but there are many exceptions to this general principle. For example, [Integrations](https://www.glideapps.com/integrations) use varying updates depending on which action or computed column feature is being used. To read more about updates and how they’re calculated for your apps, [see our full guide here](/docs/reference/account/updates).
+
+## Unlimited Usage
+
+
+
+### Have questions about Unlimited Usage?
+
+[Read the full guide here](https://www.glideapps.com/docs/reference/account/updates) or contact our [sales team](https://www.glideapps.com/contact/enterprise?sourcePage=/enterprise) to learn more.
+
+### Usage - Block 4
+
+If you reach the usage limits for your plan, certain features in your app may stop functioning as expected. To avoid this, you can enable **Unlimited usage.** Unlimited usage comes with additional costs that accrue as your usage increases.
+
+For example, if unlimited usage is enabled for updates, then when you pass your updates quota, Glide will begin to track your overage usage per update. At the end of the billing period, you will be charged $.02 per update used over the plan's quota. 
+
+Unlimited usage can also be enabled for users who access your apps. The price for additional users varies by plan. See the charts above for a breakdown of quotas and unlimited usage costs per plan. 
+
+If you’re on a free trial and want to activate unlimited usage, you can end your trial early. Ending early will activate unlimited usage immediately, reset your usage cycle, and charge your payment method right away.
+
+To disable unlimited usage, return to the usage dashboard and select **Disable**.
+
+## Row Usage
+
+On the bottom left, you will see the row usage for all of the apps in your team. If you filter by app, then only the app you selected will show row usage data. All self-serve Glide plans have different row limits per app. If you need more rows, [consider a Business or Enterprise plan. ](https://www.glideapps.com/pricing)
+
+
+
+![Row usage for all of the apps in your team.](https://images.ctfassets.net/yreygbm72t08/1NU3o4QZV3scQ997M3MbVp/ec6889356030aa27e11e666824173564/CleanShot_2024-01-17_at_4_.30.52_2x.png)
+
+
+
+Row limits differ by plan.
+
+
+
+| **Plan** | **Row Limit per App** |
+| --- | --- |
+| Free | 25,000 |
+| Maker | 50,000 |
+| Business | 100,000 |
+| Enterprise | 10 million |
+
+
+
+
+### **What happens when the row limit is reached?**
+
+Row limits are enforced per app. All data rows from spreadsheet data sources (Glide Tables, Excel, Google Sheets, and Airtable) will count toward the row limit. When a team reaches the row limit, the following will happen:
+
+1. Data syncing with external spreadsheets (Excel, Google Sheets, Airtable) will become unreliable
+2. New tables created will only show 10 rows
+3. Users of your app will see a warning message in the app
+
+If the team has hit the row limit, there are a few options:
+
+1. Delete unneeded rows or tables from the team. If you have access to [Big Tables](/essentials/data-sources/big-tables), these rows can be archived in a Big Table. You can do this by either [exporting the whole table and importing to a Big Table](https://www.glideapps.com/docs/essentials/data-sources/big-tables#import-to-a-new-big-table), or by manual copy and paste into the Big Table. 
+2. [Update to a Business or Enterprise plan](https://www.glideapps.com/pricing) to increase your row limits or access high-scale data sources like SQL, then migrate your data to that new data source.
+
+### **High-scale data source rows**
+
+If you have an Enterprise plan, you can also leverage high-scale data sources such as [PostgreSQL](/essentials/data-sources/postgresql), [MySQL](/essentials/data-sources/mysql), [Google Cloud SQL](/essentials/data-sources/google-cloud-sql), and [BigQuery](/essentials/data-sources/bigquery). High-scale data sources have a row limit of 10 million when on an Enterprise plan.
+
+### **Migrating to a high-scale data source**
+
+Migrating data from an external data source or a Glide Table involves manually recreating the columns in a new table that support scale beyond 25,000 rows, such as Big Tables. Once the data is in place, you will then need to reconnect any components or screens that were linked to the original table, so they now use the new Big Table as a data source. 
+

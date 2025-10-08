@@ -1,0 +1,115 @@
+---
+title: "Single Sign-On"
+description: "Enable users to authenticate with SSO."
+---
+
+# Single Sign-On
+
+Enable users to authenticate with SSO.
+
+### Single Sign On - Block 1
+
+Connect Glide apps to your organization’s identity tools like Okta, Azure AD, Google, and dozens more. Glide SSO is compatible with any Identity Provider (IdP) and supports both SAML and OIDC protocol.
+
+
+
+![Single Sign On - Image 1](https://images.ctfassets.net/yreygbm72t08/1DIscU8x62JWdKZmtqpY6S/f115bdead5422256e6ea5fc0b2b54afa/image.png)
+
+
+
+
+
+### Don't see the SSO option?
+
+SSO is available for Enterprise plans. [Email sales@heyglide.com to get started. ](mailto:sales@heyglide.com)
+
+### Adding SSO
+
+## Adding SSO to Your App
+
+
+
+### Single sign-on arcade
+
+### Single Sign On - Block 2
+
+1. In your Glide app, click the Settings icon in the upper-right corner.
+2. Navigate to the **Integrations **tab and then select **Single sign-on**.
+3. Click the **Add **button.
+4. Click **Connect to provider **and follow the setup wizard to connect with the identify provider of your choice.
+5. Once the setup is done, click on **Check again **to finish the configuration. If the configuration is done correctly, **Connect **and **Check again **buttons will disappear and be replaced with the **Open dashboard** button.
+
+
+
+![Single Sign On - Image 2](https://images.ctfassets.net/yreygbm72t08/I9G0jOxfrL2VrS5zvyUgm/cf1291fc634f3d136735b52d550021da/CleanShot_2025-03-27_at_3_.28.50_2x.png)
+
+
+
+
+
+
+### [BLANK] Single Sign On - Callout 2
+
+Note that an IT administrator will likely be needed to assist with this setup, as it requires secure information from your identity provider.
+
+### Single Sign On - Block 3
+
+## Configuring App Settings for SSO
+
+When you enable SSO in your app, it has implications for both your **privacy** and **users & authentication** settings.
+
+### Access
+
+In the privacy settings, you will have a new option to allow **Anyone from SSO** to sign in. This will automatically turn on when SSO is enabled, and it cannot be turned off unless SSO is disabled.
+
+### Authentication
+
+In the** Access** menu, you can make adjustments to how your users will sign in to your app. 
+
+
+
+![The project's Access settings.](https://images.ctfassets.net/yreygbm72t08/2RkNbUAt0FpNIIFM7KWTL0/786a023a68147639ec32ad4dea125243/CleanShot_2025-03-27_at_3_.26.40_2x.png)
+
+
+
+After you've set up the SSO integration, the **Single sign-on** option can be enabled. This option cannot be turned off unless you remove the SSO integration. If you have turned on the SSO option, the other authentication options will automatically turn off.
+
+When SSO is enabled, the **Access Requests** option will disappear.
+
+If you would like to use only SSO for authorization, make sure you disable **PIN** emails. This will not be disabled automatically, so you can decide when you are ready to disable this option. Note that when you disable PIN emails, users will no longer see the option to manually enter their email address. They will only see the sign in with SSO button.
+
+### Sign-in Screen
+
+When you enable SSO, there will be a new option for the sign-in screen to add a button for SSO. You can customize what the text on this button says.
+
+
+
+![Single Sign On - Image 3](https://images.ctfassets.net/yreygbm72t08/53XL1xnyXG5IsFFwXByIPB/66c38423ccb2c2f2a5560f03007d28a3/image.png)
+
+
+
+This sign-in screen option will not be available unless SSO has been fully configured and tested. 
+
+## Testing Your SSO Integration
+
+Before making your SSO integration live, we recommend testing the sign in to ensure that it’s working properly. The SSO setup wizard will confirm if sign in is successful, or if there are any issues that need to be resolved.
+
+To learn more generally about Integrations in Glide, including how they affect your app’s usage, check out our [Introduction to Integrations](/introduction-to-integrations).
+
+### The SSO Dashboard
+
+The SSO Dashboard allows you to review your SSO connection, metadata configuration, and user sessions. You can configure reset and test the connection to your identity provider, copy or edit your metadata as needed, and review sign in attempts that your users make. You can filter session by state (All, Authorized, Failed, Started, or Successful).
+
+Clicking into an individual session will display the session ID, user ID, timestamp, name, email, and session type. You can also see the full SAML request and SAML response, and copy them if needed. 
+
+## Removing SSO from Your App
+
+1. In your Glide app, click the Settings icon in the upper-right corner.
+2. Navigate to **Access **and disable Single Sign on.
+3. Navigate to the **Integrations **tab and then select **Single Sign On**.
+4. Click the **Remove from App **button.
+
+Note that you must first disable Single Sign on in the Access menu before you can remove the integration from your app. If you are removing SSO as a your sign in method, we recommend choosing another [secure sign in method](/essentials/users#private-vs.-public-users). 
+
+
+

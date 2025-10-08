@@ -1,0 +1,155 @@
+---
+title: "Generate CSV"
+description: "Let users generate CSV files from your tables or relations through an action."
+---
+
+# Generate CSV
+
+Let users generate CSV files from your tables or relations through an action.
+
+### Generate CSV
+
+### Not available with Glide Big Tables
+
+Generate CSV is not available for use with Glide Big Tables at this time. 
+
+### Generate CSV - Block 1
+
+A CSV (Comma-Separated Values) file is a type of file used to store tabular data (numbers and text) in plain-text form. It's essentially a basic spreadsheet format without the additional formatting or formulas you'd find in something like a Glide Table, Google Sheet, Excel, or Airtable. CSV files are typically used for data import and export among different software programs.
+
+Glide displays your data in various styles and layouts, but sometimes users need to export that data to a CSV file for use outside of your Glide app. For this, you can use the Generate CSV action.
+
+
+
+![Generate CSV Hero](https://images.ctfassets.net/yreygbm72t08/35Y6ubJ6NwIXUer964Qi7G/219f2d11dc89ec0297b614fbd4a01f13/image.png)
+
+
+
+
+
+### Don't see the Generate CSV integration?
+
+You may need to upgrade your plan. [Browse Glide's plans and find the right fit for you.](https://www.glideapps.com/pricing)
+
+### Adding + Configuring Integration Header
+
+## Adding and Configuring the Action
+
+
+
+### Adding Generate CSV
+
+### Generate CSV - Block 2
+
+## Using the Generate CSV Action
+
+**Generate CSV **can be added to a [Component](/components) that supports [Actions](/automation/actions) (e.g., a [Button component](/button-components)) or added as a step to a workflow in the [Workflow Editor.](/getting-started/introduction-to-workflows#the-workflow-editor)
+
+
+
+![CSV Input/Output](https://images.ctfassets.net/yreygbm72t08/5GZAW54OysscobC0LWNVgP/6239a4bb0ac0ff903e047c252dea8c11/image.png)
+
+
+
+### In the Layout Editor
+
+
+
+### Generate CSV Layout Editor Arcade
+
+### Generate CSV Layout Editor Setup
+
+1. Select the component you'd like to add the **Generate CSV **action to. Remember, this must be a component that supports actions. 
+2. Select which source data to use for the CSV that will be generated. - [Relations](/relations) or [Query columns](/query-column) can be the source of data. You can therefore generate a CSV file from filtered data.
+3. Use **Select columns** to include as many columns from your data source as you’d like. Glide will choose most columns by default. You can also rename columns directly from this screen to customize your CSV file.
+4. Specify a column in your data to store the resulting CSV file that is generated. A URL will be generated for the file. 
+
+### In the Workflow Editor
+
+
+
+### Generate CSV Action Editor Setup
+
+1. Select the plus symbol or the **+ New Workflow **button. 
+2. Select which source data to use for the CSV that will be generated. - [Relations](/relations) or [Query columns](/query-column) can be the source of data. You can therefore generate a CSV file from filtered data.
+3. Search for the **Generate CSV File **action and add it.
+4. Confirm which table should be used for the action. Use **Select columns** to include as many columns from your data source as you’d like. Glide will choose most columns by default. You can also rename columns directly from this screen to customize your CSV file.
+5. Specify a column in your data to store the resulting CSV file that is generated. A URL will be generated for the file. 
+
+
+
+### Generate. Open. Download. Share. Delete.
+
+You can use the Generate CSV feature in tandem with actions such as [Open Link](/open-link) to view and download the file, [Show New Screen](/show-new-screen) to share it, and [Set Column Values](/set-column-values) to delete it.
+
+### Generate CSV Use Cases
+
+## Use Cases
+
+You can generate a CSV file from within your app and share it with colleagues. Although the app can allow direct access to the data through its interface, use the Generate CSV feature if your colleagues would rather receive the raw data as a CSV file in order to further process it.
+
+Business use cases might include sales, marketing, operations, HR, logistics, fieldwork, and much more. Here are just a few examples of what you could do:
+
+1. Expense Reporting: Export spending reports and upload to any expense management platform that accepts .csv files.
+2. Logistics: Share shipping and delivery details with the logistics team.
+3. Health and Safety Audits: Share field inspection results for compliance.
+4. Warehouse Management: Export data on stock levels for supply chain management.
+5. Data Backups: Generate data backups and send to IT for storage.
+6. Real Estate Listings: Share property details with potential clients.
+7. Asset Tracking: Share the location and status of company assets with the operations team.
+8. Event Registrations: Export event attendee data for event management.
+9. Fleet Management: Export vehicle usage and maintenance data for the logistics team.
+10. Equipment Maintenance: Share equipment maintenance logs with the operations team.
+
+
+
+### Example: Generate, download, share, and delete a CSV file
+
+## Example: Generate, download, share, and delete a CSV file
+
+To set up a workflow with Generate CSV, you’ll likely want to include the following steps:
+
+- Generate the CSV file
+- Download the CSV file to preview it
+- Share the CSV file with yourself or your colleagues
+- Delete the CSV file
+
+In this example, we will set up a screen with a collection of items on it. We can then allow the user to generate a CSV file of the collection, download the file, share it, and delete it.
+
+### First: the Data Editor
+
+In the [Data Editor](/introduction-to-the-data-editor):
+
+1. Create a new table called “Generate CSV.”
+2. Create a basic URL column called “Generate CSV URL” and a basic text column called “Share CSV - Emails”.
+
+### Next: the Workflow Editor
+
+You can combine the “Generate CSV” and “Download CSV” actions into a workflow in the Workflow Editor. Consider a waiting step of a few seconds in between to allow the file to be generated. 
+
+1. In the [Workflow Editor](/getting-started/introduction-to-workflows#the-workflow-editor), create a **Generate CSV** action. 
+2. Associate this action with the “Generate CSV” table as its data source. 
+3. In the configuration, select the data you want to export (eg. Products) and indicate “Generate CSV URL” as the field where to save the generated URL. - Optionally, add a [Show notification](/show-notification) action.
+4. Create an action called “Download CSV”. 
+5. Associate this action with the “Generate CSV” table as its data source. 
+6. Select the [Open link](/open-link) action and configure the action to open the “Generate CSV URL”.
+7. Create an action called “Show New Screen to Share CSV”. 
+8. Select “Generate CSV” as the screen source since this table includes the URL of the CSV file we want to send and a comma-separated list of the email addresses to share with.
+9. Create an action called “Share CSV”. 
+10. Associate this action with the “Generate CSV” table as its data source. 
+11. Select the [Send email](/send-email) action and configure the To, Subject, and Body fields. - Optionally, add [Show notification](/show-notification) and [Go back](/go-back) actions to enhance the user experience.
+
+If you'd like to also set up the ability to delete the CSV file:
+
+1. Create an action called “Delete CSV” and associate this action to the “Generate CSV” table as its data source. 
+2. Select the [Set column values](/set-column-values) action and clear the value of the “Generate CSV URL” column.
+
+### Then: the Layout Editor
+
+1. Create a page with “Generate CSV” as the data source.
+2. On the page, add components to which you will associate the generate, download, share, and delete actions created previously. These components can be collections or buttons.
+3. On the new screen where the user will select contacts with whom to share the generated CSV, include  a choice component that will be sourced from a contacts table and write to the “Share CSV - Emails” column in the “Generate CSV” table. Configure the choices as chips and allow selecting multiple.
+4. Still on the new screen, add a button block and associate the “Share CSV” action with one of the buttons.
+
+
+

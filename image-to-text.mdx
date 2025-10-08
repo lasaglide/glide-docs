@@ -1,0 +1,81 @@
+---
+title: "Image to Text"
+description: "Extract text from an image as plain text or JSON."
+---
+
+# Image to Text
+
+Extract text from an image as plain text or JSON.
+
+### Image to Text Body 1
+
+## Image to Text
+
+With the **Image to Text **feature, you can perform text extraction, visual analysis, and generate image descriptions. The result can be either plain text or a JSON (structured) format. To get a JSON result, make sure to include that preference in your instructions.
+
+### Text Extraction
+
+Extract text from the image including information from receipts or other documents, handwritten notes, signs, or labels.
+
+### Visual Analysis
+
+Analyze and identify elements from the image like objects, shapes, colors, and certain landmarks or logos. It may even recognize simple relationships between objects (e.g., "a cat sitting on a chair"). This could also mean asking questions about the image, such as "Is there a box sitting in front of the door?" Whatever instructions you put here will apply to every image in the column, so keep that in mind when leveraging the feature to ask questions.
+
+### Image Description
+
+You can generate a description of the image. The model will provide detailed descriptions of what's depicted in an image, including objects, people, settings, and other relevant details. For example, it can describe a scene with people, their activities, or the environment. This does not extract any text from the image, it only describes what appears. By changing the instructions, you can change the details, tone, and more.
+
+## Adding the Image to Text feature
+
+### In the Data Editor
+
+
+
+### Image to Text Data Editor Arcade
+
+### Image to Text Body 2
+
+1. Open the table where you want to use the **Image to Text** feature.
+2. Add a new [Basic Image Column](/basic-columns) by clicking the (**+**) plus symbol to the right of the table. This column will store the image you extract text from. - New columns added with the plus button will always appear on the right. If you'd like to add a column somewhere else in your data, you can select the dropdown menu on an existing column and choose **Add column right. **You can also click and drag columns to rearrange them.
+3. Add an **Image to Text **column to store the result. Search for “Image to Text” or navigate to AI → Image to Text.
+4. For the **Image **field, use the image column you created previously. 
+5. For the **Method **field, choose if you would like the output to describe the image, extract text from the image in plain format, or extract text in JSON structured format.
+6. **Note:** If the action will be triggered in the Workflow Editor, then add a basic text **Result** column where the result will be stored.
+7. Click on **Done**.
+
+### In the Layout Editor
+
+
+
+### Image to Text Layout Arcade
+
+### Image to Text Body 3
+
+1. If you have not yet set up the columns you'll need in the Data Editor, start with the steps above. 
+2. Add a component that supports actions such as [Button](/essentials/components/button), [Hint](essentials/components/hint), or [Rich Text](/essentials/components/rich-text). Bind this component with the column where the output is stored.
+3. In the configuration panel on the right, in the **Actions** menu, select the **Image to Text **action.
+4. Name the action and choose an icon.
+5. For the **Image **field, select the image column you created previously. 
+6. For the **Method **field, choose if you want to describe the image, extract text as JSON, or extract plain text. 
+7. For the **Results** **Text **field, choose the column where you want to store the resulting text. 
+
+If you'd like to perform multiple methods on the same image (for example, for describing the image and extracting the image text), you'll need to set up a separate action for each method. 
+
+### In the Workflow Editor
+
+
+
+### Image to Text Action Editor Arcade
+
+### Image to Text Body 4
+
+1. If you have not yet set up the columns you'll need in the Data Editor, start with the steps above.
+2. Select the (**+**) plus symbol or the **+ New Workflow** button.
+3. Select as the data source for the action the data source of the screen where the action is triggered.
+4. Add **Image to Text** as the first step of the workflow.
+5. Configure the **Image to Text** action: For the **Image** and **Text **fields, use the image and text columns created previously. 
+6. For **Method**, choose for the output to describe the image, extract text from the image in plain format, or extract text in JSON structured format.
+7. Optionally, add a [Show Notification](/automation/actions/show-notification) action at the end of the workflow to notify the user.
+
+
+

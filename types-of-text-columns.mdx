@@ -1,0 +1,84 @@
+---
+title: "Types of Text Columns"
+description: "Add different text values to your app."
+---
+
+# Types of Text Columns
+
+Add different text values to your app.
+
+### Types of Text - Block 1
+
+**Text columns** can hold four different types of text in your app:
+
+- Plain text
+- Rich text
+- Emojis
+- Email addresses
+- Multiple texts
+
+## Plain text
+
+
+
+![Types of Text - Plain Text](https://images.ctfassets.net/yreygbm72t08/1mY5UvFKLrWf3v55yVowqg/b574119ed83714f16afca3b5e50dd5ef/CleanShot_2023-10-24_at_11_.23.16_2x.png)
+
+
+
+A plain text column holds exactly that—plain, unformatted text values. This can be used for a wide range of purposes such as storing names, locations, addresses, roles, comments, notes, tasks, days of the week, months of the year, etc. Your text can also include emojis.
+
+You can display this information in your app using various [**Components**](/docs/essentials/components), or as [**Column Values**](/docs/reference/values/column-values) when setting up [**Collections**](/docs/essentials/components/collections) and components. The appearance of the plain text values in your app depends on the formatting options available for the chosen component.
+
+## Rich Text
+
+
+
+![Types of Text - Rich Text](https://images.ctfassets.net/yreygbm72t08/1fu9UMDmCYgpVIxwdWf18v/8625f3b022b2f964c462de8997da46b4/CleanShot_2023-10-24_at_11_.57.29_2x.png)
+
+
+
+A rich text column holds text that can be formatted or styled as italic text, bold text, headers, bullet points, numbered lists, links, and more using Markdown syntax. Values in a rich text column can be displayed with the specified styling using the [**Rich Text Component**](/docs/essentials/components/rich-text) in your app.
+
+For an in-depth explanation of what Markdown is and how to use it, check out the [**Markdown Guide**](https://www.markdownguide.org/getting-started). If you'd like to try a browser-based Markdown text editor, try [**StackEdit**](https://stackedit.io/).
+
+## Emoji
+
+
+
+![Types of Text - Emoji](https://images.ctfassets.net/yreygbm72t08/522LdaMwM02onKNZNG7DkG/6472e4f6738ad73516e1ab2884cc090e/CleanShot_2023-10-24_at_12_.06.34_2x.png)
+
+
+
+An emoji column can hold one or more emojis as well as plain text. If you use multiple emojis in a row (or emoji and plain text), you can display the information in your app in the same way as you would display plain text values.
+
+You can also display emojis in this column as the image in a collection component. When configuring the component, select the emoji column as the Column Value in the image field. Glide will use the emoji as the image for that collection item. If a row has more than one emoji in the column, Glide will use the first emoji as the image.
+
+## Email
+
+
+
+![Types of text - Email](https://images.ctfassets.net/yreygbm72t08/6qPpuofjUGan5263W04IYR/c03a8a1261c4ab9c0aa3f5a9ba08c2a3/CleanShot_2023-10-24_at_12_.09.19_2x.png)
+
+
+
+An email column holds email addresses. You can display the values in this column in your app using any component that displays a text value or as Column Values when setting up collections and components. You can use the values in this column in multiple [**Actions**](/docs/getting-started/introduction-to-actions) like [**Send Email**](/docs/automation/actions/send-email) and [**Compose Email**](/docs/automation/actions/compose-email), as well as with integrations like [**Gmail**](/docs/automation/integrations/gmail) and [**Microsoft Outlook**](/docs/automation/integrations/microsoft-outlook).
+
+Email addresses in a table can also be used in [**Forms**](/docs/use-cases/forms) so that, when a user who’s signed in to your app submits a form, they don’t need to manually share their email address with you.
+
+## Multiple Texts
+
+
+
+![Multiple Text - Image 1](https://images.ctfassets.net/yreygbm72t08/61liV067yODL7sHKIZnZKG/cca0708d0eafde3cb445e1da021047b3/Multiple_Texts.png)
+
+
+
+The multiple texts column holds a string array of text values. This is particularly helpful when assigning multiple [roles](/roles) to users and using OR logic to create [visibility](/visibility-conditions) and [security conditions](/row-owners) in your apps. 
+
+Multiple texts columns cannot be edited or added to directly in the Data Editor. To populate a multiple texts column:
+
+1. Use a loop in a workflow to make an array of text values, one value for each role. 
+2. Set the column value for the multiple texts column to be that array result. You can then use the multiple texts column to store assigned roles for each user. 
+
+
+

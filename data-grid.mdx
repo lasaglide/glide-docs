@@ -1,0 +1,158 @@
+---
+title: "Data Grid"
+description: "Display data in a layout that resembles a spreadsheet."
+---
+
+# Data Grid
+
+Display data in a layout that resembles a spreadsheet.
+
+### Data Grid
+
+### Data Grid Intro
+
+The **Data Grid Collection** can be used to display your data in a layout that is similar to the way it appears in the [Data Editor](/introduction-to-the-data-editor). This provides a more spreadsheet-like experience for users who require a denser, edit-first interface directly from the app.
+
+The Data Grid component has eight column types, as well as an auto detect column that will automatically create a column based on the type of source data. The eight types are:
+
+- **Text: **Display text values from your data, such as locations, names, addresses, and more.
+- **Number: **Only allows number values to be in the cell.
+- **Boolean**: Include boolean toggles that provide an intuitive way for users to capture true/false values.
+- **Image:** Enhance your data grid’s visual appeal and provide additional context by displaying images inline.
+- **Link:** Integrate clickable links that enable users to access related resources or navigate to external pages.
+- **Button: **Add clickable buttons that enable users to interact with your data and take immediate actions.
+- **Choice:** Allow users to select from predefined options, ensuring simpler and more consistent data input.
+- **Tag: **Categorize your data with color-coded tags for easy organization and visual distinction.
+
+When users select an item and hit enter or return on their keyboard, they will be able to edit columns you choose directly in the app. 
+
+### [BLANK] Basic Columns Callout
+
+Only Basic Columns can be edited by users. [Computed Columns](/computed-columns) cannot be edited directly from the Data Grid.
+
+### Adding and Setting up a Data Grid Collection
+
+## Adding and Setting up a Data Grid Collection
+
+
+
+### Data Grid Setup Arcade
+
+### Data Grid Setup
+
+1. In the [Layout Editor](/intro-to-layout) of your app, select the tab you want to edit.
+2. Click on the plus (+) symbol in the [Components](/components) panel.
+3. Find **Collections** in the menu and select **Data Grid**.
+4. Choose what [Data Source](/essentials/data-source) it should use.
+5. Add a title for the data grid.
+6. The style will be **Data Grid** by default. If you change this, you will change the component to a different collection style.
+7. Glide will automatically create columns based on the data source you’ve chosen. Column headers will match the column headers in your table in the Data Editor.- To remove a column, click the **x **symbol at the right of the column.
+- To add a column, select **+ Add item** at the bottom of the columns section.
+- Columns can be rearranged by hovering over the left of the column title and dragging by the three dots that appear.
+8. In the **Options **menu, you can **Limit the number of items** in your Data Grid, include **Row markers** (or row numbers for every row that is shown), and configure the **Page Size.**
+
+## Customizing Each Column in the Data Grid
+
+Each column has additional configuration settings accessed by clicking on the column in the **General →** **Columns **menu.
+
+- **Value** is the source data for that column. This can be a custom value or a value from your data.
+- **Title** is the header title for that column in your Data Grid component. By default this will match the column name in the Data Editor, if that is the source for the column.
+- **Type** is autodetected by default but can be adjusted. Available column types are: Text, Number, Boolean, Image, Link, Button, Choice, and Tag.
+- **Design** is where you can adjust the column width. By default this will automatically optimize based on the size of the data grid. If set to **auto**, Glide will automatically optimize the width. If set to **fixed**, you can specify a width in pixels.
+
+Some column types have additional options:
+
+- **Link, Text, and Number **columns have a **Display as** option where you can replace the full link with display text. To make this dynamic for every value in your column, consider creating another column in your data with the display text and using that column as the source for this option. A computed column can also be used as the display as value.
+
+
+
+![Data Grid - Image 1](https://images.ctfassets.net/yreygbm72t08/2JTpTx7kZpC3iAUgwObXVc/1b1458cbf006d0d834c3a479e37a26fd/Frame_64.png)
+
+
+
+- **Boolean** can allow app users to edit (default) or view. Enabling editing allows users to select and unselect the box in the data grid.
+
+
+
+![Data Grid - Image 2](https://images.ctfassets.net/yreygbm72t08/3YOZYEAsOkmeNv6BH3VHAx/2087b78ba3af9233b2ab48c6222b8892/CleanShot_2024-05-09_at_5_.39.50_2x.png)
+
+
+
+- **Button** creates a column of buttons. These can have an icon, though the icon will be the same for every button in the column. You can then configure an Action to run when the button is selected by a user.
+
+
+
+![Data Grid - Image 3](https://images.ctfassets.net/yreygbm72t08/8RYU68HmRmWdncoyiNXRg/ca951bd064e5b6b0a7216c3436de1e26/CleanShot_2024-05-09_at_5_.43.43_2x.png)
+
+
+
+- **Choice** can have a data source, values from a column in that data source, and be displayed in a variety of ways. This will create a dropdown menu of choices for the user when selected.
+
+
+
+![Data Grid - Image 4](https://images.ctfassets.net/yreygbm72t08/7DuBxGj26U3dNafbbIkK4O/a6bab09efd10ace7405b43419194b350/CleanShot_2024-05-09_at_5_.48.17_2x.png)
+
+
+
+- **Tag** has the option for users to view only or also edit. Tags can have a data source, values, and display values. The colors for tags are automatically generated based on your app's accent color setting. You can set manual colors with hex colors, CSS, or you can create a column of colors in your data and use that column for the manual color setting. This will create a dropdown menu of tag choices for the user when selected.
+
+
+
+![Data Grid - Image 5](https://images.ctfassets.net/yreygbm72t08/15JmhsM51jdur5ysvFJepj/16be97b73fc7a5d295adab4759f2ace7/CleanShot_2024-05-09_at_5_.51.45_2x.png)
+
+
+
+## Using the Data Grid Collection Component
+
+
+
+
+
+### Data Grid - Arcade 2
+
+### Data Grid Setup Options + Actions
+
+### Options
+
+All components have [visibility](/use-cases/conditions-filtering-and-visibility), [filter data](/reference/user-experience/filter), and [sort data](/reference/user-experience/sort) options in the configuration menu. A search bar for users can be enabled. This allows user to search for specific alphanumeric values in the data grid.
+
+A search bar can be enabled, placing a search field at the top of the data grid for users to search values as needed.
+
+[In-app filtering](/reference/user-experience/filter#in-app-filtering) can also be enabled. This allows user to change items displayed in the collection. This filtering will only apply to the user who is viewing your app.
+
+### Conditional Visibility
+
+Columns can be made conditionally visible. For example, you can hide options from a dropdown column until a user makes a selection in the previous column. To adjust this, select the column and locate the **Visible **part of the **Options **section in the configuration menu. When you enable the **Visible **setting, you will then be prompted to set the condition for visibility. One condition is required, and you can add more as needed.
+
+You can also show different choices in a column depending on the selection made in a pervious column. To do this, select the column and select a multi-relation as the data source for the displayed row. This will cause the options to change as the multi-relation updates in your data. 
+
+### Adding Items
+
+If you’d like users to add rows to your Data Grid, you can enable an action in the **Title Bar** above your collection. In the **Actions** tab on the right side of the **Layout Editor**, toggle on **Allow users to add items**. This will create a [Show Form Screen](/show-form-screen) action that you can configure. You can add text to this button by clicking the small pencil icon under the button settings.
+
+### Deleting Items
+
+By default, users cannot delete rows from your Data Grid. If you’d like to allow the deletion of rows, you can toggle on **Allow users to delete items**. This will add a checkbox in the far left column of your Data Grid. Once a row is selected, it can be deleted by pressing the **delete key** on your keyboard.
+
+### [BLANK] Deleting Source Data Callout
+
+It’s important to note that if a row is deleted from your Data Grid, it is also deleted from your data source. This includes all the data associated with this row in your data source, not just the columns displayed in the Data Grid.
+
+### Data Grid Additional Setup
+
+### Item Click
+
+You can choose what happens when users click on an item in the data grid. By default this will show the item details in a slide out screen.
+
+### Additional Actions
+
+
+
+### Data Grid - Additional Actions
+
+**Title bar actions** will appear at the top of the component next to the title. The first title bar action will be a button. Any additional title bar actions will appear in a dropdown menu to the right of the first button. Users can open this menu by selecting the three dots.
+
+The **Item click action** will trigger when a user click on a value in the first column of the table.
+
+**Collection item actions** will appear to the right of each row in a three dot menu. When users click the three dots, a menu will open with any collection item actions you’ve created.
+

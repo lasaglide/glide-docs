@@ -1,0 +1,151 @@
+---
+title: "Replicate"
+description: "Access the Replicate suite of different text, audio, image, and video AI models."
+---
+
+# Replicate
+
+Access the Replicate suite of different text, audio, image, and video AI models.
+
+### Replicate - Block 1
+
+[Replicate](https://replicate.com/) is a platform that allows you to customize and run open-source AI models. By integrating Replicate with Glide, you can fine-tune thousands of models and incorporate them into your apps. You can run open-source models that other people have published, or package and publish your own models. The models you work with can be public or private.
+
+### Paid Plan Required
+
+A paid plan is required to use this feature. [Check out our pricing to find the right plan for you. ](https://www.glideapps.com/pricing)
+
+### Replicate - Block 2
+
+If you’re new to Replicate, we recommend [reviewing their documentation](https://replicate.com/docs) to get a feel for how to run the different models, how to fine-tune models, and how to build your own private models.
+
+## Adding the Integration
+
+
+
+### Replicate - Arcade 1
+
+### Replicate - Block 3
+
+To start using the Replicate integration, you first need to add it to your project.
+
+1. Create an account on Replicate.
+2. In your Account settings, go to **API tokens** and create a new token. For ease, we recommend naming it the name of your Glide app.
+3. In Glide, click the Settings icon in the upper-right corner.
+4. Navigate to the **Integrations** tab and then select **Replicate.**
+5. Click the **Add to app** button.
+6. Copy your API Token from your Replicate Account settings.
+
+## Setting up a Replicate account
+
+It’s free to create an account and experiment with Replicate, but once you start running predictions, Replicate will charge by usage. [You can review how Replicate charges on their pricing page.](https://replicate.com/pricing)
+
+### [BLANK] - Replicate Callout 2
+
+Totally new to working with language models? [Replicate has a comprehensive guide to getting started. ](https://replicate.com/docs/how-does-replicate-work)
+
+### Replicate - Block 4
+
+Once you’ve set up your account and have billing configured, you can run [any public model that Replicate offers](https://replicate.com/explore). You can also create your own private models and use those directly in your apps.
+
+Functionally the models available can perform a huge variety of tasks, from generating speech, music, image, and video to editing or answering detailed questions about images.
+
+Each model has its own playground, API, examples, and documentation. Glide recommends experimenting with the model in Replicate’s playground before connecting it to your app.
+
+## Run Prediction
+
+The **Run Prediction** feature can be used as either a computed column or an action. Each row that changes when the **Run Prediction** feature is run will use one update in Glide.
+
+Each model from Replicate has different API requirements. Before you start configuring your **Run Prediction** action or column, make sure you review which inputs are required for the model you want to use. You'll need to make sure the required input fields match the value field name in Glide exactly. 
+
+For our example, we’ll configure [this model for extracting text from images](https://replicate.com/abiruyt/text-extract-ocr). There is only one required input: an image to run through the model.
+
+### In the Data Editor
+
+
+
+### Replicate - Arcade 2
+
+### Replicate - Block 5
+
+
+
+1. Open the table where you want to use the **Run Prediction** feature.
+2. Add a new [Basic Image Column](/essentials/basic-columns) by clicking the (**+**) plus symbol to the right of the table. This column will store the image you extract text from. - New columns added with the plus button will always appear on the right. If you'd like to add a column somewhere else in your data, you can select the dropdown menu on an existing column and choose **Add column right.** You can also click and drag columns to rearrange them.
+3. Add a **Run Prediction** column to store the result. Search for “Run Prediction” or navigate to Integrations → Replicate → Run Prediction.
+4. The **Identifier** field is always required. You can find this value in the API tab on the model page in Replicate. - In Node.js under “Get started,” select the whole string value for 
+`const output = await replicate.run("VALUEHERE")`
+- For Python under “Get started,” select the whole string value for 
+`output = replicate.run( 
+"VALUEHERE", 
+input=input 
+)`
+- For HTTP under “Get started,” select the numeral value for 
+`"version"`
+5. Add fields for any other required inputs for the model you’re using. For the extract text example, we will add our image column created in step 2. The field name in Glide must exactly match the input value from Replicate (the text within the quotation marks should be used for the Glide field value name).
+6. Select **Save**.
+
+
+
+### [BLANK] - Replicate callout 3
+
+Note that if you have images already in the source column, the prediction model will run when you hit save. This will consume an update for each row the integration runs successfully on. Glide recommends doing testing on small batches of test data, rather than on live apps in production with full data tables.
+
+### Replicate - Block 6
+
+### In the Layout Editor
+
+
+
+### Replicate - Arcade 3
+
+### Replicate - Block 7
+
+
+
+1. If you have not yet set up the columns you'll need in the Data Editor, start with the steps above.
+2. Create a column to store the prediction output when the action is run.
+3. Add a component that supports actions such as [**Button**](/essentials/components/button), [**Hint**](/automation/ai/essentials/components/hint), or [**Rich Text**](/essentials/components/rich-text). Bind this component with the column where the output will be stored.
+4. In the configuration panel on the right, in the **Actions** menu, search for the **Run Prediction** action.
+5. Name the action and choose an icon.
+6. The **Identifier** field is always required. You can find this value in the API tab on the model page in Replicate. - In Node.js under “Get started,” select the whole string value for 
+`const output = await replicate.run("VALUEHERE")`
+- For Python under “Get started,” select the whole string value for 
+`output = replicate.run( 
+"VALUEHERE", 
+input=input 
+)`
+- For HTTP under “Get started,” select the numeral value for 
+`"version"`
+7. Add fields for any other required inputs for the model you’re using. For the extract text example, we will add our image column created in step 2.
+8. Select the column you made to store the prediction output.
+9. Click away to save your configuration.
+
+### In the Workflow Editor
+
+
+
+### Replicate - Arcade 4
+
+### Replicate - Block 8
+
+1. If you have not yet set up the columns you'll need in the Data Editor, start with the steps above.
+2. Select the (**+**) plus symbol or the **+ New Workflow** button.
+3. Select as the data source for the action the data source of the screen where the action is triggered.
+4. Search for the **Run Prediction** action.
+5. Name the action and choose an icon.
+6. The **Identifier** field is always required. You can find this value in the API tab on the model page in Replicate. - In Node.js under “Get started,” select the whole string value for 
+`const output = await replicate.run("VALUEHERE")`
+- For Python under “Get started,” select the whole string value for 
+`output = replicate.run( 
+"VALUEHERE", 
+input=input 
+)`
+- For HTTP under “Get started,” select the numeral value for 
+`"version"`
+7. Add fields for any other required inputs for the model you’re using. For the extract text example, we will add our image column created in step 2.
+8. Select the column you made to store the prediction output.
+9. Click **Publish** to save your configuration.
+
+To learn more generally about Integrations in Glide, including how they affect your app’s usage, check out our [Introduction to Integrations](/introduction-to-integrations).
+

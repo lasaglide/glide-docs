@@ -1,0 +1,68 @@
+---
+title: "Text to Boolean"
+description: "Transform text into a true/false output."
+---
+
+# Text to Boolean
+
+Transform text into a true/false output.
+
+### Text to Boolean Body Text 1
+
+Use the **Text to Boolean** feature when you wish to transform a text input into a boolean true/false output. Is a statement true or false? Is the statement true or false based on a certain context? The **Text to Boolean **feature does this analysis for you. 
+
+## Adding the Text to Boolean Feature
+
+### In the Data Editor
+
+
+
+### Text to Boolean Data Editor Arcade
+
+### Text to Boolean Body Text 2
+
+1. Open the table where you want to use the **Text to Boolean** column.
+2. Add a new basic text column for the **Input**. Any text column can be used for the input, so if you've created a computed column with a text result, you can use that column as well.- New columns added with the plus button will always appear on the right. If you'd like to add a column somewhere else in your data, you can select the dropdown menu on an existing column and choose **Add column right.** You can also click and drag columns to rearrange them.
+3. Add a **Text to Boolean** column to store the result. Search for “Text to Boolean” or navigate to AI → Text to Boolean. 
+4. For **Instructions,** enter custom text to create more specificity for your prompt.
+5. For the **Input**, select the **Input** column created previously.
+6. **Note:** If the action is to be triggered in the Workflow Editor, then add a [Basic Boolean Column](/getting-started/introduction-to-the-data-editor/basic-columns) where the result will be stored.
+7. Click on **Done**.
+
+### In the Layout Editor
+
+
+
+### Text to Boolean Layout Arcade
+
+### Text to Boolean Body Text 3
+
+1. If you have not yet set up the columns you'll need in the Data Editor, start with the steps above.
+2. Add a component that supports actions such as [Button](/essentials/components/button), [Hint](essentials/components/hint), or [Rich Text](/essentials/components/rich-text). 
+3. In the configuration panel on the right, in the **Actions** menu, select **Text to Boolean.**
+4. Name the action and choose an icon.
+5. For **Instructions,** enter custom text to create more specificity for your prompt.
+6. For **Input**, choose the column where the input text is stored, or enter custom text. 
+7. For **Results, **select the column where the results should be stored. 
+8. To display the text that results from the action, add a [Text Component](/essentials/components/text) and use your results column as the source. This will instantly show the generated text to your users. 
+9. To enable users to adjust the instructions, add a [Text Entry Component](/essentials/components/entry) pointing to an **Instructions** column with the adjustments you want made.
+10. To enable users to adjust the input, add a [Text Entry Component](/essentials/components/entry) pointing to the **Input** column to be able to change the input.
+
+### In the Workflow Editor
+
+
+
+### Text to Boolean Action Editor Arcade
+
+### Text to Boolean Body Text 4
+
+1. If you have not yet set up the columns you'll need in the Data Editor, start with the steps above.
+2. Select the (**+**) plus symbol or the **+ New Workflow** button.
+3. Select the data source of the screen where the action is triggered.
+4. Add T**ext to Boolean** as the first step of the workflow.
+5. For **Instructions,** enter custom text to create more specificity for your prompt.
+6. For the **Input** and **Result** fields, use the **Input** and **Result** columns created previously.
+7. Optionally, add a [Show Notification](/automation/actions/show-notification) action at the end of the workflow to notify the user.
+
+
+

@@ -1,0 +1,98 @@
+---
+title: "Google Analytics"
+description: "Learn how to integrate Google Analytics with your apps."
+---
+
+# Google Analytics
+
+Learn how to integrate Google Analytics with your apps.
+
+### Google Analytics 4
+
+Please note that Google sunset Universal Analytics on **July 1, 2023 **and will fully disable Universal Analytics as of **July 1, 2024**. You can [read more about this change here](https://support.google.com/analytics/answer/11583528?hl=en). [Please see Google's migration guide for help migrating. ](https://support.google.com/analytics/answer/10759417)
+
+### Google Analytics Intro
+
+[Google Analytics](https://developers.google.com/analytics) is an analytics service offered by Google for web and mobile traffic and event tracking. You can use the Google Analytics integration to track app traffic, as well as custom events that you create and configure with your app.
+
+In Google Analytics, everything is structured into accounts, properties, and data streams. **Accounts**, which are distinct from your Google or even Google Analytics account, typically represent a company. If you're affiliated with multiple organizations, you might have access to several of these accounts. Within these accounts are **properties**. These can be numerous, and they symbolize the various websites and apps tied to that business. **Data streams,** whether they are apps or websites, are what feed data into a property. A property can be seen as a team, department, or project within the company. A single property can comfortably house multiple data streams, thereby letting you monitor user activity across both websites and apps seamlessly.
+
+### Don't see the Google Analytics integration?
+
+You may need to upgrade your plan. [Browse Glide's plans and find the right fit for you.](https://www.glideapps.com/pricing)
+
+### Adding + Configuring Integration Header
+
+## Adding and Configuring the Action
+
+
+
+### Analytics Events Only Work in Live Apps
+
+Tracking custom events only works in live apps when triggered by a user. Note that when testing in the Glide builder, the action will not track data. 
+
+### Adding Google Analytics Arcade
+
+### Adding Google Analytics Steps
+
+1. In **Glide**, click the **Settings **icon in the upper-right corner.
+2. Click the **Integrations** tab and then select **Google Analytics.**
+3. Click **Add.**
+4. Copy the **Measurement ID **from your Google Analytics admin dashboard. 
+5. Paste it into Glide. 
+
+
+
+### Setting up Google Analytics for Your App Header
+
+## Setting up Google Analytics for Your App
+
+
+
+### Google Analytics Stream Creation Arcade
+
+### Google Analytics Dash Setup
+
+Let's set up a basic data stream: A Glide app, connecting to a property in an Analytics account. If you haven't set up an account yet, sign up at [analytics.google.com](http://analytics.google.com/). For existing account holders, navigate to the admin area of Google Analytics.
+
+1. If you have not already created an **Account **for the organization, create one in the Google Analytics dashboard. 
+2. Create a **Property **and fill out the details you want to include with it. 
+3. Choose a business description, size, and objective. 
+4. Set up your **Data stream **in  the collection data section. Glide apps are web-based, so choose **web **as the data stream type. 
+5. Add the URL for your live app and name the data stream.- Glide supports SSL
+6. Click on the data stream you created to copy the **measurement ID **and paste this in Glide.
+
+Once the measurement ID is connected to Glide, Google Analytics will start tracking user information and behavior and populating your dashboard with the data. 
+
+### Google Analytics Block 2
+
+## Report Types in Google Analytics
+
+There are four general types of reports Google Analytics automatically creates. You can also create custom reports or ask questions in the search bar at the top of your Analytics dashboard to search for specific metrics as needed.
+
+### Users
+
+Basic user information such as page visits, new users, where new users came from and real-time active user information will appear in your dashboard, as well as in your Reports menu.
+
+### Demographics
+
+Demographic information such as which country and city users are, age, gender, language, and interests in will also be available in the **User **section of the Reports menu. 
+
+### Behavior
+
+Many different user behavior is tracked automatically and classified for you. These include which pages users are engaging with, how long they engage, if they convert or generate revenue, and more. 
+
+### Technology
+
+The **Tech **section of the Reports menu shows which platform, type of device, and operating system users are accessing your app from.
+
+
+
+### Google Analytics - Block 5
+
+## Make your own custom analytics & reporting app
+
+You can also use any data from Google Analytics and make your own custom Glide App. 
+
+### Custom Analytics
+

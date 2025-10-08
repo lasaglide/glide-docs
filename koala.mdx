@@ -1,0 +1,84 @@
+---
+title: "Koala"
+description: "Track custom user events with Koala."
+---
+
+# Koala
+
+Track custom user events with Koala.
+
+### Koala - Block 1
+
+[Koala](https://getkoala.com/) is a customer intent platform used by sales professionals to track intent signals about prospects. Koala tracks activity on your Glide app and surface it with relevant user data in the Koala dashboard, allowing you to track real-time intent from sales prospects. 
+
+### Don't see the Koala Integration?
+
+You may need to upgrade your plan. [Browse Glide's plans and find the right fit for you.](https://www.glideapps.com/pricing)
+
+### Koala - Block 2
+
+## Adding the Integration
+
+
+
+### Koala - Arcade 1
+
+### Koala - Block 3
+
+To start using the Koala integration, you first need to add it to your project. You will also need an existing Koala account.
+
+1. In Glide, click the Settings icon in the upper-right corner.
+2. Navigate to the **Integrations** tab and then select Koala.
+3. Click the **Add to app** button.
+4. In your Koala dashboard, find the **APIs & Developer** section of the settings on the left-hand side, and open the **API Keys** menu. There will automatically be a public key generated, but we recommend creating a new, unique one for your app.
+5. Select **+ Create public key**, copy the key, and paste it into your Koala integration configuration in Glide. - Note that only public keys will work with the integration.
+
+## Track Custom Event
+
+The **Track custom event** action will send event data to your Koala workspace. The action can be added to a [Component](/essentials/components) that supports [Actions](/getting-started/introduction-to-actions) (e.g., a [Button component](/essentials/components/button)), added to a workflow in the [Workflow Editor](/getting-started/introduction-to-workflows#the-workflow-editor). Event tracking actions can only be used with [App Interaction workflows](/automation/workflows#app-interaction-workflows), because they require a user to take action that can be tracked.
+
+
+
+### Analytics Events Only Work in Live Apps
+
+Tracking custom events only works in live apps when triggered by a user. Note that when testing in the Glide builder, the action will not track data. 
+
+### Koala - Block 4
+
+### In the Layout Editor
+
+
+
+### Koala - Arcade 2
+
+### Koala - Block 5
+
+
+
+1. Select the component you'd like to add the action to. Remember, this must be a component that supports actions.
+2. In the actions settings, search for the **Track custom event** action from Koala or navigate to **Integrations -> Koala -> Track custom event.**- Note: There are other track event actions. Make sure to choose the correct one.
+3. Name the action.
+4. Choose an icon.
+5. Choose the **Event name**. This can be a manual value or come from your existing data.
+6. Add values as needed.
+7. Click away to exit the configuration.
+
+### In the Workflow Editor
+
+
+
+### Koala - Arcade 3
+
+### Koala - Block 6
+
+
+
+1. Select the (**+**) plus symbol or the **+ New Workflow** button and select App Interaction as the trigger.
+2. Add a new step.
+3. Search for the **Track custom event** action from Koala or navigate to **Integrations -> Koala -> Track custom event.**
+4. Enter an **Event name.**
+5. Add values as needed.
+6. Click away to exit the configuration.
+
+To learn more generally about Integrations in Glide, including how they affect your app’s usage, check out our [Introduction to Integrations](/automation/integrations).
+

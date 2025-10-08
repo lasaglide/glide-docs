@@ -1,0 +1,44 @@
+---
+title: "Files"
+description: "What happens to files uploaded in Glide."
+---
+
+# Files
+
+What happens to files uploaded in Glide.
+
+### Files Body Text
+
+Some Glide features require file hosting. For example, when you upload files in the **image** or **file picker** and when you fill out the **signature component**, Glide stores that file online, and this counts against your storage quota. Different plans have different storage limits.
+
+
+
+| **Plan** | **Storage Limit** |
+| --- | --- |
+| Free | 500MB |
+| Explorer | 10GB |
+| Maker | 25GB |
+| Business | 500GB |
+| Enterprise | Custom |
+
+
+
+
+You can learn more about files and quotas on our [pricing](https://www.glideapps.com/pricing) page.
+
+Uploaded files will eventually be deleted if they aren't used for a long time.
+
+"Being used" means that there is a link from your app to the file in a table. So as long your app links to a file somewhere in your table, Glide will not delete it (assuming your team is within your plan's storage quota).
+
+- If a Glide-hosted file is referenced in a row and that row is being used in an app—it will not be deleted
+- If a Glide-hosted file is referenced in a row, but the team is affected by quota overages—it may be deleted after 21 days.
+- If a Glide-hosted file is referenced in a row, but that table is not used in any Glide app—it may be deleted after 21 days.
+
+Deleted files can be reinstated for up to 21 days after removal by putting them back in a visible row.
+
+## Public File Links
+
+In order to be viewable in a Glide app, links to files hosted elsewhere (like Google Drive, for example) must be set to public. Proceed with caution if using this approach to store and share files, as public links can be accessed by anyone with the link, and could still be viewed if shared with someone outside of your app.
+
+
+

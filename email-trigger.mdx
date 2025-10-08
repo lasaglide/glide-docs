@@ -1,0 +1,103 @@
+---
+title: "Email Trigger"
+description: "Trigger workflows when an email is received."
+---
+
+# Email Trigger
+
+Trigger workflows when an email is received.
+
+### Email trigger workflow
+
+### Beta Availability for Email Trigger
+
+Email triggered workflows are only available for Glide teams with current paid plans or Team and Business 2024 and newer plans. Enterprise customers should contact their account manager to get started. Older [legacy plan](https://www.glideapps.com/pricing/legacy) teams must upgrade to use Email** **triggered** **workflows.
+
+### Trigger Email - Block 1
+
+[Workflows](/getting-started/introduction-to-workflows) can be triggered when an email is received. When you create a workflow with an email trigger, the workflow will have a unique email address that can receive email and begin the workflow.
+
+To create a workflow triggered by an email:
+
+
+
+### Trigger Email - Arcade 1
+
+### Email Trigger - Block 2
+
+1.  Open the [Workflow Editor](/getting-started/introduction-to-workflows#the-workflow-editor) and create a new workflow
+2. Select **Email** as the trigger.
+3. An email address will be generated in the right-hand panel.
+4. Copy the address and send an email to start the workflow.
+
+## Understanding Email Triggers
+
+When you receive an email triggered from a workflow, you can access data from the email and use it in your app. The email attributes available are:
+
+- The From field of the email: Either full, just the name, or just the email address of the sender
+- The full To field of the email
+- The email subject
+- The plain body of the email
+- The HTML body of the email
+- The unique Message ID
+- Headers from the email
+- Attachments from the email
+
+## Handling Attachment Files
+
+In order to store attachments that come in from an email trigger, you must create a [Multiple Files column](/essentials/basic-columns) in your data table. When you create an add row step for the email workflow, make sure to use the table with the multiple files column as the data source. Then, the **Attachment **field will appear as an option when you create a step that uses data fields from the email. Select **Trigger** as the field source. This will automatically store the incoming attached files from the trigger when an email is received. 
+
+### Trigger Email - Arcade 2
+
+### Trigger Email - Block 3
+
+##  Building an Email Workflow
+
+A single workflow can contain up to 2,000 steps. Each node you see displayed on the screen (Loop, condition, or action) is considered a step. Steps can be dragged and reordered within loops, conditions, and workflows.
+
+There are three types of steps you can use in an email triggered workflow: Actions, Loops, and Conditions.
+
+### **Actions**
+
+[Actions](/automation/actions) create change or perform a function in your app. You can add actions to any workflow up to the limit 2,000 step limit. Any actions that trigger updates will be calculated toward the total updates used by the workflow every time it triggers. Clicking on any individual action in a workflow will open its configuration screen in the right-hand panel.
+
+### **Loops**
+
+[Loops](/automation/workflows/loops) allow workflows to sequentially process each cell in your data, one at a time. By looping a workflow over a data source, you can search through the entire table and make sure your workflow executes everywhere. Loops are a way to have each row go through a set of action steps, computed steps, or conditional branches.
+
+One Loop is included by default in every workflow. To add a new one, click the (**+**) icon at the end of a workflow, go to **Flow**, then select **Loop.**
+
+For clarity, we recommend renaming a Loop once you’ve created it, so you can track what each one does within a workflow.
+
+The **Limit** field sets a row limit within a Loop. This will limit how many rows matching a condition are included in each run of a workflow.
+
+### **Conditions**
+
+Conditions allow you to create branches within workflows that will only run if the conditions are met. To add a new condition, click the (**+**) icon at the end of a workflow, go to **Flow**, then select **Condition.** Conditions can be added on their own, or nested within loops and other conditions.
+
+## **Viewing Details of Email Workflows**
+
+You can review the details of email triggered workflows in the right-hand panel of the [Workflow Editor](/getting-started/introduction-to-workflows#the-workflow-editor). When you select a workflow, you will see:
+
+- How many updates each trigger uses
+- The URL for the email to be sent to
+- a switch to enable or disable the workflow
+- The run history for that workflow
+- An error message if a step did not run successfully
+
+Clicking on any of the specific items in the history list will open that entry and show details about the run. Clicking the curly brackets {} will display the data sent when the workflow ran.
+
+### Trigger Email - Arcade 3
+
+### Email Trigger - Limitations Block
+
+## Email Trigger Workflow Limitations
+
+- If Workflows are used with a Google Sheet, a [Row ID column](/automation/computed-columns/row-id-column) is needed.
+- [Experimental Code Columns](/automation/computed-columns/experimental-code-column) are not supported.
+- Email triggers cannot refer to the User Profile row because the workflow is not run by a user.
+- [User-specific columns](/essentials/security-and-user-data/user-specific-columns) cannot be used by workflows.
+- Email Workflows cannot refer to values in the current screen because the Workflow does not have a screen context.
+
+
+

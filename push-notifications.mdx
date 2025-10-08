@@ -1,0 +1,103 @@
+---
+title: "Push Notifications"
+description: "Send messages to mobile, tablet, or desktop devices."
+---
+
+# Push Notifications
+
+Send messages to mobile, tablet, or desktop devices.
+
+### Push Notifications Feature Deprecated
+
+The Push Notifications feature was deprecated in December 2024. While existing uses of the feature will continue to appear in apps, ongoing challenges with Progressive Web Apps (PWAs) in general results in push notifications not working as expected. [Read more here.](https://help.glideapps.com/en/articles/9703516-push-notification-feature-deprecated-december-2024)
+
+### Push Notifications - Block 1
+
+## Introduction
+
+**Push notifications** are messages sent to a user's mobile, tablet, or desktop device. These notifications can be sent to a user even when they do not have the app open. Push notifications appear in the notification center of the user’s device.
+
+### System Requirements
+
+- Apple devices: iOS and iPadOS 16.4 (and higher). Deep linking is not possible on Apple devices.
+- Android devices: While push notifications are available on android, their reliability is volatile and varies by manufacturer and operating system version. 
+
+
+
+### Adding + Configuring Integration Header
+
+## Adding and Configuring the Action
+
+
+
+### Adding Push Notifications Arcade
+
+### Push Notifications - Block 2
+
+1. In **Glide**, click the **Settings **icon.
+2. Find the [Integrations](/introduction-to-integrations) section and then select **Push Notifications**.
+3. Click the **Add to app **button.
+
+## Features
+
+To send a push notification to a user, you first need to request the user for permission. Once the user has enabled push notifications for your app, you can then send them a push notification.
+
+### Request to allow push notifications
+
+The **Request to allow push notifications permissions** action is used to ask a user if they would like to allow push notifications. When this action runs, the user will be prompted to allow or not allow push notifications.
+
+You can add this action to a button or add the action as a step in a sequence of a workflow. If the user chooses to not allow push notifications, you will not be able to send them push notifications.
+
+### Request to allow push notifications arcade
+
+### [BLANK] Push Notifications - Callout 3
+
+On mobile devices, the user must first install the app to their home screen in order to allow push notifications. Learn more about installing apps [here](/sharing).
+
+### Push Notifications - access granted
+
+### Push notifications access granted 
+
+The **Push notification access granted **feature tracks whether users have given permission to receive push notifications from your app. To use it, you must first create a column with the feature enabled. 
+
+### Push Notifications Access Granted DE Arcade
+
+### Push Notifications Access Granted Setup
+
+1. In the [Data Editor](/getting-started/introduction-to-the-data-editor), open the table you want to edit.
+2. Add a new column by clicking the plus (**+**) symbol to the right of the table- New columns added with the plus button will always appear on the right of the table. If you'd like to add a column somewhere else in your data, you can select the dropdown menu on an existing column and choose **Add column right. **You can also click and drag columns to rearrange them.
+3. Name the column.
+4. For **Type**, search for **Push notifications access granted **or navigate to **Integrations → Push notifications → Push notifications access granted**.
+5. The column will automatically generate with checkboxes to verify if access has been granted or not. 
+6. Select **Done **to save the column.
+
+
+
+### Push Notifications - Send push notification 1
+
+### Send push notification
+
+The **Send push notification** action is used to send a push notification to your users. Once you've configured the recipient list, you can then customize the title and body text of the notification, and even include a specific screen link to bring users directly to a certain part of your app.
+
+### Send Push Notification Arcade
+
+### Push Notifications - Send Push Notification 2
+
+1. Click on the plus (**+**) sign in the **Components** panel to add a new component that supports actions, or select an existing component to add an action.
+2. In the **General** tab on the right side of the Layout Editor, navigate to the **Actions** section and search for **Send Push Notification** or navigate to **Integrations → Push Notification -> Send Push Notification.**
+3. Select the icon and title for your action.
+4. Choose if you will send the notification to everyone or only specific users. - If you choose to send only to specific users, you will need to specify the **Recipient email**, which can be a column from your data or a custom value. When setting up this column, the field types **Email, Split Text, **or **Text **with a single email address can be used. 
+5. Enter a value for the notification **Title**, or select a column from your data. 
+6. Enter a value for the notification **Message** text, or select a column from your data. 
+7. If you'd like to include a **Link to screen **to direct users to, include that link.- To get the link for the notification, open the published app in your browser, navigate to the right page, and copy the URL from your browser. **Note that deep links do not work on Apple devices.**
+
+
+
+### Ready to automate?
+
+You can use a [**Template column**](/template-column) to create customized push notifications for different users.
+
+### Integrations Learn More Block
+
+To learn more generally about Integrations in Glide, including how they affect your app’s usage, check out our [Introduction to Integrations](/automation/integrations).
+

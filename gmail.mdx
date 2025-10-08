@@ -1,0 +1,219 @@
+---
+title: "Gmail"
+description: "Send emails from your own Gmail account"
+---
+
+# Gmail
+
+Send emails from your own Gmail account
+
+### Gmail - Block 1
+
+[Gmail](https://workspace.google.com/products/gmail/) is an email platform for workplace communication and an integral part of Google Workspace. When emails are a critical part of your workflow, trigger emails from within your Glide app with Gide’s **Gmail Integration**.
+
+
+
+### Don't see the Gmail integration?
+
+You may need to upgrade your plan. [Browse Glide's plans and find the right fit for you.](https://www.glideapps.com/pricing)
+
+### Adding + Configuring Gmail header
+
+## Adding and Configuring the Integration
+
+
+
+### Adding Gmail Arcade
+
+### Gmail - Block 2
+
+1. In **Glide**, click the **Settings **icon in the upper-right corner.
+2. Click the [Integrations](/automation/integrations) tab and then select Gmail.
+3. Select **Add**
+4. Sign into your Google Workspace account and select **Allow **to approve the integration.
+5. Once Glide has access to your Gmail account, you will be able to send emails from your Glide app.
+
+## Send Email with Gmail
+
+The **Send Email with Gmail** action allows you to send an email from your own Gmail account.
+
+### Input, output & required fields
+
+The **Send Email with Gmail** action allows you to trigger an email send-out via Gmail from within your Glide app. Like any email send-out, the **recipients’ email addresses**, a **subject** line, and a **body of text** are required, whereas **cc** and **bcc** recipients are optional. 
+
+The **In-Reply-To** field is for the unique message ID of the email that should be replied to. This enables the email to be sent as a reply to a specific email that has been received. In-Reply-To is particularly useful when creating [Workflows](/automation/workflows).
+
+The output of the **Send Email with Gmail** action is a sent email, and from the recipients’ perspective, the email will seem to come from Gmail.
+
+### Multiple Recipients
+
+You can address the email to multiple recipients by separating email addresses
+
+You can send emails to multiple recipients by manually entering email addresses in the To, Cc, and Bcc fields. Separate the email addresses using a comma, a comma followed by a space, a semicolon, or a semicolon followed by a space.
+
+To use a column containing multiple email addresses as the source, data must be in an array column.
+
+
+
+![Using a Joined List or a Lookup Column for multiple recipients. ](https://images.ctfassets.net/yreygbm72t08/1V2ljOYg5Cqcd6VX51yVyr/7b22b76c79b2a1f9a0a9f6ca3dcbecc1/image.png)
+
+
+
+## Setting up the Send Email with Gmail action
+
+### In the Data Editor
+
+
+
+
+
+### Gmail Data Editor setup
+
+The Gmail action cannot be configured in the Data Editor. However, to create dynamic emails, it's best to make sure your data table is set up before you start configuring your action. The data for the fields To, Cc, Bcc, Subject, and Body, therefore, needs to be available in one of the following:
+
+- the table shared by the screen and action
+- the [User Profile table](/reference/security-and-user-data/user-profiles)
+- [special values](/reference/values/introduction-to-values) that are the current date/time, unique identifier, user’s email address, or link to the current screen
+
+Columns such as text, template, or single value are well suited to generate the subject line and body of the email. If the Body field points to an image column, the email received will display the URL of the location of the image.
+
+- Recipient fields (To, Cc, Bcc): create columns that will house email addresses. These could be basic text, a joined list, a split text, or array columns.
+- Subject line: a text or template column.
+- Body: a text or template column.
+
+
+
+### Body vs Body HTML
+
+The Body field will accept plain text whereas the Body HTML supports HTML tags. The Body HTML field overrides the Body field and allows you to send emails with more advanced formatting, including images, different fonts, types, colors, etc. 
+
+### Action Editor Heading 3
+
+### In the Workflow Editor
+
+
+
+### Gmail Action Editor Arcade
+
+### Gmail Action Editor setup
+
+1. Select the plus symbol or the **+ New Workflow **button.
+2. Select which source data to use for the email to be generated. 
+3. Add who the email should be sent **From**. This should be a person or company name. If left blank, the email address sending the email will appear here when the user receives the email. To manually enter a value here, make sure you use the format `Name to use <email of sender>` .
+4. Select a column to source the **To **field or input custom values manually.- optionally, add recipients to cc and/or bcc.
+5. Select a column to source the **Subject **field or input a custom value manually.
+6. Select a column to source the **Body **field or input a custom value manually.- If you'd like, you can use HTML to create a more visual email body.
+7. Select a column to source the **In-Reply-To **field, if needed.
+
+### In the Layout Editor
+
+The **Send Email with Gmail** action can be associated with any component that supports actions or triggered upon a form submission. Importantly, the action can be triggered from any screen as long as the action and screen share the same table as the data source.
+
+### Gmail Send Email Arcade
+
+### Gmail Layout Editor Setup
+
+1. Select the component you'd like to add the** **action to. Remember, this must be a component that supports actions.
+2. Search for the **Send email **action or navigate to Integrations -> Gmail -> Send email.
+3. Name the action.
+4. Choose an icon.
+5. Add who the email should be sent **From**. This should be a person or company name. If left blank, the email address sending the email will appear here when the user receives the email. To manually enter a value here, make sure you use the format `Name to use <email of sender>` .
+6. Select a column to source the **To **field or input custom values manually.- optionally, add recipients to cc and/or bcc.
+7. Select a column to source the **Subject **field or input a custom value manually.
+8. Select a column to source the **Body **field or input a custom value manually.- If you'd like, you can use HTML to create a more visual email body.
+9. Click away to exit the configuration.
+
+
+
+### Pin Emails from Gmail
+
+## PIN Emails from Gmail
+
+In App Settings, you can enable sending PIN emails through a Gmail account instead of through Glide's default email service. To enable this, you must first set up the Gmail integration in the app. 
+
+### PIN Emails from Gmail Arcade
+
+### Pins with Gmail Setup steps
+
+1. From the team [Dashboard](/getting-started/quick-start/glide-dashboard#general-settings), select Settings.
+2. Enable **Pins via integrations.**
+3. Navigate to the Apps dashboard and select the app you want to add Gmail PINs to.
+4. If you have not yet connected a Gmail account, go to the [App Settings](/getting-started/app-settings)**.**
+5. In [Access](https://www.glideapps.com/docs/getting-started/app-settings#access), find **Pin emails from Gmail **and select **Connect. **
+6. On the Gmail configuration screen, select **Add to app. **
+7. A new tab or window will open with the Gmail authentication screen. Choose which account to connect with Glide. 
+8. Select **Continue. **
+9. Grant access to **send email on your behalf**. 
+10. Select **Continue. **
+11. In Glide, go back to the Users & Authentication settings. 
+12. Enable the Pin email from Gmail toggle. 
+
+
+
+### Gmail Example Build
+
+## Example: S**end inventory in a CSV file via email**
+
+In this example, fieldworkers update warehouse inventory in their Glide app. From within the app, let’s allow them to send an email with the new list of items in a CSV file, allowing other teams to update their systems.
+
+To set up this workflow with the **Generate CSV** and **Gmail** integrations, you will likely want to include the following steps:
+
+1. Build a screen with your inventory with the ability to add, edit and delete inventory items.
+2. Create a **Generate CSV** workflow.
+3. Create a **Send Email via Gmail** workflow.
+4. Add the **Generate CSV** and **Send Email via Gmail** workflows to the screen.
+
+### **Build a screen with your inventory with the ability to add, edit and delete inventory items**
+
+
+
+### Build inventory screen
+
+1. In the Data Editor: Create a single-row screen table.
+2. In the Layout Editor: Create a custom screen with the single-row screen table as the data source. 
+3. Add a collection component with the warehouse inventory, using the table with the inventory data as the source. Include the ability to add, edit and delete inventory items.
+
+### **Create a Generate CSV custom action**
+
+
+
+### Create a Generate CSV custom action body
+
+1. In the Data Editor: Add a basic URL column to the single-row screen table.
+2. In the Workflow Editor: Create an [App interaction workflow](/automation/workflows/user-interaction) associated with the single-row screen table. 
+3. Add the **Generate CSV** action. 
+4. Set the source data to the table with the inventory and the file output to the Generate CSV URL column in the single-row screen table. - Optionally, include a [Show Notification](/automation/actions/show-notification) action to enhance the user experience.
+
+### **Create a Send Email via Gmail workflow**
+
+
+
+### Create a Send Email via Gmail workflow
+
+**In the Data Editor:**
+
+1. In the single-row screen table, create 5 columns to house information for the To, Cc, Bcc, Subject, and Body fields.
+2. Emails: If they will always remain the same, you can input the comma-separated list of email addresses directly into basic text columns. Basic text columns will also be used if associated with a choice component. Alternatively, create basic boolean and if-the-else columns in the Users table to indicate who will be a recipient, and use a [Lookup](/automation/computed-columns/lookup-column) or [Joined List column](/automation/computed-columns/joined-list) in the single-row screen table to generate an array or comma-separated list of recipient email addresses.
+3. Subject line: The subject of the email can be fixed, or use a [Template column](/automation/computed-columns/template-column) to include a date.
+4. Body: For the body of the email, use a [Template column](/automation/computed-columns/template-column) to include the URL of the inventory CSV.
+
+**In the Workflow Editor:**
+
+1. Create a workflow associated with the single-row screen table. 
+2. Add the **Send Email with Gmail **action. 
+3. Set the To, Subject, and Body fields to their respective columns in the single-row screen table.- Optionally, include a Show Notification action to enhance the user experience.
+
+### **Add the Generate CSV and Send Email via Gmail actions to the screen**
+
+In the Layout Editor, add components the user will interact with to trigger the **Generate CSV** and **Send Email** actions. Here, we placed two button components inside a container at the top of the screen. 
+
+The Generate CSV button triggers the generation of the CSV file and populates the table with the URL.
+
+The Send CSV button shows a new screen whose data source is the same single-row screen table by selecting “This item”. On the new screen, add a checklist collection whose data source is the Users table. Checking names in this collection populates true values in the CSV Recipients column in the Users table, which in turn populates the array or comma-separated list of recipient emails in the single-row screen table. Below the collection, add a button that will trigger the **Send Email with Gmail** workflow.
+
+
+
+### Integrations Learn More Block
+
+To learn more generally about Integrations in Glide, including how they affect your app’s usage, check out our [Introduction to Integrations](/automation/integrations).
+

@@ -1,0 +1,100 @@
+---
+title: "Comments"
+description: "Allow users to comment directly in your app."
+---
+
+# Comments
+
+Allow users to comment directly in your app.
+
+### Comments start
+
+The **Comment Collection** is a special type of [Collection Component](/collection-components) that allows users to comment directly in your app. Users can add new comments and see previous comments.
+
+### [BLANK] Comment sign-in callout
+
+For the comment feature to work properly, your app should have a sign-in method enabled and the user must be signed in with their email address.
+
+### Comments Main Body 1
+
+## Setting up Comment Collections
+
+
+
+### Adding Comments Arcade
+
+### Comments Main Body 2
+
+1. In [Layout Editor](/intro-to-layout) of your app, hit the plus (+)** **symbol to add a new component.
+2. Select the **Comments** component.
+3. Choose the [Data Source](/data-sources) where you want your comments to be stored.
+4. If you’d like, give the component a new **Title**.
+5. Finally, pick the column in the data source where new messages should be stored under **Save Comment**.
+
+## Configuring Comment Collections
+
+Comment collections are specifically designed for comment threads with the following **Display** fields:
+
+- **Comment**: The user’s comment.
+- **Timestamp**: The date and time the comment was made.
+- **User photo**: The photo of the user who made the comment.
+- **User name**: The name of the user who made the comment.
+
+After mapping the fields you want to display with columns in the data source, populate **Additional Columns** for each new message. This will store the values that you want to display in the data source.
+
+- **Timestamp: **The date and time when the comment as made.
+- **User name**: The name of the signed-in user who made the comment.
+- **User photo**: The photo of the signed-in user who made the comment.
+- **{A Unique Identifier}**: In our example, this was the candidate’s name. We recommend storing at least one unique value for the thread in which you want this comment to appear. This will allow you to set up a [Relation](/relations) or [Filter](/filter) to segment your comments.
+
+In addition to the standard options available with collections, the comment collection also comes with an **Empty screen** option. This is the message that will be displayed when there are no previous comments to show.
+
+## Adding Actions to your Comment Collections
+
+The Comment Collection supports two types of actions:
+
+**After Submit Action**: Triggers every time a new comment is added. This is often used to send a notification through one of Glide’s [Integrations](/automation/integrations).
+
+
+
+![After Submit Action](https://images.ctfassets.net/yreygbm72t08/4oxXuoRUqTvI07R3NIAvR0/462b14de8dc71c4b48c3e508f03cfc18/image.png)
+
+
+
+**Collection Item Actions**: These can be triggered on each comment in the collection. This is often used to allow users to edit or delete a comment.
+
+
+
+![Collection item Actions](https://images.ctfassets.net/yreygbm72t08/2cfEK0wMGm7m5L5l1CfCdE/2ddf54f4225927e5c0f5fabf14310036/image.png)
+
+
+
+## Comment Collections Case Study
+
+Darren is a freelancer helping businesses get the most out of Glide. When he meets with his clients, they establish a few tasks to work on. Each task is tracked to completion in a [Kanban Collection](/kanban-collection).
+
+
+
+![Comment Case Study 1](https://images.ctfassets.net/yreygbm72t08/22YtfO0hlxroolw1mas9jJ/1067fa08ef021659a16c064c88f9332c/image.png)
+
+
+
+When Darren has questions, he will shoot his clients a quick email, expecting a reply. But lately a few of his clients have mentioned losing his emails in their inbox. And to make matters worse, Darren’s having trouble keeping up with all the email threads as he brings on more clients.
+
+**To help Darren and his clients get organized, we can use the Comment Collection to allow them to message back and forth on the tasks they are already tracking.**
+
+
+First, let’s create a new comments table with these fields: 
+
+- Task
+- Comment
+- Timestamp
+- User Photo
+- User Name
+
+Next, let’s add a new Comment Collection to the task screen and map each of the fields we just created.
+
+Finally, let’s add a filter to only show comments with this task as the topic and sort by the **Timestamp**.
+
+Amazing! Now Darren and his clients have a centralized single source of truth to discuss each of the tasks when they are working asynchronously.
+

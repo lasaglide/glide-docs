@@ -1,0 +1,58 @@
+---
+title: "Chat"
+description: "Allow users to chat with each other directly in your app. "
+---
+
+# Chat
+
+Allow users to chat with each other directly in your app. 
+
+### Chat - Block 1
+
+The **Chat Collection** is a special type of [**Collection Component**](https://www.glideapps.com/docs/collection-components) that allows users to chat with each other directly in your app. Users can send and receive chat messages instantly in a shared chat screen.
+
+## Adding Chat Collections
+
+
+
+### Chat - Arcade 1
+
+### Chat - Block 2
+
+1. In the **Data Editor, **Create a table to house the chat messages
+2. Create columns to save the chat text and time stamp of the message.
+3. In the **Layout Editor**, select the tab you want to edit.
+4. Click on the plus symbol in the **Components** panel.
+5. Select **Chat**.
+6. Choose the [**Data Source**](/essentials/data-sources) table where you want your chat messages to be stored.
+7. Give the component a title.
+8. In **Save Text**, choose which column should store the chat messages that are sent.
+
+You can also choose Chat as a style for the [Comment Collection](https://www.glideapps.com/docs/essentials/components/collection/comments).
+
+## **Configuring Chat Collections**
+
+
+
+### Chat - Arcade 2
+
+### Chat - Block 3
+
+Chat collections are specifically designed for chat threads with the following **Display** fields:
+
+- **Text**: The user’s chat text.
+- **Timestamp**: The date and time the chat was sent.
+- **User photo**: The photo of the user who sent the chat.
+- **User name**: The name of the user who sent the chat.
+
+After mapping the fields you want to display with columns in the data source, populate **Additional Columns** for each new message. This will store the values that you want to display in the data source.
+
+- **Timestamp**: The date and time the chat was sent.
+- **User photo**: The photo of the user who sent the chat.
+- **User name**: The name of the user who sent the chat.
+- **{A Unique Identifier}**: We recommend storing at least one unique value for the thread in which you want this chat to appear. This will allow you to set up a [**Relation**](https://www.glideapps.com/docs/relations) or [**Filter**](https://www.glideapps.com/docs/filter) to segment your chats.
+
+In addition to the standard options available with collections, the chat collection also comes with an **Empty screen** option. This is the message that will be displayed when there are no previous chats to show.
+
+Optionally, you can limit the number of chats that will appear on a page.
+

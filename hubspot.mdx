@@ -1,0 +1,150 @@
+---
+title: "Hubspot"
+description: "Manage contacts, companies, and deals in Hubspot"
+---
+
+# Hubspot
+
+Manage contacts, companies, and deals in Hubspot
+
+### Hubspot - Block 1
+
+[HubSpot](https://www.hubspot.com/) is a marketing, sales, and customer service platform designed to help businesses grow and manage customer relationships. The HubSpot integration in Glide empowers you to seamlessly interact with your HubSpot Contact, Company, and Deal data.
+
+### Don't see the Hubspot integration?
+
+You may need to upgrade your plan. [Browse Glide's plans and find the right fit for you.](https://www.glideapps.com/pricing)
+
+### Adding + Configuring Integration Header
+
+## Adding and Configuring the Action
+
+
+
+### Adding Hubspot Arcade
+
+### Hubspot - Block 2
+
+1. In Glide, click the Settings icon in the upper-right corner.
+2. Navigate to the **Integrations** tab and then select [HubSpot](https://www.hubspot.com/).
+3. Click the **Add **button.
+4. Sign into your Hubspot account and select 
+5. **Connect app **to approve the integration.
+
+## Hubspot Objects and Properties
+
+### Objects
+
+The Hubspot integration in Glide currently supports integrations with 3 [Hubspot objects](https://knowledge.hubspot.com/get-started/manage-your-crm-database#understand-objects-records-and-properties):
+
+1. **Contacts **- Individuals who interact with your business
+2. **Companies **- Organizations your business engages with
+3. **Deals **- Typically sales opportunities that are tracked in pipelines
+
+
+
+### [BLANK] Hubspot - Warning 1
+
+Each object has a unique identifier that is used to link records between Glide and Hubspot. Be sure to store this field in Glide if you want to retrieve info or make changes to records in the future.
+
+### Hubspot - Block 3
+
+### Properties
+
+Once you pick an object and find its unique identifier, you’ll need the **Hubspot Property Internal Name** for the value(s) you want to add, edit, or retrieve.
+
+1. [Properties](https://knowledge.hubspot.com/get-started/manage-your-crm-database#understand-objects-records-and-properties) are the different fields where you can store information. For example a Contact has properties like First Name, Last Name, Location, etc.
+2. An Internal Name is the name of the field that does not change and is needed for integrations. For example, one day you may want to relabel First Name as Name in Hubspot, but the internal name (firstname) never changes.
+
+To retrieve the internal name of a property:
+
+1. In Hubspot, go to your **Settings.**
+2. In **Data Management**, select the Object you are working with.
+3. In Setup, select **Manage contact properties.**
+4. Search and select the Property you want.
+5. Select **</> **and copy the **Internal name.**
+
+## Features
+
+Glide supports 5 features for each of Hubspot’s objects.
+
+1. **Create **- Adds a new record
+2. **Edit **- Updates an existing record
+3. **Archive **- Temporarily hides a record without permanently deleting it
+4. **Delete **- Permanently removes a record
+5. **Retrieve Info **- Displays properties from a record in Glide.
+
+All 5 features can be added as [Actions](/actions) to [Components](/components) or added to a workflow in the [Workflow Editor](/getting-started/introduction-to-workflows#the-workflow-editor). Additionally, the **Retrieve Info** feature can be added as a [Computed Column.](/computed-columns)
+
+Let's take a look at how to use each of these features in Glide. 
+
+### Create
+
+The Hubspot integration can create new **contacts, companies**, or **deals**.
+
+### Create Arcade Demo
+
+### Hubspot Edit Section
+
+### Edit
+
+The Hubspot integration can edit existing **contacts, companies**, or **deals**.
+
+
+
+### Editing Hubspot Records Arcade
+
+### Hubspot Archive Section
+
+### Archive
+
+The Hubspot integration can archive existing **contact, company**, and **deal **records. 
+
+### Archive Hubspot Records Arcade
+
+### Hubspot Delete Section
+
+### Delete
+
+The Hubspot integration can delete existing **contact, company**, and **deal **records. The record will be permanently deleted from Hubspot.
+
+### Hubspot Delete Record Arcade
+
+### Hubspot Retrieve Info Section
+
+### Retrieve Info
+
+The Hubspot integration can retrieve information from existing records about **contacts, companies**, and **deals**.
+
+### Hubspot Retrieve Info Arcade
+
+### Hubspot Example 1
+
+Let’s look at 3 examples of the Hubspot integration.
+
+### Example 1: Create Contact
+
+The Create Contact action creates a new Contact record in Hubspot with the property values you send from Glide.
+
+You can customize which properties to add to the new contact record in Hubspot. Make sure you use your internal Hubspot names so the fields match when you send the new contact data.
+
+When you create a new contact, Hubspot will send back a Contact ID to be stored in Glide. You can specify which column in Glide should store the Contact ID data.
+
+### [BLANK] Hubspot - Callout 2
+
+While not required, if you don’t fill out the “Values” field, a blank contact will be created in Hubspot.
+
+### Hubspot - Block 4
+
+### Example 2: Archive Company
+
+The Archive Company action hides a company in Hubspot. You can specify a column that houses Hubspot Company IDs to automate this process.
+
+### Example 3: Retrieve Deal Info
+
+The Retrieve Deal Info action looks up a deal in Hubspot with the ID you provide and returns the property you request. You'll need a column with Deal IDs that match Hubspot, as well as the Property name from Hubspot.
+
+### Integrations Learn More Block
+
+To learn more generally about Integrations in Glide, including how they affect your app’s usage, check out our [Introduction to Integrations](/automation/integrations).
+

@@ -1,0 +1,70 @@
+---
+title: "Navigation"
+description: "The different ways you can build navigation in apps."
+---
+
+# Navigation
+
+The different ways you can build navigation in apps.
+
+### Navigation Body Text 1
+
+## The different ways you can build navigation in apps.
+
+You can allow users to navigate to different screens in a variety of ways:
+
+- Tabs
+- Using Collection items
+- Using Components
+
+## Tabs
+
+Tabs are the main and most straightforward way you can present screens to users. Tabs on mobile live at the bottom of your app. In the web app, they can can live in two places: at the top of your app or in the left sidebar. You can change their position in the web app at any time from the appearance settings in the top right of the Layout Editor.
+
+You can hide or show tabs based on [User Profile](/reference/values/user-profile-columns) data by setting [Visibility Conditions](/reference/user-experience/visibility-conditions).
+
+### [BLANK] Visibility Conditions on tabs not security feature
+
+Using Visibility Conditions to hide tabs is not a security feature. You should not rely on them to hide tabs with sensitive information from users. Read this article to learn about [Row Owners](https://www.glideapps.com/docs/essentials/security-and-user-data/row-owners), a secure way to restrict access to certain rows.
+
+### Navigation Body Text 2
+
+### Creating tabs
+
+To create a tab:
+
+1. In the Layout Editor, click the plus (+) sign in the Navigation panel.
+2. Choose the data source or table for your tab.
+3. From the configuration settings on the right, change the name and pick an icon.
+
+
+
+### Navigation - Arcade 1
+
+### Navigation - Block 3
+
+## Using Collection items
+
+You can use the Show Detail Screen and Show New Screen actions on Collection items to create navigation options.
+
+1. In the **Layout Editor**, click on the Collection in the Components panel to which you want to set the action.
+2. In the **Actions** tab on the right of the screen, select **Item Click** and choose either **Show Detail Screen** or **Show New Screen**.
+3. If you select Show Detail Screen, you see options to use the table or data source powering the Collection item:- **This item:** By default, Collection items link to their detail screen through the Show Detail Screen action. You can use this action if you want to take users to a screen with the data for that particular Collection item or row.
+- **Computed Columns:** You can choose a Relation Column or a whole row in a Single Value Column to show users the data from those columns that are connected to the Collection item.
+4. If you select Show New Screen, you can use a different table or data source in your app.
+
+## Using Components
+
+You can also use actions on other components to create navigation options for users.
+
+**Show Detail Screen:** If you choose the action Show Detail Screen and select **This item**, Glide will pull up the first row in the table that is powering the tab the Component is located on.
+
+**Show New Screen:** If you use the action Show New Screen, you can choose the table or data source and create a screen to send users to.
+
+**Go to Tab:** You can use this action to send users to any tab in your app from a Component.
+
+1. In the **Layout Editor**, click on the Component to which you want to set the action.
+2. In the **Actions** tab on the right of the screen, select **Item Click** and choose either **Show Detail Screen, Show New Screen,** or **Go to Tab.**
+
+
+

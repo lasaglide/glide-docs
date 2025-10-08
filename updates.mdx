@@ -1,0 +1,111 @@
+---
+title: "Updates"
+description: "An explanation of updates and how they relate to billing."
+---
+
+# Updates
+
+An explanation of updates and how they relate to billing.
+
+### Updates - Block 1 (NEW)
+
+## **What are updates?**
+
+Updates are one of the ways Glide tracks usage in apps. Most often, updates are consumed when data changes and when actions run.
+
+In general, most features of Glide consume **one update per changed row,** but there are many exceptions to this general principle. When working in the data editor and adjusting computed columns, only the visible rows will change and count as updates as you make adjustments. Scrolling will cause the newly visible rows to update as you reveal them, generating more updates.
+
+### [BLANK] Updates - Callout 1 (new)
+
+[Glide Tables](https://www.glideapps.com/docs/essentials/data-sources/glide-tables) and [Big Tables](https://www.glideapps.com/docs/essentials/data-sources/big-tables) do not consume updates. Enterprise customers may have custom terms - contact your customer success representative for details about your specific plan. To save on update consumption, consider building or [importing](https://www.glideapps.com/docs/essentials/data-sources/import-file) your data directly to Glide.
+
+### Updates - Block 2 (NEW)
+
+When building your app and working with your data, the Glide interface will provide defaults about how many updates various features consume.
+
+
+
+![Updates are counted and tracked across all apps within a team. ](https://images.ctfassets.net/yreygbm72t08/4fOH6lJGYdLvfNWUOtZLG8/c5fe22b9804ef067ca8690ce4ede9252/Frame_49.png)
+
+
+
+## What counts as update usage
+
+### Changes to external data sources
+
+Users can interact with your data through actions and integrations you add to your app. When they do this, they are likely to generate the following types of updates:
+
+1. **Adds:** When a user in your Glide app adds a row to your data source.
+2. **Edits**: When a user in your Glide app edits a row in your data source.
+3. **Deletes**: When a user in your Glide app deletes a row in your data source.
+4. **Syncs**: When Glide reloads data from an external data source that has changed (e.g., Google Sheets, Excel). If no data has changed since the last sync, then no update will be used.- Extra Sync mode: If you select "Extra" for your app's Sync mode in Data settings, Glide will sync your data on a fixed schedule when your app is active (e.g., every few minutes) instead of only syncing when data changes. These syncs count as updates even if there is no new data.
+5. **Workflow executions:** When workflows run and perform actions or make data changes.
+
+### Integrations
+
+In addition to changes in your data, [integrations](https://www.glideapps.com/integrations) consume variable amounts of updates when they run successfully. This includes when integrations run as actions. Every time integrations run in computed columns, updates are consumed for each successful run per row. Cached data will not consume updates, and data is cached for 30 days. To review the full list of integrations and how many updates each feature consumes, [see our full integrations guide.](https://www.glideapps.com/integrations)
+
+### Actions and Computed Column
+
+[Actions](https://www.glideapps.com/docs/automation/actions) can consume updates, depending on the action and how it’s configured. [Computed Columns ](/automation/computed-columns)can also consume updates if they are part of integrations or making changes to external data sources. 
+
+### Glide API
+
+[Glide Basic API](https://www.glideapps.com/docs/getting-started-with-the-glide-api) and [Glide Advanced API](https://www.glideapps.com/docs/using-glide-tables-api) consume updates when they add, edit, delete, and read data. When Glide Advanced API pulls data from your Glide app, each call costs an update, as well.
+
+## What doesn’t count as update usage
+
+- Changes to data in native Glide data sources, like Glide Tables and Big Tables.- **Exception:** Any changes made through Glide API will consume updates. Enterprise customers may have custom terms that differ from the standard policy. Contact your Customer Success representative for details about your specific plan.
+- Working in the layout editor to build screens for your apps.
+- Working in the workflow editor to build workflows.
+- Any action or integration that normally would consume updates but fails to run successfully will **not **consume updates.
+- Querying data, regardless of data source.
+- Filters and visibility conditions.
+
+## Monitoring Updates Usage
+
+Updates usage can be monitored on the[ Usage dashboard](https://www.glideapps.com/docs/reference/account/usage#updates). Here you can view the team’s total updates usage, as well as updates used in individual apps. Clicking into an app will review which features are consuming updates, and how many.
+
+Glide will automatically send email reminders as you approach the updates quota on the plan. You will receive an email at the following thresholds:
+
+- 75% of the updates quota
+- 90% of the updates quota
+- 100% of the updates quota
+- 150% of the updates quota
+- 200% of the updates quota
+
+Glide will continue to send emails at every additional increase of 100%, up to 1,000%, or 10 times over the threshold. 
+
+If you are approaching the quota for your plan and are not near the end of the billing cycle, you may want to consider enabling unlimited updates.
+
+## **Unlimited Updates**
+
+By default, teams won't be able to use more updates than what is included in the team's plan.
+
+For example, if the team has a Business plan, that team's apps can use up to 5,000 updates per month. If the team uses more than 5,000 updates, users will receive an alert when they log in that the apps have reached their updates limit. To remove the alert, you can either:
+
+1. Upgrade to a plan with a higher updates quota, or
+2. Turn on unlimited updates on the team's Usage or Billing page.
+
+Teams with paid plans can enable unlimited updates.
+
+When unlimited updates are enabled, the team's apps will be able to use more updates than what is included in the team's plan.
+
+
+
+![Untitled (4)](https://images.ctfassets.net/yreygbm72t08/6PpX3m9OWZ1zU8f2DYfCTc/ddf4eb568681e3d9ead770af130f30fd/Untitled__4_.png)
+
+
+
+Updates are used across all apps in the team.
+
+For example, if the team has a Business plan, your team's apps can use up to 5,000 updates per month. If your team uses more than 5,000 updates, your users can continue using your apps without an interruption in service. The team will be automatically charged $.02 per update used over the 5,000 included in the plan. This charge will occur at the end of the billing cycle.
+
+Enabling unlimited updates is a good choice if you want to make sure that users can access your apps even during periods of high usage.
+
+To disable unlimited updates, open the [Usage dashboard](https://www.glideapps.com/docs/reference/account/usage) and select **Disable**.
+
+### Updates Refund Policy
+
+If you accidentally use too many updates, we can offer you a one-time account credit for the overages. [Please contact support for assistance.](https://www.glideapps.com/docs/reference/account/support)
+

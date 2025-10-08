@@ -1,0 +1,74 @@
+---
+title: "Schedule Trigger"
+description: "Run actions automatically on a schedule."
+---
+
+# Schedule Trigger
+
+Run actions automatically on a schedule.
+
+### Schedule Trigger Video
+
+### Beta Availability for Schedule Trigger
+
+Schedule triggered workflows are only available for Glide teams with current paid plans or Team and Business 2024 and newer plans. Enterprise customers should contact their account manager to get started. Older [legacy plan](https://www.glideapps.com/pricing/legacy) teams must upgrade to use Schedule** **triggered** **workflows.
+
+### Schedule Workflows - Block 1
+
+To create a scheduled [Workflow](/automation/workflows), select **Schedule** as the trigger. By default, this will generate a new workflow that runs every day at 9 AM in your time zone. The default Workflow will consist of one loop with a limit of 10. Any of these defaults can be changed to fit your needs. Workflows cannot currently be run more than every 5 minutes.
+
+A single workflow can contain up to 2,000 steps. Each node you see displayed on the screen (Loop, condition, or action) is considered a step. Steps can be dragged and reordered within loops, conditions, and workflows.
+
+There are three types of steps you can use: Actions, Loops, and Conditions.
+
+### Actions
+
+[Actions](/automation/actions) create change or perform a function in your app. You can add actions to any workflow up to the 2,000 step limit. Any actions that trigger updates will be calculated toward the total updates used by the workflow every time it triggers. Clicking on any individual action in a workflow will open its configuration screen in the right-hand panel.
+
+### [BLANK] Schedule Workflows - Warning 1
+
+Note that scheduled Workflows cannot contain actions that require an interaction to trigger, such as [Show Detail Screen](/automation/actions/show-detail-screen) or [Show Notification](/automation/actions/show-notification).
+
+### Schedule Workflows - Block 2
+
+### Loops
+
+Loops allow workflows to sequentially process each cell in your data, one at a time. By looping a workflow over a data source, you can search through the entire table and make sure your workflow executes everywhere. Loops are a way to have each row go through a set of action steps, computed steps, or conditional branches.
+
+One Loop is included by default in every workflow. To add a new one, click the (**+**) icon at the end of a workflow, go to **Flow**, then select **Loop.**
+
+For clarity, we recommend renaming a Loop once you’ve created it, so you can track what each one does within a workflow.
+
+The **Limit** field sets a row limit within a Loop. This will limit how many rows matching a condition are included in each run of a workflow.
+
+### Conditions
+
+Conditions allow you to create branches within workflows that will only run if the conditions are met. To add a new condition, click the (**+**) icon at the end of a workflow, go to **Flow**, then select **Condition.** Conditions can be added on their own, or nested within loops and other conditions.
+
+## Viewing Details of Scheduled Workflows
+
+When reviewing a Scheduled workflow in the right-hand panel of the [Workflow Editor](/getting-started/introduction-to-workflows#the-workflow-editor), you will see:
+
+- How many updates each trigger uses
+- The schedule set for that workflow
+- When the workflow will next run
+- A switch indicating if the workflow is enabled or disabled
+- The run history for that workflow
+- An error message if a step did not run successfully
+
+Clicking on any of the specific items in the history list will open that entry and show details about the run. Clicking the curly brackets {} will display the data sent when the workflow ran.
+
+### Intro to Workflows - Schedule Workflows Overview
+
+### Schedule Workflows - Limitations Block
+
+## Schedule Workflow Limitations
+
+- If Workflows are used with a Google Sheet, a [Row ID column](/automation/computed-columns/row-id-column) is needed.
+- [Experimental Code Columns](/automation/computed-columns/experimental-code-column) are not supported.
+- Scheduled triggers cannot refer to the User Profile row because the workflow is not run by a user.
+- [**User-specific columns**](/essentials/security-and-user-data/user-specific-columns) cannot be used by workflows.
+- Scheduled Workflows cannot refer to values in the current screen because the Workflow does not have a screen context.
+
+
+

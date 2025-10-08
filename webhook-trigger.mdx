@@ -1,0 +1,135 @@
+---
+title: "Webhook Trigger"
+description: "Trigger workflows with an incoming Web request."
+---
+
+# Webhook Trigger
+
+Trigger workflows with an incoming Web request.
+
+### Webhook Trigger
+
+### Beta Availability for Webhook Trigger
+
+Webhook triggered workflows are only available for Glide teams with current paid plans or Team and Business 2024 and newer plans. Enterprise customers should contact their account manager to get started. Older [legacy plan](https://www.glideapps.com/pricing/legacy) teams must upgrade to use Webhook** **triggered** **workflows.
+
+### Webhook Trigger - Block 1
+
+Workflows can be triggered by a POST request from a webhook. When you create a workflow with a Webhook trigger, the workflow will have a unique URL to send webhook events from other tools and services into Glide.
+
+To create a Workflow triggered by a webhook:
+
+
+
+### Webhook Trigger - Arcade 1
+
+### Create Webhook Trigger Text
+
+1. Open the [Workflow Editor](/getting-started/introduction-to-workflows#the-workflow-editor) and create a new workflow
+2. Select **Webhook** as the trigger.
+3. A URL will be generated for you automatically.
+4. Generate a bearer token if needed. This is a secret security token to make the request more secure. The authorization header in your request will need to match the bearer token.
+5. Send a POST request with a JSON body to the URL Glide provided.
+
+
+
+### Synchronous Saves in Big Tables
+
+We recommend using Big Tables with the Webhook trigger, as they support synchronous saves and can read and write in real time. Using another data source may not be reliable with workflows. 
+
+### Webhook Trigger - Block 2
+
+## Understanding Webhook Triggers
+
+After you create your workflow, you can decide what types of webhook events you want to receive. You can make different request types, headers, and request bodies.
+
+## Headers
+
+### Authorization
+
+Webhook triggers can require a bearer token for security. Creating a bearer token requires that webhook events sent to the trigger's URL have the secret bearer token. If you create a bearer token, then any webhook events that do not include this authorization header will not trigger your workflow to run.
+
+If a bearer token is created, each webhook event must have in its header the following key-value pair:
+
+- **Key: **Authorization
+- **Value:** Bearer `unique_trigger_bearer_token`
+
+For security purposes, keep the bearer token a secret. If you need to generate a new bearer token, click on the refresh button.
+
+Depending on your use case, you may not be able to set an Authorization header. In these situations, you should not create a bearer token for your workflow. If you created a bearer token, you can delete it by clicking the “x” button.
+
+### Idempotency Key
+
+An idempotency key can be used with each webhook event. This is a unique value to differentiate webhook events from each other. This makes sure that multiple webhook events with the same idempotency key do not trigger your workflow more than once.
+
+To make your requests idempotent, you must add the following key-value pair to the header of your webhook events:
+
+- **Key:** Idempotency-Key
+- **Value: **`universally_unique_identifiter (UUID)`
+
+A UUID is a randomly-generated 20-character string. 
+
+## Request Body
+
+Your webhook events can include a JSON body. This can be useful when you want your webhook event to bring in data for your workflow to use. You can then extract that JSON with the [Query JSON](/automation/integrations/json#query-json) feature in Glide. 
+
+## Triggering Webhooks from Glide
+
+Workflows can be triggered with a webhook from a Glide app or another workflow by using the [Trigger Webhook](/automation/actions/webhook) or [Call API](/automation/integrations/call-api) actions. To do this, set up either of these actions and use the webhook triggered workflow URL as the Endpoint. The method will be POST. You can also use the bearer token for authorization and create idempotency key values with a unique value column in your table.
+
+
+
+![Webhook Trigger - Image 1](https://images.ctfassets.net/yreygbm72t08/5onXHu9pTV49hhKkWZxiep/324e7654a5679c7d985a842987c8ece7/CleanShot_2024-12-06_at_5_.49.37_2x.png)
+
+
+
+## Building a Webhook Workflow
+
+A single workflow can contain up to 2,000 steps. Each node you see displayed on the screen (loop, condition, or action) is considered a step. Steps can be dragged and reordered within loops, conditions, and workflows.
+
+There are three types of steps you can use in a Webhook triggered workflow: Actions, Loops, and Conditions.
+
+### **Actions**
+
+[Actions](/automation/actions) create change or perform a function in your app. You can add actions to any workflow up to the limit 2,000 step limit. Any actions that trigger updates will be calculated toward the total updates used by the workflow every time it triggers. Clicking on any individual action in a workflow will open its configuration screen in the right-hand panel.
+
+### **Loops**
+
+Loops allow workflows to sequentially process each cell in your data, one at a time. By looping a workflow over a data source, you can search through the entire table and make sure your workflow executes everywhere. Loops are a way to have each row go through a set of action steps, computed steps, or conditional branches.
+
+To add a new one, click the (**+**) icon at the end of a workflow, go to **Flow**, then select **Loop.**
+
+For clarity, we recommend renaming a Loop once you’ve created it, so you can track what each one does within a workflow.
+
+The **Limit** field sets a row limit within a Loop. This will limit how many rows matching a condition are included in each run of a workflow.
+
+### **Conditions**
+
+Conditions allow you to create branches within workflows that will only run if the conditions are met. To add a new condition, click the (**+**) icon at the end of a workflow, go to **Flow**, then select **Condition.** Conditions can be added on their own, or nested within loops and other conditions.
+
+## **Viewing Details of Webhook Workflows**
+
+You can review the details of Webhook triggered workflows in the right-hand panel of the [Workflow Editor](/getting-started/introduction-to-workflows#the-workflow-editor). When you select a workflow, you will see:
+
+- How many updates each trigger uses
+- The URL for the webhook POST request to be sent to
+- A button to copy, generate, reset, or delete a bearer token
+- The run history for that workflow
+- An error message if a step did not run successfully
+
+Clicking on any of the specific items in the history list will open that entry and show details about the run. Clicking the curly brackets {} will display the data sent when the workflow ran.
+
+### Webhook Trigger - Arcade 2
+
+### Webhook Trigger - Limitations Block
+
+## Webhook Trigger Workflow Limitations
+
+- If Workflows are used with a Google Sheet, a [Row ID column](/automation/computed-columns/row-id-column) is needed.
+- [Experimental Code Columns](/automation/computed-columns/experimental-code-column) are not supported.
+- Webhook triggers cannot refer to the User Profile row because the workflow is not run by a user.
+- [User-specific columns](/essentials/security-and-user-data/user-specific-columns) cannot be used by workflows.
+- Webhook Workflows cannot refer to values in the current screen because the Workflow does not have a screen context.
+
+
+

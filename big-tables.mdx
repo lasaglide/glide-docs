@@ -1,0 +1,141 @@
+---
+title: "Big Tables"
+description: "Scale your app with up to 10 million rows of data."
+---
+
+# Big Tables
+
+Scale your app with up to 10 million rows of data.
+
+### Glide Big Tables
+
+### Big Tables - Block 1
+
+Built for the most demanding workflows, Big Tables are enterprise-grade databases hosted directly in Glide. While a normal [Glide Table](/glide-tables) has a limit of 25,000 rows, Big Tables can support up to 10 million rows. With Big Tables, your app can scale as your data grows.
+
+Big Tables are a native Glide data source, and so they do not use updates when adding, editing, deleting, or syncing data. Data changes made with [Glide API](/essentials/data-sources/getting-started-with-the-glide-api), however, still consume updates. Teams with an Enterprise plan will also use updates on Big Tables. 
+
+### Synchronous Saves Block
+
+### Synchronous Saves
+
+When a user saves data in a Glide app they will see an indicator on the bottom of the screen showing that the data is being saved. When the data has been safely saved to the Big Table, the indicator will disappear. If there are any errors during the save, the user will see an error message. 
+
+Changes to Big Tables made in the app will be updated on the Big Table. A refresh of the app or the data in the table is not necessary. Even if the data table shows "Query" in the cell, the data has been updated and refreshed data will appear live in the app if a component is connected to it. 
+
+### Big Tables - Block 2
+
+## Creating a Big Table
+
+You can only create Big Tables once you've created the app.
+
+1. Select the [Data Editor](/data-editor) icon.
+2. On the left side of the Data Editor, select the plus (+) icon.
+3. Select **New big table**.
+
+
+
+![image - 1](https://images.ctfassets.net/yreygbm72t08/7eUydSRkv3zpUFXHEQvYrl/8f9bc24927d977ad48b46381bedc3ea3/image.png)
+
+
+
+The Data Editor will create an empty table with a single cell. From here, you can add more rows and columns and configure them as you need.
+
+## Import/Export Big Table data
+
+### Import to a new Big Table
+
+To import data into a new Big Table:
+
+1. In the **Data Editor**, right-click the Big Table you'd like to import data into.
+2. Select **Import**.
+3. Choose which file to upload for import.
+
+
+
+![image - 2](https://images.ctfassets.net/yreygbm72t08/BTB1j4qC7DEHvDiSu7VZb/371421ce2926347f859095e521617f79/image.png)
+
+
+
+Glide data imports support .xlsx, .csv, or .ods files.
+
+### Import to an existing Big Table
+
+To import data into an existing Big Table:
+
+1. First, make sure the column names on the spreadsheet you want to import data from match the column names on the Big Table you want to import to. This helps Glide know where to put your imported data!
+2. In the **Data Editor**, right-click the Big Table you'd like to import data into.
+3. Select **Import**.
+4. Choose which file to upload for import.
+
+When you import data into an existing Big Table, Glide will add your rows to the existing table. It will not modify or delete the data that's already there.
+
+### Exporting from a Big Table
+
+To export data from a Big Table:
+
+1. In the **Data Editor**, right-click the Big Table you'd like to export data from.
+2. Select **Export**.
+3. Choose which columns to export, or export all.
+4. You will receive an email with your Big Table export as a .csv file.
+
+
+
+![image - 3](https://images.ctfassets.net/yreygbm72t08/5ksQuVihZB0QqgHgENW6dj/98ae591478228628f5d77a4a1ae5b9c4/image.png)
+
+
+
+## Big Tables API
+
+
+
+### Glide API v2
+
+Big Tables can be used with Glide APIv2, a RESTful API. [Read more at our advanced API documentation.](https://apidocs.glideapps.com/api-reference/v2/general/introduction)
+
+### Big Tables - Block 3
+
+You can also use an API to add rows, set columns, or delete rows from a Big Table. To use an API to add rows, set columns, get all rows, or delete rows from a Big Table:
+
+- In the **Data Editor**, right-click on the Big Table you want to connect with.
+- Select **Show API**.
+
+
+
+![image - 4](https://images.ctfassets.net/yreygbm72t08/5F06LMd7jBmnfbZfhL3VlB/2cb9bf8722ea51f5ae7daefe9ef7ccad/image.png)
+
+
+
+- The API usage provides examples for JavaScript, Python, and curl. Select one, then choose from either **Get rows, Add rows, Edit rows **or** Delete rows, **then click the Copy Code button to copy the API instructions to your clipboard.
+
+
+
+![image - 5](https://images.ctfassets.net/yreygbm72t08/1PfTJcgrYXrdBk55Ik6eUj/34008e13942b614dd9cfb1b73e391b92/image.png)
+
+
+
+## Big Tables Audit Log
+
+When you make changes to a Big Table via the API, an audit log is automatically generated to keep track of any new data that is written to your Big Table. This audit log will appear as a Big Table in the Data Editor called **GBT/SQL Table Audit Logs** and is read-only. The table cannot be deleted, but it can be renamed. The columns in the table also cannot be changed.
+
+If you previously had a SQL source synced to your app, there will already be an audit log in the Data Editor called **SQL Table Audit Logs. **This same log will be used for your Big Tables audit information.
+
+
+
+![Existing SQL Table Audit Log](https://images.ctfassets.net/yreygbm72t08/aUP9emZyOeYcxlTmDsHgk/1182aeb81faa7c521611b2422ace5a47/image.png)
+
+
+
+## Limitations of Big Tables
+
+There are some features in Glide that aren't compatible with a Big Table. These unavailable features are:
+
+- **Single Value columns**: Cannot target a Big Table directly but work via [Multiple Relations](/automation/computed-columns/relations#building-multiple-relations) or [Queries](/automation/computed-columns/query-column).** **Only Single Value → First is supported.
+- [Lookups](/lookup-column) into Big Tables (eg. Lookups via Multiple Relations or Lookups that target an entire Big Table column) are supported in Multiple Relations and Queries but limited to 100 matching rows.
+- [Rollups](/rollup-column) and [Joined Lists](/automation/computed-columns/joined-list): Work with most computed columns but are limited to 100 matching rows.
+- **Delete Rows action:** Cannot be applied through a multi-relation in Big Tables.
+- The [User Profile](/user-profiles) data source cannot be a Big Table.
+- Aggregations in general are limited to 100 matching rows.
+
+
+

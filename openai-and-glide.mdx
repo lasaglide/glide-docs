@@ -1,0 +1,494 @@
+---
+title: "OpenAI and Glide"
+description: "Leverage artificial intelligence to generate prompt-based text and images."
+---
+
+# OpenAI and Glide
+
+Leverage artificial intelligence to generate prompt-based text and images.
+
+### OpenAI and Glide
+
+### OpenAI and Glide - Block 1
+
+The **OpenAI integration** allows you to generate text and images based on your own prompts, using the artificial intelligence of OpenAI's language models. These models have the ability to comprehend and produce text and images for you. You can also analyze and manipulate existing text and images, depending on which features you leverage in Glide.
+
+### Don't see the OpenAI integration?
+
+You may need to upgrade your plan. [Browse Glide's plans and find the right fit for you.](https://www.glideapps.com/pricing)
+
+### OpenAI and Glide - Block 2
+
+A prompt in the context of OpenAI is a command you give OpenAI for it to generate text or images for you. Here is a [quickstart guide on prompts](https://platform.openai.com/docs/guides/prompt-engineering).
+
+### [BLANK] OpenAI and Glide - Callout 2
+
+Need to set up your integration? [Get started here](https://www.glideapps.com/docs/automation/integrations/openai-integration-setup).
+
+### OpenAI and Glide - Block 3
+
+## Features Overview
+
+There are many possibilities with the OpenAI integration. You can:
+
+1. [Answer Question About a Table](#answer-question-about-a-table)
+2. [Generate Image](#generate-image)
+3. [Complete Chat](https://www.glideapps.com/docs/automation/integrations/openai-and-glide#complete-chat)
+4. [Complete Chat (With History)](https://www.glideapps.com/docs/automation/integrations/openai-and-glide#complete-chat-(with-history))
+5. [Speech to Text](#speech-to-text)
+6. [Text to Speech](https://www.glideapps.com/docs/automation/integrations/openai-and-glide#text-to-speech)
+
+This guide will break down each of these features and how you might leverage them with your Glide app.
+
+## General Principles for Building with OpenAI in Glide
+
+OpenAI features can be set up in two ways: in the [Data Editor](https://www.glideapps.com/docs/getting-started/introduction-to-the-data-editor) or in the [Workflow Editor](/getting-started/introduction-to-workflows#the-workflow-editor). All OpenAI features can be set up directly as an action. Two OpenAI features—**Complete chat **and **Speech to Text**—can also be set up in the [Data Editor](https://www.glideapps.com/docs/getting-started/introduction-to-the-data-editor).
+
+1. In the [Data Editor](https://www.glideapps.com/docs/getting-started/introduction-to-the-data-editor), use OpenAI's [Computed Columns](https://www.glideapps.com/docs/automation/computed-columns) under the [Integrations](https://www.glideapps.com/docs/automation/integrations) section. This applies the feature to all rows in that column.
+2. In the [Workflow Editor](/getting-started/introduction-to-workflows#the-workflow-editor), the feature applies to the **active row **where the action is performed. The table associated with the action contains input and output columns.
+
+## **OpenAI Models & Model Tweaks**
+
+There are several parameters you can add to your OpenAI commands to fine tune how the ai will respond. When working with artificial intelligence, it’s helpful to first understand what language model you’re interacting with so you can make decisions about how best to guide that model and make it the most impactful for your work. OpenAI has created several different models, some of which you may have heard of (like GPT-4 and DALL·E) and others which may be less familiar (like Whisper and Embeddings).
+
+### [BLANK] OpenAI and Glide - Callout 3
+
+You can review [the latest OpenAI models here.](https://platform.openai.com/docs/models/overview)
+
+### OpenAI and Glide - Block 4
+
+Glide supports three different parameters. We call these **Model Tweaks**. All of these allow you to fine tune the responses you generate with whichever model you’re using.
+
+### Temperature
+
+**Temperature** is represented by a number between 0.0 and 2.0. OpenAI models are **non-deterministic**, meaning that identical inputs can yield different outputs. Higher temperature will make the output more random, diverse, and creative—but also possibly less relevant to the input prompt. Lower temperature will make the output more focused and deterministic, with only a small amount of variability remaining, so repeating the same input will give you very similar responses every time.
+
+### Maximum Length
+
+**Maximum length**, which must be a number below 2048, controls the maximum length of the generated text, measured in the number of tokens (words or symbols). A higher value will result in longer responses, but may also make the responses less coherent. Most models have a context length of 2048 tokens, except for the newest models, which support 4096 tokens.
+
+### Frequency Penalty
+
+**Frequency penalty** is represented by a number between -2.0 and 2.0. Frequency penalty controls the model's tendency to repeat itself or produce responses that are irrelevant to the input. It works by lowering the chances of a word being selected again the more times that word has already been used. A higher frequency penalty will discourage the model from repeating itself.
+
+### [BLANK] OpenAI and Glide - Callout 4
+
+OpenAI’s GPT language models generate answers to the best of the model’s capabilities. The accuracy of these answers is not guaranteed.
+
+### OpenAI and Glide - Block 5
+
+## Answer Question About a Table
+
+With the **Answer question about a table** feature, users can ask a question about a table of data.
+
+### [BLANK] OpenAI and Glide - Callout 5
+
+This feature is experimental and may provide approximate or erroneous answers.
+
+### OpenAI and Glide - Block 6
+
+### Input and Output of Answer Question About a Table
+
+**Input**
+
+- Question (required): A question in text format.
+- Source table (required): The table the feature will analyze.
+- Row specifier
+- Additional context (optional): Give a secondary instruction to complete the question.
+- Temperature (optional number, defaults to 1): For most factual use cases, such as data extraction and truthful Q&A, a temperature of 0 is best.
+- Maximum length (optional number, defaults to 16): This is a hard cutoff limit for token generation.
+- Frequency penalty (option number, defaults to 0): Number between -2.0 and 2.0.
+
+**Output**
+
+- An answer to the question.
+
+### Setup
+
+1. In the Data Editor, determine which table will be the data source for the action.
+2. Create columns that will hold basic text values for the question and answer.
+3. Optionally, create additional columns to hold basic text values for Query and Prompt, and basic number values for Temperature, Maximum Length, and Frequency Penalty.
+4. In the Workflow Editor, configure an **Answer question about a table **action.
+5. Configure the action by pointing the fields to their associated columns.
+
+
+
+### [BLANK] OpenAI and Glide - Callout 7
+
+Rules of Thumb:
+
+- Use the latest OpenAI model.
+- Be specific, descriptive, and as detailed as possible about the desired context, outcome, length, format, style, etc.
+- Model and temperature are the most commonly used parameters to alter the output.
+
+
+
+### OpenAI and Glide - Block 8
+
+## Generate Image
+
+The **Generate image** feature allow you to create images from scratch based on a text prompt. Note that images take 5-10 seconds to generate on average.
+
+### Input and output of Generate Image
+
+**Input**
+
+- A description of the image to be generated
+
+**Output**
+
+- An image
+
+### Setup
+
+1. In the [Data Editor](https://www.glideapps.com/docs/getting-started/introduction-to-the-data-editor), create a basic text column to store the image prompt and a basic image column to house the generated image.
+2. In the [Workflow Editor](/getting-started/introduction-to-workflows#the-workflow-editor), create a new action, select the **Generate image **action, and select the table where the generated image will be stored.
+3. Select the **prompt **column you set up previous, or enter a manual prompt. 
+4. Glide will input the latest Dall-E **model **automatically, and you can change it if needed.
+5. Point the Dall-E image field to the basic image column that will store the generated image.
+6. Change the default size if desired.
+7. Input a style if desired.
+8. Select if you'd like the image to be HD.
+9. The action, when run, will generate an image from the description or custom text.
+
+[Review the full configuration options in OpenAI's Cookbook. ](https://cookbook.openai.com/articles/what_is_new_with_dalle_3)
+
+## Complete Chat
+
+You can embed the power of [ChatGPT](https://openai.com/blog/chatgpt) in your app to create your very own question and answer features. This feature can be configured either with or without the ability to reference the chat history when forming responses. If you’d like the feature to reference chat history, first follow this guide, then proceed to the next guide, [Complete chat (with history)](https://www.glideapps.com/docs/automation/integrations/openai-and-glide#complete-chat-(with-history)).
+
+### Input and Output
+
+**Input**
+
+- A simple text prompt, question, or request.
+
+**Output**
+
+- A response from ChatGPT.
+
+### Setup
+
+There are several ways to set up the **Complete Chat** feature in Glide. In this guide, we will set it up using the [Comments component](https://www.glideapps.com/docs/essentials/components/collection/comments), as it provides the best chat experience for users.
+
+First, create a chat message table in the Data Editor with the following columns:
+
+### [BLANK] OpenAI and Glide - Callout 8
+
+If you plan to use Complete chat with history, make sure your column names match these exactly.
+
+
+
+### OpenAI and Glide - Block 9
+
+1. **Timestamp: **The time each message and answer are created.
+2. **Session ID: **A unique value for each chat conversation (e.g. user ID, conversation ID, etc.)
+3. **Content: **A text column to store the message sent to ChatGPT.
+4. **Result: **A text column to store the response from ChatGPT.
+5. **User Name: **A text column to store the name of the user who created the message.
+6. **User Photo: **A image column to store the image of the user who created the message.
+
+
+
+### [BLANK] OpenAi And Glide - Callout 9
+
+User Name and User Photo are only required if you are using the Comments component.
+
+### OpenAi And Glide - Block 10
+
+Next, we’ll set up the chat feature in the Layout Editor:
+
+1. Create a new screen with the [Comments component.](https://www.glideapps.com/docs/essentials/components/collection/comments)
+2. Connect it to **Data**:- Use your chat message table as the [Data Source](https://www.glideapps.com/docs/essentials/data-sources).
+- Give your chat a custom **Title.**
+- Set the **Topic to Save **to the unique identifier you want to use as the **Session ID**. In our example, we used the current user’s [Row ID](https://www.glideapps.com/docs/automation/computed-columns/row-id-column).
+3. Configure it’s **Content** using the fields you created in the last step:- **Comment: **The field that stores the user’s message (ie. Content)
+- **Timestamp: **The field that stores the time the message was created.
+- **User photo: **The field that stores the photo of the user that created the message.
+- **User name: **The filed that stores the name of the user that created the message.
+- **Topic: **The field that stores the unique identifier for the conversation. (ie. Session ID)
+4. Finally we’ll create a workflow to send the user’s prompt to ChatGPT and store the response as a new message in Glide:
+5. Within the [Comments component's](https://www.glideapps.com/docs/essentials/components/collection/comments) settings, create a new action for the **AFTER SUBMIT ACTION**.
+6. Add an new **Complete chat **action specifying the user’s **Message **and where the **Result **from ChatGPT should be stored.
+7. If you'd like your output in JSON format, check the box.
+8. Follow that with an [Add row](https://www.glideapps.com/docs/automation/actions/add-row) action so that the response appears as a new message to the user.- **Sheet: **Your chat message table.
+- **Timestamp: **The current date/time.
+- **Session ID: **The unique identifier for the chat.
+- **Content: **The Result from the last message.
+- **User Name: **A custom name for your bot.
+- **User Photo: **A custom photo for your bot.
+9. Finally, we added two [Show notification](https://www.glideapps.com/docs/automation/actions/show-notification) actions to let our user’s know when the message was sent and when a new message was received. 
+
+If you'd like to allow users to send an image to ChatGPT, you can also add a an Image input column. This leverages GPT-4's Vision technology. [Read more here](https://platform.openai.com/docs/guides/vision). This can only be used if you select a model that supports Vision.
+
+## Complete Chat (With History)
+
+You can embed the power of [ChatGPT](https://openai.com/blog/chatgpt) in your app to create your very own chatbot. This feature can be configured either with or without the ability to reference the chat history when forming responses.
+
+### OpenAi And Glide - Block 11
+
+This guide will walk you through the additional configuration needed so that ChatGPT can reference your chat history when forming responses.
+
+### Input and Output
+
+**Input**
+
+- **Message History: **The table where all chat messages are stored.
+- **Message: **A simple text prompt, question, or request.
+- **Session ID: **The unique identifier for the conversation.
+
+**Output**
+
+- **Result: **The response from ChatGPT.
+
+### Setup
+
+
+
+### [BLANK] OpenAi And Glide - Callout 11
+
+If you have not gone through the first guide, please reference the [Complete chat guide](https://www.glideapps.com/docs/automation/integrations/openai-and-glide#complete-chat) before continuing. This guide continues what was set up there.
+
+### OpenAi And Glide - Block 12
+
+First, update your chat message table in the [Add row](https://www.glideapps.com/docs/automation/actions/add-row):
+
+1. Add a basic text column called “Role” to store the role of the user that created the message.- Messages from your user’s will have a role of “user”
+- Messages from ChatGPT will have a role of “assistant”
+2. ChatGPT requires specific fields in order to reference the chat history. Make sure you have the following fields created and labelled exactly as follows:- Timestamp
+- Session ID
+- Content
+- Role
+
+Finally, update the action that is triggered when a new message is created:
+
+1. When a new message is created, use the [Set column values](https://www.glideapps.com/docs/automation/actions/set-column-values) action to set the message’s [Role](https://www.glideapps.com/docs/essentials/security-and-user-data/roles) to “user”.
+2. Change the OpenAI action to use the **Complete chat (with history) **action.
+
+
+
+### [BLANK] OpenAi And Glide - Callout 12
+
+Make sure your Message History has these fields: **Timestamp**, **Content**, **Session ID**, and **Role.**
+
+### OpenAI And Glide - Block 13
+
+- Update the [Add row](https://www.glideapps.com/docs/automation/actions/add-row) action to set the **Role **of ChatGPT’s message to “assistant”
+
+## Speech to Text
+
+With the **Speech to text** feature, you can transcribe an audio recording into text. This allows you to leverage AI to generate usable text data from audio your users record and submit.
+
+### Input and output of Suggest a Color
+
+- Input: An audio recording.
+- Output: A text transcription of the audio recording.
+
+### Setup
+
+- In the [Add row](https://www.glideapps.com/docs/automation/actions/add-row), create a basic text column with the URL of the audio.
+- Either in the [Data Editor](https://www.glideapps.com/docs/getting-started/introduction-to-the-data-editor) or in the [Workflow Editor](/getting-started/introduction-to-workflows#the-workflow-editor), select **Speech to text** and point to the column with the URL of the audio.
+- The action, when run, will transcribe the audio file and output the corresponding text.
+
+## 
+Text to Speech
+
+The **Text to Speech **feature can be used as an action in the Layout or Action Editor. With it, you can convert written text to an audio file. 
+
+### Input and output of Text to Speech
+
+- Input: Text
+- Output: URL for an audio file
+
+### Setup
+
+1. In the Data Editor, create a column to store the input text and a column to store the URL result.
+2. In the Layout or Workflow Editor, create a new action and select **Text to Speech. **
+3. Use the column with the input text as your **input. **
+4. Open the **Options **menu if you'd like to configure additional options.- Which audio **model **to use. [You can learn more about OpenAI's audio models here](https://platform.openai.com/docs/api-reference/audio/createSpeech#audio-createspeech-voice). 
+- Which **voice **to use. [You can learn more about voice options here](https://platform.openai.com/docs/guides/text-to-speech/voice-options). 
+- If you'd like to increase or decrease the **speed **of the audio. 
+- The file format of the **response. **[Learn more about format options here](https://platform.openai.com/docs/api-reference/audio/createSpeech#audio-createspeech-response_format). 
+5. Use the column you created to store the Audio URL for the **result.**
+
+## Deprecated Features
+
+The following features were deprecated in December 2023. Apps with existing computed columns and actions using these features will continue to work. However, if you delete an action or computed column that has been configured, you will not be able to restore it. 
+
+## Analyze Sentiment
+
+With the **Analyze sentiment** feature, you can identify whether a piece of text is positive, negative, or neutral.
+
+### Input and Output of Analyze Sentiment
+
+**Input (required text)**
+
+- Text such as a word, sentence, or paragraph. This text should be fewer than ~3,000 words.
+
+**Output**
+
+- The terms “positive,” “neutral,” or “negative”.
+
+### Setup
+
+The **Analyze sentiment** feature can be used as an action or as a computed column. To set up as a computed column:
+
+1. Create a basic text column for the input text.
+2. Create a new computed column and select **Analyze sentiment **as the type. You can search for this in the “Type” menu.
+3. Set the Prompt field to point to the basic text column whose text is to be analyzed.
+
+### Use cases
+
+OpenAI’s Analyze sentiment model is used to identify whether a piece of text is positive, negative, or neutral. Some use cases for Analyze Sentiment might include:
+
+1. Monitoring user comments to assess the likeability of your brand or products.
+2. Improving customer support by identifying negative and neutral opinions.
+3. Tracking the mood of employees by analyzing team member surveys and segmenting responses.
+4. Analyzing user-generated content and ensuring tone consistency.
+5. Turning sentiment analysis results into numerical values and performing roll-ups such as counts and averages for reporting.
+6. Acting promptly on negative comments submitted in a feedback form.
+
+## Answer Question
+
+With the **Answer question** feature, you can create a question-and-answer or chatbot feature within your app. Note that OpenAI’s GPT language models generate answers to the best of the model’s capabilities. The accuracy of these answers is not guaranteed.
+
+### Input and Output of Answer Question
+
+**Input (required text)**
+
+- A question
+
+**Output**
+
+- An answer to the question
+
+### Setup
+
+1. Create a basic text column that will house the question to be answered.
+2. Create a new computed column and select the **Answer question **column, which you will find in the [Integrations](https://www.glideapps.com/docs/automation/integrations) group or by using the search function.
+3. Set the Question field to point to the basic text column whose question will be answered.
+
+## Complete Prompt
+
+The **Complete prompt** feature has limitless potential. You can ask for anything, from story and recipe ideas, to business plans, to character descriptions and marketing slogans. By providing a text prompt as a cue, the **Complete prompt** computed column will generate a text output that tries to replicate the context or pattern that was initially given. Depending on your prompt, the text output might continue the initial text prompt, transform it, or generate an entirely new text related to it.
+
+### [BLANK] Complete Prompt Variation Callout
+
+If repeated, you might get a slightly different output even if your prompt input stays the same. This is because OpenAI’s language models are random. Setting the temperature to 0 will make the outputs mostly deterministic (less different), but a small amount of variability may remain.
+
+### OpenAI and Glide - Complete Prompt Input/output
+
+### Input and Output of Complete Prompt
+
+**Input**
+
+- Prompt (required text): The word, sentence, or paragraph to be completed.
+- Model (required text): The OpenAI API is powered by a diverse set of models with different capabilities. For instance:- text-davinci-003 can be used for text completion.
+- code-davinci-002 is optimized for code completion, most capable in Python and proficient in over a dozen languages including JavaScript, Go, Perl, PHP, Ruby, Swift, TypeScript, SQL, and even Shell.
+- gpt-3.5-turbo is optimized for chat at 1/10th the cost of text-davinci-003.
+- Refer to OpenAI’s [latest language models](https://platform.openai.com/docs/models/overview).
+- Temperature (optional number, defaults to 1): Number between 0 and 2.
+- Maximum length (optional number, defaults to 16): Does not control the length of the output, but a hard cutoff limit for token generation.
+- Frequency penalty (option number, defaults to 0): Number between -2.0 and 2.0. Positive values decrease the likelihood of the same strings of words being repeated verbatim.
+
+**Output**
+
+- A text output that tries to replicate the context or pattern that was initially given, such as a stories, recipes, business plans, character descriptions, or marketing slogans.
+
+
+
+### Complete Prompt Setup, Correct Grammar, Extract Keywords
+
+### Setup
+
+1. Create a basic text column that will house the Prompt.
+2. Create a new computed column and select the Complete Prompt column, which you will find in the [Integrations](https://www.glideapps.com/docs/automation/integrations) group or by using the search function. The values for the Model, Temperature, Maximum length, and Frequency penalty can be set within the configuration of the **Complete prompt **column, or you can create basic columns for each should you require further fine tuning of the output.
+3. Set the prompt to point to the basic text column whose Prompt will be completed. Optionally, set the model, temperature, maximum length and frequency penalty.
+
+## Correct Grammar
+
+The **Correct grammar** feature corrects the grammar of a block of text. This feature will only change text that is grammatically inaccurate. It will not edit for tone or other stylistic choices.
+
+### Input and output of Correct Grammar
+
+**Input**
+
+- A block of text (sentence, paragraphs) with grammar to be corrected.
+
+**Output**
+
+- The same block of text with correct grammar.
+
+### Setup
+
+1. Create a basic text column which will house the text whose grammar is to be corrected.
+2. Create a new computed column and select the **Correct grammar **column, which you will find in the [Integrations](https://www.glideapps.com/docs/automation/integrations) group or by using the search function.
+3. Set the Phrase to point to the basic text column housing the text whose grammar is to be corrected.
+
+## Extract Keywords
+
+The **Extract keywords** feature allows you to extract keywords from a block of text such as a sentence, paragraph, or series of paragraphs. The most used and most important words and expressions from the text help summarize the content and identify the main topics.
+
+### Input and output of Extract Keywords
+
+**Input**
+
+- A block of text (sentence or paragraphs).
+
+**Output**
+
+- The most used and most important words and expressions from the text.
+
+### Setup
+
+1. Create a basic text column to house the phrase or paragraph(s) whose keywords will be extracted.
+2. Create a new computed column and select the Extract Keywords column, which you will find in the [Integrations](https://www.glideapps.com/docs/automation/integrations) group or by using the Search function.
+3. Set the Prompt to point to the basic text column whose keywords will be extracted.
+
+## Suggest a Color
+
+The **Suggest a color** feature takes a prompt and suggest a color hex code.
+
+### Input and output of Suggest a Color
+
+- Input: Simple text
+- Output: One single color in HEX color code format.
+
+### Setup
+
+- Create a basic text column which will house the text from which a color will be suggested.
+- Create a new computed column and select the **Suggest a color **column, which you will find in the [Integrations](https://www.glideapps.com/docs/automation/integrations) group or by using the search function.
+- Set the prompt to point to the basic text column from which a color will be suggested.
+
+## Suggest an Emoji
+
+The **Suggest an emoji** feature takes a prompt and guesses which emoji would bet go with that prompt.
+
+### Input and output of Suggest an Emoji
+
+- Input: Simple text
+- Output: One single emoji
+
+### Setup
+
+- Create a basic text column that will house the text from which an emoji will be suggested.
+- Create a new computed column and select the **Suggest an emoji **column, which you will find in the [Integrations](https://www.glideapps.com/docs/automation/integrations) group or by using the search function.
+- Set the prompt to point to the basic text column from which an emoji will be suggested.
+
+## Summarize
+
+The **Summarize** feature allows you to translate a difficult text into simpler concepts or to turn meeting notes into a summary.
+
+### Input and output of Summarize
+
+- Input: A block of text, notes, bullet points.
+- Output: An summarized or simplified version of the text.
+
+### Setup
+
+- Create a basic text column that will house the text to be summarized or simplified.
+- Create a new computed column and select the **Summarize **column, which you will find in the [Integrations](https://www.glideapps.com/docs/automation/integrations) group or by using the search function.
+- Set the prompt to point to the basic text column whose text is to be summarized or simplified.
+
+
+

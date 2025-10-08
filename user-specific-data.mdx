@@ -1,0 +1,39 @@
+---
+title: "User-specific Data"
+description: "Show different data to different users."
+---
+
+# User-specific Data
+
+Show different data to different users.
+
+### User-specific Data - Block 1
+
+If you think about the apps you use every day, most of them have data that is specific to you. In other words, when other people log into that app, they don't see your data, they see their own.
+
+There are a couple of ways to do this when building an app in Glide.
+
+## Row Owners
+
+If you have entire rows of data in your app that only belong to certain users, you should use [Row Owners](/row-owners). When you assign a Row Owner column, only the users who have been assigned that row will be able to download or access that data. No other users can access it.
+
+### User-specific Data - Block 2
+
+## User-specific Columns
+
+Assigning Row Owners is great for restricting access to certain items. But what if you want to show all items to all users but still have some data on each item be specific to each user, like a personal rating for that item or personal notes? For that, you need [user-specific columns](/user-specific-columns).
+
+Like Row Owners, user-specific columns are very secure.
+
+### User-specific Data - Block 3
+
+## Conditions
+
+Conditions can be used to hide or show components, tabs, or individual collection items. However, this hiding is limited to the user interface only. In other words, the app still downloads the data that the user doesn't see on the screen, and it may still be accessible. **If your app contains sensitive or private data, you should only use Row Owners and user-specific columns.**
+
+### User-specific Data - Block 4
+
+## Viewing as
+
+Whether you use Row Owners, User-Specific Columns, or [Conditions](/conditions-filtering-and-visibility), you'll want to preview the app from the perspective of certain users while you build it. This will allow you to see what they will see in the app. In the [Layout Editor](/getting-started/intro-to-layout), click on the **Viewing As** dropdown and select a user or enter their name/email address, and you'll see exactly what they'll see.
+

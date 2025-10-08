@@ -1,0 +1,235 @@
+---
+title: "JSON"
+description: "Build and query JSON Objects. "
+---
+
+# JSON
+
+Build and query JSON Objects. 
+
+### JSON - Block 1
+
+The **JSON **integration allows you to work with data in JavaScript Object Notation format. This format is the most common way to store and work with data through APIs. When paired with the [**Call API **](/docs/automation/integrations/call-api)integration, you can unlock infinite new ways to connect your Glide apps with other platforms. 
+
+### [BLANK] JSON - Callout 1
+
+Just getting started with JSON? Check out our [guide to APIs and JSON to learn more](https://www.glideapps.com/blog/introduction-to-apis). 
+
+### JSON - Block 2
+
+## JSON Object
+
+The **JSON Object** feature allows you to build JSON objects from your data. JSON objects contain key-value pairs, consisting of a key (or string type) and a value.
+
+When you create JSON objects in Glide, keys will be quoted values in strings, and values will be quoted or unquoted depending on the type of value. You can pull in values from columns in your data, or enter values manually. Note that if you enter string values manually, they must be entered with quotes.
+
+The feature can be configured as a column in the [Data Editor](/docs/getting-started/introduction-to-the-data-editor) or as an action in the Layout or Workflow Editor.
+
+### In the Data Editor
+
+
+
+### JSON - Arcade 1
+
+### JSON - Block 3
+
+1. In the Data Editor, open the table you want to edit.
+2. Add a new column by clicking the (**+**) plus symbol to the right of the table.
+3. Give the column a name.
+4. For type, search for **JSON Object** or navigate to **Integrations → JSON → JSON Object.**
+5. Add as many key-value pairs as needed by clicking **+ Add Value**.
+6. Select **Done.**
+
+Your JSON objects should appear in the column immediately.
+
+### In the Layout Editor
+
+
+
+### JSON - Arcade 2
+
+### JSON - Block 4
+
+
+
+1. Create a column in your data to house the returned JSON.
+2. Click on the plus (**+**) sign in the **Component** panel to add a new component that supports actions, or select an existing component to add an action.
+3. In the **General** tab on the right side of the Layout Editor, navigate to the **Actions** section and search for **JSON Object** or navigate to **Integrations → JSON → JSON Object.**
+4. Select the icon and title for your action.
+5. Add as many key-value pairs as needed by clicking **+ Add Value**.
+6. For **Resulting JSON**, select the column you created to store this data.
+7. Add conditions to the action, if desired. These will limit when the action is allowed to trigger.
+8. Click away from the configuration menu. Your settings will save automatically.
+
+### In the Workflow Editor
+
+
+
+### JSON - Arcade 3
+
+### JSON - Block 5
+
+1. Create a column in your data to house the returned JSON.
+2. Select the (**+**) plus symbol or the **+ New Workflow** button.
+3. Select as the data source for the action the data source of the screen where the action is triggered.
+4. Search for **Query JSON** or navigate to **Integrations → JSON → JSON Object.**
+5. Add as many key-value pairs as needed by clicking **+ Add Value**.
+6. For **Resulting JSON**, select the column you created to store this data.
+7. Click away from the configuration menu. Your settings will save automatically.
+
+## Query JSON
+
+The **Query JSON** feature allows you to parse, or pull out, part of a JSON object. Glide uses JSONata as our querying language.
+
+### [BLANK] JSON - Callout 2
+
+Want to learn more about querying JSON? We recommend checking out [JSONata](https://jsonata.org/) to learn more.
+
+### JSON - Block 6
+
+When setting up Query JSON, you will have the option of choosing values from a menu. This menu will show an example value for each element, pulled from the first row of your data. To pull out multiple types of values into different columns, create a new **Query JSON** for each one. The feature can be configured as a column in the Data Editor or as an action in the Layout or Workflow Editor.
+
+### In the Data Editor
+
+
+
+### JSON - Arcade 4
+
+### JSON - Block 7
+
+
+
+1. In the Data Editor, open the table you want to edit.
+2. Add a new column by clicking the (+) plus symbol to the right of the table.
+3. Give the column a name.
+4. For type, search for **Query JSON** or navigate to **Integrations → JSON → Query JSON.**
+5. For the **JSON** field, select the column with the JSON you want to parse.
+6. For the **Query** field, when you click the three dots to open the column selector, you will see a list of the values from your JSON. You can choose from this list or type the key name of the value you want to parse out. For example, if you want to pull the values from the “name” value, you could type “name” in this field.
+7. Select **Done.**
+
+Your parsed values will appear immediately in the column.
+
+### In the Layout Editor
+
+
+
+### JSON - Arcade 5
+
+### JSON - Block 8
+
+
+
+1. Create a column in your data to house the transformed JSON.
+2. Click on the plus (**+**) sign in the **Components** panel to add a new component that supports actions, or select an existing component to add an action.
+3. In the **General** tab on the right side of the Layout Editor, navigate to the **Actions** section and search for **Query JSON** or navigate to **Integrations → JSON → Query JSON.**
+4. Select the icon and title for your action.
+5. For the **JSON** field, select the column with the JSON objects you want to parse.
+6. For the **Query** field, when you click the three dots to open the column selector, you will see a list of the values from your JSON. You can choose from this list or type the key name of the value you want to parse out. For example, if you want to pull the values from the “name” value, you could type “name” in this field.
+7. For the **Transformed JSON** field, use the column you created to store this data.
+8. Add conditions to the action, if desired. These will limit when the action is allowed to trigger.
+9. Click away from the configuration menu. Your settings will save automatically.
+
+### In the Workflow Editor
+
+
+
+### Json - Arcade 6
+
+### JSON - Block 9
+
+
+
+1. Create a column in your data to house the transformed JSON.
+2. Select the (**+**) plus symbol or the **+ New Worfkflow** button.
+3. Select as the data source for the action the data source of the screen where the action is triggered.
+4. Search for **Query JSON** or navigate to **Integrations → JSON → Query JSON.**
+5. For the **JSON** field, select the column with the JSON objects you want to parse.
+6. For the **Query** field, when you click the three dots to open the column selector, you will see a list of the values from your JSON. You can choose from this list or type the key name of the value you want to parse out. For example, if you want to pull the values from the “name” value, you could type “name” in this field.
+7. For the **Transformed JSON** field, use the column you created to store this data.
+8. Click away from the configuration menu. Your settings will save automatically.
+
+
+
+### JSON Template - Block 1
+
+## JSON Template
+
+
+The **JSON Template** feature allows you to build JSON objects by creating a template with variables you can then substitute with values from your data.
+
+JSON objects contain key-value pairs, consisting of a key (or string type) and a value. To build these into a template in Glide, put each key in quotation marks and each value starting with a $ symbol. For example, to build a template with key-value pairs for a person’s name and age, the template JSON would look like this:
+
+### JSON Template Code Block 1
+
+{
+  "person": {
+    "name": "$name",
+    "age": $age
+  }
+}
+
+
+### JSON Template Block 1.5 (post code-block)
+
+You can then bind the values for name and age to existing column values in your data tables.
+
+The feature can be configured as a column in the [**Data Editor**](https://www.glideapps.com/docs/getting-started/introduction-to-the-data-editor) or as an action in the Layout or Workflow Editor.
+
+### In the Data Editor
+
+
+
+### JSON Template - Arcade 1
+
+### JSON Template - Block 2
+
+
+
+1. In the Data Editor, open the table you want to edit.
+2. Add a new column by clicking the (**+**) plus symbol to the right of the table.
+3. Give the column a name.
+4. For type, search for **JSON Template** or navigate to **Integrations → JSON → JSON Template.**
+5. Enter the JSON template. Format keys `“like this”` and values `$likethis`
+6. Bind the template keys to values from your columns. Add as many key-value pairs as needed by clicking **+ Add Value**.
+7. Select **Done.**
+
+Your JSON objects should appear in the column immediately.
+
+### In the Layout Editor
+
+
+
+### JSON Template - Arcade 2
+
+### JSON Template - Block 3
+
+1. Create a column in your data to house the returned JSON.
+2. Click on the plus (**+**) sign in the **Component** panel to add a new component that supports actions, or select an existing componentto add an action.
+3. In the **General** tab on the right side of the Layout Editor, navigate to the **Actions** section and search for **JSON Template** or navigate to **Integrations → JSON → JSON Template.**
+4. Select the icon and title for your action.
+5. Enter the JSON template. Format keys `“like this”` and values `$likethis`
+6. Bind the template keys to values from your columns. Add as many key-value pairs as needed by clicking **+ Add Value**.
+7. For **Resulting JSON**, select the column you created to store this data.
+8. Add conditions to the action, if desired. These will limit when the action is allowed to trigger.
+9. Click away from the configuration menu. Your settings will save automatically.
+
+### In the Workflow Editor
+
+
+
+### JSON Template - Arcade 3
+
+### JSON Template - Block 4
+
+1. Create a column in your data to house the returned JSON.
+2. Select the (**+**) plus symbol or the **+ New Workflow** button.
+3. Select as the data source for the action the data source of the screen where the action is triggered.
+4. Search for **JSON Template** or navigate to **Integrations → JSON → JSON Template.**
+5. Enter the JSON template. Format keys `“like this”` and values `$likethis`
+6. Bind the template keys to values from your columns. Add as many key-value pairs as needed by clicking **+ Add Value**.
+7. For **Resulting JSON**, select the column you created to store this data.
+8. Add conditions to the action, if desired. These will limit when the action is allowed to trigger.
+9. Click away from the configuration menu. Your settings will save automatically.
+
+
+

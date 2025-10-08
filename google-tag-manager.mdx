@@ -1,0 +1,81 @@
+---
+title: "Google Tag Manager"
+description: "Track user behavior with Google Tag Manager."
+---
+
+# Google Tag Manager
+
+Track user behavior with Google Tag Manager.
+
+### Google Tag Manager - Block 1
+
+[Google Tag Manager](https://tagmanager.google.com/#/home) is a tag management system for web analytics. GTM) is a powerful tool that simplifies the process of managing and deploying tags on your website. Tags are snippets of code that collect data and send it to third-party tools, such as analytics platforms or advertising platforms. GTM provides a centralized platform where you can add, update, and manage these tags without the need for manual coding each time a change is required. 
+
+With the Google Tag Manager integration, you can track user behavior in your Glide app. Data from events created with Google Tag Manager are sent to Google Analytics, so you'll need a Google Analytics account before you get started. 
+
+### Don't see the Google Tag Manager integration?
+
+You may need to upgrade your plan. [Browse Glide's plans and find the right fit for you.](https://www.glideapps.com/pricing)
+
+
+
+### New Format for Tags
+
+Please note that Google changed the format for GTM tags in September 2023. Te previous format was GTM-xxxxx. New measurement IDs start with G-xxxxx. If your previous tags stop working, you may need to update your measurement ID in the integration settings. 
+
+### Adding + Configuring Integration Header
+
+## Adding and Configuring the Action
+
+
+
+### Adding GTM Arcade
+
+### Google Tag Manager - Block 2
+
+1. In **Glide**, click the **Settings **menu.
+2. Find the [Integrations](/automation/integrations) section and then select [Google Tag Manager](https://tagmanager.google.com/#/home).
+3. Click **Add.**
+4. You will need the Google Analytics 4 (GA4) **Measurement ID **to send events to Google Tag Manager and see them in Google Analytics.
+5. If you have not created a GA4 property or configured it in Google Tag Manager, continue following the steps below.
+
+### Creating a Google Analytics 4 Property
+
+1. If you have not already created a GA4 property, you can create one in [Google Analytics](https://analytics.google.com/).
+2. Once the GA4 property is created, you will need to create a web data stream.
+3. The website URL for your web data stream is your app URL.
+
+### Configuring your GA4 Property in Google Tag Manager
+
+1. If you have not created a Google Tag Manager account, you can create one in [Google Tag Manager](https://tagmanager.google.com/).
+2. During the account creation process, select web as the container type.
+3. Configure your tag as desired to track a variety of different behaviors in your app.
+
+For detailed instructions, you can read more in Google Tag Manager’s [docs](https://support.google.com/tagmanager/answer/9442095?hl=en).
+
+### Set up GA4 Events in Google Tag Manager
+
+1. If you have not created a Google Tag Manager account, you can create one in [Google Tag Manager](https://tagmanager.google.com/).
+2. If you have not configured your GA4 property, read the section above.
+3. Click **New Tag **and **Google Analytics: GA4 Event **as the tag type.
+4. Select the tag to configure its settings.
+5. Set the name of the event you would like to send in the **Event Name **field.
+6. To set the trigger, click the **`+ `**button on the upper right and choose **All Elements**.
+7. **Save **your tag to finish the tag creation process.
+8. Make sure to **publish **to push your changes.
+
+For detailed instructions, you can read more in [Google Tag Manager’s docs](https://support.google.com/tagmanager/answer/13034206).
+
+In the settings area of Glide, enter your GA4 Measurement ID, a required 12-character alphanumeric string (e.g., G-ABC1234567), to connect your GA4 property.
+
+## Track custom event
+
+The **Track custom event** action is used to send an analytics event to your Google Analytics 4 property via Google Tag Manager. To create custom events, the **Event Name** is required. You can also add additional values if needed.
+
+The action can be added to a [Component](/components) that supports [Actions](/actions) (e.g., a [Button component](/button-components)), added to a workflow in the [Workflow Editor](/getting-started/introduction-to-workflows#the-workflow-editor), or after a [Form](/forms) is submitted.
+
+
+### Integrations Learn More Block
+
+To learn more generally about Integrations in Glide, including how they affect your app’s usage, check out our [Introduction to Integrations](/automation/integrations).
+

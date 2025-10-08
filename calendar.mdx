@@ -1,0 +1,78 @@
+---
+title: "Calendar"
+description: "Display items on a calendar based on a specified date and time."
+---
+
+# Calendar
+
+Display items on a calendar based on a specified date and time.
+
+### Calendar - Block 1
+
+The Calendar component is a special type of [Collection Component](https://www.glideapps.com/docs/essentials/components/collection-components) that allows you to display items on a calendar based on a specified date and time. You can use this component to display events, appointments, deadlines, and more on a calendar.
+
+The Calendar component has different views to show events in different formats. You can display events by month, week, day, or display an agenda view.
+
+## Setting Up Calendar Collections
+
+To set up your Calendar Collection:
+
+1. In the [Layout Editor](/intro-to-layout) of your app, hit the plus (+) symbol to add a new component.
+2. Find **Collections** in the menu and select **Calendar**.
+3. Choose the [Data Source](/data-sources) where your calendar items are stored.
+4. You can also give your calendar a new **Title** if you want.
+
+## Configuring Calendar Collections
+
+
+
+
+
+### Calendar Arcade
+
+### Calendar Block 2
+
+Calendar Collections are specifically designed for items that have a date, such as events, appointments, projects with deadlines, and more. You can set the **Items Data** for each item:
+
+- **Title**: The name of the item you want to display.
+- **Start Time**: The date and time you want the item to be displayed on. This should be a Date & Time column.
+- **End Time**: An optional end date and time. If no End Date is specified, Glide will display your event as being 30 minutes long. This should be a Date & Time column.
+
+After mapping the data, you can configure how the Calendar should **Display**:
+
+- **Title Style:** The style of the top of your calendar. Choose `Simple` or `Bold` to use your apps Accent Color.
+- **Default Mode:** The default view of your calendar (**Month, Week, **or **Day)**
+- **Default Date:** The date the calendar should start on. You can choose `Today`**, **the `Earliest` or `Latest` date in your list, or any other another specific date.
+
+## **Adding Actions to your Calendar Collections**
+
+You can set up specific [Actions](/automation/actions) for your calendar. This will control how users can interact with the data.
+
+### **Default Actions**
+
+- In the **Actions** tab, enable the actions you want to allow users to take.- **Allow users to add items**
+- **Allow users to edit items**
+- Click on the **Add Condition** button under the respective actions to create your conditions, if desired.
+
+
+
+### [BLANK] Calendar - callout 1
+
+If **Allow users to edit items **is enabled, users can click on the calendar to create an event and drag calendar events to adjust the start and end times. 
+
+### Calendar - Block 3
+
+### **Advanced Actions**
+
+Advanced actions allow you to specify what happens when users click on your event and add your own actions as buttons in the title bar.
+
+- In the **Actions** tab, locate the **Advanced Actions** section.
+- Click on the **Enable advanced actions** button.
+- In the **Inline** **Actions** section, enable the actions you want to allow users to take.- **Allow adding events**
+- **Allow changing the time of events**
+- Click on the **Add Condition** button under the respective actions to create your conditions, if desired.
+- In the **Title Bar Action** section, click on **Add primary action** to add a new action to the title bar.
+- In the **Item Click** section, specify an action to take when a user clicks on an item in the board.
+
+
+

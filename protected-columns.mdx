@@ -1,0 +1,39 @@
+---
+title: "Protected Columns"
+description: "Keep unused columns in your data source secure."
+---
+
+# Protected Columns
+
+Keep unused columns in your data source secure.
+
+### [BLANK] Protected Columns - Callout 1
+
+Protected columns are only supported for external data sources. A paid Glide plan is required. 
+
+
+
+### Security Center
+
+To learn more about keeping your app secure, [read the latest information in our Security Center.](https://www.glideapps.com/security-center)
+
+### Protected Columns - Block 1
+
+When you build a screen with the data in your sheet, you don't always use all the sheet's columns. However, your app can still download the data in unprotected columns—even if they're not used or are hidden by visibility conditions.
+
+If you have unused columns with sensitive or private information and your app is on a **paid plan**, you should make those columns protected columns.
+
+When a column is protected, its contents will be hidden in the [Data Editor](/introduction-to-the-data-editor) and Glide won't be able to download or process any of its data from the [Data Source](/data-sources). This means that your app’s users also won't be able to access any of the information in the protected column
+
+### Protected Columns - Arcade 1
+
+### Protected Columns - Block 2
+
+## Writing data to protected columns
+
+Although users can't access content in protected columns, you can allow them to write/add data to these columns using a [**Form**](/forms) or **Add screen**. Once it's been added, it will act like all other data in the column and neither Glide nor users will be able to access it — including the user who wrote the data in.
+
+## Unused sheets
+
+If you have entire sheets that your app doesn't use at all, then you don't need to protect them. Your app can only access sheets that the app uses.
+

@@ -1,0 +1,140 @@
+---
+title: "User Experience"
+description: "Learn how to create user-specific experiences."
+---
+
+# User Experience
+
+Learn how to create user-specific experiences.
+
+### User Experience Body 1
+
+When you log in to your music app or social media account, your user experience is totally defined by your data. Your music app has your playlists and favorites, and your social media account is tied to your friends and likes. If you were to log into someone else's account, the app would look very different.
+
+With Glide, you can make apps that are public and don't have any focus on [User-specific Data](/user-specific-data). Often, you'll want to create a user-specific experience in a variety of different ways. For example:
+
+- Allow users to save favorites
+- Show different tabs to different users
+- Only allow admins to edit records
+- Let everyone have an individual rating for a specific item
+- Let everyone see their own private notes about a particular item/event
+- Allow a user to do or see something when they have reached a certain level
+
+This guide will explain all the essential features you need to start building user-specific apps.
+
+## Access and privacy
+
+In your app's Access Settings, you'll be able to choose whether your app is private or public. Depending on which one you pick, you'll see controls for which users can sign in.
+
+
+
+![The project's Access settings.](https://images.ctfassets.net/yreygbm72t08/2RkNbUAt0FpNIIFM7KWTL0/786a023a68147639ec32ad4dea125243/CleanShot_2025-03-27_at_3_.26.40_2x.png)
+
+
+
+There are quite a few different combinations you can create here. Below is a list of all the different types of access settings you can create.
+
+## Private apps
+
+Private apps are not viewable publicly. Only the people you allow to sign-in from the Privacy Settings will be able to access your app. You can make private apps that are:
+
+- Accessible only by users in the users table
+- Accessible only by members of your Glide team
+- Accessible only by people with an email matching your domain
+- Accessible only by people in a specific table that you set
+
+If your app contains any sensitive, private, or personal information, then you should use a private sign-in setting.
+
+## Public apps
+
+Public apps are always accessible by anyone in the world who has the link. Using the combination of settings in the Privacy Settings, you can create public apps that are:
+
+- Publicly accessible with no sign-in (users won't have profiles)
+- Publicly accessible, but users are required to sign-in
+- Publicly accessible, with optional sign-in
+
+## User table
+
+A user table is where the data for each of your users is stored. Every Glide app has one. Each row represents a user, and each column a property of that user. This table is essential unless your app is totally public with no sign-in.
+
+When you create a new app, Glide will automatically create a **Users** table and assign it as your User Profile Table. While the default user profiles table is a [Glide Table](/essentials/data-sources/glide-tables), you can create a table in another [data source](/essentials/data-sources) such as Google Sheets to use as the user profiles table instead.
+
+
+
+![A User Profile Table in Glide.](https://images.ctfassets.net/yreygbm72t08/3cecqUKXLFbZADhDPJO7A3/d2b55a2be889a1aa06cd748835189479/CleanShot_2024-01-11_at_3_.01.09_2x.png)
+
+
+
+At minimum, the users table needs a column for **Name, Email, **and **Photo. **Apps with sign-in can also use **Role**. You can add as many columns for your users and can use these properties in many different ways. For example:
+
+- Only show users a tab if their age is greater than 15
+- Create a list of all the users that signed up more than five months ago
+- Give editing rights only to admins
+- Create teams that people belong to
+- Show and hide items depending on users' interests
+
+
+
+### Row owners & user privacy
+
+User data in a User Table is often private and needs to be kept secure. Row owners is enabled on user tables by default. [Learn about Row Owners here](/row-owners).
+
+### User Experience Body 2
+
+## User Profile Screen
+
+When a user clicks on their profile image in the menu bar, they will be taken to their user profile screen, which is powered by their row in the users table.
+
+You can configure this screen with [Components](/essentials/components) to show and allow the user to edit their information.
+
+On desktop devices this will be on the bottom left of the app and on mobile devices this will be in the flyout menu on the top left.
+
+
+
+![How to view the User Profile in a Glide App.](https://images.ctfassets.net/yreygbm72t08/7oy7ajm8ZbLqr1ffJTc6S3/22c23e2b97ed6053bab11af03a7fd56a/CleanShot_2024-01-12_at_12_.44.32_2x.png)
+
+
+
+## Private vs. Public Users
+
+Private Users are users with assigned Roles, or users who sign into apps that limit access via the User Table, Team Member access, Allowed Domains, Emails in a Table, or [SSO](/automation/integrations/single-sign-on). Public users are users without Roles, who sign into apps that allow anyone to sign in.
+
+To read more about the full range of privacy options for your apps, check out our [App Settings guide](/getting-started/app-settings#privacy).
+
+## Viewing as user
+
+
+The **Viewing as user** menu in Glide shows you all the users who are in your Users Table. Depending on your settings, it defaults to either viewing as anyone or as the first user in the table. If you visit the User Profile Screen and switch users, you'll see the screen change. Or, if you're in the Users Table in the [Data Editor](/getting-started/introduction-to-the-data-editor), you'll see the data change.
+
+This is an incredibly useful tool if you are building an app with lots of different user data and need to see the experience that different users will have.
+
+
+
+![Opening the Preview-as menu in Glide.](https://images.ctfassets.net/yreygbm72t08/4C5EcfFxrlp9ejmGUjvki1/f8c18ac623c4f716260eb93bdc569f10/CleanShot_2024-01-12_at_12_.47.11_2x.png)
+
+
+
+You can find the Viewing as menu in both the Data Editor and the [Layout Editor](/getting-started/intro-to-layout). To switch between different users, click on the Viewing as menu and choose a user from the options or type in their name, email address, or role.
+
+## User-specific Columns
+
+**User-Specific Columns** allow cells to hold unique data for each user. This means each user can experience their own data for a particular item.
+
+For example, in the table below, there is a column for **Notes**. This allows users to write their own notes on each item in the app. In the Data Editor, you'll see a slightly different color for this column indicating that it's user-specific. If you switch between users with the viewing as menu, you'll see the data in this column change and you'll be able to edit it for different users.
+
+
+
+![A User-specific column in the Data Editor.](https://images.ctfassets.net/yreygbm72t08/6uOvGA1VqkZ9pqLlvpj8il/1f6c56a2caf92948f7c67c75ed1a7e21/CleanShot_2024-01-12_at_12_.49.22_2x.png)
+
+
+
+Without user-specific columns, this note would appear to everyone else who can see that row. And if someone else changed that note, it would change for everyone else. This is obviously not ideal!
+
+Now, when users make notes in this section, those notes will be specific to them. In other words, that single cell will contain a unique value for each user. If you have 1,000 users, there will be 1,000 different versions of that cell—one for every user.
+
+## Roles
+
+For greater control of your app's data, you can assign [Roles](/roles) to the users in your user profiles table. You can then use these Roles with [**Row Owner**](/row-owners) columns to make certain records only accessible to certain users.
+
+This allows you to, for example, give many people the role of **Admin **and then make **Admin** a Row Owner for certain rows. Now, only people with the role of Admin will be able to access those rows.
+

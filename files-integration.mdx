@@ -1,0 +1,114 @@
+---
+title: "Files Integration"
+description: "Create and Store files in Glide storage."
+---
+
+# Files Integration
+
+Create and Store files in Glide storage.
+
+### Files - Block 1
+
+The Files integration allows you to save files directly to Glide storage. This is useful for files that come from APIs and integrations like OpenAI and Replicate and may not be stored in Glide by default.
+
+## Adding the Integration
+
+
+
+### Files - Arcade 1
+
+### Files - Block 2
+
+1. In Glide, click the Settings icon in the upper-right corner.
+2. Navigate to the [**Integrations**](/docs/automation/integrations) tab and then select **Files.**
+3. Click the **Add **button.
+
+## **Upload File**
+
+The **Upload File** feature can be used in the layout editor or in the workflow editor.
+
+Before configuring actions, you need to create two basic columns (text or URL) in the data editor: one to store the original file link and another to store the Glide file link.
+
+### In the Layout Editor
+
+
+
+### Files - Arcade 2
+
+### Files - Block 3
+
+
+
+1. Select the component you'd like to add the action to. Remember, this must be a component that supports actions.
+2. Search for the **Upload File** action or navigate to **Integrations -> Files -> Upload File.**
+3. Name the action.
+4. Choose an icon.
+5. Select the column that contains the **URLs**, or enter a custom URL.
+6. Select the column that contains the **file name**, or enter a custom file name.
+7. Choose where to store the resulting **Glide URL.**
+8. Click away to exit the configuration.
+
+### **In the Workflow Editor**
+
+
+
+### Files - Arcade 3
+
+### Files - Block 4
+
+1. Select the (**+**) plus symbol or the **+ New Workflow** button.
+2. Select as the data source for the action the data source of the screen where the action is triggered.
+3. Select the default action.
+4. Search for **Upload Files** or navigate to **Integrations → Files → Upload File.**
+5. Select the column that contains the **URLs**, or enter a custom URL.
+6. Choose where to store the resulting **Glide URL.**
+7. Name your Action.
+
+## Create File
+
+The **Create File** action will take content you choose and generate a link to a file. The feature can generate the following types of files: Text, CSV, Markdown, HTML, JSON, YAML, JSON5, TOML, XML, RSS, Atom Feed, and SVG.
+
+The feature can be used as an action in the [Layout](/getting-started/intro-to-layout#layout-editor) or [Workflow Editors](/getting-started/introduction-to-workflows#the-workflow-editor).
+
+### In the Layout Editor
+
+
+
+### Files - Arcade 4
+
+### Files - Block 5
+
+
+
+1. Create a [URL column ](/essentials/basic-columns/url)in the Data Editor to store the file output.
+2. Click on the plus (**+**) sign in the **Component** panel to add a new component that supports actions, or select an existing component to add an action.
+3. In the **General** tab on the right side of the Layout Editor, navigate to the **Actions** section and search for **Create File** or navigate to **Integrations → Files → Create File.**
+4. Choose an icon.
+5. Name the action.
+6. Select the source for the **Content** of the file that will be created. This can be a mix of custom and column values.
+7. Choose which **File Type** to create.
+8. Select a source for the **File Name** or enter a custom value.
+9. Choose where to store the URL file **Result.**
+10. Click away to exit the configuration.
+
+### In the Workflow Editor
+
+
+
+### Files - Arcade 5
+
+### Files - Block 6
+
+
+
+1. Create a URL column in the Data Editor to store the file output.
+2. Select the (**+**) plus symbol or the **+ New Workflow** button and choose a trigger.
+3. Search for **Create File** or navigate to **Integrations → Files → Create File.**
+4. Select the source for the **Content** of the file that will be created. This can be a mix of custom and column values.
+5. Choose which **File Type** to create.
+6. Select a source for the **File Name** or enter a custom value.
+7. Choose where to store the URL file **Result.**
+8. Click away to exit the configuration.
+
+
+

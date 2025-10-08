@@ -1,0 +1,88 @@
+---
+title: "Device Info"
+description: "Get information about the users device."
+---
+
+# Device Info
+
+Get information about the users device.
+
+### Device Info - Block 1
+
+Device Info lets you retrieve information about the user’s device. For example, you could work out their screen size, whether they are on Android or iOS, or what browser they are using.
+
+You can then use that information as simple analytics in your database to see how your users interact with your app—or use [Conditions](/conditions-filtering-and-visibility) to show different things.
+
+For example, in the welcome screen below, install instructions are shown based on the fact the user is viewing on iOS.
+
+
+
+![Showing the Device Info to a user. ](https://images.ctfassets.net/yreygbm72t08/30uNws24VX7JTp9GHy77Si/f873fb1895c83d9c606c4c3d040dfca7/image.png)
+
+
+
+## Adding and Configuring the Integration
+
+
+
+### Device Info Adding Arcade
+
+### Device Info - Block 2
+
+1. In Glide, click the Settings icon in the upper-right corner.
+2. Navigate to the [Integrations](/automation/integrations) tab and then select Device Info.
+3. Click the **Add to app **button.
+
+## Features
+
+The Device Info integration has only one feature: **Get device info**. It can be used as an [Action](/automation/actions), or as a [Computed Column](/computed-columns). The following device attributes are available:
+
+- `DeviceType`
+- `BrowserName`
+- `BrowserVersion`
+- `DeviceBrand`
+- `DeviceName`
+- `Gpu`
+- `IsTouchScreen`
+- `OsName`
+- `OsVersion`
+- `ScreenDensity`
+- `ScreenHeight`
+- `ScreenWidth`
+- `WindowHeight`
+- `WindowWidth`
+
+
+
+### [BLANK] Device Info - Callout 1
+
+Not all devices will support all device attributes. Some devices may only support some, and this will vary from device to device.
+
+### Device Info - Block 3
+
+## As a Computed Column
+
+Device info can be used in the [Data Editor](/introduction-to-the-data-editor) as a [Computed Column](/computed-columns) found in the group of columns called [Integrations](/automation/integrations). When added as a column, the device info attribute will be applied to all rows in the table.
+
+It’s important to note that when used as a Computed Column, the value returned will only be available to the current user. If you want to gather information about all of your users' devices, then you should use it as an [Action](/automation/actions), so that the results are stored in [Basic Columns](/basic-columns).
+
+## As an Action
+
+
+
+### Integrations Learn More Block
+
+To learn more generally about Integrations in Glide, including how they affect your app’s usage, check out our [Introduction to Integrations](/automation/integrations).
+
+### Device Info Action
+
+### Device info - block 4
+
+1. Click on the plus (+) sign in the **Components **panel and select the **Component** you want to trigger the action.
+2. In the **General** tab on the right side of the Layout Editor, navigate to the **Actions** section and select Get device info.
+3. Select the icon and descriptive text to use in your app.
+4. Use the **+ Add Value **button to add as many values to the action as you need. 
+5. You can optionally add **Conditions** for certain criteria to be met before a user can trigger this action.
+
+
+

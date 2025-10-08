@@ -1,0 +1,211 @@
+---
+title: "Pinecone"
+description: "Incorporate AI assistants into Glide."
+---
+
+# Pinecone
+
+Incorporate AI assistants into Glide.
+
+### Pinecone - Block 1
+
+[Pinecone](https://www.pinecone.io/) is a vector database that powers AI applications with intelligent data processing and search capabilities. With the Pinecone integration, you can create custom AI assistants, manage document databases, and build applications with features like personalized Q&A and smart document search.
+
+### Don't see the Pinecone Integration?
+
+You may need to upgrade your plan. [Browse Glide's plans and find the right fit for you.](https://www.glideapps.com/pricing)
+
+### Pinecone - Block 2
+
+**What is a Vector Database?** A vector database is a specialized database designed to store, index, and search data stored as mathematical vectors. It is primarily used in AI and machine learning applications.
+
+## Adding the Integration
+
+
+
+### Pinecone - Adding the integration
+
+### Pinecone - Block 3
+
+To start using the Pinecone integration, you first need to add it to your project. You will also need an existing Pinecone account.
+
+1. In Glide, click the Settings icon at the top right.
+2. Navigate to the **Integrations** tab and select Pinecone.
+3. Click the **Add **button.
+4. Copy your Pinecone API key from your [Pinecone API keys dashboard](https://app.pinecone.io/organizations/-/apikeys).
+5. Copy the host URL from the Assistant settings in Pinecone, on the top right.
+6. Click away to exit the configuration.
+
+## Features
+
+The Pinecone integration has features that allow you to create and manage AI assistants in your Glide apps. These assistants can be customized with specific information relevant to your users. You can then allow users to message the assistant to ask questions about the information you've given to the assistant.
+
+All Pinecone features can be used as actions in the [Layout](/getting-started/intro-to-layout#layout-editor) or [Workflow Editors](/automation/workflows#the-workflow-editor).
+
+### Create Assistant
+
+The **Create Assistant** action creates a new assistant in Pinecone that can process information and respond to queries.
+
+### Pinecone - Create Assistant
+
+### Pinecone - Block 4
+
+1. Select the component you'd like to add the action to. Remember, this must be a component that supports actions.
+2. Open the action configuration menu.
+3. Name the action.
+4. Choose an icon.
+5. Search for the **Create Assistant** action or navigate to Integrations -> Pinecone -> Create Assistant.
+6. Choose an **Assistant Name.** This name should not include spaces or special characters.
+7. The **Description** field is for providing further instructions to the assistant. These instructions, like a prompt, will be applied to all responses.
+8. Optionally, add additional data for the assistant to consider.
+9. Choose the **Region** where the indexed cloud data will be stored. You can [read more about Pinecone's region options here.](https://docs.pinecone.io/troubleshooting/available-cloud-regions)
+10. Click away to exit the configuration.
+
+### Delete Assistant
+
+The **Delete Assistant** action deletes an existing assistant from your Pinecone account. 
+
+### Pinecone - Delete Assistant
+
+### Pinecone - Block 5
+
+1. Select the component you'd like to add the action to. Remember, this must be a component that supports actions.
+2. Open the action configuration menu.
+3. Name the action.
+4. Choose an icon.
+5. Search for the **Delete Assistant **action or navigate to Integrations -> Pinecone -> Delete Assistant.
+6. Select the **Assistant Name** you want to delete. This name should match exactly how it appears in Pinecone.
+7. Click away to exit the configuration.
+
+### Upload File
+
+The **Upload File** action adds files that can be referenced when generating responses. You can read more about [which file types are supported here.](https://docs.pinecone.io/guides/assistant/understanding-assistant#files-in-pinecone-assistant)
+
+### Pinecone - Arcade 4
+
+### Pinecone - Block 6
+
+1. Select the component you'd like to add the action to. Remember, this must be a component that supports actions.
+2. Name the action. 
+3. Choose an icon.
+4. Search for the **Upload File** action or navigate to Integrations -> Pinecone -> Upload File.
+5. Select the **Assistant Name** you want to upload the file into. This name should be exactly as it appears in Pinecone.
+6. Provide a **File URL** or select the column where you have the files saved.
+7. Optionally, add **Metadata **in JSON format.
+8. Select the column where you want to save the **Field ID** result.
+9. Click away to exit the configuration
+
+### Delete File
+
+Delete File action can delete specific files from your assistant's knowledge base.
+
+### Pinecone - Delete File
+
+### Pinecone - Block 7
+
+1. Select the component you'd like to add the action to. Remember, this must be a component that supports actions.
+2. Open the action configuration menu.
+3. Name the action.
+4. Choose an icon.
+5. Search for the **Delete File** action or navigate to Integrations -> Pinecone -> Delete File.
+6. Input the **Assistant Name** where the file you want to delete exists. This name should be exactly as it appears in Pinecone.
+7. Select columns with the **File ID **or enter a custom value.
+8. Click away to exit the configuration.
+
+### Get File Info
+
+**Get File Info** retrievs details about uploaded files, including status and metadata.
+
+### Pinecone - Get file info
+
+### Pinecone - Block 8
+
+1. Select the component you'd like to add the action to. Remember, this must be a component that supports actions.
+2. Open the action configuration menu.
+3. Name the action. 
+4. Choose an icon.
+5. Search for the **Get File Info **action or navigate to Integrations -> Pinecone -> Get File Info.
+6. Select the **Assistant Name** you want to receive the file information from. This name should be exactly as it appears in Pinecone.
+7. Select or enter the **File ID**.
+8. Configure the columns where you want to save the results.
+9. Click away to exit the configuration.
+
+### Send Message
+
+The **Send Message** action communicates with an assistant to get AI-generated responses based on an input.
+
+### Pinecone - Send message
+
+### Pinecone - Block 9
+
+1. Select the component you'd like to add the action to. Remember, this must be a component that supports actions.
+2. Open the action configuration menu. 
+3. Name the action. 
+4. Choose an icon.
+5. Search for the **Send Message** or navigate to Integrations -> Pinecone -> Send Message.
+6. Select the **Assistant Name** you want to send the message to. This name should be exactly as it appears in Pinecone.
+7. Select the column with the messages or enter a custom message.
+8. Configure the columns where you want to save the results.
+9. Click away to exit the configuration.
+
+### Index Data
+
+The **Index Data** action adds text data to your Pinecone database.
+
+### Pinecone - Index data
+
+### Pinecone - Block 10
+
+1. Select the component you'd like to add the action to. Remember, this must be a component that supports actions.
+2. Open the action configuration menu.
+3. Name the action. 
+4. Choose an icon.
+5. Search for the **Index Data** action or navigate to Integrations -> Pinecone -> Index Data.
+6. Enter an **ID** for your data. You can leave this blank for a randomly generated ID, or use a dynamic ID from your data.
+7. Add the **Text** you want to index.
+8. Enter the **Host** of your Pinecone index.
+9. Enter the **Name** of your index. This name should be exactly as it appears in Pinecone.
+10. Select a column where you want to save the return ID.
+11. Click away to exit the configuration.
+
+### Query Data
+
+The **Query Data** action searches your Pinecone index for content similar to your query text.
+
+### Pinecone - Query data
+
+### Pinecone - Block 11
+
+1. Select the component you'd like to add the action to. Remember, this must be a component that supports actions.
+2. Open the action configuration menu.
+3. Name the action.
+4. Choose an icon.
+5. Search for the **Query Data** action or navigate to Integrations -> Pinecone -> Query Data.
+6. Enter the **Text** to query from your index.
+7. Set the **Number of Results** you want to retrieve.
+8. Enter the **Host** of your Pinecone index. This must match Pinecone exactly.
+9. Enter the **Name** of the index you want to query data from. This name should be exactly as it appears in Pinecone.
+10. Configure where to save the results.
+11. Click away to exit the configuration.
+
+### Delete Data
+
+The **Delete Data** action deletes an entire existing record in Pinecone, not just text within that record. 
+
+### Pinecone - Delete data
+
+### Pinecone - Block 12
+
+1. Select the component you'd like to add the action to. Remember, this must be a component that supports actions.
+2. Open the action configuration menu.
+3. Name the action.
+4. Add an icon.
+5. Search for the **Delete Data** action or navigate to Integrations -> Pinecone -> Delete Data.
+6. Enter the **Text** that matches the text you used when adding the data.
+7. Enter an **ID** for your data. This must match the existing record ID in Pinecone.
+8. Enter the **Host** of your Pinecone index.
+9. Enter the **Name** of your index.
+10. Click away to exit the configuration.
+
+To learn more generally about Integrations in Glide, including how they affect your app’s usage, check out our [Introduction to Integrations](/introduction-to-integrations).
+

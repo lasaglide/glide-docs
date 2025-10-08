@@ -1,0 +1,53 @@
+---
+title: "Roles"
+description: "Define roles for your users and build different experiences and permissions."
+---
+
+# Roles
+
+Define roles for your users and build different experiences and permissions.
+
+### Roles Body Text
+
+Roles are a convenient way to assign user permissions or access groups to specific parts of your app’s data. For example, you can create an **Admin** role for users who need access to everything, and a **Reader** role with access to only specific tabs or data.
+
+There are two primary ways to use Roles.
+
+1. You can use Roles on their own in [**Conditions**](/reference/user-experience/visibility-conditions).** **This allows you to hide or show different parts of your app’s UI or create conditional actions based on the different roles of your users. However, conditions are not security features. Your app can still download data in the background even if UI or records are hidden.
+2. To securely restrict access to certain data you should use Roles in conjunction with [**Row Owners**](/row-owners)**.**
+
+This article will go through how to use Roles with Row Owners. To learn more about conditions, check out our guide [**here**](/visibility-conditions).
+
+## What are Row Owners?
+
+If you have a table from your [data source](/data-sources) that you’d like to secure so that only certain users can access certain rows, you can assign an **Email** column as the Row Owner. When this is done, only that specific user will be able to download the data for that specific row when the published app is accessed.
+
+You can assign more than one email column as a row owner to give more than one user access to a particular row. However, if you have many users who consistently require access to particular rows, or if you need to automatically give new users access to particular rows, a simpler approach may be to use **Roles**.
+
+
+
+![Row Owners and Roles](https://images.ctfassets.net/yreygbm72t08/83fYQs75IUKFgwLiA47w9/9a831f35543585c344583658d5d5b5a1/CleanShot_2024-01-11_at_11_.53.53_2x.png)
+
+
+
+## Setting up Roles with Row Owners
+
+To use Roles:
+
+1. Create a column in your **Users** table where you assign roles. 
+2. Assign that column from your **Users** table in the **Role **field of the User Profile configuration in the [Layout Editor](/getting-started/intro-to-layout). 
+
+Note that You cannot use [Computed Columns](/computed-columns) such as [Make Array](/make-array) or [Template](/template-column) columns as Roles. Roles have to be manually entered in [Basic Columns](/basic-columns). 
+
+Once you’ve set the Role column in your User Profile table, you can start securing the data in other tables of your app based on each user’s designated role.
+
+1. Add a basic column to the table you’d like to secure. This column will contain the role that should have access to each row of data.
+2. Enter the name of the role that should be granted access for each row of your table.
+3. Click the arrow next to the role column name and select **Make row owner.**
+
+Now, each user that is assigned the role that is noted in the Role column of your table will be granted access to that row’s data. 
+
+### [BLANK] row owners greyed out
+
+When using the [Data Editor](/getting-started/introduction-to-the-data-editor), you are able to view all of the data in your apps. When Row Owners are enabled, some rows of data may be greyed out based on which user is viewing the data. Greyed out rows are not downloaded to that user’s device in published apps.
+

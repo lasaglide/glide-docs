@@ -1,0 +1,50 @@
+---
+title: "Screen Values"
+description: "Values that you can access from the current screen."
+---
+
+# Screen Values
+
+Values that you can access from the current screen.
+
+### Screen Values Body Text
+
+Occasionally you will see the option to work with **Screen values** in Glide. Screen values are useful when working with Forms or Inline Lists. Let's look at two examples.
+
+## In Forms
+
+Take a look at using Screen Values to filter a [Choice component](/essentials/components/choice) using the inventory template.
+
+
+
+![Screen Value Example 1](https://images.ctfassets.net/yreygbm72t08/1hJLTnwuRDNqcA1f8ueYxN/7b8642e4dca2b1203998ce1fcd94bb3e/CleanShot_2023-11-07_at_1_.29.33_2x.png)
+
+
+
+This screen shows a user adding a new inspection. This is a [**Form**](/form-container) screen.
+
+In this app, there are many properties and each property has multiple units. When you pick a property, you only want to have to choose from a list of units within that property. You don't want to pick from a list of all units from all properties.
+
+You can therefore add a [Filter](/reference/user-experience/filter) on the **Choice component** that says: "Only show units where the property ID matches the property ID selected in the current screen."
+
+## Filtering Collections
+
+Another use case for using **Screen Values** is when you have collections.
+
+When you have a collection, you have two contexts:
+
+1. The row of the current screen
+2. The rows of the collection
+
+Without screen values, the collection doesn't know what screen it is being shown on. With screen values, you can use the containing screen's values in your conditions.
+
+For example, showing a list of related items without showing the current item.
+
+
+
+![Field Sales Screen Values Example](https://images.ctfassets.net/yreygbm72t08/4RQjKXD1cUFpErKQDN6hA7/225363ed844427851d1a9c9a9c826c64/CleanShot_2023-11-07_at_1_.39.13_2x.png)
+
+
+
+
+

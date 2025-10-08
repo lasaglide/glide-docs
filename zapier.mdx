@@ -1,0 +1,131 @@
+---
+title: "Zapier"
+description: "Integrate Glide with thousands of other tools."
+---
+
+# Zapier
+
+Integrate Glide with thousands of other tools.
+
+### Zapier
+
+### Don't see the Zapier integration?
+
+You may need to upgrade your plan. [Browse Glide's plans and find the right fit for you.](https://www.glideapps.com/pricing)
+
+### Zapier - Block 1
+
+[Zapier](https://zapier.com/) allows you to connect different services and apps together to make new automations across your tools. With the Zapier integration, you can connect Glide to Zapier and leverage any App from Zapier—[over 7,000 possibilities](https://zapier.com/apps).
+
+Send data from Glide to Zapier using a webhook. Or use our Zapier integration to manage and manipulate your Glide data from Zapier.
+
+### [BLANK] Zapier - Callout 1
+
+If you’re new to Zapier, we recommend checking out [Zapier Learn](https://learn.zapier.com/) before getting started.
+
+### Zapier - Block 2
+
+A Zap has two parts: a trigger and an action.
+
+1. Trigger: something that happens in an app to start a Zap. In Glide, use the Trigger Webhook action to initiate a Zap.
+2. Action: an event a Zap performs after it is triggered
+
+The actions available via the Zapier integration are **Add Row, Delete Row, Edit Row, Get All Rows,** or **Get Row.** To use more than one of these actions, set up a unique Zap for each one.
+
+## Adding the Integration
+
+
+
+### Zapier - Arcade 1
+
+### Zapier - Block 3
+
+1. If you do not already have a [Zapier account](https://zapier.com/), create one.
+2. In Glide, click the **Settings** icon in the upper-right corner.
+3. Navigate to the **Integrations** tab and then select Zapier.
+4. Click the **Add** button.
+5. The integration menu will now show a hidden 
+6. **API Key**. Select **Copy to Clipboard.**
+7. In your Zapier dashboard, go to **My apps **and search for Glide.
+8. Select **Connect.**
+9. Enter the API Key you copied in step five.
+10. Select **Yes, Continue to Glide.**
+
+## Trigger Webhook with Zapier Connection
+
+The Trigger Webhook action can be used to send data to Zapier for any connection you’ve set up between Glide and Zapier. To create a Zapier trigger with Trigger Webhook:
+
+### Layout Editor
+
+
+
+### Zapier - Arcade 2
+
+### Zapier - Block 4
+
+
+
+1. Click on the plus (**+**) sign in the **Components** panel to add a new component that supports actions, or select an existing component to add an action.
+2. In the **General** tab on the right side of the Layout Editor, navigate to the **Actions** section and search for **Trigger Webhook** or navigate to **Integrations → Trigger Webhook.**
+3. Select the icon and title for your action.
+4. Add the Zapier URL for the specific zap you want to connect.
+5. Add as many values as needed. No specific values are required.
+6. Add conditions to the action, if desired. These will limit when the action is allowed to trigger.
+7. Click away to save the configuration.
+
+### Workflow Editor
+
+
+
+### Zapier - Arcade 3
+
+### Zapier - Block 5
+
+1. Select the (**+**) plus symbol or the **+ New Workflow **button.
+2. Select as the data source for the action the data source of the screen where the action is triggered.
+3. Search for **Trigger Webhook** or navigate to **Integrations → Trigger Webhook.**
+4. Add the Zapier URL for the specific zap you want to connect.
+5. Add values to the request body as needed. These can be entered manually, or come from a column in your data.
+6. Name the workflow.
+7. Click away to save the configuration.
+
+In the Workflow Editor, you can view the run history of the custom action. Clicking into any specific run and opening the **Data sent** window will show the JSON that was sent through the Zapier connection.
+
+## Creating the Zap
+
+After you’ve connected the Zapier integration with the steps above, you can create a Zap.
+
+### Configuring the Trigger
+
+
+
+### Zapier - Arcade 4
+
+### Zapier - Block 6
+
+1. In your Zapier dashboard, go to **My Zaps** and select **+ Create.**
+2. Select **New Zap.**
+3. All Zaps start with a Trigger. All Triggers for Glide Zaps will be the same: **Webhooks by Zapier.** Select this option as the Trigger.
+4. For **Event**, select **Catch Hook**.
+5. For the **Pick off a Child Key** field, enter `body`. Select **Continue.**
+6. Zapier will generate the webhook URL for you. Copy this URL for your Trigger Webhook action in Glide.
+7. Once you’ve configured both the Zap and your Trigger Webhook in Glide, you can test the Zap trigger from your Zapier dashboard. It should show the JSON you sent from Glide.
+
+### Configuring the Zapier Action
+
+
+
+### Zapier - Arcade 5
+
+### Zapier - Block 7
+
+1. Select **Action** in the Zap you set up above.
+2. Search for **Glide** and select the action marked **Latest.**
+3. Select which Event to perform: **Add Row, Delete Row, Edit Row, Get All Rows,** or **Get Row.**
+4. The configuration menu will show fields where you can select which **App, Table,** and **Row ID** to use for the Zap. These options will fill in automatically from Glide. - If you are using the **Edit Row** or **Delete Row** event, you’ll need to have a Row ID column in your Glide table and provide that column data in the Zap configuration.
+5. Fill in the values as needed. These can be columns from your data in Glide, or custom values entered manually.
+6. Test your Zap.
+7. Select **Publish** to make the Zap live.
+
+
+

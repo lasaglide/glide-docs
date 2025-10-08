@@ -1,0 +1,99 @@
+---
+title: "Loops"
+description: "Sequentially process rows in your data."
+---
+
+# Loops
+
+Sequentially process rows in your data.
+
+### Loops
+
+### Loops - Block 1
+
+**Loops** apply a set of instructions over data systematically, allowing for processing over large pieces of data. For example, you might create a set of instructions with ten steps. You want those ten steps to run on every row of data, in order. The Loop will repeat the steps automatically until it has checked through every line of your data. In this way, the Loop keeps working in the background with no further effort from the programmer.
+
+In programming generally there are three types of Loops: For Loops, While Loops, and Do-While Loops. The current available Loops in Glide most closely resemble For Loops. Loops can also be nested within other Loops and [conditions](/automation/workflows/schedule#conditions).
+
+Loops are initiated when a Workflow triggers them and the filtering conditions are met.
+
+Nested Loops are built within another Loop and will execute each time the outer Loop is triggered.
+
+## Loops in Workflows
+
+[Schedule](/automation/workflows/schedule), Email, and [Webhook](/automation/workflows/webhook) triggers all support Loops. In Scheduled-trigger workflows, a Loop is created by default but can be deleted if not needed. To create a Loop in other types of workflows, click the (**+**) icon at the end of a workflow, go to **Flow**, then select **Loop.** For clarity, we recommend renaming a Loop once you’ve created it, so you can track what each one does within a workflow.
+
+Once you've added the Loop, configure it in the right-hand panel. You can choose which table the Loop should run through, filter out any data that should be ignored, and adjust the row Limit, or the maximum number of rows the Loop will process when it runs. 
+
+### Loops - Arcade 1
+
+### Loops - Block 2
+
+To create a Nested Loop, click the (**+**) icon within the outer Loop you want to nest in, go to **Flow**, then select **Loop. **Nested Loops can also be created within conditions in Workflows.
+
+### Loops - Arcade 2
+
+### Loops - Block 3
+
+There is no restriction on how many Loops can be used in a Workflow.
+
+### Limits in Loops
+
+The **Limit** field sets a row limit within a Loop. This will limit how many rows matching a condition are included in each run of a workflow. The default limit is set to 10, but this can be adjusted up to 1,000.
+
+
+
+![Loops - Image 1](https://images.ctfassets.net/yreygbm72t08/L4rsL8LF3bIhZkgcf6Utz/74bdd5d04a396838637f6febae1fd7c2/CleanShot_2025-01-06_at_1_.39.47_2x.png)
+
+
+
+Because the nature of Loops is to keep iterating through the data set until there are no more matching rows, it’s important to consider what the appropriate Limit for your Loop might be. If there are multiple tables and rows to search through, you’ll need to increase the limit to the Loop can check through all the relevant rows across the data set.
+
+### [BLANK] Loops - Callout 1
+
+If your Loop is failing but appears to be set up correctly, try increasing the Limit in the configuration. 
+
+### Loops - Block 4
+
+### Changing Existing Loops
+
+To adjust an existing Loop, open the workflow that contains that Loop and click into the Loop directly. The configuration menu for that Loop will appear on the right-hand sidebar. Here you can adjust the source table, filters, and Limit set for that Loop. Note that changing any part of an existing Loop may cause it to break or execute differently than it did before the change.
+
+To move the position of a Loop in a workflow, hover over the left side of the Loop. A bar with six small dots in the middle will appear. Click and drag this bar to move the Loop to another position in the workflow. Loops can also be moved into or out of other loops and conditions.
+
+### Loops - Arcade 3
+
+### Loops - Block 5
+
+## Reviewing Loop Run History
+
+To review the run history of a specific Loop, open the workflow in the Workflow Editor and click on a run from the run history list on the right-hand side. This will open a detailed past run screen. By default you will see details from the most recent past run, including how it was triggered, how long it took, when it started, and what data was sent. If the Loop encounters an error when it runs, that line of the run history log will show in red in the Workflow Editor. Team admins will also receive an email about the error with more details.
+
+Numbers will appear on the upper right of each executable step. On Loops, the number indicates how many times the Loop ran. On steps, the number indicates how many times that step executed during that Loop run.
+
+For example, in this image, the Loop ran 465 times. However, the conditions for the steps were only met twice, so each executable step ran only two times.
+
+
+
+![Loops - Image 2](https://images.ctfassets.net/yreygbm72t08/45GudI48sUZJ7aBeXSLz6t/c58b07ad342fdb5dce254cbb094b5b8d/CleanShot_2025-01-06_at_3_.49.57_2x.png)
+
+
+
+Details about each row the Loop ran through can be viewed by clicking on the number in the right-hand side of the Loop run log.
+
+
+
+![Loops - Image 3 ](https://images.ctfassets.net/yreygbm72t08/oV0ilCs667QpwSr6Ng67n/18d02361cdcf88ffbbb1a10a3595fbc5/CleanShot_2025-01-06_at_1_.47.34_2x.png)
+
+
+
+Clicking on any individual step will reveal more details about what data was sent or changed in that particular step. Any errors will appear in red.
+
+
+
+![Loops - Image 4](https://images.ctfassets.net/yreygbm72t08/TSRoudf9wn2UOQ68jzFQB/d77ef7d8c4877c13141217a5bd63672d/CleanShot_2025-01-06_at_1_.49.49_2x.png)
+
+
+
+
+

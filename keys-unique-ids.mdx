@@ -1,0 +1,35 @@
+---
+title: "Keys & Unique IDs"
+description: "Use unique values to make your apps more reliable."
+---
+
+# Keys & Unique IDs
+
+Use unique values to make your apps more reliable.
+
+### Keys & Unique IDs Body Text
+
+In [Google Sheets](/essentials/data-sources/google-sheets), rows don't really have an identity apart from their row number. In the image below we can see that the product **Part 3** is located in **row 4**.
+
+
+
+![Google Sheet Row IDs](https://images.ctfassets.net/yreygbm72t08/zyv8TohA3JerS9Gi3Pc6l/9ff690916beac64164c7a6a4d59c84f3/CleanShot_2023-12-18_at_3_.14.23_2x.png)
+
+
+
+This is fine, but if you add, move or delete rows, that row's location will change. In the image below, **Part 3** started off in **row 4,** but ends up in **row 3 **after we delete a row.
+
+
+
+![Google Sheet Unique ID 2](https://images.ctfassets.net/yreygbm72t08/4xPTBqqT44fSmLW0389Fwe/861e0c9993df3728110eeffe92d168e2/CleanShot_2023-12-18_at_3_.22.32_2x.png)
+
+
+
+In some circumstances this is fine. But if you have [Components](/essentials/components) like **Comments** and **Favorite** or use [Relations](/relations)—which need to know the exact location of a row and then the row number changes—these components will be confused or pull up incorrect data as they are only looking at row numbers.
+
+## Unique Identifier
+
+The way to solve this issue is by giving each row a **Unique Identifier**. In other words, a value in a column that will always be different and unique for each row. And the easiest way to do this in Glide is by using the [Row ID ](/row-id-column)column in the [Data Editor](/getting-started/introduction-to-the-data-editor).
+
+If you don't have a Row ID column in your table, components like **Comments **and **Favorite** will ask you to set a Key or a Topic. This is a manual way for you to connect that component with a column of unique values in your sheet so it can keep track of that row. The Row ID column is the best way of doing this.
+

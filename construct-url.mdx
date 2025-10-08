@@ -1,0 +1,66 @@
+---
+title: "Construct URL"
+description: "Create URLs based on the different values in your table."
+---
+
+# Construct URL
+
+Create URLs based on the different values in your table.
+
+### Construct URL Body Text 1
+
+The **Construct URL** column lets you create a URL using custom and/or column values.
+
+## Adding and Configuring a Construct URL Column
+
+
+
+### Construct URL Arcade
+
+### Construct URL Body Text 2
+
+## Creating a Construct URL Column
+
+1. In the [Data Editor](https://www.glideapps.com/docs/automation/computed-columns/format-duration), open the table you want to edit.
+2. Add a new column by clicking the plus (+) symbol to the right of the table- New columns added with the plus button will always appear on the right of the table. If you'd like to add a column somewhere else in your data, you can select the dropdown menu on an existing column and choose **Add column right. **You can also click and drag columns to rearrange them.
+3. Name the column.
+4. For **Type**, search for **Construct URL **or navigate to **Computed → Construct URL**.
+5. The **Protocol** defaults to https:// if you leave it blank, but you can change this to anything you like.
+6. For **Host**, enter a custom value or select a column from your [data source](/essentials/data-sources) that contains the domain or sub-domain for the URL.
+7. For **Path**, enter a custom value or select a column from your data source that contains the values for the rest of the URL.
+8. You can also include **Query Parameters**, which can be a custom value or a column from your data source that contains the values for query parameters. 
+
+
+
+For example, in the table below has a list of speakers at a conference and each of them has a column for their Twitter handle.
+
+You can use the Construct URL column to create a unique URL for each of them. The table below contains twitter.com as the hostname and the Twitter handle as the path. This creates a working link to their Twitter profile.
+
+
+
+![Construct URL Example](https://images.ctfassets.net/yreygbm72t08/6iLjXKT87R4pg6disfdQzt/245345d169b64783111e023dfa4157ee/CleanShot_2023-09-07_at_13.49.59_2x.png)
+
+
+
+This is just one example of how to use the Construct URL column. There are many other ways you might want to use this column, some of which will require a small amount of knowledge of URL anatomy. To learn more, [check out this guide](https://www.w3schools.com/tags/ref_urlencode.ASP).
+
+## Working with Query Parameters
+
+**Query Parameters**, also known as URL parameters or query strings, add more elements to a URL for a variety of reasons. You can use query parameters to bring users to a specific location on a page, add passive tracking, or prompt some kind of behavior on the page. 
+
+Query parameters are formatted as key-value pairs with an equals sign in the middle. For example, this key value pair:
+
+
+`key: name`
+
+`value: Jeremiah`
+
+Would appear in the URL like this:
+
+`name=Jeremiah`
+
+Every new query parameter you add will be separated by a `? `So the above example parameters added to a URL appear like this:
+`glideapps.com/?name=Jeremiah`
+
+You can add as many query parameters to your URL as needed. 
+

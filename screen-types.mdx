@@ -1,0 +1,110 @@
+---
+title: "Screen Types"
+description: "Understand the different types of screens."
+---
+
+# Screen Types
+
+Understand the different types of screens.
+
+### Screen Types - Block 1
+
+In our core guide on [Data to Layout](/data-to-layout)—we said that "Tables become Tabs". This is, in fact, a bit of a simplification.
+
+Think of tabs as windows through which you can visit many screens.
+
+When you're building simple apps, you don't need to think too much about what type of screen you're on. Observing how the components panel changes when you move from screen to screen will help you orient yourself.
+
+But when you're building more complex apps, it's important to know all the different types of screens and how they relate to your data.
+
+## Collection Screen
+
+When you create a new tab and choose a table with multiple rows, Glide will choose a Collection Screen layout. A Collection Screen is a top-level screen that shows all the rows in your table. You can choose between different display styles for how users see the information on the app.
+
+On a Collection Screen, the components panel on the left shows a single Collection component.
+
+## Custom Screen
+
+The other type of top-level screen you can have for a tab is a Custom Screen. A Custom Screen can have as many components as you like, as opposed to a Collection Screen, which can only have a collection. 
+
+If you switch a tab from a Collection Screen to a Custom Screen, the collection will remain, but you will be able to add other components. To do this, click on Custom under the Style options in the configuration panel on the right.
+
+Similarly, if you add components to a Collection Screen, the screen will change to a Custom Screen automatically.
+
+## Detail Screen
+
+When you click on a collection item, you get taken to that item's Detail Screen. A Detail Screen represents the data contained in an entire row, whereas a Collection Screen represents the data contained in an entire table.
+
+Detail Screens are like Custom Screens in that you can add multiple components to them, but they are sub-pages. They are not at the top level of your tab. This means that users can't access a Detail Screen directly from a tab—they can only access it from a Collection Screen or Custom Screen. You can see this reflected in the breadcrumb navigation in Glide and the Breadcrumb Component if you have it added on a Page.
+
+## New Screen Templates
+
+If you click the plus (+) icon in the Layout Editor to add a new Tab, you'll find pre-built screens you can add to your app.
+
+Most of these will create a Custom Screen that has pre-configured [Components](/components) and also automatically add the necessary pre-built Glide Tables to the [Data Editor](/introduction-to-the-data-editor).
+
+This is a really easy way of creating forms and other screen types. However, you may also want to add a component that triggers a form screen with an action.
+
+## Form Screen Action
+
+For example, say you're working on a Property Manager app, and on the details screen of a property, you want a button called Log Issue. This will trigger a new form screen that will submit a new issue to the Issues table. You can add a button to that screen and assign the Show Form Screen action.
+
+When you add the form screen action, you configure which table it will populate.
+
+When you open that form screen, you can add fields that map to the columns of that table. As always, Glide will add all of these for you, but you can customize this screen however you like.
+
+## Edit Screen Action
+
+You can enable add and edit screens or delete items by toggling the switches in a collection in the configuration panel.
+
+You can also configure other components, such as buttons, with the Edit Screen action to trigger an edit screen.
+
+## Targets
+
+Often, a new screen will pop out and display over the main content you're working with. In Glide, this is called an **Overlay** or **Slide In**.
+
+By default, Details Screen opens in the current screen a user is viewing, and Edit Screen opens in overlays. But you can change this behavior.
+
+Whether your action is Show Details, Show Form Screen, or Show Edit Screen, you'll see four options in the action configuration for the target: Current, Main, Overlay, and Slide In.
+
+### Overlay
+
+Overlay will open the new screen as a pop-up in the center of your screen. On mobile, the overlay covers the entire screen.
+
+### Slide In
+
+With the Slide In target style, content can slide in from the right on desktop, or slide up from the bottom on mobile.
+
+### Current
+
+**Current** replaces the current screen with the new screen. For example;
+
+- If the current screen is an overlay, and you trigger an open screen action like Show Form Screen, then the overlay will change to show that new form screen.
+- If the current screen is the main screen (not an overlay), and you trigger an open screen action like [Show Form Screen](/show-form-screen), then the new screen will replace that main screen.
+
+### Main
+
+Main replaces the main screen with the new screen. For example;
+
+- If the current screen is an overlay, and you trigger an open screen action like Show Form Screen, then the overlay will close, and the main screen (the screen behind the overlay) will be replaced by the new form screen.
+- If the current screen is the main screen (not an overlay), and you trigger an open screen action like Show Form Screen, then the main screen will be replaced by the new form screen.
+
+## User Profile Screen
+
+The User Profile Screen is a Details Screen showing a row in the Users table. You can configure it exactly like a normal Details Screen. 
+
+There are two ways for users to access this screen:
+
+- Clicking on their profile image.
+- Clicking on a component that triggers the [**Show User Profile Screen**](/show-user-profile-screen) action.
+
+## Other Screens
+
+There are other new screens that appear, but they don't have components on them and are therefore not configurable in the same way. They are:
+
+- Open link opens a web browser
+- The Event Picker component opens its own full-screen calendar
+- The sign-in screen is where people sign in and out of the app.
+
+
+

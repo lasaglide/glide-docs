@@ -1,0 +1,37 @@
+---
+title: "User Profile Columns"
+description: "Work with user data from anywhere in your app."
+---
+
+# User Profile Columns
+
+Work with user data from anywhere in your app.
+
+### User Profile Column Body Text
+
+If you have **User Profiles** enabled in your app, you can submit User Profile columns in [Forms](/docs/use-cases/forms).
+
+For example, the app below shows you **Viewing as** a user called Alma Malmberg. When you configure your **Add item** Screen's components, you can also submit values from the current user's profile. For example, you could add the Name of the person that added this item, their title, and their photo.
+
+Now, when a user submits a new item, their name, title, and photo properties will be added to the row.
+
+### User Profile Columns - Arcade 1
+
+### [BLANK] User Profile Columns - Callout 1
+
+You can compute these values with [Relations](/automation/computed-columns/relations) and [Lookups](/automation/computed-columns/lookup-column) by submitting the user's email, relating that email to the user profiles table, and then looking up the necessary information. However, User Profile columns may be a simpler option for your use case—with the added benefit that the values get written to [Basic Columns](/getting-started/introduction-to-the-data-editor/basic-columns)—which means they appear in your sheet!
+
+### User Profile Column - Block 2
+
+## Assigning the user's Role column
+
+Submitting User Profile Column values is particularly useful when it comes to [Roles](/essentials/security-and-user-data/roles) as it allows you to automatically secure the row that gets added and make it accessible only to people with the same role as the person who added it.
+
+For example:
+
+Let's say that Alma has the role of "Management." When she submits a new row, you can make sure that her "Management" role value gets added to our [Row Owners](/essentials/security-and-user-data/row-owners) column in whatever table we're submitting to. We just need to add a User Profile column in our Add or Form screen.
+
+Now, automatically, the row she added will populate the Row Owner's column with "Management." This means that this row is now secure and only visible to those with the role of "Management."
+
+You can of course use [Array Columns](/automation/computed-columns/make-array-column) if you want the row you're adding to be accessible to multiple roles.
+

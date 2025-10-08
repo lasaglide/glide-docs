@@ -1,0 +1,57 @@
+---
+title: "Split Text Column"
+description: "Take a string and split it up into an array."
+---
+
+# Split Text Column
+
+Take a string and split it up into an array.
+
+### Split Text Body text 1
+
+The **Split Text **column splits up text by a value of your choosing. For example, say you have a list of people separated by commas.
+
+**Marie Rao**, **Tamsin Woodward**, **Alan Eijk**, **Fo Lambert**, **Christina Wallace**, **Ryan Holbert**
+
+Because this value lives in a single cell, Glide sees it as a single value. However, you can split it up by the commas.
+
+
+
+![Split text commas](https://images.ctfassets.net/yreygbm72t08/61XrD8jSruuuvQFVGzduo8/6e3104eb1d9a0ac93af4a3f5091e9440/CleanShot_2024-10-28_at_8_.59.13_2x.png)
+
+
+
+When you do this, you end up with a new column with multiple values.
+
+
+
+![splitting text result](https://images.ctfassets.net/yreygbm72t08/3wCRN2I1PfkLnEmZXfhY4P/2e47652b18721f1407e67f909e53161f/CleanShot_2024-10-28_at_9_.03.33_2x.png)
+
+
+
+The image below has created a [Relation](/relations) column with the [Joined List](/joined-list) column that relates all employees who are attending this meeting.
+
+
+
+![Split Text Relations](https://images.ctfassets.net/yreygbm72t08/2LRnTICbQfwFuGt7HMsEh2/48f79c6654df38b66bce6dc53def3192/CleanShot_2024-10-28_at_9_.41.29_2x.png)
+
+
+
+Because Split Text is splitting up multiple distinct pieces of information, the column you apply this to should have multiple values in each row—otherwise known as a string. 
+
+## **Adding and Configuring a Split Text Column**
+
+
+
+### Split Text Column Arcade
+
+### Split Text Body text 2
+
+1. In the [Data Editor](/getting-started/introduction-to-the-data-editor), open the table you want to edit.
+2. Add a new column by clicking the plus (+) symbol to the right of the table.- New columns added with the plus button will always appear on the right. If you'd like to add a column somewhere else in your data, you can select the dropdown menu on an existing column and choose **Add column right. **You can also click and drag columns to rearrange them.
+3. Give the column a name.
+4. For **Type**, search for **Split Text **or navigate to **Computed → Split Text**.
+5. Choose the column that contains the text you want to split, and then type in the item in that column to act as the separator. This could be one of many possible options, including a comma, period, space, hyphen, etc. depending on the value in the column.
+
+
+

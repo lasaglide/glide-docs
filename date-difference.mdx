@@ -1,0 +1,52 @@
+---
+title: "Date Difference"
+description: "Calculate the time to or from a particular date."
+---
+
+# Date Difference
+
+Calculate the time to or from a particular date.
+
+### Date Difference Text Block 1
+
+The **Date Difference Column** allows you to calculate how much time has passed since a particular date, or how much time is left until a particular date. You can then show the output by displaying it in various components in your app.
+
+## Creating a Date Difference Column
+
+
+
+### Date Difference Column - Arcade 1
+
+### Date Difference Text Block 2
+
+1. In the [Data Editor](/getting-started/introduction-to-the-data-editor), open the table you want to edit.
+2. Add a new column by clicking the plus (**+**) symbol to the right of the table.- New columns added with the plus button will always appear on the right. If you'd like to add a column somewhere else in your data, you can select the dropdown menu on an existing column and choose **Add column right.** You can also click and drag columns to rearrange them.
+3. Name the column.
+4. For **Type**, search for **Date Difference** or navigate to **Computed -> Experimental -> Date & Time -> Date Difference.**
+5. Configure the **Data** options that will calculate the difference between dates. You can use [Custom Values](/reference/values/custom-values), [User Profile Values](/user-profile-columns), or [Column Values](/reference/values/column-values) for the different fields. You can also use the **Current Time** value to allow users to see the date difference between a particular date and the current date in which they’re viewing the app.- **Start Date:** This is the date from which Glide should begin calculating the difference.
+- **End Date: **This is the date Glide should use to calculate the difference from the start date.
+- **Units:** You can calculate the difference in days, weeks, months, or years. You can change this at any time, and Glide will recalculate the difference based on the unit you select.
+- **Accuracy:** Accuracy is casual by default, but you can use longterm accuracy for a pedantic 400-year calendar.
+6. Select how you want to **Display** the date difference in the chosen component. You can choose how **Precise **the difference should be, and whether to include the units in the component.
+
+## Use Cases for Date Difference Column
+
+### Employee tenure
+
+One way to use the date difference column is in an employee directory to see how long each employee has been working with the company. To do this, you can configure the column as follows:
+
+- In your data source, create a **Date Column** and enter your employees’ joining dates to use as the start date.
+- Create a Date Difference Column and configure it as follows:- **Start Date:** Use Column Values to pick the date column above as the start date.
+- **End Date:** Select **Current Time **as the value for the end date.
+
+Add a component in employee profiles that will display the Column Value of the Date Difference Column. When viewing an employee’s profile in your app, users will be able to see how much time has passed from the date the employee joined the company to the current date.
+
+### Countdown to a date
+
+Another way to use the difference column is to create a countdown to an event, special occasion, or launch date. For example, for a restaurant’s app, you could create a countdown to the launch of a new seasonal menu. To do this, you can configure the column as follows:
+
+- In your data source, create a Date Difference Column and configure it as follows:- **Start Date:** Select **Current Time** as the value for the start date.
+- **End Date: **Use Custom Values and enter the date of the launch.
+
+Add a component to your app to display the Column Value of the Date Difference Column. When viewing the screen with this component, users will be able to see how much time is left until the launch date for the new menu.
+

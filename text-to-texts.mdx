@@ -1,0 +1,85 @@
+---
+title: "Text to Texts"
+description: "Extract text into an array of strings."
+---
+
+# Text to Texts
+
+Extract text into an array of strings.
+
+### Text to Texts - Block 1
+
+The **Text to Texts** feature extracts text from a message and transforms it into an array of strings. For example:
+
+**Input:** I’m making a cake. the ingredients are flour, sugar, butter, and eggs.
+
+**Output:** flour,sugar,butter,eggs
+
+The instructions can extract simple arrays like the example above, or more complicated sets of phrases and sentences. For example, you could upload an entire document and extract every question or every bullet point.
+
+### Don't see Glide AI features?
+
+Glide AI is available for paid plans only.
+
+[Browse our plans to find the right fit for you.](https://www.glideapps.com/pricing)
+
+### Text to Texts - Block 2
+
+## Adding the Text to Texts Feature
+
+### In the Data Editor
+
+
+
+### Text to Texts - Arcade 1
+
+### Text to Texts - Block 3
+
+### 
+
+1. Open the table where you want to use the **Text to Texts **column.
+2. Add a new basic text column for the **Input**. The input can be any column that contains text, so if you’ve used another action or computed column to create a text result, you can also use that text result as the **Input** source. - New columns added with the plus button will always appear on the right. If you'd like to add a column somewhere else in your data, you can select the dropdown menu on an existing column and choose **Add column right. **You can also click and drag columns to rearrange them.
+3. Add a **Text to Texts** column to store the result. Search for “Text to Texts” or navigate to **AI → Text to Texts**.
+4. For **Instructions,** enter custom text to create more specificity for your prompt.
+5. For **Input**, use the **Input** column created previously.
+6. **Note:** If the action is to be triggered in the Workflow Editor, then add a basic text **Result** column where the result will be stored.
+7. Click on **Done**.
+
+### In the Layout Editor
+
+
+
+### Text to Texts - Arcade 2
+
+### Text to Texts - Block 4
+
+
+
+1. If you have not yet set up the columns you'll need in the Data Editor, start with the steps above.
+2. Add a component that supports actions such as [**Button**](https://www.glideapps.com/docs/essentials/components/button), [**Hint**](https://www.glideapps.com/docs/automation/ai/essentials/components/hint), or [**Rich Text**](https://www.glideapps.com/docs/essentials/components/rich-text). Connect this component with the column where the output is stored.
+3. In the configuration panel on the right, in the **Actions** menu, select the **Text to Texts** action.
+4. Name the action and choose an icon.
+5. For **Instructions**, choose the column where the instructions are stored, or enter custom text.
+6. For **Input**, choose the column where the input text is stored, or enter custom text.
+7. For **Results**, choose the column where the result should be stored.
+
+### In the Workflow Editor
+
+
+
+### Text to Texts - Arcade 3
+
+### Text to Texts - Block 5
+
+
+
+1. If you have not yet set up the columns you'll need in the Data Editor, start with the steps above.
+2. Select the (**+**) plus symbol or the **+ New Workflow** button.
+3. For data source, select the data source of the screen where the action is triggered.
+4. Add **Text to Texts** as the first step of the workflow.
+5. For **Instructions,** enter custom text to create more specificity for your prompt.
+6. For the **Input** and **Result** fields, use the **Input** and **Result** columns created previously.
+7. Optionally, add a [**Show Notification**](https://www.glideapps.com/docs/automation/actions/show-notification) action at the end of the workflow to notify the user.
+
+
+

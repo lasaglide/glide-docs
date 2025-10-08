@@ -1,0 +1,94 @@
+---
+title: "Data to Layout"
+description: "Understand the fundamental ways Glide transforms your data to UI."
+---
+
+# Data to Layout
+
+Understand the fundamental ways Glide transforms your data to UI.
+
+### Data to Layout
+
+### Data to Layout - Block 1
+
+When you create an app or add a new tab to an existing app, Glide will build a basic layout based on the data that it finds. As you navigate and build new screens and forms, it can sometimes be a little unclear how your data maps to the interface.
+
+In this guide, you'll learn how to structure your data well and understand how your data appears in Glide.
+
+## Structuring your data
+
+There are many different [data sources](/data-sources) that you can use with Glide. Some are databases and some are more flexible, like spreadsheets. Spreadsheets allow you to organize your cells however you want, but for your data to work in Glide, it must be tabular (with neat rows and columns).
+
+Within each table, every column should have a name. These column names describe the properties or attributes of your items. Some data sources like [Airtable](/airtable) automatically have column names, but in spreadsheets, you'll need to make sure the first row is reserved for this.
+
+For example, if you are making a Team Directory, you might have two tables; one for Staff and another for Locations. In the **Staff **table, you would have columns for **Name, Email, Photo, Phone Number, Role, Manager,** and **Location**. In the **Location **table, you would have columns for **Name, Address, **and **Image.**
+
+### [BLANK] Data to Layout  - Callout 1
+
+If your data is not in the right format for Glide but needs to stay in that format for other reasons, you might want to read our guides on [Changing Horizontal Data to Vertical](/transpose), [IMPORTRANGE](/importrange), and [ARRAYFORMULA](/arrayformula).
+
+### Data to Layout - Block 2
+
+## Understanding how Glide displays your data
+
+When you first import your data source, Glide will create a basic app as a starting point. You'll see some screens with components in the [Layout Editor](/intro-to-layout). If you click on one of these items, you'll see more data about that item.
+
+Let's break down how your data relates to the layout view in Glide:
+
+1. Tables become tabs
+2. Rows become Collection Items
+3. A single row becomes a Details Screen
+4. Column values (a single cell in a row) are displayed in Components
+
+### Tables → Tabs
+
+When you create an app from a data source, Glide will try to make a tab for every table it finds. You can create new tabs whenever you like, but they must have a table as a source. You can create multiple Tabs from the same Data Source.
+
+### Rows → Collection Items
+
+If your data source has multiple rows, you'll see those items in a [Collection](/collection-components).
+
+When you click on the collection in the components panel, you'll be able to configure its settings in the configuration panel on the right and select which columns to show from that table. Modifying your Collection Layouts is one of the first ways you start designing your app in Glide.
+
+
+
+![Data from columns pulling into collection items. ](https://images.ctfassets.net/yreygbm72t08/MeCw6NpJOS0Q9wI0is5Vu/31b0fba35f7ba0332c08a616024f73e9/CleanShot_2024-01-12_at_8_.02.13_2x.png)
+
+
+
+### Row → Details Screen
+
+When you click on one of the items in a collection, Glide's default action is to take you to a details screen that represents all the information available in that row. Glide adds Components for each column it finds in your table. So if you added a table with team member info, your Details Screens might look like this:
+
+
+
+![A details screen pulling specific items from data. ](https://images.ctfassets.net/yreygbm72t08/1ZIQc7zI9TngvDmVM8OOES/87758a35d2805bdcce1e16c39252add4/CleanShot_2024-01-12_at_8_.36.31_2x.png)
+
+
+
+But you don't have to show every single column in a component. You can display the data you want and hide other columns using the components panel in the left sidebar of the Layout Editor.
+
+
+
+### [BLANK] Data to Layout - Callout 2
+
+Leaving components out of your screens is not a security feature as the data can still be downloaded to a user's device. Learn more in our [Security Guide.](/security-and-user-data)
+
+### Data to Layout - Block 3
+
+### Column Values → Components
+
+Some components can display only one column from your row, and others, like the [Title Component](/title-component), can display more.
+
+
+
+![Data displayed in a component.](https://images.ctfassets.net/yreygbm72t08/Qyq2SLxIvpQd2IzN16GuN/a843d0603b879fe15882b3e67917c11b/CleanShot_2024-01-12_at_8_.39.19_2x.png)
+
+
+
+
+
+### [BLANK] Data to Layout - Callout 3
+
+Get a deeper understanding of [Screen Types](/screens)
+

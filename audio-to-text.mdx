@@ -1,0 +1,80 @@
+---
+title: "Audio to Text"
+description: "Transcribe an audio file into text. "
+---
+
+# Audio to Text
+
+Transcribe an audio file into text. 
+
+### Audio to Text Body Block 1
+
+## Audio to Text
+
+With the **Audio to Text **feature, you can transcribe an audio recording into text. Audio files should be uploaded directly to Glide. You can do this with a [File Picker Component](/essentials/components/file-and-image-pickers), or by recording directly to your app with an [Audio Component](/essentials/components/audio).
+
+### File types and size restrictions
+
+Glide supports the following audio file types: `mp3`, `mp4`, `mpeg`, `mpga`, `m4a`, `wav`, and `webm
+`
+File uploads are currently limited to 25 MB.
+
+### Audio to Text Body 2
+
+## Adding the Audio to Text feature
+
+### In the Data Editor
+
+
+
+
+
+### Audio to Text Data Editor Arcade
+
+### Audio to Text Body 3
+
+1. Open the table where you want to save the audio recording and its text transcript.
+2. Add a new [basic URL column](getting-started/introduction-to-the-data-editor/basic-columns) by clicking the (**+**) plus symbol to the right of the table. This column will store the URL of the audio recording.- New columns added with the (**+**) plus symbol will always appear on the right. If you'd like to add a column somewhere else in your data, you can select the dropdown menu on an existing column and choose **Add column right. **You can also click and drag columns to rearrange them.
+3. Add an **Audio to Text **column. Search for “Audio to Text” or navigate to AI → Audio to Text. 
+4. Select the URL column you created for the **Audio URL **field.
+
+### In the Layout Editor
+
+
+
+### In the Layout Editor [NEW]
+
+### Audio to Text Body 4
+
+1. If you have not yet set up the columns you'll need in the Data Editor, start with the steps above. 
+2. Add an [Audio Recorder Component](/essentials/components/audio) to the screen.
+3. For the **Save To **field, use the URL column you created.
+4. Select the action configuration menu.
+5. Search for the **AI -> Audio to Text** action.
+6. For the **Audio URL field**, select the column where you have the audio stored.
+7. For the **Text** field, select the column where you want to save the text.
+8. Click away to exit the configuration.
+9. Add a [Hint Component](/essentials/components/hint) to the screen. For the **Content **field, use the **Audio to Text** column. This will display the transcript of the audio recording.
+10. Test your action.
+
+### In the Workflow Editor
+
+
+
+### Audio to Text Action Editor Arcade
+
+### Audio to Text Body 5
+
+1. If you have not yet set up the columns you'll need in the Data Editor, start with the steps above.
+2. Select the (**+**) plus symbol or the **+ New Workflow** button. For the example above, we chose App Interaction.
+3. Select as the data source for the action the data source of the screen where the action is triggered.
+4. Add **Audio to Text** as the first step of the workflow.
+5. Configure the **Audio to Text **action: For the **Audio URL** field, select the **URL column** where your audio files will be stored. For the **Text** field, select the basic text column where the transcript will be stored.
+6. Optionally, add a [Show Notification](/automation/actions/show-notification) action at the end of the custom action to notify the user.
+
+
+
+### Record audio and upload file components
+
+[Record Audio](/essentials/components/audio) and [Upload File](/essentials/components/file-and-image-pickers) are possible via dedicated components and are not actions in and of themselves. To use these features, add them as components in the Layout Editor. Because they are Components and not Actions, they cannot be used in Custom Actions. 
+

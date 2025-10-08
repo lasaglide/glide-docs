@@ -1,0 +1,63 @@
+---
+title: "Document to Text"
+description: "Extract text from documents. "
+---
+
+# Document to Text
+
+Extract text from documents. 
+
+### Document to text - Block 1
+
+The **Document to Text** feature extracts text from documents so you can use the raw text as data in your apps. Extracted text will retain the capitalization, line breaks, and loose groupings from the original document. If you use multiple files as the column input, the extracted text will be appended together to form a single string output. PDF, DOCX, XLSX, HTML, and PowerPoint file types are supported.
+
+## Adding the Document to Text Feature
+
+### In the Data Editor
+
+
+
+### Document to text - Arcade 1
+
+### Document to text - Block 2
+
+1. Open the table where you want to use the **Document to Text** column.
+2. Add a column to store the document(s) by clicking the (+) plus symbol to the right of the table. This can be either a URL column to store one document or a multiple file column to store more than one document.- New columns added with the plus button will always appear on the right. If you'd like to add a column somewhere else in your data, you can select the dropdown menu on an existing column and choose **Add column right.** You can also click and drag columns to rearrange them.
+3. Add a  **Document to Text** column to store the result. Search for “Document to Text” or navigate to **AI → Document to Text**.
+4. For the **Document** field, use the document column you created previously.
+5. **Note:** If the action is to be triggered in the Workflow Editor, then add a basic text **Result** column where the result will be stored.
+6. Click on **Done**.
+
+### In the Layout Editor
+
+
+
+### Document to text - Arcade 2
+
+### Document to text - Block 3
+
+1. If you have not yet set up the columns you'll need in the Data Editor, start with the steps above.
+2. Add a component that supports actions such as a button, hint text, or rich text to trigger the action.
+3. In the configuration panel on the right, in the **Actions** menu, select the **Document to Text** action.
+4. Name the action and choose an icon.
+5. For the **Document** field, select the document column you created previously.
+6. For the **Results text** field, choose the column you created to store the result.
+7. To display the result in your app, add a component such as [hint text](/essentials/components/hint). Connect this component with the column where the text output is stored.
+
+### In the Workflow Editor
+
+
+
+### Document to text - Arcade 3
+
+### Document to text - Block 4
+
+1. If you have not yet set up the columns you'll need in the Data Editor, start with the steps above.
+2. Select the (+) plus symbol or the **+ New Workflow** button.
+3. Select as the data source for the action the data source of the screen where the action is triggered.
+4. Add **Document to Text** as the first step of the workflow.
+5. Configure the **Document to Text** action: For the **Document** and **Text** fields, use the document and text columns created previously.
+6. Optionally, add a [Show Notification](/automation/actions/show-notification) action at the end of the workflow to notify the user.
+
+
+

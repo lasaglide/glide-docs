@@ -1,0 +1,91 @@
+---
+title: "Numbers"
+description: "Add numbers to your app."
+---
+
+# Numbers
+
+Add numbers to your app.
+
+### Numbers - Block 1
+
+**Number columns** can hold four different types of values in your app:
+
+- Numerical values or numbers
+- Phone numbers
+- Dates & Times
+- Durations
+
+## Number
+
+
+
+### Numbers - Arcade 1
+
+### Numbers - Block 2
+
+A **Numbe**r column holds numerical values. This can be used for a wide range of purposes such as weights, distance, volume, area, temperate, cost, income, etc.
+
+You can customize a number column when adding it to your [**data source**](/docs/essentials/data-sources) in the following ways:
+
+- **Precision** allows you to select how many decimal places you want to include in the number.
+- **Units **allows you to type in custom values for the type of number displayed, e.g. $, lbs, °F, feet. You can choose to display the units before or after the number in your app.
+
+You can display this information in your app using various [**Components**](/docs/essentials/components), or as [**Column Values**](/docs/reference/values/column-values) when setting up [**Collections**](/docs/essentials/components/collections) and components. The appearance of the numerical values in your app depends on the formatting options available for the chosen component.
+
+You can use the number column in lots of different ways by using them as the source for computed columns and integrations. For example, you can configure a [**Rollup Column**](/docs/automation/computed-columns/rollup-column) and calculate the sum, average, range, etc. of all the values in the column.
+
+## Phone number
+
+
+
+### Numbers - Arcade 2
+
+### Numbers - Block 3
+
+An **Phone number** column holds phone numbers. You can display the values in this column in your app using any component that displays a text value or as Column Values when setting up collections and components. You can use the values in this column in multiple [**Actions**](/docs/getting-started/introduction-to-actions) like [**Dial Phone Number**](/docs/automation/actions/dial-phone-number) and [**Compose SMS**](/docs/automation/actions/compose-text-message), as well as with integrations like [**Twilio**](/docs/automation/integrations/twilio).
+
+## Date & Time
+
+
+
+### Numbers - Arcade 3
+
+### Numbers - Block 4
+
+A Date & Time column can hold calendar dates and time values. When setting up the column in the [**Data Editor**](/docs/getting-started/introduction-to-the-data-editor), you can choose from the following options:
+
+- **Parts** enables you to decide if you want to store both the date and the time, the date only, or the time only.
+- If you choose date and time or date only, you can choose the **Date Format** to display:- Short (mm/dd/yyyy or dd/mm/yyyy depending on your local settings)
+- Medium ( October 2023)
+- Long (Thursday, 5 October 2023)
+- If you choose date and time or time only, you can choose the **Time Format** to display:- Without seconds (hh:mm)
+- With seconds (hh:mm:ss)
+
+
+
+### [BLANK] Numbers - Callout 1
+
+When importing date values to Glide, we recommend using ISO formatted dates in your source data. [You can read more about ISO date and time standards here. ](https://www.ionos.com/digitalguide/websites/web-development/iso-8601/)
+
+### Numbers - Block 5
+
+### Use Cases for Date & Time Column
+
+1. Add static values to the column from the Data Editor. For example, for an employee directory, you can add the date an employee joined the company.
+2. For a project management app, you can use a Date & Time column to set due dates for tasks.
+3. Use values in a Date & Time column with the **Date Difference Column **to calculate the time elapsed since a certain date or the time to a certain date.
+4. Add the column to a form to record the time the form was submitted. To do this, use the Current Date & Time component while configuring the form, and choose the Date & Time column to which you’d like to record the submission date.
+
+## Duration
+
+
+
+### Numbers - Arcade 4
+
+### Numbers Block 6
+
+The **Duration** column stores days—entered as whole numbers or decimals—displayed in hh:mm:ss format. For example, 1 day will display as 24:00:00, 1.5 days will display as 36:00:00, etc. It is always displayed in hours, and the minute and seconds portions of the time format do not display. It is meant to be used with a calculation already done in a synced data source such as Airtable or Google Sheets.
+
+To see the duration between two distinct times, we recommend using the **Date & Time** columns to capture start and end dates/times, and then using the [Date Difference Column](/automation/computed-columns/date-difference) to calculate the time between the two.
+

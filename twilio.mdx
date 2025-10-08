@@ -1,0 +1,166 @@
+---
+title: "Twilio"
+description: "Send SMS messages from your Glide app."
+---
+
+# Twilio
+
+Send SMS messages from your Glide app.
+
+### Twilio - Block 1
+
+[Twilio](https://www.twilio.com/) is a communications platform that enables businesses to send messages to their customers across multiple channels. With the Twilio integration, you can easily send SMS (text) messages from your app to keep your users engaged and informed.
+
+### Don't see the Twilio integration?
+
+You may need to upgrade your plan. [Browse Glide's plans and find the right fit for you.](https://www.glideapps.com/pricing)
+
+### Adding + Configuring Integration Header
+
+## Adding and Configuring the Action
+
+
+
+### Adding Twilio Arcade
+
+### Twilio - Block 2
+
+1. In **Glide**, click the **Settings **icon in the upper-right corner.
+2. In the [Integrations](/introduction-to-integrations) menu, choose [Twilio](https://www.twilio.com/) and select **Add**. 
+3. Next, you will to set your Twillio **Account SID, Auth token**, and **From number**.
+4. To find this information, open your Twilio dashboard.
+5. Input the information into your Glide integration. 
+6. If you are using Twilio to send PINs, choose where the integration can find the user phone number. - **Note: ****Phone numbers used to receive PINS with Twilio cannot be changed through the app interface. This is a security precaution. Phone numbers can still be updated through the Data Editor if needed.**
+
+
+
+
+
+### Verified phone numbers on Twilio
+
+Twilio allows messaging to different numbers depending on what level of account you have. In some cases, you can only text phone numbers that you’ve verified. [Click here](https://support.twilio.com/hc/en-us/articles/223180048-How-to-Add-and-Remove-a-Verified-Phone-Number-or-Caller-ID-with-Twilio) to learn more about verified phone numbers on Twilio.
+
+### Twilio - Block 3
+
+## Features
+
+To send a text with Twilio, select which column the integration should pull phone numbers from, and then input the message text you'd like to send. You can choose to send messages either as SMS or through Whatsapp. 
+
+The actions can be added to a component that supports actions (e.g., a button), added to a workflow in the Workflow Editor, or after a form is submitted.
+
+You can create a dynamic message by creating a [Template Column](/template-column) in the [Data Editor](/data-editor) and then setting that column as your **Message** field.
+
+### Send SMS message
+
+
+
+### Twilio Send SMS arcade
+
+### Twilio - Block 4
+
+1. If you have not already, set up columns to the recipient phone numbers and the message text.
+2. Select the component you'd like to add the** **action to. Remember, this must be a component that supports actions.
+3. Search for the **Send SMS message **action or navigate to Integrations -> Twilio -> Send SMS message.
+4. Name the action.
+5. Choose an icon.
+6. Select the column that contains the **Recipient **phone numbers, or enter a manual value.
+7. Select the column that contains the **Message**, or enter custom text. 
+8. Click away to exit the configuration.
+
+### Send WhatsApp message
+
+
+
+### Twilio send Whatsapp message
+
+### Twilio - Block 5
+
+1. If you have not already, set up columns to the recipient phone numbers and the message text.
+2. Select the component you'd like to add the** **action to. Remember, this must be a component that supports actions.
+3. Search for the **Send WhatsApp message **action or navigate to Integrations -> Twilio -> Send WhatsApp message.
+4. Name the action.
+5. Choose an icon.
+6. Select the column that contains the **Recipient **phone numbers, or enter a manual value.
+7. Select the column that contains the **Message**, or enter custom text. 
+8. Click away to exit the configuration.
+
+
+
+### Ready to automate?
+
+You can use a [Template Column](/template-column) to create customized messages for different users.
+
+### Twilio - Examples
+
+Let’s look at a potential use case for this integration.
+
+## Optimizing Delivery Times with Twilio SMS Notifications
+
+SwiftCourier, a premier courier service, coordinates with a network of freelance couriers working from mobile devices. They've encountered a bottleneck in getting couriers to pick up orders as soon as they become available for delivery. They need a way to send real-time order status, etas, and delivery updates to their drivers, who are on both ios and Android devices. Driver’s can opt-in to push notifications from the app, but not all do.
+
+SwiftCourier manages all order data and metrics in Glide, and delivery drivers already have the mobile app on their phones. Currently when a delivery notification needs to be sent, SwiftCourier manually writes an email notification for the assigned courier to arrange pickup.
+
+
+
+![SwiftCourier app for managing new orders and deliveries. ](https://images.ctfassets.net/yreygbm72t08/xInStDCmQ2H2g488Pqa7A/354f680a20635cc80d75dea00347bee5/image.png)
+
+
+
+This process, while functional, isn't scalable as the delivery business grows. Optimization is needed, so they decide to utilize Glide's Twilio integration with their existing mobile app to add more communication channels and improve delivery driver and customer experiences. This setup sends an automatic sms notification to the assigned delivery service or courier when a new order is marked ready for delivery.
+
+### Implementing Twilio Text Messages
+
+After integrating Twilio with their Glide app, they create a custom Twilio action. This action is added to the workflow that marks an order as ready for delivery.
+
+
+
+![Custom action workflow for sending Twilio SMS to couriers. ](https://images.ctfassets.net/yreygbm72t08/30ekwUJP6melCsf7tjIctT/c2481fe7538db44fc1d5f3e459b56bb6/image.png)
+
+
+
+And that's it! Each time an order is marked ready for delivery in Glide, a text message is instantly sent out to the assigned courier.
+
+
+
+![A text being sent to the courier. ](https://images.ctfassets.net/yreygbm72t08/2vAZY5LSP5KoveTdQYoAZo/c40d084a3ed152a0af37ea511b2be700/SwiftCourier_Notification__1_.gif)
+
+
+
+### Enhancing Twilio Notifications with Delivery Details
+
+SwiftCourier takes this a step further by including pertinent delivery details in the text messages.
+
+In the Orders table in Glide, they add a new [template column](/template-column). This column includes:
+
+- The pickup location
+- The delivery destination
+- Specific order details
+
+
+
+![Template column for SwiftCourier SMS. ](https://images.ctfassets.net/yreygbm72t08/2N5AArGxZ2L47052NCKye3/07a4fdd01d3063f8234fbbd69f184a20/image.png)
+
+
+
+They then modify the Twilio notification action to use this template column.
+
+
+
+![Adding the template column to the custom actions workflow. ](https://images.ctfassets.net/yreygbm72t08/46ku61ICLM1mt90bFMgO2l/4743bc997a81e61973a126c137c23352/twilio_notification_template.gif)
+
+
+
+Now, every time an order is ready, a detailed text is automatically dispatched to the assigned courier. This automation makes SwiftCourier's delivery process faster and eliminates manual text messaging, saving valuable hours.
+
+
+
+![Dynamic SwiftCourier SMS with Twilio. ](https://images.ctfassets.net/yreygbm72t08/TxBtcWExFeGNtSOGGRNQb/809d61ea2fcc8c3843d364ff451555bc/SwiftCourier_Notification__2_.gif)
+
+
+
+If the order details were stored somewhere else (say, an e-commerce platform like shopify), SwiftCourier could use [Call API](/automation/integrations/call-api) to share data between their Glide app and the e-commerce platform. 
+
+### Integrations Learn More Block
+
+To learn more generally about Integrations in Glide, including how they affect your app’s usage, check out our [Introduction to Integrations](/automation/integrations).
+

@@ -1,0 +1,172 @@
+---
+title: "Glide Tables"
+description: "Use Glide's built-in spreadsheet for optimal integration"
+---
+
+# Glide Tables
+
+Use Glide's built-in spreadsheet for optimal integration
+
+### 25,000 Row Limit on Spreadsheet Data Sources
+
+Rows from spreadsheet data sources have a **total cap of 25,000 rows across all tables**. If you need more than 25,000 rows of data in a team, consider a high-scale data source like [Big Tables.](https://www.glideapps.com/docs/essentials/data-sources/big-tables) 
+
+### Glide tables - Block 1
+
+Glide Tables are spreadsheets that live in Glide and are the most compatible data source for Glide apps. You can share Glide Tables among apps using the **Link Table** feature. Making changes in Glide Tables does not consume [updates](/reference/account/updates), unless you make changes through [Glide API](/essentials/data-sources/getting-started-with-the-glide-api) or have an Enterprise plan.
+
+## How to create an app with Glide Tables
+
+When you create a new app, Glide sets Glide Tables as the data source by default unless you select a different source.
+
+
+
+### Create an app with Glide Tables
+
+### Glide Tables - Block 2
+
+
+
+1. From the dashboard, select **New app.**
+2. Choose the template type you want.
+3. Select **Create app**. Glide will create your app using **Glide Tables** as the data source.
+
+### Change the default name of the table
+
+1. Select the [Data Editor** **](/data-editor)icon.
+2. On the left side of the Data Editor, double click on the name of a table, type the name you'd like to use, and hit enter.
+
+
+
+![image - 2](https://images.ctfassets.net/yreygbm72t08/4PQKI49eY4uYvEXLhxvUZP/95024c1476efb67ce5e06512e26179d9/CleanShot_2023-12-12_at_8_.15.36_2x.png)
+
+
+
+### Change the default data in the table
+
+You can make changes to the placeholder data in your new Glide Table using the **Data Editor.** Below are some basic ways to make changes and input data for your new app.
+
+1. To edit a column, hover over the column you want to edit, select the dropdown arrow, and select **Edit **to change the name and column type. You can also duplicate, add, or delete columns with this menu.
+2. To change the data in a cell, select it with your cursor, then edit or enter new data.
+3. You can add multiple cells of data at one time by copying cells from another data source and pasting the data into your Glide Table.
+4. To add a row, select the plus icon located under the bottom row.
+5. To add a column, select the plus icon located add the top right of the data table.
+
+
+
+### [BLANK] Glide Tables - Callout 1
+
+To add a full database of existing information as a table, you can upload an Excel or CSV file. Glide will create and populate a new Glide Table using the data from your file. For steps and details, see Create a new Glide Table from existing data below.
+
+### Glide Tables - Block 3
+
+## Add a new Glide Table to your app
+
+If you'd like an empty database you can input new data into, you can add a new table.
+
+On the left sidebar of the **Data Editor**, select the plus (+) icon and **New empty table.**
+
+
+
+![image - 4](https://images.ctfassets.net/yreygbm72t08/4RXftIQWS7jmZ4wI8O3buU/faf9cad52ff43170c0cfe134f150ac6e/CleanShot_2023-12-12_at_8_.16.57_2x.png)
+
+
+
+Glide creates a new table for you with an auto-generated name. To change the table's default name, double click on the name and edit.
+
+## Create a new Glide Table from existing data
+
+If you already have a full database of information that you want to add to your app, you can upload your data as an Excel or CSV file. Glide will convert the data from your file into a new Glide Table.
+
+1. Select the **Data Editor **icon.
+2. On the left side of the Data Editor, select the plus (+) icon.
+3. Select **Import File > Excel or CSV**.
+4. When prompted, click on the arrow in **Import Data From a File**.
+5. Select the file you want to use for your new table or simply drag and drop.
+
+
+
+### Glide Tables - Arcade 1
+
+### Glide Tables - Block 4
+
+Glide converts your data file into a Glide Table and adds it to the list of tables available in your app's Data Editor.
+
+## Link an existing Glide Table to your app
+
+To share information across apps in the same team, you can use Glide's **Link Table** feature. When you link a table from one app to another, any changes made to that table's data will also be reflected in your other apps that use the same table.
+
+### [BLANK] Glide Tables - Callout 2
+
+To reuse information contained in a Glide Table without syncing updates across each app, see Duplicate a Glide Table below.
+
+### Glide Tables  - Block 5
+
+To link a Glide Table to your app:
+
+1. Select the **Data Editor **icon.
+2. On the left side of the Data Editor, select the plus (+) icon.
+3. Under **Sync Data**, select the Glide Tables data source.
+4. When prompted, select the Glide Table(s) you want linked to your app and **Link Table**.
+
+Your linked Glide Table will now appear in the **Tables** panel of the Data Editor.
+
+### Glide Tables - Arcade 2
+
+### [BLANK] Glide Tables - Callout 3
+
+Only the data in a table's [Basic Columns](/basic-columns) can be shared and synced across apps. Computed Columns are not affected. When you link an existing Glide Table to an app, computed columns will not appear in your app's Data Editor. For more information, see [Computed Columns](/computed-columns).
+
+### Glide Tables - Block 6
+
+### How to unlink a Glide Table from your app
+
+1. Select the **Data Editor **icon.
+2. On the left side of the Data Editor, under **Tables**, right click on the name of the table.
+3. Select **Unlink**.
+
+
+
+![image - 9](https://images.ctfassets.net/yreygbm72t08/1b8u2laUITc4az51HNYuQI/1800f177148f499106e527080f37bd46/CleanShot_2023-12-12_at_8_.27.35_2x.png)
+
+
+
+## Duplicate a Glide Table
+
+If you want to reuse the data from an existing Glide Table but don't want the data to be synced across apps, use Duplicate.
+
+1. Select the **Data Editor **icon.
+2. On the left side of the Data Editor, under **Tables**, right click on the name of the table.
+3. Select **Duplicate**.
+
+
+
+![image - 10](https://images.ctfassets.net/yreygbm72t08/2PihrzD4SOkce3pbzRS2H7/a56932b405e3bb72e7ed6ed8b71fc77f/CleanShot_2023-12-12_at_8_.28.42_2x.png)
+
+
+
+Glide creates a copy of the selected table and lists it in the **Tables** panel of the Data Editor.
+
+## Export a Glide Table
+
+To export a Glide Table as a .csv file:
+
+1. Select the **Data Editor **icon.
+2. On the left side of the Data Editor, under **Tables**, right click on the name of the table.
+3. Select **Export. **
+4. Choose which columns to include in the export, or select all.
+5. Select **Export. **
+6. A save dialog will open on your device. Choose where to save the export. 
+
+
+
+![Glide tables - image 8](https://images.ctfassets.net/yreygbm72t08/B1gxuqZy0uLBrApZZHavk/66abdd465ae0fd4005cadae0d4961273/CleanShot_2023-12-12_at_8_.30.31_2x.png)
+
+
+
+
+
+### Export Limitations
+
+Note that empty columns will not be exported. Computed columns that link to other tables will also not be exported.
+

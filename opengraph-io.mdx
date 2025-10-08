@@ -1,0 +1,116 @@
+---
+title: "OpenGraph.io"
+description: "Fetch metadata from any URL."
+---
+
+# OpenGraph.io
+
+Fetch metadata from any URL.
+
+### OpenGraph.io - Block 1
+
+[OpenGraph.io](http://opengraph.io/) provides a set of tools and APIs for generating rich previews of links on the web. With it, you can fetch metadata from any URL and incorporate that data into your Glide app.
+
+### Don't see the OpenGraph.io Integration?
+
+You may need to upgrade your plan. [Browse Glide's plans and find the right fit for you.](https://www.glideapps.com/pricing)
+
+### OpenGraph.io - Block 2
+
+## Adding the Integration
+
+To start using the OpenGraph.io integration, you first need to add it to your project. You will need an [OpenGraph.io](http://OpenGraph.io) account if you don’t already have one.
+
+### OpenGraph.io - Arcade 1
+
+### OpenGraph.io - Block 2
+
+1. In Glide, click the Settings icon in the upper-right corner.
+2. Navigate to the **Integrations** tab and then select OpenGraph.io.
+3. Click the **Add to app** button.
+4. Copy your OpenGraph.io API key from your dashboard. You can use the default key or create a unique key to use with Glide.
+5. Click away to exit the configuration.
+
+## Get Website Metadata Action
+
+The **Get Website Metadata Action** will fetch metadata from a website URL using your connected OpenGraph.io account. The action can be added to a column in the [Data Editor](/getting-started/introduction-to-the-data-editor), a [component](/essentials/components) that supports [Actions](/getting-started/introduction-to-actions) (e.g., a [Button component](/essentials/components/button)), or added to a workflow in the [Workflow Editor](/getting-started/introduction-to-workflows#the-workflow-editor).
+
+The action can gather the following data from a URL:
+
+- **Result**: The full metadata fetched from OpenGraph as JSON
+- **Title:** The webpage title
+- **Description:** The description of the webpage
+- **Type:** The type of content on the page
+- **Image URL:** The main image URL for the page
+- **URL:** The canonical URL of the page
+- **Favicon URL:** The Favicon URL for the page
+- **Site Name:** The name of the website
+- **Published Time:** When the article was published, if the content type is an article
+- **Author URL:** URL to the article author’s profile, if the content type is an article
+
+### Advanced options
+
+There are three advanced options that can be enabled for each iteration of the **Get Website Metadata** action.
+
+**Allow cache** will cache the retrieved metadata in OpenGraph.io’s servers. By default this cache will be stored for five days.
+
+**Full Render** will return the full HTML of the page.
+
+**Use Proxy** will route the request through one of OpenGraph.io’s proxy servers.
+
+**Accept Language** by default metadata will be retuned in English, but this can be changed if you prefer to retrieve data in another language.
+
+### In the Data Editor
+
+
+
+### OpenGraph.io - Arcade 2
+
+### OpenGraph.io - Block 3
+
+1. Open the table where you want to use the **Get Website Metadata** feature.
+2. Add a new URL column by clicking the (**+**) plus symbol to the right of the table. This will store the URL you pull the source from. - New columns added with the plus button will always appear on the right. If you'd like to add a column somewhere else in your data, you can select the dropdown menu on an existing column and choose **Add column right.**You can also click and drag columns to rearrange them.
+3. Add a **Get Website Metadata** column to store the result. Search for “Get Website Metadata ” or navigate to Integrations → OpenGraph.io → Get Website Metadata.
+4. Select the URL column you created as the **URL** source, or enter a custom value.
+5. Choose which metadata you want to recover from the URL. You will need to create a new OpenGraph column for each type of result you want to collect.
+6. Enable advanced features if needed.
+7. Click **Save** to exit the configuration.
+
+### In the Layout Editor
+
+
+
+### OpenGraph.io - Arcade 3
+
+### OpenGraph.io - Block 4
+
+1. If you have not already created columns to store the URL and the result, make those columns following the steps above.
+2. Select the component you'd like to add the action to. Remember, this must be a component that supports actions.
+3. Search for the **Get Website Metadata** action or navigate to Integrations -> OpenGraph -> Get Website Metadata.
+4. Name the action.
+5. Choose an icon.
+6. Select the column that contains the **URL**, or enter custom text.
+7. Enable advanced features if needed.
+8. Select which column to store the metadata you want to collect. If you don’t wish to collect that field, leave it blank.
+9. Click away to exit the configuration.
+
+### In the Workflow Editor
+
+
+
+### OpenGraph.io - Arcade 4
+
+### OpenGraph.io - Block 5
+
+1. If you have not already created columns to store the URL and the result, make those columns following the steps above.
+2. Select the (**+**) plus symbol or the **+ New Workflow** button.
+3. Choose a trigger. - For [App Interaction Workflows](/automation/workflows/user-interaction), select as the data source for the action the data source of the screen where the action is triggered.
+- For other trigger types, create a loop and select the data source where you want to store the metadata.
+4. Search for the **Get Website Metadata** action or navigate to Integrations -> OpenGraph -> Get Website Metadata.
+5. Select the column that contains the **URL**, or enter custom text.
+6. Enable advanced features if needed.
+7. Select which column to store the metadata you want to collect. If you don’t wish to collect that field, leave it blank.
+8. Click away to exit the configuration.
+
+
+

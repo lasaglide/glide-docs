@@ -1,0 +1,49 @@
+---
+title: "Conditional Relations"
+description: "Create relationships only in certain conditions."
+---
+
+# Conditional Relations
+
+Create relationships only in certain conditions.
+
+### Conditional Relation Body Text
+
+When you configure **components**, **computed columns,** or **conditions, **you're always dealing with **values**. The **If → Then → Else Column** allows you to produce new values based on a set of conditions. 
+
+
+
+![The If -> Then -> Else column configuration. ](https://images.ctfassets.net/yreygbm72t08/5MSRPyT85UJYqCTJ1Zqq13/5d38af414d1c0f1dba885f0952275fcd/CleanShot_2024-10-22_at_3_.42.31_2x.png)
+
+
+
+The simplest and most common way to use this column is to test for a value and then output a **Custom Value**. For example: "if the value in the **Price** column is below 10 then output the value **low**."
+
+However, each case's output value can also be a **Column Value**. There are many reasons and use cases for this, but let's look at two of the most common.
+
+## Outputting a value for a relation
+
+For example, this app has an If → Then → Else Column which tests for the custom value of **true** and then outputs a column value from the row that is being evaluated.
+
+
+
+![Conditional Relations 2](https://images.ctfassets.net/yreygbm72t08/3ju3D0liGZbUkxV3idQ3ES/3f6f8a92e0fbdab8bccbd387bcf20db8/CleanShot_2024-10-22_at_3_.47.11_2x.png)
+
+
+
+In other words, if an item is active then the Property ID will be shown. You can then use that value elsewhere, like in a further **Relation**. Your new relation will only pull back those rows that have values in them.
+
+## Outputting a value for a calculation
+
+Another example would be in a calculation. Say you had an inventory log, with sales items out and restocking items in, and we wanted to sum the total of all the sold items in the log (but not the restocking items).
+
+To do this, you can create an If → Then → Else column that will show the order total only if the Sale or Restock column contains the value 'Sale' and will show the value of 0 if not. You can then use that column elsewhere in a calculation, rollup, or chart.
+
+
+
+![Conditional Relation 3](https://images.ctfassets.net/yreygbm72t08/3npKlGsaKUhmLouaOxsIWP/6b6ee15c548af82cf0d0dd81968e1b48/CleanShot_2024-10-28_at_8_.52.50_2x.png)
+
+
+
+
+

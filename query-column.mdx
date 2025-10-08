@@ -1,0 +1,180 @@
+---
+title: "Query Column"
+description: "Create complex relations in your data with conditional filtering, sorting, and limits."
+---
+
+# Query Column
+
+Create complex relations in your data with conditional filtering, sorting, and limits.
+
+### Query Column Video
+
+### Query Column Body 1
+
+The **Query** column allows you to gain powerful insights into your data. You can create complex relations and apply multiple filters, sorting, and limits—all in one place!
+
+The Query column feature can be applied to an entire table, a multiple relation, or even another query column. It works in all tables, including Glide [Big Tables](/essentials/data-sources/big-tables).
+
+## Creating a Query Column
+
+
+
+### Query Column Arcade
+
+### Query Column Body 2
+
+1. In the [Data Editor](/getting-started/introduction-to-the-data-editor), open the table you want to edit.
+2. Add a new column by clicking the plus (+) symbol to the right of the table.- New columns added with the plus button will always appear on the right. If you'd like to add a column somewhere else in your data, you can select the dropdown menu on an existing column and choose **Add column right. **You can also click and drag columns to rearrange them. 
+3. Name the column.
+4. For **Type**, search for **Query **or navigate to **Computed -> Query. **
+5. Select a **Source. **This can be any table, a multiple relation in the same table, or even another Query column in the same table.
+6. You can add one or more conditions to **filter by.**
+7. Control the ordering of the results with **sort by**, either ascending or descending by the values of any column in the source.
+8. Deselect **Match multiple **to return a single row from the query. 
+9. **Limit **how many matching rows will be returned by the query. 
+
+## Queries vs Relations
+
+
+
+### Performance Warning
+
+Query columns can be slow when querying [Glide Tables](/essentials/data-sources/glide-tables). Use [Relations](/automation/computed-columns/relations) instead for matching exact values, or use [Big Tables](/essentials/data-sources/big-tables) as your target since queries to Big Tables are always fast.
+
+
+
+### Query Column - Body 3
+
+Because Query columns and relations can have overlapping functionality, it can sometimes be hard to know which type of computed column to use. 
+If you are just trying to link records together with one-to-one or one-to-many relationships:
+
+- In Glide Tables and any other non-SQL data source, Relations are faster.
+- In Big Tables and any SQL data source, there is no difference.
+
+When configuring your Query column, Glide will tell you in the configuration screen if a multiple relation will be faster. 
+
+### Query Column vs Relations Video
+
+### Query Column Body 3
+
+## Using “This Row”
+
+The **This row** filter allows you to match your query results to specific rows in your table. With it, you can relate the rows in a source table with the relevant rows in another table. 
+
+For example, the table below uses a Query column to find a list of records for each Product from the Orders table. Rows are filtered for where the **Quantity** is more than 100, and the **Type** is “Sell”. The **This row** query automatically matches the results with the relevant rows in the table, organized by SKU.
+
+
+
+![This Row example](https://images.ctfassets.net/yreygbm72t08/6B0RmXgntPYS77t6W9oMoz/99e619b57408b774b5de0b416cb4de41/image.png)
+
+
+
+The Query column could then be used as the source of a Collection on a Product Details screen, to show all sales made of that product that fit the filter settings:
+
+
+
+![This Row Example 2](https://images.ctfassets.net/yreygbm72t08/1jb8VXeh52vrgHbYj7m9QU/f01171ee5aa287935c3a6ee758982cef/CleanShot_2024-01-12_at_5_.32.45_2x.png)
+
+
+
+## Example 1: Sales Tracking
+
+The image below is a table containing data for 1,000 sales people, including data for their salaries and sales figures:
+
+
+
+![Example sales data.](https://images.ctfassets.net/yreygbm72t08/4nH8cb5C7HMUIDa64w59eY/8f428ccdf106a1cad3eb264d179a5a06/CleanShot_2024-01-12_at_5_.34.26_2x.png)
+
+
+
+Now you'd like to know what percentage of total sales is accounted for by your top 100 sales people. You can determine this by using the Query column:
+
+Start by calculating the total sales across all sales people. For this, use a [Rollup column](/automation/computed-columns/rollup-column) to calculate the **sum** of all sales:
+
+
+
+![Rollup Sum of sales](https://images.ctfassets.net/yreygbm72t08/6uT04pU8aMEMrUNCS4RStX/e6db206d7fe0cda4ee5cefafa6f06ede/image.png)
+
+
+
+Next, use a Query column to find the top 100 sales people. This column would be configured as follows:
+
+- **Source**: Salespeople
+- **Sort by**: Sales descending
+- **Limit**: 100
+
+
+
+![Query Column for Top Sales](https://images.ctfassets.net/yreygbm72t08/63nsBEnsFkVXsuphcdoyBU/2a6d52ccd35572713b2e8fbb664f0bee/image.png)
+
+
+
+Now, calculate the total sales of the top 100 sales people. Again, use a Rollup column taking the **sum** of all sales found in the Query column.
+
+
+
+![Rollup Column Sales](https://images.ctfassets.net/yreygbm72t08/4aUOAtRrUr3x5ghNsYApH0/4161bb3fa63ef76d982e2c498fb053a7/image.png)
+
+
+
+Finally, use a Math column to calculate what percent of sales can be attributed to the Top 100 sales people. The formula for this is **100*Top Sales/Total Sales** where **Top Sales** is the total sales of the top 100 sales people, and **Total Sales** is the total of all sales.
+
+
+
+![Final Sales Query Example](https://images.ctfassets.net/yreygbm72t08/1gSBGKSMWg0pVB0XVmqsCO/8e00d40379bb372d1b556e651ec98a9d/image.png)
+
+
+
+You can see that the Top 100 Sales people have contributed 19.6% of the Total Sales.
+
+## Example 2: Gamification
+
+For this example, imagine that you reward your users with points, and you've defined a points table with a number of levels and a range of points for each level:
+
+
+
+![Points values for rewards. ](https://images.ctfassets.net/yreygbm72t08/2gFxDRm9XT4cQwsqNVG5An/f91370a4c29d63d42a9d813a9b0b53b1/CleanShot_2024-01-12_at_5_.36.52_2x.png)
+
+
+
+In your Users Table, you track the points balance for each User. Now, you need to determine their “Reward Level” based on their current points balance.
+
+
+
+![Tracking points in a table.](https://images.ctfassets.net/yreygbm72t08/2cA3CA6Ro8EsEvYJrfBqz1/8700c2ebd00b127499caf354a5c15cec/CleanShot_2024-01-12_at_5_.39.50_2x.png)
+
+
+
+If you look at your first user, Alma, you can see that she has a current points balance of 157, which puts her at the Silver level (100-199). To include each user’s Reward Level on their User Profile page, you need to calculate their level based on points. The Query column automates the whole process.
+
+First, create a Query column in the Users table and configure as follows:
+
+- **Source:** Reward Levels
+- **Filter by:** Min Points is less than or equal to
+- **This row ->** Points AND Max Points is greater than or equal to **This row ->** Points.
+- The Query in this case will only return a single match, but it will be different for each row in our Users table.
+
+
+
+![Calculating rewards with a query column. ](https://images.ctfassets.net/yreygbm72t08/1xDLP1qR744kFenc9TxLN0/ddf80d61da6b086a799322dc605f3971/image.png)
+
+
+
+Importantly, although the Query column only returns a single match, it is the same as a Multiple Relation, so it cannot be used in any component that expects a text value. Here, you want to use it in a Title component, so you need to retrieve the text value. To do this, use a [Single Value column](/automation/computed-columns/single-value-column):
+
+
+
+![Single value column with reward level](https://images.ctfassets.net/yreygbm72t08/7I6pvsefIhst7tWwSOJb5T/c31d2cd1a7de49ebdd308c092d31b95e/CleanShot_2024-01-12_at_5_.41.39_2x.png)
+
+
+
+This gives you a text value that you can use in a Title component on the User Profile screen:
+
+
+
+![User profile screen with text. ](https://images.ctfassets.net/yreygbm72t08/7fKNtrx3XNCJMtyLQQIC6Z/1d1705bb6e1c95607cbc2a23928df383/CleanShot_2024-01-12_at_5_.44.05_2x.png)
+
+
+
+
+

@@ -1,0 +1,81 @@
+---
+title: "PostHog"
+description: "Track user behavior and product analytics."
+---
+
+# PostHog
+
+Track user behavior and product analytics.
+
+### PostHog - Block 1
+
+[PostHog](https://posthog.com/) is an open-source product analytics platform. With the PostHog integration, you can track custom events and user behavior in your Glide app.
+
+### Don't see the PostHog integration?
+
+You may need to upgrade your plan. [Browse Glide's plans and find the right fit for you.](https://www.glideapps.com/pricing)
+
+### PostHog - Block 2
+
+## Adding and Configuring the Action
+
+To use the PostHog integration, you'll first need to set up a [PostHog account.](https://posthog.com/) Once you have a project API key, you can connect the project in Glide.
+
+### PostHog - Arcade 1
+
+### PostHog - Block 3
+
+1. In **Glide**, click the **Settings** menu.
+2. Find the [Integrations](/automation/integrations) section and select PostHog.
+3. Click **Add.**
+4. You will need your PostHog project's **Project API Key** to track events. You can find it** **in your PostHog settings.
+5. The **API Host** will default to [https://us.i.posthog.com](https://us.i.posthog.com), but depending on your PostHog region, you may need to change this. Your correct API Host can be found in your settings tab.
+6. Under **Person Profiles**, choose either: - **Identified Only**: Creates profiles only for users who have been explicitly identified in PostHog
+- **Always**: Creates profiles for all visitors, including anonymous ones
+
+## Track Event
+
+The **Track Event** action allows you to send custom events to PostHog when users interact with your app.
+
+The action can be added to a [Component](/components) that supports Actions (e.g., a [Button component](/essentials/components/button)), added to a workflow in the [Workflow Editor](/getting-started/introduction-to-workflows#the-workflow-editor), or after a [Form](/use-cases/forms) is submitted.
+
+### Analytics Events Only Work in Live Apps
+
+Tracking custom events only works in live apps when triggered by a user. Note that when testing in the Glide builder, the action will not track data.
+
+### PostHog - Block 4
+
+### In the Layout Editor
+
+
+
+### PostHog -Arcade 2
+
+### PostHog - Block 5
+
+1. Select the component you'd like to add the action to.
+2. In the **General** tab on the right side of the Layout Editor, navigate to the **Actions **section and search for **Track Event** or navigate to **Integrations → PostHog → Track Event.**- Note that there are other integrations that have a **Track Event** feature. Make sure to pick the correct one.
+3. Name the action.
+4. Choose an icon.
+5. Enter an **Event Name** that describes the action being tracked.
+6. Add values to track.
+7. Click away to exit the configuration.
+
+### In the Workflow Editor
+
+
+
+### PostHog - Arcade 3
+
+### PostHog - Block 6
+
+1. Select the plus (**+**) sign or the **+ New Workflow** button.
+2. Choose a trigger.
+3. In the **General** tab on the right side of the Layout Editor, navigate to the **Actions **section and search for **Track Event** or navigate to **Integrations → PostHog → Track Event.**- Note that there are other integrations that have a **Track Event** feature. Make sure to pick the correct one.
+4. Enter an **Event Name** that describes the action being tracked.
+5. Add the values you want to send to PostHog.
+6. Name your Workflow.
+7. Click away to exit the configuration.
+
+To learn more generally about Integrations in Glide, including how they affect your app’s usage, check out our [Introduction to Integrations](/automation/integrations).
+

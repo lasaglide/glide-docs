@@ -1,0 +1,117 @@
+---
+title: "Slack Trigger"
+description: "Initiate workflows with Slack."
+---
+
+# Slack Trigger
+
+Initiate workflows with Slack.
+
+### Feature Still in Development
+
+This feature has not yet reached [General Availability](/reference/account/preview-features), so it will likely continue to change as the Glide team makes improvements. This document will be updated as the feature becomes finalized.
+
+### Slack Trigger - Block 1
+
+Workflows can be triggered from a message in Slack. The trigger can be configured to listen only in specific channels, or to be activated only by specific users. 
+
+### Beta Availability for Slack Trigger
+
+Slack triggered workflows are only available for Glide teams with current paid plans or Team and Business 2024 and newer plans. Enterprise customers should contact their account manager to get started. Older [legacy plan](https://www.glideapps.com/pricing/legacy) teams must upgrade to use Slack** **triggered** **workflows.
+
+### Slack Trigger - Block 2
+
+## Creating a Slack Workflow
+
+### Connecting Your Slack Workspace to Glide
+
+Before you can use the Slack trigger, you’ll need to connect Slack to your Glide app. If you’ve already done this to use the Slack integration, you may need to reauthenticate.
+
+### Connecting Your Slack Workspace to Glide
+
+### Slack Trigger - Block 3
+
+1. Open the **Settings **menu in your app and click **Integrations**.
+2. Select **Slack** and then **Add.**
+3. A new window from Slack will open in your web browser.
+4. Choose which Slack workspace you want to connect with Glide. You can change this in the upper right hand corner. - **Note: Only workspace owners can add the Glide app to a Slack workspace.**
+5. Select **Allow** to add the workspace to your Glide app.
+6. In Glide settings, choose a name for you bot. If left blank, the name will be the name of your app.
+7. Choose an icon to appear in Slack when the bot sends a message. This should be a URL to an image. If left blank, it will be your app’s icon.
+8. Now that you’ve connected Slack to Glide, you’re ready to use Slack actions.
+
+### Setting up the Slack Workflow Trigger
+
+To use Slack as a trigger, you will first need a Slack account and membership to the Slack workspace you want to use.
+
+### Setting up the Slack Workflow Trigger
+
+### Slack Trigger - Block 4
+
+1. Open the [Workflow Editor](/getting-started/introduction-to-workflows#the-workflow-editor) and create a new workflow.
+2. Select **Slack** as the trigger.
+3. Specify **Channel IDs** for the channels the workflow can be triggered from. Leaving this field blank will mean the workflow can be triggered from any channel. - **Note: You must add the Glide app to the channel in Slack. You can do this in the channel settings, under “Integrations.”**
+4. Specify the **User IDs** for which users can trigger the workflow. Leaving this field blank will mean anyone can trigger the workflow.
+5. If you’d like to put in manual values to test, you can fill out the **Test Data** section. Otherwise, leave this section blank.
+
+### Advanced Features in the Slack Trigger
+
+In the Advanced configuration settings, you can leverage [Slack’s Blocks](https://api.slack.com/block-kit) features. Blocks allow you to create visually structured messages that include interactive elements like text, images, and buttons. Each block type offers different content options that you can mix and match to build messages according to your needs. Build the blocks you need from the Slack’s Block Kit Builder, copy the block code, and paste it into the Blocks field in Glide.
+
+You can also configure your Glide slack bot to thread its responses and respond to messages in a thread.
+
+## Data Available from Slack Trigger
+
+When you receive information or files from a slack triggered workflow, you can access that data and use it in your app. The slack attributes available are:
+
+- User ID that sent the message
+- Channel ID where the message was sent
+- Message as plain text
+- Blocks data from Slack
+- Message ID
+- Thread ID
+- A boolean response of whether the message was sent in a thread
+
+
+
+![Data Available from Slack Trigger](https://images.ctfassets.net/yreygbm72t08/5Pjgx0aHg9aHr0CxyB3TMH/1d83dc4aff10ec78d9807566270f281b/CleanShot_2025-04-23_at_12_.12.56_2x.png)
+
+
+
+## Building a Slack Workflow
+
+A single workflow can contain up to 2,000 steps. Each node you see displayed on the screen (Loop, condition, or action) is considered a step. Steps can be dragged and reordered within loops, conditions, and workflows.
+
+There are three types of steps you can use in a Slack triggered workflow: Actions, Loops, and Conditions.
+
+### **Actions**
+
+[Actions](/getting-started/introduction-to-actions) create change or perform a function in your app. You can add actions to any workflow up to the limit 2,000 step limit. Any actions that trigger updates will be calculated toward the total updates used by the workflow every time it triggers. Clicking on any individual action in a workflow will open its configuration screen in the right-hand panel.
+
+### **Loops**
+
+[Loops](/automation/workflows/loops) sequentially process each cell in your data, one at a time. By looping a workflow over a data source, you can search through the entire table and make sure your workflow executes everywhere. Loops are a way to have each row go through a set of action steps, computed steps, or conditional branches.
+
+One Loop is included by default in every workflow. To add a new one, click the (**+**) icon at the end of a workflow, go to **Flow**, then select **Loop.**
+
+For clarity, we recommend renaming a Loop once you’ve created it, so you can track what each one does within a workflow.
+
+The **Limit** field sets a row limit within a Loop. This will limit how many rows matching a condition are included in each run of a workflow.
+
+### **Conditions**
+
+[Conditions](/use-cases/conditions-filtering-and-visibility) create branches within workflows that will only run if the conditions are met. To add a new condition, click the (**+**) icon at the end of a workflow, go to **Flow**, then select **Condition.** Conditions can be added on their own, or nested within loops and other conditions.
+
+## Viewing Details of Slack Workflows
+
+You can review the details of Slack triggered workflows in the right-hand panel of the [Workflow Editor](/getting-started/introduction-to-workflows#the-workflow-editor). When you select a workflow, you will see:
+
+- How many updates each trigger uses
+- a switch to enable or disable the workflow
+- The run history for that workflow
+- An error message if a step did not run successfully
+
+Clicking on any of the specific items in the history list will open that entry and show details about the run. Clicking the curly brackets {} will display the data sent when the workflow ran.
+
+### Viewing Details of Slack Workflows
+

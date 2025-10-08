@@ -1,0 +1,50 @@
+---
+title: "Wait/Wait for Condition"
+description: "Create a delay between actions."
+---
+
+# Wait/Wait for Condition
+
+Create a delay between actions.
+
+### Wait/Wait for Condition - Block 1
+
+## Create a delay between actions.
+
+The **Wait** action allows you to create a short delay before triggering a second action in a multi-step [Workflow](/getting-started/introduction-to-workflows). For example, when a user submits a form, the Wait action can trigger a short delay while the data source is updated before showing a success message or taking them to a new tab or screen.
+
+The **Wait for condition** action allows you to create an action sequence in the Workflow Editor where the next step of the action is triggered only if certain conditions are met. The **Timeout seconds **field tells the action how long to wait for the condition to be met. If the condition is not met in that time, then the action will fail and display the message you input.  For example, if you put in 8 seconds and the condition is met in 1 second, the action will run after one second. If it gets to 8 seconds and the condition isn't met, then the action will fail.
+
+## **Setting up the Wait Action**
+
+### In the Workflow Editor
+
+
+
+### Wait/Wait for Condition - Arcade 1
+
+### Wait/Wait for Condition - Block 2
+
+1. Select the **+ New Workflow** button. If you have existing actions, click on the plus (+) sign in the left panel.
+2. Select the data source for your action.
+3. Configure your first action by clicking the first step in the workflow. At this step, you can also set conditions to allow the action to trigger, if needed.
+4. To add new actions to the flow, hover just underneath an action and click the plus button. In this way you can add the Wait action as just one step in a larger workflow.
+
+## **Setting up the Wait for Condition Action**
+
+### In the Workflow Editor
+
+
+
+### Wait/Wait for Condition - Arcade 2
+
+### Wait/Wait for Condition - Block 3
+
+1. Select the **+ New Workflow** button. If you have existing actions, click on the plus (+) sign in the left panel.
+2. Select the data source for your action.
+3. Configure your first action by clicking the first step in the workflow. At this step, you can also set conditions to allow the action to trigger, if needed.
+4. To add new steps to the flow, hover just underneath a step and click the plus button. In this way you can add the Wait for Condition action as just one step in a larger workflow.
+5. When setting the Wait for Condition action, select the condition that must be met for the next action in the sequence to run. Set a failure message to display if the condition is not met and the next action in the sequence will fail.
+
+Check the [Introduction to Actions](/automation/actions) page for a full list of components that can be used to trigger actions.
+

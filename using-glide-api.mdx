@@ -1,0 +1,315 @@
+---
+title: "Using Glide API"
+description: "Explore what you can do with the Glide Advanced API"
+---
+
+# Using Glide API
+
+Explore what you can do with the Glide Advanced API
+
+### Using Glide Tables API - Block 1
+
+Connecting to your [Glide Tables](/glide-tables) via the API allows you to automate your data management and integrate it with your own applications. The basic API allows you to add, edit, update, and delete data within Glide Tables directly. 
+
+The Advanced API has the additional ability to get row(s) from Glide Tables.
+
+Note that when you use Glide Advanced API to pull data from Glide, [each call costs an update.](/reference/account/updates) For Get Rows, an update is charged for every 1,000 rows collected, rounded up. For example, a "get all row" call that returns 500 rows will consume one update. A call that returns 5,800 rows will consume 6 updates. 
+
+## Using Glide Tables API
+
+You can leverage Glide Tables API in lots of different ways. Let’s break down a few different possibilities together.
+
+### [BLANK] Using Glide Tables API - Callout 1
+
+New to APIs? If you want a step-by-step guide for setting up an API automation tool and using each call, [check out this article](/getting-started-with-the-glide-api).
+
+### Using Glide Tables API - Block 2
+
+## Mutations
+
+The mutateTables call in each Glide curl statement adds one or more mutation operation for tables in an app in Glide's queue. After they're added to the queue, they can be processed anytime after the call returns the actions.
+
+This call takes a JSON body of the following form:
+
+### Using Glide Tables API - Code Block 1
+
+1 {
+2     "appID": "APP-ID",
+3     "mutations": [MUTATION, ...]
+4 }
+
+### [BLANK] Using Glide Tables API - Callout 2
+
+At least one mutation must be given. Glide doesn’t support more than 500 mutations in one invocation.
+
+### Using Glide Tables API - Block 3
+
+The call will succeed if all mutations succeed. It will fail if even one mutation fails. It will return a JSON response that's an array of results—one for each mutation. If a mutation fails, then its result has a property error, which is an error message.
+
+Keep in mind:
+
+- Actions that are enqueued are not guaranteed to succeed. For example, an action to delete a row that does not exist might successfully be queued. However, it will not be processed successfully since there is nothing to delete.
+- Actions are not guaranteed to be processed in sequence. For example, two added rows will not necessarily be added in the order they are given in the mutations array.
+
+
+
+### [BLANK] Using Glide Tables API - Callout 3
+
+Mutations available in the Glide Tables API include **add-row-to-table**,** set-columns-in-row**,** **and** delete-row**.
+
+### Using Glide Tables API - Block 4
+
+## Add rows
+
+The **add-row-to-table** mutation adds one row to your table.
+
+### Using Glide Tables API - Code Block 2
+
+1 {
+2     "kind": "add-row-to-table",
+3     "tableName": "TABLE-NAME",
+4     "columnValues": {
+5         "COLUMN-NAME": "COLUMN-VALUE",
+6         ...
+7     }
+8 }
+
+### Using Glide Tables API - Block 5
+
+If the table has a [Row ID](/row-id-column) column and the call is successful, the result will have a property "Row ID" with the Row ID of the row to be added.
+
+### [BLANK] Using Glide Tables API - Callout 4
+
+Not all columns have to be specified. Columns that are not set will remain empty or unchanged.
+
+### Using Glide Tables API - Block 6
+
+## Set columns
+
+The **set-columns-in-row** mutation sets one or more columns in an existing row in your table.
+
+
+
+
+
+### Using Glide Tables API - Code Block 3
+
+1 {
+2     "kind": "set-columns-in-row",
+3     "tableName": "TABLE-NAME",
+4     "columnValues": {
+5         "COLUMN-NAME": "COLUMN-VALUE",
+6         ...
+7     },
+8
+9     ROW-ID-OR-INDEX
+10 }
+
+### Using Glide Tables API - Block 7
+
+The ROW-ID-OR-INDEX is one of the following:
+
+- "rowID": "ROW-ID"
+- "rowIndex": "ROW-INDEX"
+
+
+
+### [BLANK] Using Glide Tables API - Callout 5
+
+**ROW-INDEX **should only be used for [Google Sheets](/google-sheets). It must be a number, and it's zero-based, i.e. the first row in the sheet has index **0**.
+
+### Using Glide Tables API - Block 8
+
+## Delete rows
+
+The **delete-row mutation** deletes an existing row from your table.
+
+### Using Glide Tables API - Code Block 4
+
+1. {
+2.     "kind": "delete-row",
+3.     "tableName": "TABLE-NAME",
+4.     ROW-ID-OR-INDEX
+5. }
+
+### [BLANK] Using Glide Tables API - Callout 6
+
+**ROW-ID-OR-INDEX** is interpreted identically to **set-columns-in-row**. 
+
+### Using Glide Tables API - Block 9
+
+## Get Rows
+
+
+
+### Using Glide Tables API - Block 10
+
+Get Rows takes a list of table names and returns all the rows in those tables. It will only return basic columns, not computed columns. The maximum number of rows that can be returned per call is 10,000.
+
+It takes a JSON body of the following form:
+
+### Using Glide Tables API - Code Block 5
+
+1. {
+2.     "appID": "jD5sfkQujM9ywabItn0l",
+3.     "queries": [QUERY, ...]
+5. }
+
+### Using Glide Tables API - Block 11
+
+Each query looks like this:
+
+### Using Glide Tables API - Code Block 6
+
+1. {
+2.     "tableName": "TABLE-NAME",
+3.     "startAt": CONTINUATION
+5. }
+
+### Using Glide Tables API - Block 12
+
+startAt is optional, and needs only be sent when continuing a previous query that did not return all rows. For example:
+
+The call returns an array with one element for each query, each of which looks like this:
+
+### Using Glide Tables API - Code Block 7
+
+1. {
+2.         "rows": [ROW, ...],
+3.         "next": CONTINUATION
+5. }
+
+### Using Glide Tables API - Block 13
+
+Each row is a row object, with one property per column. The `next` field will only be sent when more rows are in the table than Glide sent in the response. Glide will only send a maximum of 10K rows, so if there are more, then the `next` value of `CONTINUATION` will be included with the returned data. Your code needs to check for this and make an additional API call that includes the field `startAt` with the value of `CONTINUATION`.
+
+## Filtered Queries with Big Tables
+
+
+
+### Using Glide Tables API - Block 15
+
+When querying a [Big Table](/big-tables) with SQL, a query looks like this:
+
+### Using Glide Tables API - Code Block 8
+
+{
+    "sql": "SELECT * FROM ...",
+    "params": [PARAM1, PARAM2, ...]
+}
+
+### Using Glide Tables API - Block 16
+
+The params array is optional, but it must be given if the SQL query refers to any parameters.
+
+The allowed SQL is a small strict subset of ANSI SQL. The restrictions are:
+
+- All columns must be selected via *, nothing else can be used
+- Only one table can be queried
+- No joins or sub-queries
+- No group-by
+- ORDER BY only allows sorting by a single column
+- The WHERE clause allows conditions combined with AND, as well as OR. ORs can be nested within ANDs, but not the other way around.
+- Only a few conditions are allowed:- Checking for equality with =, or comparisons with < , > , <= , >= , between a column and a constant, or a column and a column
+- Checking for inequality with <> or !=
+- Checking whether a column is (not) empty with IS [NOT] NULL
+- LIMIT is supported, but the API will not return more than 1000 rows
+
+## Query parameters
+
+The preferred way for the query to include constant values is via parameters, to avoid having to escape strings and format numbers. These are written as numbers, starting at 1, preceded by a dollar sign, i.e. $1, $2, ... If the query uses parameters then they must be passed in the params array. $1 refers to the first element in that array, $2 to the second, and so on. Parameters can be strings, numbers, and booleans, as well as date-times formatted as strings like 1992-01-01T12:18:25.040Z.
+
+### Other considerations
+
+- The table name for FROM has to be the same table name that would otherwise be passed as tableName
+- The column names are the same as used with the regular API
+- Continuations (startAt) are not yet supported
+
+### Example
+
+Let's say we want to query a table for which the curl command for Add rows is this:
+
+### Using Glide Tables API - Code Block 9
+
+curl --request POST 'https://api.glideapp.io/api/function/mutateTables' \
+  --header 'Content-Type: application/json' \
+  --header 'Authorization: Bearer 80b01e13-f3a5-406d-a1d4-b24bbaf8b2b4' \
+  --data-raw '{
+  "appID": "fTKOnTvyN3xu2aXwuBI7",
+  "mutations": [
+    {
+      "kind": "add-row-to-table",
+      "tableName": "native-table-W6X94ehhihDbnGdSCKib",
+      "columnValues": {
+        "Name": "Name",
+        "jGa1O": "Material",
+        "H76kQ": "Category / Name",
+        "TibYN": "Price",
+        "pfMJe": "SKU",
+        "uolS2": "Visible?"
+      }
+    }
+  ]
+}'
+
+### Using Glide Tables Intro Example Arcade
+
+To get to this code, we need to reveal the Glide Tables API.
+
+### API Example Arcade
+
+### Using Glide Tables API - Block 17
+
+Now, we want to get the first 10 rows from that table where:
+
+- Name is Recycled Soft Hat and
+- Material is Wooden or Category is Shoes
+
+The query we would send to queryTables in that case would be
+
+
+
+### Using Glide Tables API - Code Block 10
+
+{
+  "sql": "SELECT * FROM \"native-table-W6X94ehhihDbnGdSCKib\" WHERE \"Name\" = $1 AND (\"Material\" = $2 OR \"Category\" = $3) LIMIT 10",
+  "params": ["Recycled Soft Hat", "Wooden", "Shoes"]
+}
+
+### Using Glide Tables API - Block 18
+
+Note that we have to quote the column names in SQL so they're interpreted case-sensitively.
+
+The full curl command would be:
+
+### Using Glide Tables API - Code Block 11
+
+curl --request POST 'https://api.glideapp.io/api/function/queryTables' \
+  --header 'Content-Type: application/json' \
+  --header 'Authorization: Bearer **********' \
+  --data-raw '{
+  "appID": "i9nkuGit0hSil4z6GzEn",
+  "queries": [
+    {
+      "sql": "SELECT * FROM \"native-table-W6X94ehhihDbnGdSCKib\" WHERE \"Name\" = $1 AND (\"Material\" = $2 OR \"Category\" = $3) LIMIT 10",
+      "params": ["Recycled Soft Hat", "Wooden", "Shoes"]
+    }
+  ]
+}'
+
+### Looking for more options?
+
+Additional calls such as `Get all tables` and `Get table schema info `are available. [Please see documentation here.](https://www.npmjs.com/package/@glideapps/tables) Not that some features are only available for Business and Enterprise customers.
+
+### Using Glide Tables API - Block 19
+
+## Learn Glide Tables API
+
+Want to see the API in action? Explore the resources below.
+
+- Article: [Getting Started with Glide API](/getting-started-with-the-glide-api)
+- Video: [How to Use the Glide Tables API (Getting Started in 2022)](https://youtu.be/mbtUy6mpbyY)
+
+
+
+

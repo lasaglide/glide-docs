@@ -1,0 +1,111 @@
+---
+title: "Airtable"
+description: "Integrate Airtable databases with your app."
+---
+
+# Airtable
+
+Integrate Airtable databases with your app.
+
+### 25,000 Row Limit on Spreadsheet Data Sources
+
+Rows from spreadsheet data sources have a **total cap of 25,000 rows across all tables**. If you need more than 25,000 rows of data in a team, consider a high-scale data source like [Big Tables.](https://www.glideapps.com/docs/essentials/data-sources/big-tables) 
+
+### Airtable
+
+### Airtable - Block 1
+
+Airtable is a spreadsheet-database hybrid with the features of a database but applied to a spreadsheet. Your apps can be integrated with Airtable bases, offering you a more robust approach to data management that you may not find in simple spreadsheets.
+
+### [BLANK] Airtable - pricing callout
+
+Airtable is available as a data source for Business and Enterprise customers. [Browse our plans to find the right first for you.](https://www.glideapps.com/pricing)
+
+### How to Connect Airtable with Glide
+
+## **How to connect Airtable with Glide**
+
+
+
+### Airtable Sync Arcade
+
+### Airtable user must stay in Glide team
+
+Before adding your Airtable base, decide who in your Glide team will control the integration. This Glide user account needs to be part of the team as long as you are using Airtable and cannot be changed or removed. Any updates to the Airtable connection must be performed by this same team member. 
+
+### Airtable - Block 2
+
+1. To create a new app, click on **New app** in your dashboard.
+2. Select **Airtable **as the data source, then **Continue**.
+3. Select **Connect to Airtable** to give Glide access to your Airtable.
+4. Sign in to Airtable, click on **Add a base,** add the Airtable base(s), and then **Grant access.**
+5. Select the base you want to use for your app and click **Create Page** to create your new app.
+6. If you want to add more data sources later, you can do it in the **Data Editor**.
+
+The sheets or tables in your base are added as individual **Tabs** to the [Layout Editor](/intro-to-layout) and individual **Tables** in the [Data Editor](/introduction-to-the-data-editor).
+
+### Airtable - Block 4
+
+## Sync data between Airtable and Glide
+
+Glide and Airtable differ in how they manage data, which may impact how the data syncs across both platforms.
+
+### Views
+
+Airtable allows you to create different ways to view your information. This means you can switch seamlessly between looking at your data as rows in a grid, cards on a kanban board, or even events on a calendar. Each view has its own layout, sorting, filtering, grouping, and more.
+
+When connecting your bases to Glide, keep in mind that any filters applied to an Airtable view will not be transferred to your app. For example, if you have a filter in Airtable that hides empty rows, those empty rows will appear in your data in Glide.
+
+### [BLANK] Airtable - Callout 5
+
+It's best practice to keep at least one view in your Airtable base that has no filters or customizations. This way, you can see all the records in that base and know what will be brought into Glide.
+
+### Airtable - Block 5
+
+### Columns vs. fields
+
+In Glide, data is arranged in **columns**. In Airtable, these are called **fields**. Airtable allows you to create many different types of fields, but Glide doesn't support all of them.
+
+### [BLANK] Airtable - Callout 6
+
+All field types transfer to Glide, except for the **Button** type.
+
+### Airtable - Block 6
+
+### Basic vs. user-specific columns
+
+The Airtable API does not allow Glide to add new fields to your Airtable base. Because of this, any new basic columns (e.g., **Text**, **Number**) you create in Glide will not appear in Airtable. Instead, they will become user-specific columns that are only accessible in the **Data Editor** in Glide.
+
+### [BLANK] Airtable - Callout 7
+
+It's recommended to add new basic columns directly to Airtable rather than Glide if you want to keep both data sources in sync. Once you add a new column to the Airtable base and save, you'll be automatically prompted to refresh your app's data to update it.
+
+### Airtable - Block 7
+
+### Links vs. Relations
+
+In Glide, data is connected using [Relation](/relations) columns. In Airtable, these same connections are called **Links**. When you create a link in your Airtable base, it will show up in Glide as a **Relation** column.
+
+You can use that data just like you would a normal relation. However, you will not be able to configure it in Glide since the configuration for the link/relation is set in Airtable. Connecting columns between data sources
+
+### Attachments
+
+Starting November 8th, 2022, Airtable introduced expiring links for all attachments stored in Airtable. This means that URLs for attachments stored in Airtable will expire every few hours. You can read Airtable's full announcement [here](https://support.airtable.com/docs/changes-to-airtable-attachments).
+
+As a result of this change, attachments stored in Airtable bases connected to Glide will be automatically stored in Glide, so that these attachments remain accessible to users of Glide apps. **These attachments count toward your Glide team's file storage quota.**
+
+Exceeding your file storage quota can result in your Glide apps becoming inaccessible to users until you upgrade to a higher plan. Removing an Airtable base from your Glide team (e.g. by deleting apps that use it) will free up storage space within minutes, and unused attachments are removed from Glide within 72 hours.
+
+On your team's dashboard, you can navigate to the **Usage** page to check how much file storage your team is currently using.
+
+## Learn Airtable
+
+If you're new to Airtable, check out the resources below to get you started.
+
+- Article: [Airtable vs Traditional Spreadsheets](https://zapier.com/blog/what-is-airtable/)
+- Video: [Meet Airtable](https://www.youtube.com/watch?v=POgkE-YjAJo&ab_channel=Airtable)
+- Course: [Intro to Airtable](https://www.youtube.com/playlist?list=PLkcBLUN49n2F2XtXMWWfWsOx2D6W3sWn-)
+- Support: [Airtable Support Center](https://support.airtable.com/)
+
+
+

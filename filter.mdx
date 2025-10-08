@@ -1,0 +1,75 @@
+---
+title: "Filter"
+description: "Filter your content based on criteria."
+---
+
+# Filter
+
+Filter your content based on criteria.
+
+### Filter video
+
+### Filter Body 1
+
+By default, your Collections show all the rows coming from your [data source](/getting-started/introduction-to-the-data-editor) (which could be a table or a [Relation](https://www.glideapps.com/docs/relations)). However, you can filter the rows that appear in your app's interface. You can also enable in-app filtering so that users can change the filtering themselves.
+
+### Filters are not a security feature. 
+
+Please note that filtering is not a security feature. If you use it, the app can still download filtered data. If your app has private or sensitive data then you should use [Row Owners](https://www.glideapps.com/docs/row-owners).
+
+### Filter Body 2
+
+## Filtering from the layout
+
+**Filter** allows you to exclude items from your [Collections](/essentials/components/collections) based on different criteria. Users will not be able to see items that you filter out of a collection. For example, the app below contains a filter that shows only the products where the **Low quantity** column **Is not checked**.
+
+The filter is created by checking certain criteria on a column in your sheet. The below example has a list of products. Some are low of quantity, some are not. The sheet contains a Boolean column that identifies **Low Quantity.**
+
+In Glide, select that column as the **Filter** column and then choose the criteria to filter by.
+
+### Filter - Arcade 1
+
+### Filter - Block 3
+
+You can use the same sheet as a data source in multiple tabs and then filter each one in different ways. For example, the app below shows the same product list in three different tabs. Each tab has the same exact source sheet, but each one is filtered to show only those with a different category.
+
+### Filter - Arcade 2
+
+### Filter - Block 4
+
+## Multiple filters
+
+We can use multiple filters on a list with AND + OR logic. In the following example, we add two filters to our list of products to ensure that only items where the 'Visible' column is checked and the 'Price' is greater than 50 are shown. 
+
+- Visible **is checked**
+
+And
+
+- Price **> 50** 
+
+
+
+![Adding multiple filters.](https://images.ctfassets.net/yreygbm72t08/4ShiKOuS74II5LH79n8LJP/1880a16415eebea6356b711bb2bc7956/CleanShot_2024-01-26_at_3_.04.58_2x.png)
+
+
+
+## In-app filtering
+
+You can also enable in-app filtering for your users so they can change the items that are displayed in the collection. This is particularly useful for collections with a large amount of of items. The example below shows the configuration of an in-app filter based on the Size column, which allows users to see only the drinks with certain sizes.
+
+### Filter - Arcade 3
+
+### Filter - Block 5
+
+## Multiple in-app filters
+
+If you’d like users to filter your **Collections** by more than one field, you can include multiple in-app filters. When multiple filters are added, the filtered results are displayed using **AND** logic. You can add as many in-app filters as you like by clicking the **+Add filter** button. For example, the inventory list below is filtered to include items from the **Body** category with **Low Stock** levels.
+
+
+
+![Multiple in-app filtering. ](https://images.ctfassets.net/yreygbm72t08/13gWHWFF6jADFsH5kwvOmh/0715db82af8a1339aacaf936148e093e/CleanShot_2024-01-26_at_3_.21.00_2x.png)
+
+
+
+
+

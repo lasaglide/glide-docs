@@ -1,0 +1,80 @@
+---
+title: "BigQuery"
+description: "Bring your BigQuery data into Glide."
+---
+
+# BigQuery
+
+Bring your BigQuery data into Glide.
+
+### BigQuery Video
+
+### BigQuery Body Text 1
+
+[BigQuery](https://cloud.google.com/bigquery) is Google Cloud's data warehouse tool that allows businesses to run analytics across a tremendous amount of data using SQL (Structured Query Language).
+
+### [BLANK] BigQuery Pricing Callout
+
+BigQuery integration is only available on Enterprise plans. Need to upgrade? Read more about our plans and pricing [here](https://www.glideapps.com/pricing).
+
+### BigQuery Body Text 2
+
+## Getting Set up with BigQuery
+
+1. Before using BigQuery with Glide, [you'll need to set up a BigQuery account.](https://cloud.google.com/bigquery)
+2. Make sure your first column in your data set is a unique string or number column named “id” so Glide can identify the rows.
+3. New to SQL queries? [Check out Google's documentation to get started](https://cloud.google.com/bigquery/docs/reference/standard-sql/introduction).
+4. Make sure cookies are left on in your personal Glide settings.
+
+## Syncing Data from BigQuery
+
+
+
+### BigQuery Sync Arcade
+
+### BigQuery Body Text 3
+
+1. From the [Data Editor](/data-editor), navigate to the Tables menu in the left sidebar and select plus (+)** **to add a new [Data Source](/data-sources).
+2. Select **BigQuery **and sign in to the relevant Google account.
+3. **Search or browse your datasets **and select the one you want to sync with Glide.
+4. In the query screen, run whatever queries you like to create the dataset you want to pull into Glide.
+5. When you're ready, you can name the query and save it as a table.
+6. You can now work with this data for your Glide app.
+
+## Editing Your Synced Table
+
+
+
+### [BLANK] BigQuery - Callout 2
+
+Unlike our other data integrations, changes you make to BigQuery data in Glide do not write back to your BigQuery data warehouse. Glide uses BigQuery as a read-only data source.
+
+### BigQuery - Block 4
+
+To change your table:
+
+1. Select **edit query** in the upper right corner of your query table.
+2. Make any changes to the query you'd like.
+3. Preview your data, then save it to update your table.
+
+## Limitations of BigQuery
+
+There are some features in Glide that aren't compatible with a table generated from BigQuery. Those features are:
+
+- [Row owners](/row-owners)
+- [Protected columns](/protected-columns)
+- [Rollups](/rollup-column) and [lookups](/lookup-column) into relations
+- [Grouping](/group)
+
+In [computed columns](/computed-columns), filtering, sorted, and search is not supported.
+
+The following components will load at most 5000 rows:
+
+- Chart
+- Radial Chart
+- Choice
+- Kanban
+- Calendar
+
+
+

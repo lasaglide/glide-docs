@@ -1,0 +1,112 @@
+---
+title: "DocsAutomator"
+description: "Generate PDFs based on your data."
+---
+
+# DocsAutomator
+
+Generate PDFs based on your data.
+
+### DocsAutomator
+
+### DocsAutomator - Block 1
+
+[DocsAutomator](https://docsautomator.co/) let's you generate PDFs based on your data. With this tool, you can create personalized and customizable documents by merging your data with prebuilt templates. 
+
+
+
+![DocsAutomator Hero](https://images.ctfassets.net/yreygbm72t08/2ir8isxfOJomFOitfpWC57/dbe989e8ba064b1e277ef9bf706786c3/DocsAutomator.png)
+
+
+
+
+
+### Don't see the DocsAutomator integration?
+
+You may need to upgrade your plan. [Browse Glide's plans and find the right fit for you.](https://www.glideapps.com/pricing)
+
+### Adding + Configuring Integration Header
+
+## Adding and Configuring the Action
+
+
+
+### Adding DocsAutomator Arcade
+
+### DocsAutomator - Block 2
+
+1. In Glide, click the **Settings **icon in the upper-right corner.
+2. Navigate to the **Integrations** tab and then select DocsAutomator.
+3. Click the **Add to app **button.
+4. From your DocsAutomator account, retrieve your API key from the [Settings menu](https://app.docsautomator.co/settings).
+5. In Glide, enter this key into the **API Key **field under your DocsAutomator integration settings, along with the email address that you use to login to DocsAutomator.
+
+## Generate Document
+
+The [DocsAutomator](https://docsautomator.co/) Integration has one feature: **Generate Document**.
+
+The action can be added to a [Component](/components) that supports [Actions](/actions) (e.g., a [Button component](/button-components)), added to a workflow in the [Workflow Editor](/getting-started/introduction-to-workflows#the-workflow-editor).
+
+### DocsAutomator Generate Document
+
+### DocsAutomator - Block 3
+
+1. Click on the plus (**+**) sign in the **Components** panel to add a new component that supports actions, or select an existing component to add an action.
+2. In the **General** tab on the right side of the Layout Editor, navigate to the **Actions** section and search for **Generate document **or navigate to **Integrations → DocsAutomator -> Generate document.**
+3. Select the icon and title for your action.
+4. Add your DocsAutomator **Template ID. **This can be found in the URL on the DocsAutomator website: app.docsautomator.co/templates/**[Template ID]**
+5. Specify a **Filename **or replace placeholders in your template with Data from Glide.
+6. When the PDF is ready, a link to it will be stored in the field you specify as the File output.
+7. Add conditions to the action, if desired. These will limit when the action is allowed to trigger.
+8. Click away from the configuration menu. Your settings will save automatically.
+
+## Use Cases
+
+DocsAutomator allows you to generate documents directly from your app. Here are a few ways businesses are leveraging DocsAutomator:
+
+1. **Contract Creation: **Automatically generate contracts for clients based on terms agreed upon within the app.
+2. **Inventory Reports:** Generate inventory or stock reports based on real-time app data.
+3. **Customized Marketing Material: **Create personalized marketing brochures or flyers based on user preferences or past orders.
+
+
+
+### DocsAutomator Example 1
+
+## **Example: Automated Invoice Generation**
+
+SwiftCourier, a reputable delivery service, prides itself on its prompt and efficient operations. However, as their customer base expanded, so did their administrative workload. One such task was creating invoices for each delivery order. Working with paper invoices made it tedious to create automated workflows. SwiftCourier wants to switch to electronic invoices to reduce time-consuming administrative hassle and use their existing invoice data for an automated solution. They need an automated invoice processing workflow. They already built a Glide app to be their internal operations management system, operating like their own erp system on a smaller scale. This app already hastheir pricing, payment options, and notification workflows set up.
+
+This is where the DocsAutomator integration came into play.
+
+### **Setting Up Invoice Automation**
+
+After integrating DocsAutomator with Glide, SwiftCourier created a Google Doc to serve as the template for their invoices. This template includes placeholders for the invoice details:
+
+- Customer Name
+- Delivery Address
+- List of Items
+- Total Cost
+- Date of Delivery
+
+### **Generating the Invoices**
+
+Within the back office app, whenever a customer places an order, a button labeled "Confirm Order" appears. Clicking this button triggers a workflow to finalize order acceptance.
+
+The initial action involves DocsAutomator's "Generate Document" feature to produce the invoice. This action uses the invoice Google Doc template, populating it with order details and generating a unique invoice for that specific order. This reduces the team’s processing time by creating an invoice automation with all the relevant information required for payment processing and invoice payment. This data can then be passed to the invoice processing software used by SwiftCourier’s accounting department. 
+
+### **Distributing the Invoices**
+
+Once generated, the invoice is automatically emailed to the customer. This gives the customer a record of their order and confirmation of its acceptance. The same workflow could be used to generate purchase orders, streamline manual data entry processes, set up recurring invoices, and create an automation system for other bookkeeping tasks. 
+
+### **Invoice Management in Glide**
+
+Not only did the new workflow eliminate human error in invoice creation, but it also ensured customers received prompt and accurate billing information.
+
+SwiftCourier streamlined an important step in their business processes, heightening customer satisfaction and removing manual tasks to improve their invoice processing workflow. They created their own invoice processing solution, custom to their needs, integrated with their other operational workflows.
+
+If SwiftCourier’s accounting system required approval workflows for invoice approval, they could use [roles](/essentials/security-and-user-data/roles) to add an approval process to the automation. They could also set up notifications for late payments, updates about accounts payable, and more.
+
+### Integrations Learn More Block
+
+To learn more generally about Integrations in Glide, including how they affect your app’s usage, check out our [Introduction to Integrations](/automation/integrations).
+

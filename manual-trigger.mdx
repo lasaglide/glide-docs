@@ -1,0 +1,84 @@
+---
+title: "Manual Trigger"
+description: "Trigger workflows internally from a Glide app."
+---
+
+# Manual Trigger
+
+Trigger workflows internally from a Glide app.
+
+### Beta Availability for Manual Trigger
+
+Manually triggered workflows are only available for Glide teams with current paid plans or Team and Business 2024 and newer plans. Enterprise customers should contact their account manager to get started. Older [legacy plan](https://www.glideapps.com/pricing/legacy) teams must upgrade to use Manual** **triggered** **workflows.
+
+### Manual Trigger Intro
+
+Workflows in Glide can be triggered by a Glide app—even within the same app. Manually triggered workflow begin with the Trigger Workflow action in the Layout or Workflow Editors. This allows you to trigger a workflow from another workflow as an action step, or by a user interaction with a button in the app.
+
+### Feature Still in Development
+
+This feature has not yet reached [General Availability](/reference/account/preview-features), so it will likely continue to change as the Glide team makes improvements. This document will be updated as the feature becomes finalized.
+
+### Manual Trigger - Creating a Manually Triggered Workflow (1)
+
+To create a Workflow triggered manually:
+
+### Manual Trigger - Creating a Manually Triggered Workflow (2)
+
+
+
+1. Open the Workflow Editor and create a new workflow.
+2. Select **Manual **as the trigger.
+3. Build the rest of the workflow steps as needed.
+
+
+
+### Manual Trigger - Block 4
+
+## Data Available from Manual Triggers
+
+If you decided to pass values from the Trigger Workflow action, they will be available for use in the rest of the workflow.
+
+## Building a Manual Workflow
+
+A single workflow can contain up to 2,000 steps. Each node you see displayed on the screen (Loop, condition, or action) is considered a step. Steps can be dragged and reordered within loops, conditions, and workflows.
+
+There are three types of steps you can use in a manually triggered workflow: Actions, Loops, and Conditions.
+
+### **Actions**
+
+Actions create change or perform a function in your app. You can add actions to any workflow up to the limit 2,000 step limit. Any actions that trigger updates will be calculated toward the total updates used by the workflow every time it triggers. Clicking on any individual action in a workflow will open its configuration screen in the right-hand panel.
+
+### **Loops**
+
+Loops sequentially process each cell in your data, one at a time. By looping a workflow over a data source, you can search through the entire table and make sure your workflow executes everywhere. Loops are a way to have each row go through a set of action steps, computed steps, or conditional branches.
+
+One Loop is included by default in every workflow. To add a new one, click the (**+**) icon at the end of a workflow, go to **Flow**, then select **Loop.**
+
+For clarity, we recommend renaming a Loop once you’ve created it, so you can track what each one does within a workflow.
+
+The **Limit** field sets a row limit within a Loop. This will limit how many rows matching a condition are included in each run of a workflow.
+
+### **Conditions**
+
+Conditions create branches within workflows that will only run if the conditions are met. To add a new condition, click the (**+**) icon at the end of a workflow, go to **Flow**, then select **Condition.** Conditions can be added on their own, or nested within loops and other conditions.
+
+## Viewing Details of Manual Workflows
+
+You can review the details of Manually triggered workflows in the right-hand panel of the Workflow Editor. When you select a workflow, you will see:
+
+- How many updates each trigger uses
+- a switch to enable or disable the workflow
+- The run history for that workflow
+- An error message if a step did not run successfully
+
+Clicking on any of the specific items in the history list will open that entry and show details about the run. Clicking the curly brackets {} will display the data sent when the workflow ran.
+
+## **Manual Workflow Limitations**
+
+- If Workflows are used with a Google Sheet, a [Row ID column](https://www.glideapps.com/docs/automation/computed-columns/row-id-column) is needed.
+- [Experimental Code Columns](https://www.glideapps.com/docs/automation/computed-columns/experimental-code-column) are not supported.
+- [User-specific columns](https://www.glideapps.com/docs/essentials/security-and-user-data/user-specific-columns) cannot be used by workflows.
+
+
+

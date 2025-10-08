@@ -1,0 +1,61 @@
+---
+title: "Breadcrumbs"
+description: "Display users' location within the app."
+---
+
+# Breadcrumbs
+
+Display users' location within the app.
+
+### Breadcrumbs body text
+
+Depending on how complex your app is, you may want to include the **Breadcrumb** component to show users where they are and how they got there. 
+
+For example, in the Applicant Tracker below, the Breadcrumb component shows that the current page is called **Cameron Williamson** and that the user got to this page from the **Applicants** screen.
+
+The Breadcrumb menu can also be used as navigation. Clicking on **Applicants** will take the user back to that screen.
+
+
+
+![Breadcrumbs - Image 1](https://images.ctfassets.net/yreygbm72t08/3RFFqW0RHYBWx6NB63OzzW/0cba8dd2ce55a95445a764618ad90d6b/CleanShot_2023-08-07_at_11.00.04_2x.png)
+
+
+
+The breadcrumb menu is a very common navigation tool in websites, especially complex ones where you can get to the same page from different locations. For example, in the image below you can see the same screen as above, but the user got to that screen via the **Pipeline** tab.
+
+
+
+![Breadcrumbs with Tabs](https://images.ctfassets.net/yreygbm72t08/6AObPybzSMiFMHZ5I5MWeV/f68f92bb570c849b3cfe0b1c25bdd998/CleanShot_2023-08-07_at_11.15.19_2x.png)
+
+
+
+## Adding and Configuration
+
+
+
+### Breadcrumbs - Arcade 1
+
+### Breadcrumbs - Block 2
+
+Ideally, the Breadcrumb component will be in the same place on every screen in your app—that way it will act as a consistent navigation item that users can rely on—just like the navigation menu. However, it's fine not to have it on the top level of your tabs.
+
+This means that you will need to add it to every screen manually.
+
+The Breadcrumb component itself does not have any configuration. It just shows the screen titles as a path. For example, below, the user is on the **Schedule** tab. This is because the title of that tab is called Schedule. If you changed the title of that tab to "Elephants" or "Cars"—the Breadcrumb component would update.
+
+
+
+![Breadcrumb example 1](https://images.ctfassets.net/yreygbm72t08/50nDijkIPLQWpSerhZrHW7/5ea7eb02ae155537ca049f983fabebf3/CleanShot_2023-08-07_at_11.58.05_2x.png)
+
+
+
+When a user visits a different page of a collection, the breadcrumb component will keep the name of the screen they came from and then show a second value for the current page. For example, here you see the word **Ralph Edwards** after Pipeline because that is the title of the page the user is now on.
+
+
+
+![Breadcrumb Hugo Example](https://images.ctfassets.net/yreygbm72t08/3jfQYuvWlu8H6kbFQ2hSQh/ad9b9f029fdb14022bbdc320161e0acf/CleanShot_2023-08-07_at_11.59.57_2x.png)
+
+
+
+If you want the component to display a different value, you can change the value for what appears in the breadcrumb as the title of that page. For example, in the image below, the title of the details screen is reading the value from the position name instead of the candidate name.
+

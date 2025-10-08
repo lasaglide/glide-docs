@@ -1,0 +1,241 @@
+---
+title: "SQL Server"
+description: "Connect to your SQL Server and build database-grade apps and tools."
+---
+
+# SQL Server
+
+Connect to your SQL Server and build database-grade apps and tools.
+
+### [BLANK] SQL Server - Callout 1
+
+SQL data sources are currently available to Enterprise customers only. [Browse our plans to find the right fit for you.](https://www.glideapps.com/pricing)
+
+### SQL Server - Block 1
+
+Microsoft’s [SQL Server](https://www.microsoft.com/en-us/sql-server) is a relational database management system. With the **SQL Server** integration, you can connect to an existing database and bring the data directly into your Glide app. You can both read and write to your SQL Server database.
+
+### [BLANK] SQL Server - Callout 2
+
+Just getting started with SQL Server? [You can read more about how to get set up here.](https://learn.microsoft.com/en-us/training/modules/introduction-to-sql-server-2022/)
+
+### SQL Server - Block 2
+
+## Adding SQL Server to your app
+
+
+
+### SQL Server - Arcade 1
+
+### SQL Server - Block 3
+
+Glide apps cannot be started directly from SQL data sources. If you’re starting a new app, select Glide Tables as the source and then follow the steps below to add your SQL data.
+
+If your credentials appear as a connection string from your hosting platform, the information above can be found in that string in this format: `sql_database_type://database_user:password@host:port/database`
+
+1. In Glide, open the Data Editor and click the plus (+) next to **Tables** to add a new table.
+2. Navigate to **SQL** and select **SQL Server**.
+3. Give the database connection an internal name.
+4. The **Connection Type** will be SSL/TLS.
+5. Enter the **Server host name** or **IP address** of your database.
+6. The default **port** **number** (1433) will appear automatically, but you may change it if needed.
+7. Enter the **database** name. This must match the name in SQL Server.
+8. Disable **SSL certificate** verification if desired. This is less secure.
+9. Add the **username** and **password** of the database user that should be used for access.
+10. Click **Continue** to save your configuration settings.
+
+
+
+### [BLANK] SQL Server - Callout 3
+
+SQL data source integrations can also be added in App Settings, in the Integrations menu. If you have multiple databases to sync from the same source, you can add those in the Integrations menu.
+
+### SQL Server - Block 4
+
+## Syncing Data from SQL Server
+
+Now that you’ve connected the database to your app, you can add data from it in the data editor. You can link a full dataset to create a read and write table in Glide, or you can query your data to create a read-only table. To read and write to a table, your table must have at least one primary key. If you haven’t set a primary key in your source table, Glide will prompt you to choose one. Date or time fields cannot be the primary key at this time.
+
+### [BLANK] SQL Server - Callout 4
+
+If you’d like to let users manually refresh data in your app, you can create a [Reload query action. ](/automation/actions/reload-query)
+
+### SQL Server - Block 5
+
+### Creating a read-and-write table
+
+
+
+### SQL Server - Arcade 2
+
+### SQL Server - Block 6
+
+1. In the [Data Editor](/getting-started/introduction-to-the-data-editor), click the plus (+) button to add a new table.
+2. Select **SQL Server**.
+3. Search or browse your datasets and select the one you want to sync with Glide.
+4. Select **Continue**.
+5. Your dataset will appear as a table in the data editor.
+
+If your table’s schema has changed, click the ↻ icon next to the table name to update the columns of your table. This will not update automatically, so if you’ve made a change to your table in your SQL database, you must sync the table schema for that change to appear in Glide.
+
+### Creating a read-only table with a query
+
+
+
+### SQL Server - Arcade 3
+
+### SQL Server - Block 7
+
+You can also query your data to create a read-only table in Glide. Data from SQL data sources is not mirrored. This means that Glide queries your database to retrieve the data from your SQL table. This query happens on demand when you view the data in the data editor, and when users view the data in your app. To allow users to manually refresh the data in your app, you can create a [Reload query action.](/automation/actions/reload-query)
+
+1. In the **Data Editor**, click the plus (+) button to add a new table.
+2. Select **SQL Server**.
+3. Select **Custom Query** to open the query screen.
+4. In the query screen, run whatever queries you like to create the dataset you want to pull into Glide.
+5. In order to save your query as the definition of your table, you will need to select a column to use as the `id. `If you already have a column in your table called `id` , this will be chosen automatically. 
+6. When you're ready, you can name the query by clicking on **Untitled query** and changing the name.
+7. Select **Save**.
+8. You can now work with this data for your Glide app.
+
+## Editing Your Queried Table
+
+
+
+### SQL Server - Arcade 4
+
+### SQL Server - Block 8
+
+To change your table:
+
+1. In the [Data Editor](/getting-started/introduction-to-the-data-editor), open the table you created with the query.
+2. Select **Edit query** in the upper right corner of your query table.
+3. Make any changes to the query you'd like.
+4. Preview your data, then save it to update your table.
+
+## Removing your SQL data source
+
+
+
+### SQL Server - Arcade 5
+
+### SQL Server - Block 9
+
+To remove your SQL data from your Glide app:
+
+1. In the [Data Editor](/getting-started/introduction-to-the-data-editor), unlink each table you synced from the database.
+2. Once all tables are unlinked, go to the [App Settings](/getting-started/app-settings) menu and select **Remove from app.**
+
+Note that if you created any [Reload Query](/automation/actions/reload-query) actions connected to this data source, those actions will disappear from your app.
+
+## File Tracking with SQL Databases
+
+If you use components that allow users to upload [files](/essentials/security-and-user-data/files) to your app, Glide will automatically create a [Big Table](/essentials/data-sources/big-tables) in your team to save both the file and several pieces of metadata. The table will be named with the convention `Team Name: Uploaded Files`. This new table will automatically store the following metadata:
+
+
+
+![SQl Server - Image 1](https://images.ctfassets.net/yreygbm72t08/6K1v8bPNj5FJ4IbtiJt2Xb/7c7400542fe5b1e8b4bbb479a52638a0/CleanShot_2023-12-18_at_1_.24.39_2x.png)
+
+
+
+- URL of the file
+- Timestamp of when the file was added
+- AppID of the app that saved the file
+- Email of the user who uploaded the file
+- Name of the table where the file was saved
+- the RowID of the row the file was saved in
+
+This table will be created the first time a user uploads a file to an app with a SQL data source, and the table cannot be deleted. The columns in the table also cannot be changed.  If you create more than one app with a SQL data integration, each app with the integration will automatically have this Big Table. You can also link this table to other apps within the same team, enabling you to create a standalone app with this data, if desired. 
+
+## SQL Data Sources Audit Log
+
+When you sync a SQL data source to Glide, an audit log is automatically generated to keep track of any new data that is written to your SQL data source. This audit log will appear as a [Big Table](/essentials/data-sources/big-tables) in the **Data Editor** called **SQL Table Audit Logs** and is read-only. The table cannot be deleted. The columns in the table also cannot be changed. 
+
+
+
+![SQl Server - Image 2](https://images.ctfassets.net/yreygbm72t08/5A2LwlYEQd6n6yPjcxlEyZ/f2b92b0cc8f94b8e427d143f24f0ebf5/CleanShot_2023-12-18_at_1_.25.17_2x.png)
+
+
+
+The audit log table can be used in your apps if you’d like to build interfaces or other functionality for users. It will automatically capture the following information when data is written to the SQL data source:
+
+- Date and time the write started at
+- Date and time the write ended at
+- Operation (add, delete, or set)
+- The App ID that made the change
+- User email who made the change
+- Source of the change (Builder, Data Editor, etc.)
+- Screen path where the change was made
+- Which SQL integration was used
+- The name of the table that was changed in the external SQL database
+- The name of the Glide table that was changed
+- The Row ID of the row that was changed
+- The full data package that was sent, as JSON
+- The result of the change, as JSON
+- Any error message that may have been returned
+
+This audit log can be useful for debugging any issues that may arise when trying to write to a SQL data source, or for administrators or IT to have a high level view of what changes are being sent to your database. If you create more than one app with a SQL data integration, each app with the integration will automatically have this Big Table. You can also link this table to other apps within the same team, enabling you to create a standalone app with this data, if desired. 
+
+## Limitations of SQL Server
+
+It is not possible to use a table from a SQL data source as your app’s Users Table.
+
+The **primary key **column must be unique and stable. "Unique" means that no two rows can have the same primary key. "Stable" means that the same row must always have the same primary key, which means that it can't be an ID that's randomly generated every time the table is queried, for example
+
+### Write Limitations
+
+The following functionality is not yet supported for SQL Server:
+
+- Creating new columns in Glide
+- Offline add row
+- User-specific columns
+
+We recommend structuring you app so these limitations are respected. Columns that are non-nullable will show errors when you add rows because the default value will be null. We recommend configuring the default values in your SQL database.
+
+Columns that have constraints that are unknown to Glide might show errors when you try to add or edit them.
+
+Glide does not support adding rows to tables that have columns defined as UDFs unless those UDFs are declared as `WITH SCHEMABINDING`. 
+
+### Query Limitations
+
+Query-based tables cannot be written to. The following functionality is not yet supported for SQL data sources:
+
+- Common Table Expressions  (i.e., `WITH `syntax)
+- `ORDER BY` within the sub-query will not change the ordering of the result set- To order your rows, you can use the `Sort data` feature in a collection
+- If you are using functions or other expressions, you should alias the result to what you want the column name to appear as in Glide
+
+### Aggregation Limitations
+
+The following aggregation features are not currently supported for **computed columns** in tables from SQL data sources:
+
+- Relations based on [Computed Columns](https://www.glideapps.com/docs/computed-columns)—the target column cannot be a computed column if it’s in a SQL data source (but the source column can be)
+- Some Single Value columns that target SQL columns. Only Single Value --> First is supported
+- Multi [Lookups](https://www.glideapps.com/docs/lookup-column) into SQL sources (eg. Lookups via Multiple Relations or Lookups that target an entire SQL column)
+- Filtering, sorting, and search by computed columns
+- Joined List columns that target computed columns in SQL
+- [Rollups](https://www.glideapps.com/docs/rollup-column) that target computed columns in SQL
+- The Delete Rows action cannot be applied through a multi-relation in SQL
+
+### Aggregation Workaround
+
+While computed columns like Rollups don’t currently work with SQL data sources, this can be worked around by writing a query that includes the aggregation you’d like to perform.
+
+[For a list of common SQL math functions, check out this resource. ](https://blog.hubspot.com/website/sql-math-functions)
+
+For example, to add each row of a column and get the total column value, you can write the `SUM` function directly into your query, like this:
+
+### Sum Example Code Block
+
+SELECT company_id,
+SUM(quantity) as "total_quantity",
+SUM(cost) as "total_cost",
+FROM public.orders,
+GROUP By compani_id
+
+### SQL Sum example Text Block
+
+The resulting table will include the aggregation you want to perform. This table will be read-only, but it can be used in your app to display data for users. When users add or edit data in your app, it will update the database and the queried data will update as well. To do this instantly, add a [Reload Query](automation/actions/reload-query) action.
+
+Let’s look at this whole process in an example.
+
+### SQL Sum Example Arcade
+

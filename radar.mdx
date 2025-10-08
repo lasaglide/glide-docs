@@ -1,0 +1,117 @@
+---
+title: "Radar"
+description: "Get coordinates, auto-complete addresses, and determine distances."
+---
+
+# Radar
+
+Get coordinates, auto-complete addresses, and determine distances.
+
+### radar
+
+### Radar - Block 1
+
+[**Radar**](https://radar.com/) is a location-based platform that provides developers with tools to add gps location tracking, auto-complete partial addresses, and location-based analytics to their android and ios apps. Integrating Radar with Glide can provide a powerful toolset for adding real-time map app features to your Glide mobile app.
+
+### Don't see the Radar integration?
+
+You may need to upgrade your plan. [Browse Glide's plans and find the right fit for you](https://www.glideapps.com/pricing).
+
+### Adding + Configuring Integration Header
+
+## Adding and Configuring the Action
+
+
+
+### Adding Radar Arcade
+
+### Radar - Block 2
+
+1. In Glide, click the Settings icon in the upper-right corner.
+2. Navigate to the **Integrations** tab and then select **Radar**.
+3. Click the **View** button, and then select **Add**.
+4. Next, log into your [**Radar Dashboard**](https://radar.com/dashboard) and obtain your **Live publishable (client) **API key.
+5. In Glide, you’ll enter this key into the **Live publishable (client)** API Key field under your Radar Integration settings.
+
+## Features
+
+The Radar integration has five features that can be used in the Workflow Editor or as Computed Columns.
+
+- Track once
+- Get coordinates for address
+- Get address from coordinates
+- Complete address
+- Calculate distance
+
+## Track Once
+
+The **Track once **action will return the user's latitude and longitude at the moment they select the action. In order for track once to work, the user must have location services enabled on the device running the app. 
+
+### Radar Track Once Arcade
+
+### Radar - Block 3
+
+## Addresses and Coordinates
+
+The **Radar** integration can generate an address from coordinates or vice versa, depending on your needs. Both actions can be added to a [Component](https://www.glideapps.com/docs/guides/core/components) that supports actions, to a workflow in the [Workflow Editor](/getting-started/introduction-to-workflows#the-workflow-editor), or as a computed column in the [Data Editor](https://www.glideapps.com/docs/guides/core/introduction-to-the-data-editor).
+
+The **Get coordinates for address** action returns the coordinates of the address you provide. You can choose to display the result as `Latitude`, `Longitude`, or `Latitude,Longitude`.
+
+You can make this action static by using the same address every time, or make it dynamic by using a column from your data that contains addresses users input somewhere else, like a form.
+
+The **Get address from coordinates** action returns the closest known street address for the coordinates you provide.
+
+You can make this action static by using the same coordinates every time, or make it dynamic by using a column from your data that contains coordinates users input somewhere else, like a form.
+
+### [BLANK] Radar - Callout 2
+
+Note that if you use columns from a table as your data input, you’ll need two columns: one for latitude and one for longitude. 
+
+### Radar - Block 4
+
+## Complete Address
+
+The **Complete address** feature generates a full address based on a partial address. The table below describes the different settings.
+
+### Configuring the Complete Address Action
+
+To configure the **Complete address** action, choose which column from your table the action should read the partial address from.
+
+## Calculate distance
+
+The **Calculate distance** feature determines the distance or duration between two given locations.
+
+### Configuring the Calculate Distance Action
+
+To configure the **Calculate distance** action, choose which values to input for address 1 and address 2. You can make one of these addresses static if, for example, the starting point is always the same. Or, you can use columns in your data to make both fields dynamic.
+
+Then, decide if you’d like to return a distance or duration result. Distance results can be alphanumeric characters in kilometers or meters. Duration results are alphanumeric characters in minutes. You can also specify the travel mode, either car, bike, or foot.
+
+## Use Cases
+
+The Radar integration with Glide offers a powerful way to leverage location data within your apps. Whether you need to convert addresses into coordinates or the other way around, or even calculate distances, the Radar integration offers a solution. Let's explore some potential scenarios where this feature can be useful:
+
+1. **Delivery Services:** Determine the distance between a delivery address and your store or warehouse, which is particularly handy for limited-range deliveries, such as within a 5-mile radius.
+2. **Surveying and Field Work**: Transform fieldwork coordinates into street addresses for streamlined reporting.
+3. **Real Estate**: Convert property addresses into coordinates, enabling potential buyers to visualize them on a map.
+
+Combining the Radar integration with [Call API](/automation/integrations/call-api) enables you to pull in real-time weather forecasts, alerting drivers or field workers to severe weather. Notifications can be created for precipitation,  thunderstorms, and more.
+
+## Example: Enhancing Campsite Location Marking
+
+TrailBlazer, a popular hiking and camping app, let’s adventurers save the coordinates of their favorite camping spots so they don’t need to screenshot maps for later when they don’t have wifi. Recently, a few users have mentioned wanting to know the nearest street address that they could input into their GPS devices. This is where the Radar integration with Glide comes into play.
+
+### Retrieving the Street Address
+
+After integrating Radar with TrailBlazer’s Glide app, they add Radar’s **Get address from coordinates** column to their **Camping Spot** table. The column takes the stored coordinates as input and returns the closest known street address as output.
+
+### Sharing the Street Address
+
+TrailBlazer goes a step further by not only displaying the address on-screen but also including buttons for users to [Copy](https://www.glideapps.com/docs/automation/actions/copy-to-clipboard) or [Share](https://www.glideapps.com/docs/automation/actions/share-link) the address directly from their iPhone or data-enabled iPad. This empowers users to effortlessly share location details via email, messaging, or any other communication platform of their choice.
+
+The result? Campers find it more convenient to revisit their preferred locations and share them with fellow enthusiasts.
+
+### Integrations Learn More Block
+
+To learn more generally about Integrations in Glide, including how they affect your app’s usage, check out our [Introduction to Integrations](/automation/integrations).
+

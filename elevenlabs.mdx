@@ -1,0 +1,97 @@
+---
+title: "ElevenLabs"
+description: "Generate realistic text-to-speech audio using ElevenLabs."
+---
+
+# ElevenLabs
+
+Generate realistic text-to-speech audio using ElevenLabs.
+
+### ElevenLabs - Block 1
+
+[ElevenLabs ](https://elevenlabs.io/)is a generative speech company that uses AI to create text-to-speech functionality. So far ElevenLabs has developed speech, voices, and sound effects across 32 languages. With the ElevenLabs integration in Glide, you can bring the power of generative AI voice to your apps. 
+
+### Don't see the ElevenLabs integration?
+
+You may need to upgrade your plan. [Browse Glide's plans and find the right fit for you.](https://www.glideapps.com/pricing)
+
+### ElevenLabs - Block 2
+
+## Adding the Integration
+
+To start using the ElevenLabs integration, you first need to add it to your project. You will need an existing ElevanLabs account.
+
+### ElevenLabs - Arcade 1
+
+### ElevenLabs - Block 3
+
+1. In Glide, click the Settings icon in the upper-right corner.
+2. Navigate to the **Integrations** tab and then select ElevenLabs.
+3. Click the **Add to app **button.
+4. In your ElevenLabs account, navigate to your workspace settings in the bottom left of your dashboard. Select API keys and generate a key to use in Glide. Copy and paste this key into the integration configuration. The key will not be shown again, so be sure to copy it when ElevenLabs displays it after generation.
+
+## Text to Speech
+
+The **Text to Speech** action will generate realistic speech from a text input.
+
+The action can be added to a [Component](/essentials/components) that supports [Actions](/getting-started/introduction-to-actions) (e.g., a [Button component](/essentials/components/button)), added to a workflow in the [Workflow Editor](/getting-started/introduction-to-workflows#the-workflow-editor).
+
+### In the Layout Editor
+
+
+
+### ElevenLabs - Arcade 2
+
+### ElevenLabs - Block 4
+
+
+
+1. Select the component you'd like to add the action to. Remember, this must be a component that supports actions.
+2. In the actions settings, search for the **Text to Speech** action from ElevenLabs or navigate to **Integrations -> ElevenLabs -> Text to Speech. **- Note: there is also a [Text to Speech action](/docs/automation/integrations/openai-and-glide#text-to-speech) from the OpenAI integration. Make sure you select the correct one.
+3. Name the action.
+4. Choose an icon.
+5. Select the **Text** source column from your data. If you do not already have a column with existing text, create a column in the [Data Editor](/getting-started/introduction-to-the-data-editor) and make this new column the Text source.
+6. Choose a voice to use. This list is provided by ElevenLabs and you can choose a new voice at any time.
+7. Choose where to store the resulting **Audio URL** that ElevenLabs will generate.
+8. Click away to exit the configuration.
+
+To let users immediately hear the generated speech, you can pair the Text to Speech action with an [Audio component](/essentials/components/audio). To do this:
+
+### ElevenLabs - Arcade 3
+
+### ElevenLabs - Block 5
+
+
+
+1. On the same screen as the Text to Speech action, add an audio component.
+2. Set the generated Audio URL from the Text to Speech action as the source for the Audio component.
+
+### In the Workflow Editor
+
+
+
+### ElevenLabs - Arcade 4
+
+### Elevenlabs - Block 6
+
+
+
+1. Select the (**+**) plus symbol or the **+ New Workflow** button.
+2. Choose a trigger.
+3. Select the table that hosts the **Text** source column from your data. If you do not already have a column with existing text, create a column in the Data Editor and make this new column the Text source.
+4. Search for the **Text to Speech** action from ElevenLabs or navigate to **Integrations -> ElevenLabs -> Text to Speech.**- Note: there is also a Text to Speech action from the OpenAI integration. Make sure you select the correct one.
+5. Choose a voice to use. This list is provided by ElevenLabs and you can choose a new voice at any time.
+6. Choose where to store the resulting **Audio URL** that ElevenLabs will generate.
+7. Name your Workflow.
+8. Click away to exit the configuration.
+
+### Advanced Settings for Text to Speech
+
+There are a variety of advanced settings that can be adjusted for the Text to Speech action.
+
+The **ModelID** is for the specific model being used from ElevenLabs. You can read more about the available models, what makes them unique, and their different pricing [here](https://elevenlabs.io/docs/product/speech-synthesis/models).
+
+**Language Code** is for the language of the input text. ElevenLabs uses standard codes ISO 639-1.
+
+**Previous Text** and **Next Text** provide further context for the generate voice by letting the AI know what text came before and/or after the text it’s currently reading. This can cause the voice to sound more natural and flow more easily from line to line if you have multiple Text to Speech actions running in a row.
+

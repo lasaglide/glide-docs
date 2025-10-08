@@ -1,0 +1,93 @@
+---
+title: "Visibility Conditions"
+description: "Control who can view different elements of your app."
+---
+
+# Visibility Conditions
+
+Control who can view different elements of your app.
+
+### Visibility Conditions Videos
+
+### Appearance vs. security
+
+Visibility conditions, hidden tabs, and removed components are not security features—they are merely changes that impact how different users see your app. Do not rely on these changes for your app's security. Read this article about [Row Owners](https://www.glideapps.com/docs/essentials/security-and-user-data/row-owners), a secure way to restrict access to certain rows. 
+
+### Visibility Conditions - Block 1
+
+When you use **visibility conditions** or design a screen to show some data but not other data, your app still downloads all the data available to it for the corresponding sheet, even if users can't see it. It is relatively straightforward for someone to inspect this data with common tools such as your browser's developer console, so you shouldn't rely on hiding information to keep it secure.
+
+Use visibility conditions to customize the display of data that all users should be able to access. For example, use filtering to create a Managers tab in an employee directory, since the manager profiles are already accessible to all employees in the main directory.
+
+Use visibility conditions together with security features such as [Row Owners](/row-owners) to securely control what data users can access, and how the data is displayed.
+
+## When to use visibility features
+
+### Component visibility
+
+In the app below, we have two Choice and Image components. Each image is visible or hidden depending on the delivery status. The data here is not private, it's purely informational, so it's safe to use conditional visibility.
+
+
+
+### Visibility - Arcade 1
+
+### Visibility - Block 2
+
+### Filters
+
+In an Inventory app, there is a tab named 'Products.' This tab uses a filter to show only the products for which the `Low Quantity` column is **not checked**.
+
+
+
+![Filter data that is displayed elsewhere in the app. ](https://images.ctfassets.net/yreygbm72t08/4q0sOxpVa5jssZ4UEBV9tO/f839f624ef684f7f9fc2ed871d879947/CleanShot_2024-01-12_at_3_.07.06_2x.png)
+
+
+
+In this case, it's ok to use the filter condition as we're already displaying the filtered-out information (products) elsewhere in our app.
+
+## When not to use visibility features
+
+### Component visibility
+
+The app below shows a component with each employee's yearly performance on it. It's using conditional visibility to only show this component when the user who's logged in is an admin.
+
+
+
+![not secure component visibility](https://images.ctfassets.net/yreygbm72t08/BwJl0r3qosvfk8CbbF8KI/5424dca4fda400675478320d994186b2/CleanShot_2024-01-16_at_3_.31.48_2x.png)
+
+
+
+This is not a secure way of displaying data to admins as the yearly performance statics will still be downloaded by the app, even when it's not visible on the screen.
+
+### Tab visibility
+
+The app below has a tab for company reports, which contains private financial data. You can see that there's a Tab Visibility condition to only show this tab when the user who's logged in is the CEO.
+
+
+
+![Not secure tab visibility](https://images.ctfassets.net/yreygbm72t08/1peqv4VxJAfHVSrearSOLr/244e2ec77059c47fefc31478e6e9ed22/CleanShot_2024-01-16_at_3_.35.25_2x.png)
+
+
+
+This is not a secure way of displaying data to managers as the data in this tab will still be downloaded by the app, even if it's not visible to users other than the CEO.
+
+### Filters
+
+The app below has a table with private information in it without Row Owners applied.
+
+
+
+![Sheet with column of user emails. ](https://images.ctfassets.net/yreygbm72t08/5ECyHSyJp6lreF8GbCSx9N/b21cfd9c54ec6f0a62715c7bc98cba0d/CleanShot_2024-01-16_at_3_.43.48_2x.png)
+
+
+
+There's a new tab with a **Details layout** and filtered that tab to only show items where the email column matches the signed-in user's email. This will show the user the data from only their Row.
+
+
+
+![Hiding user emails with filters, which is not secure. ](https://images.ctfassets.net/yreygbm72t08/6xsWgbsZylpe1j3gFuif5J/f3140f875279c6440f1c6c5413b1bbff/CleanShot_2024-01-16_at_3_.46.59_2x.png)
+
+
+
+However, this is not a secure way of displaying a user their private profile information. Even though they can't see other users' profiles, the other user rows are still downloaded.
+

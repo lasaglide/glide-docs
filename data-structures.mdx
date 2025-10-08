@@ -1,0 +1,111 @@
+---
+title: "Data Structures"
+description: "Create and manipulate simple Data Structures"
+---
+
+# Data Structures
+
+Create and manipulate simple Data Structures
+
+### Data Structures - Block 1
+
+The Data Structures integration allows you to create and manipulate simple data structures. It can be used as both an [Action](/automation/actions), and as a [Computed Column](/computed-columns) in the [Data Editor](/introduction-to-the-data-editor). When used in the Data Editor, the new column will contain the result. When used as an Action, a destination column must be provided for the result.
+
+### Not guaranteed to be stable
+
+These are not guaranteed to be stable, and they are not atomic, meaning that if multiple users change them at the same time, the result may not be what you expect.
+
+### Adding + Configuring Integration Header
+
+## Adding and Configuring the Action
+
+
+
+### Adding Data Structures Arcade
+
+### Data Structures - Block 2
+
+1. In Glide, click the **Settings **icon in the upper-right corner.
+2. Navigate to the [Integrations](/automation/integrations) tab and then select **Data Structures**.
+3. Click the **Add to app **button.
+
+## Features
+
+The Data Structures integration has seven features:
+
+1. Add element to set
+2. Array to set
+3. Empty set
+4. Remove all elements
+5. Remove element from set
+6. Set contains element
+7. Set size
+
+
+
+### [BLANK] Data Structure Callout - 2
+
+All Experimental Data Structures features can be used as Actions, as well as Computed Columns in the Data Editor. 
+
+### Data Structures - Block 3
+
+### Add element to set
+
+Adds an element to an existing set. Note that set elements must be unique, so if you add an element to a set that already contains that same element, the set will not change.
+
+The **String Set **and **Element **fields are required. String set must be an array (["x", "y", "z"]) and Element can be one or more elements (x or ["x", "y"]). If you plan to use the feature as an action, the **String Set Results **column is also required to store the results generated from the action. 
+
+### Array to set
+
+Converts an array of values to a set. 
+
+The **String Set **field is required and must be an array (["x", "y", "z"]).  If you plan to use the feature as an action, the **String Set Results **column is also required to store the results generated from the action. 
+
+In the example shown below, Array to set is used to create a set containing a list of email addresses from an array.
+
+
+
+![A set containing a list of email addresses.](https://images.ctfassets.net/yreygbm72t08/38s4hm28VIpVFpBtmV9ZG5/3d016d8f85f57eeb8ea3551ab6aecc0c/CleanShot_2024-10-28_at_10_.40.05_2x.png)
+
+
+
+### Empty set
+
+Creates a new, empty set. The **String Set Results **field is required as a destination column. 
+
+### Remove all elements
+
+Remove all elements from an existing set. Results in an empty set.
+
+The **String Set **field is required and must be an array (["x", "y", "z"]).  If you plan to use the feature as an action, the **String Set Results **column is also required.
+
+### Remove element from set
+
+Remove an element from an existing set.
+
+The **String Set **and **Element **fields are required. String set must be an array (["x", "y", "z"]) and Element can be one or more elements (x or ["x", "y"]). If you plan to use the feature as an action, the **String Set Results **column is also required.
+
+In the example shown below, **Remove element from set** is used to remove the users email in each row from the set of all email addresses. The result is that each row contains a list of all email addresses except the one in the current row.
+
+
+
+![Removing email addresses from a set.](https://images.ctfassets.net/yreygbm72t08/755LQE2HwmGICGI4aaXTaz/970a8793300acb4d99c147c4a1e1ef35/CleanShot_2024-10-28_at_10_.42.48_2x.png)
+
+
+
+### Set contains element
+
+Checks if an existing set contains an element. This feature will return either `true` or `false`.
+
+The **String Set **and **Element **fields are required. String set must be an array (["x", "y", "z"]) and Element can be one or more elements (x or ["x", "y"]). If you plan to use the feature as an action, the **String Set Results **column is also required.
+
+### Set size
+
+Count the number of elements in a set.
+
+The **String Set **field is required and must be an array (["x", "y", "z"]).  If you plan to use the feature as an action, the **String Set Results **column is also required.
+
+### Integrations Learn More Block
+
+To learn more generally about Integrations in Glide, including how they affect your app’s usage, check out our [Introduction to Integrations](/automation/integrations).
+

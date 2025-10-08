@@ -1,0 +1,49 @@
+---
+title: "Choice"
+description: "Pick options from a list."
+---
+
+# Choice
+
+Pick options from a list.
+
+### Choice Component
+
+### Choice Body Text
+
+The **Choice Component** allows users to select an option from a predefined list.
+
+
+
+![Choice Hero](https://images.ctfassets.net/yreygbm72t08/4ZLpOzoi0lYvFRQcQ2aJMr/d00bb713b566f5c6a05ec4a3c856d53c/image.png)
+
+
+
+## Adding and Setting up the Choice Component
+
+
+
+### Choice Setup Arcade
+
+### Choice Body 2
+
+1. Add the static values to use for your choices to an existing table or create a new table for these values.- You can store these values in a [text column](/basic-columns).
+2. In the **Layout Editor**, select the tab you want to edit. 
+3. Select the plus (+) icon in the [Components](/components) panel and add the **Choice** component. 
+4. In the **Write to** field, select the column from your [Data Source](/data-sources) where you want user choices to be recorded.
+5. Select the source column that contains the options to be displayed. This column should contain a row for each value you want to display.
+6. For **Values**, choose the column that contains the options users will pick from. 
+7. If you'd like to display an image and/or alternate text in your choice, you can also configure the **Images** and **Display as** options.
+8. You can add a **Label** to the choice component to provide direction.
+9. You can also select a **Style** between **Dropdown, Chips,** and **Radio Button. **If you select the **Dropdown** style and your list of choices is over nine items, a search bar will automatically be added to allow people to search your choices.
+
+NOTE: when used in a Form, the choice component is able to set a default value that pre-populates the field when the Form is opened.
+
+### Options
+
+- You can limit the number of choices displayed.
+- You can set the choice to be **Required**. This means that the user will not be able to submit unless they've selected one of the options.
+- You can also configure **Allow selecting multiple **to let users select more than one of the options displayed (only in Forms). The multiple selections will be stored in your data source (in the column chosen as the **Write to** column) as a comma-separated value. This is particularly useful when you want to filter list items that include the users' selection(s).- Note that when allowing multiple selections, the choices must not contain commas. This is because the selections are stored as a comma-separated string, so choices containing commas are not compatible. 
+
+
+

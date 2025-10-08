@@ -1,0 +1,121 @@
+---
+title: "Google Maps"
+description: "Geocoding and address completion."
+---
+
+# Google Maps
+
+Geocoding and address completion.
+
+### Google Maps - Block 1
+
+[Google Maps](https://www.google.com/maps) is a mapping platform with satellite imagery, aerial photography, street and traffic views, and more. In Glide, you can integrate Google Maps with your app to complete addresses, find the distance between locations, convert coordinates to addresses, and vice versa.
+
+### Don't see the Google Maps integration?
+
+You may need to upgrade your plan. [Browse Glide's plans and find the right fit for you.](https://www.glideapps.com/pricing)
+
+### Adding + Configuring Integration Header
+
+## Adding and Configuring the Action
+
+
+
+### Adding Google Maps Arcade
+
+### Google Maps - Block 2
+
+1. In Glide, click the Settings icon in the upper-right corner.
+2. Navigate to the **Integrations **tab and then select [Google Maps](https://www.google.com/maps).
+3. Click the **Add **button.
+4. Enter your Google Maps API key. If you don’t have one already, you can generate one through [Cloud Console.](https://developers.google.com/maps/documentation/javascript/get-api-key)
+
+## Features
+
+The Google Maps integration has four features:
+
+1. Get coordinates for address
+2. Get address from coordinates
+3. Complete address
+4. Calculate distance
+
+## Addresses and Coordinates
+
+The **Google Maps** integration can generate an address from coordinates or vice versa, depending on your needs. Both actions can be added to a [Component](/components) that supports actions, to a workflow in the [Workflow Editor](/getting-started/introduction-to-workflows#the-workflow-editor), or as a computed column in the [Data Editor](/introduction-to-the-data-editor).
+
+### Get address from coordinates
+
+The **Get address from coordinates** action returns the closest known street address for the coordinates you provide.
+
+You can make this action static by using the same coordinates every time, or make it dynamic by using a column from your data that contains coordinates users input somewhere else, like a form.
+
+### [BLANK] Google Maps - Callout 2
+
+Note that if you use columns from a table as your data input, you’ll need two columns: one for latitude and one for longitude.
+
+### Google Maps - Get Address from Coordinates
+
+### Google Maps - Block 3
+
+1. If you have not already, set up columns to hold the latitude and longitude information, as well as a column to store the returned address result. 
+2. Select the component you'd like to add the** **action to. Remember, this must be a component that supports actions.
+3. Search for the **Get address from coordinates **action or navigate to Integrations -> Google Maps -> Get address from coordinates.
+4. Name the action.
+5. Choose an icon.
+6. Choose which column to use for **Latitude**, or enter a manual value.
+7. Choose which column to use for **Longitude**, or enter a manual value.
+8. Choose where to store the resulting **Address**.
+9. Click away to exit the configuration.
+
+### Get coordinates for address
+
+The **Get coordinates for address** action returns the coordinates of the address you provide. You can choose to display the result as `Latitude `and `Longitude `separately, or as `Latitude, Longitude`.
+
+You can make this action static by using the same address every time, or make it dynamic by using a column from your data that contains addresses users input somewhere else, like a form.
+
+### Google Maps - Get coordinates for address
+
+### Google Maps - Block 4
+
+1. If you have not already, set up columns to hold the address, as well as a column or columns to store the returned coordinates result. 
+2. Select the component you'd like to add the** **action to. Remember, this must be a component that supports actions.
+3. Search for the **Get coordinates for address **action or navigate to Integrations -> Google Maps -> Get coordinates for address.
+4. Name the action.
+5. Choose an icon.
+6. Choose which column to use for **Address**, or enter a manual value.
+7. Choose where to store the resulting coordinates.
+8. Click away to exit the configuration.
+
+## Complete Address
+
+The **Complete address** action generates a full address based on a partial address. To configure the **Complete address** action, choose which column from your table the action should read the partial address from.
+
+### Google Maps Complete Address Arcade
+
+### Google Maps Block 5
+
+1. If you have not already, set up a column to hold the partial address, as well as a column to store the returned full address result. 
+2. Select the component you'd like to add the** **action to. Remember, this must be a component that supports actions.
+3. Search for the **Complete address **action or navigate to Integrations -> Google Maps -> Complete address.
+4. Name the action.
+5. Choose an icon.
+6. Choose which column to use for partial **Address**, or enter a manual value.
+7. Choose where to store the resulting completed address.
+8. Click away to exit the configuration.
+
+## Calculate Distance
+
+The **Calculate distance** action determines the distance or duration between two given locations.
+
+### Google Maps Calculate Distance arcade
+
+### Google Maps Block 6
+
+To configure the **Calculate distance** action, the start and end point need to be provided as address 1 and address 2. You can make one of these addresses static if, for example, the starting point is always the same. Or, you can use columns in your data to make both fields dynamic. To let user's input one or both distances, add a component to your app that allows users to submit data, then use the column that stores those submissions when configuring the action.
+
+Then, decide if you’d like to return a distance or duration result. Distance results can be alphanumeric characters in kilometers or meters. Duration results can be alphanumeric characters in minutes or second. The distance will be calculated by road, not as a straight line between the two points. You can choose to return any number of these possible results. 
+
+### Integrations Learn More Block
+
+To learn more generally about Integrations in Glide, including how they affect your app’s usage, check out our [Introduction to Integrations](/automation/integrations).
+

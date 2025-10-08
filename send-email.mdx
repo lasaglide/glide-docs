@@ -1,0 +1,92 @@
+---
+title: "Send Email"
+description: "Send an email directly from your app with a single tap."
+---
+
+# Send Email
+
+Send an email directly from your app with a single tap.
+
+### Send Email Body Text 1
+
+The Send Email action delivers email from a generic email address (i.e. notifications@appuser.io). There is currently a limit of 10,000 emails per month, per team. 
+
+The **Send Email** action can be used as an action in the components of your app (like [Buttons](/essentials/components/button), [Collections](/essentials/components/collection), and much more), or it can be triggered along with other actions as part of a [Workflow](/getting-started/introduction-to-workflows).
+
+The Send Email action supports markdown for text in the body of the message. 
+
+### Paid Plan Required
+
+A paid plan is required to use this feature. [Check out our pricing to find the right plan for you. ](https://www.glideapps.com/pricing)
+
+### Layout Editor Setup Header
+
+## **Setting up the Send Email Action**
+
+### In the Layout Editor
+
+
+
+### Send Email Layout View Arcade
+
+### Send Email Body Text 2
+
+1. Click on the plus (+) sign in the **Components** panel and select the **Contact** or **Button** component.
+2. In the **General** tab on the right side of the Layout Editor, navigate to the **Actions** section and select **Send email**.
+3. Select the icon and descriptive text to use in your app.
+4. Choose the values to add to the draft email. Each field can be filled in with a custom static value, or with dynamic values from a column in your data. You can leave a field blank if you don't wish to use it. The **To, CC, **and **BCC **fields can all support multiple email addresses as a comma-separated list. The fields you can add values to are:- **To:** The email address or addresses you want to send the message to.
+- **Subject:** The subject of the email message. Markdown is supported. 
+- **Body:** The body text of the email message.
+- **CC:** Send a copy of the email to someone who is not the recipient listed in the **To** field. 
+- **BCC: **Send a copy of the email to someone who is not the recipient listed in the **To** field. When using **BCC**, the recipients cannot view the other recipients who may be included in the **BCC** field, but they can view the email addresses that are included in the **To** and **CC** fields.
+- **Reply to:** The email address that the recipient will reply to if they reply to the email they receive.
+5. You can optionally add **Conditions **for certain criteria to be met before a user can trigger this action.
+
+If you select the contact component, Glide will automatically display options to dial a phone number, compose SMS, and compose email. To delete any of these options that you don’t need, click on the action and then click on the delete icon. Change the compose email option to send email and configure as above.
+
+### In the Workflow Editor
+
+
+
+### Send Email Action Editor Arcade
+
+### Send Email Body Text 3
+
+1. Select the **+ New Workflow** button. If you have existing actions, click on the plus (+) sign in the left panel.
+2. Select the **data source** for your action.
+3. Configure your first action by clicking the first step in the workflow. You can also add conditions to your actions, if needed.
+4. To add new actions to the flow, hover just underneath an action and click the plus button. In this way you can add the Send Email action as just one step in a larger workflow.
+
+
+
+### Intro to Actions full list blurb
+
+Check the [Introduction to Actions](/automation/actions) page for a full list of components that can be used to trigger actions.
+
+### Send Email Use Cases
+
+## Send Email Use Case
+
+### Send Email to Attendees
+
+The **Send Email** action can be used as an action in the components of your app (like [Buttons](/essentials/components/button), [Collections](/essentials/components/collection), and much more), or it can be triggered along with other actions as part of a [Workflow](/getting-started/introduction-to-workflows). One thing you could do is add an action that sends an email to users that have signed up for an event. The custom action below checks if a user’s email is included in a list of event attendees. If they have signed up, they’ll receive an email when the button is pressed. If they haven’t signed up, they’ll be presented with a sign-up form for the event.
+
+
+
+
+![Send Email to Attendees](https://images.ctfassets.net/yreygbm72t08/39jy4uzSAESwky6PIlGJft/40443a8b3db261a68b4f6c8008b9963d/CleanShot_2024-10-04_at_10_.08.13_2x.png)
+
+
+
+### Dynamic Email
+
+You can create a dynamic email by first creating a [Template Column](/automation/computed-columns/template-column) in the [Data Editor](/getting-started/introduction-to-the-data-editor). By using a [Template Column](/automation/computed-columns/template-column) for something like the body of an email, you can personalize the message to each user, and the values will update as your data changes. Once you’ve created a template column, you can select it as the source for the fields in your Send Email action.
+
+
+
+![Dynamic Email](https://images.ctfassets.net/yreygbm72t08/5ddomGZCH6BILL98Dmnnfd/33554a7d48c6bfd520ee250ca14a6720/CleanShot_2024-10-04_at_10_.14.29_2x.png)
+
+
+
+
+

@@ -1,0 +1,96 @@
+---
+title: "Trigger Webhook"
+description: "Send data to other apps from Glide."
+---
+
+# Trigger Webhook
+
+Send data to other apps from Glide.
+
+### [BLANK] Trigger Webhook - Callout 2
+
+For security reasons, webhooks will only work when a user is logged into an app. They will not work with Public apps without sign-in.
+
+### Trigger Webhook - Block 1
+
+Webhooks are a way for apps to send data to other apps. Here, we mean apps in the broadest sense—apps, products, services, and software like Gmail, Facebook, PayPal, and Slack.
+
+Webhooks let these programs speak to each other and to be notified when something happens. For example; when a new payment is made in Stripe, send that data to Slack as a notification.
+
+The **Trigger Webhook** action sends data from Glide to an external app. It can be used as an action in components (like [Buttons](/essentials/components/button), [Collections](/essentials/components/collection), and much more), or it can be triggered along with other actions as part of a [Workflow](/getting-started/introduction-to-workflows).
+
+The use cases for the Trigger Webhook action are limitless. Some examples include:
+
+- When a user clicks a button, send the details of the current item as an email
+- When a user submits a form, take the attached images, convert them to files and upload them to dropbox
+- After a new sale is processed, send the details of that order to your accounting software.
+
+## Understanding Webhooks
+
+
+
+### [BLANK] Trigger Webhook - Callout 1
+
+Webhooks can be used in lots of different ways but do require a specific format. Just using the Webhook action alone does not allow you to talk to any service—you need to configure the endpoint correctly.
+
+Read [**Mark's post on the forum**](https://community.glideapps.com/t/please-help-us-test-api-column-and-webhook-action/19920/3) detailing the use of Webhooks.
+
+### Trigger Webhook Block 2
+
+Webhooks in Glide require two pieces of data: the **webhook URL **and the **values **to be sent. The webhook URL will come from whatever service you're connecting to. If you're connecting with Zapier or Make, you'll need to first set up the webhook in those platforms, then add the URL to Glide.
+
+The [values](/reference/values) can come from a variety of places in Glide. They can be:
+
+- Special values such as the [Current Date/Time](/reference/values/current-date-time) and User's Email
+- [Column values](reference/values/column-values) 
+- [User profile values](/reference/values/user-profile-columns)
+- Custom values
+
+
+
+### Configuring Webhook Header
+
+## Setting up the Trigger Webhook Action
+
+### In the Layout Editor
+
+
+
+### Adding Trigger Webhook Layout Arcade
+
+### Trigger Webhook Layout Editor Setup Text
+
+1. Click on the plus (**+**) sign in the **Components** panel to add a new component that supports actions, or select an existing component to add an action.
+2. In the **General** tab on the right side of the Layout Editor, navigate to the **Actions** section and search for **Trigger Webhook **or navigate to **Integrations → Trigger Webhook.**
+3. Select the icon and title for your action.
+4. Add the webhook URL.
+5. Add as many values as needed.
+6. Add conditions to the action, if desired. These will limit when the action is allowed to trigger.
+7. Click away to save the configuration. 
+
+
+
+### Workflow Editor Header
+
+### In the Workflow Editor
+
+
+
+### Webhook Action Editor Arcade
+
+### Trigger Webhook Action Editor Setup Text
+
+1. Select the (**+**) plus symbol or the **+ New Workflow** button.
+2. Select as the data source for the action the data source of the screen where the action is triggered.
+3. Search for **Trigger Webhook** or navigate to **Integrations → Trigger Webhook.**
+4. Enter your webhook **URL**. This can be entered manually, or come from a column in your data.
+5. Add values to the request body as needed.
+6. Name the action.
+7. Click away to save the configuration.
+
+
+
+### Intro to Actions full list blurb
+
+Check the [Introduction to Actions](/automation/actions) page for a full list of components that can be used to trigger actions.
+

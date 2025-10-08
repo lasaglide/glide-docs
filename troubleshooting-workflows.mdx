@@ -1,0 +1,110 @@
+---
+title: "Troubleshooting Workflows"
+description: "Fix errors in Workflows."
+---
+
+# Troubleshooting Workflows
+
+Fix errors in Workflows.
+
+### Troubleshooting Workflows - Block 1
+
+As you build more complicated Workflows it becomes important to review the run history and audit logs for Workflows that may have errors or not be functioning as expected. Glide has several different tools for doing this.
+
+## History
+
+In the [**Workflow Editor**](/getting-started/introduction-to-workflows#the-workflow-editor), you can open any Workflow and review its run history on the right-hand side by opening the **History** tab. Here you can see logs of the run history for that workflow for the past 90 days. Clicking on any of these individual runs will show more details, including:
+
+- When the action steps ran
+- How long it took to run
+- Which steps, conditions, or loops were run
+- Which data was sent or altered, if any
+- Which steps had an error, if any
+
+
+
+![Workflow History ](https://images.ctfassets.net/yreygbm72t08/4h1g4UEYK6FoGlKkYIaBO7/6dbdee181c1e10bdffff072bad83f758/CleanShot_2024-11-18_at_2_.44.27_2x.png)
+
+
+
+Any runs that had an error will show with a red symbol. Clicking into the log history will show a detailed error message for the specific step or steps that had an issue.
+
+## Error Notifications
+
+Error notifications will automatically be sent to Team members via email. The notification will contain brief details about the specific error that occurred, and then link to the app screen impacted by the failure. Each email will also contain a **View Action** button, which will take you directly to the action or Workflow in the Workflow Editor that failed.
+
+### Disabling Error Notifications
+
+If someone on the team no longer wishes to receive the emailed error notifications, they can be disabled in the Team member settings. To disable the notifications:
+
+### Troubleshooting Workflows - Arcade 1
+
+### Troubleshooting Workflows - Block 2
+
+1. Open the Members page from the [Dashboard](/getting-started/quick-start/glide-dashboard).
+2. Select the three dots next to a member.
+3. Select **Manage email notifications.**
+4. Disable emails for errors.
+
+## Workflow Run Log
+
+The **Workflow Run Log** is automatically generated when you run a workflow. It will show the following columns:
+
+- **Run ID:** ID for a specific workflow run
+- **Workflow ID: **unique ID of the workflow
+- **App ID:** ID of the Glide app that ran the workflow
+- **Trigger Source:** How the workflow was triggered
+- **User:** The user who triggered the workflow
+- **Start time:** Timestamp when the workflow run began
+- **Finish time:** Timestamp when the workflow run completed
+- **Completion status:** End status of the workflow run
+- **Steps attempted:** Total number of workflow steps that were attempted
+- **Steps failed:** Number of steps that encountered errors
+- **First failed step message:** Error message from the first step that failed
+- **Consolidated error message:** Combined error information from all failed steps
+- **Trigger data:** Data payload that initiated the workflow
+- **Workflow definition hash:** Hash of the workflow definition for version tracking
+
+## Workflow Step Log
+
+The **Workflow Step Log** is automatically generated when you run most workflows, with the exception of app-interaction. It will show the following columns:
+
+- **Run ID:** Unique ID for the workflow run
+- **Step Index:** Sequential number indicating a step's position in the workflow
+- **Result:** The outcome when the step ran
+- **Message:** Error message related to the step execution, if any
+- **Data:** Data processed during the step
+- **Outputs:** Results produced by the step
+- **Started at:** Timestamp when the step began
+- **Finished at:** Timestamp when the step completed
+- **Node key: **Unique identifier for the workflow node/step definition
+
+## Common Errors in Workflows
+
+When a workflow step encounters an error, it will display a message meant to give more context about what went wrong with that step. Below is a list of the most common errors users encounter, with more detail about each one. 
+
+### Glide Workflow-specific Errors
+
+- **Tried to run more than **`**N**`** steps: **Workflow tried more steps than allowed. Workflow needs more filters or reduced steps to be under the maximum number of steps per run.
+- **Table not found: **Step is missing table configuration.
+- **Result is not bound: **Referring to an array with a step that needs a single value.
+- **Timed out fetching rows from table **`**Table name**`**: **Workflow timed out trying to get values from a table.
+- **Wait for condition step timed out: **Workflow timed out trying to wait for a condition.
+- **Unknown workflow failure: **Unknown failure that should be reported to Support for further investigation.
+- **Canceled by user: **A workflow run was in progress and later canceled by a user in the builder.
+
+### HTTP Errors
+
+- **HTTP status 400: **Bad request, which means including request body errors, header errors, and/or query parameter errors.
+- **HTTP status 401: **Unauthorized, which means that authorization header is missing or incorrect.
+- **HTTP status 403: **Forbidden, which means that authorization was accepted but does not have permission.
+- **HTTP status 404: **Requested resource does not exist.
+- **HTTP status 429: **Too many requests.
+
+### Generic Action Errors
+
+- **This model’s maximum context length is **`**N**`** tokens. However, your messages resulted in **`**Y**`** tokens. Please reduce the length of the messages: **The input for an AI step exceeded the number of tokens.
+- **The required parameter ‘Input’ is missing: **An action step is missing an input.
+
+
+

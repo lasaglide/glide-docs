@@ -1,0 +1,101 @@
+---
+title: "Google Cloud Vision"
+description: "Integrate vision detection features in your app"
+---
+
+# Google Cloud Vision
+
+Integrate vision detection features in your app
+
+### Google Cloud Vision - Block 1
+
+[Google Cloud’s Vision API](https://cloud.google.com/vision) allows you to use the [Vertex AI Vision](https://cloud.google.com/vertex-ai-vision) environment to build and manage applications. Vision enables computers and systems to interpret and analyze visual data and derive meaningful information from digital images, videos, and other visual inputs. These are known as Optical Character Recognition, or OCR, models. In Glide, you can use the **Google Cloud Vision** integration to extract text from PDFs and image files.
+
+### Don't see the Google Cloud Vision integration?
+
+You may need to upgrade your plan. [Browse Glide's plans and find the right fit for you.](https://www.glideapps.com/pricing)
+
+### Adding + Configuring Integration Header
+
+## Adding and Configuring the Action
+
+
+
+### Adding Google Cloud Vision Arcade
+
+### Google Cloud Vision - Block 2
+
+1. In Glide, click the Settings icon in the upper-right corner.
+2. Navigate to the **Integrations** tab and then select [Google Cloud Vision](https://cloud.google.com/vision).
+3. Click the **Add **button.
+4. [Enable the Vision API](https://cloud.google.com/vision/docs/setup#api) on your Google Cloud Project.
+5. Navigate to your [Google Cloud Console API Credentials](https://console.cloud.google.com/apis/credentials).
+6. Create and copy a new API Key for Glide.
+7. Back in Glide, add your **API Key **in your [Google Cloud Vision](https://cloud.google.com/vision) integration settings.
+
+## Features
+
+The Google Cloud Vision integration in Glide currently supports two features:
+
+1. Extract text from PDF files
+2. Extract text from image
+
+### Extract text from PDF files
+
+The **Extract text from PDF files** feature lets you select a PDF file, and Google Cloud Vision will extract text from the document. You can then use that text in your app. Google Cloud Vision has [a five page limit ](https://cloud.google.com/vision/docs/file-small-batch)on extracting text from PDF files, so only five pages can be extracted at a time. 
+
+The action can be added to a [Component](/components) that supports [Actions](/actions) (e.g., a [Button component](/button-components)), added to a workflow in the [Workflow Editor](/getting-started/introduction-to-workflows#the-workflow-editor).
+
+The **Extract text from PDF **feature is not available as a computed column. 
+
+### Cloud Vision Extract from PDF Arcade
+
+### Cloud Vision Extract text from PDF instructions
+
+1. If you have not yet set up a URL column to store the PDF file links, and a text column to store the extracted text, do that first in the Data Editor. 
+2. Select the component you'd like to add the** **action to. Remember, this must be a component that supports actions.
+3. Search for the **Extract text from PDF files **action or navigate to Integrations -> Google Cloud Vision -> Extract text from PDF files.
+4. Name the action.
+5. Choose an icon.
+6. Select the column with the **File **links.
+7. Choose the language ID for the text. [A full list of languages and IDs can be found here.](https://cloud.google.com/vision/docs/languages)
+8. Choose the model, Document or Text. 
+9. Choose which pages to extract, or leave blank to extract all.
+10. Specify where to store the extracted **Text **in Glide. 
+11. Click away to save your configuration. 
+
+
+
+### A note on page selection
+
+You may select a range of pages separated by a comma (for example, **2-3, 5, 7-9** will extract text from pages **2, 3, 5, 7, 9 **) or use * to select all pages. Google Cloud Vision limits the number of files at one time to five. 
+
+### Google Cloud Vision - Block 3
+
+### Extract text from image
+
+The **Extract text from image** feature will extract text from an image.
+
+The action can be added to a [Component](/components) that supports [Actions](/actions) (e.g., a [Button component](/button-components)), added to a workflow in the [Workflow Editor](/getting-started/introduction-to-workflows#the-workflow-editor), or added as a [Computed Column](/computed-columns).
+
+### Google Cloud Vision Extract text from Image Arcade
+
+### Extract text from image instructions
+
+1. If you have not yet set up a URL column to store the image file links, and a text column to store the extracted text, do that first in the Data Editor. 
+2. Select the component you'd like to add the** **action to. Remember, this must be a component that supports actions.
+3. Search for the **Extract text from image **action or navigate to Integrations -> Google Cloud Vision -> Extract text from image.
+4. Name the action.
+5. Choose an icon.
+6. Select the column with the **File **links.
+7. Choose the language ID for the text. [A full list of languages and IDs can be found here.](https://cloud.google.com/vision/docs/languages)
+8. Choose the model, Document or Text. 
+9. Specify where to store the extracted **Text **in Glide. 
+10. Click away to save your configuration. 
+
+
+
+### Integrations Learn More Block
+
+To learn more generally about Integrations in Glide, including how they affect your app’s usage, check out our [Introduction to Integrations](/automation/integrations).
+

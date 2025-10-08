@@ -1,0 +1,80 @@
+---
+title: "Duplicating Apps"
+description: "Learn how to duplicate existing apps on your teams."
+---
+
+# Duplicating Apps
+
+Learn how to duplicate existing apps on your teams.
+
+### Duplicating Apps Body 1
+
+If you have an existing app that you’d like to create a copy of, you can easily duplicate it from your [dashboard](/getting-started/quick-start/glide-dashboard). There are some important things to consider when doing this, though.
+
+## How to Duplicate an App
+
+
+
+### [BLANK] Duplicating Apps - Callout 1
+
+When you duplicate an app, Glide automatically finds and replaces any references to the old App ID in your data sources with the new App ID. 
+
+### Duplicating Apps Arcade
+
+### Duplicating Apps Body 2
+
+1. From your dashboard, click the three-dot menu in the top right corner of the app you’d like to duplicate.
+2. Select **Duplicate.**
+3. Decide if you want to **keep the same sheet** or **copy the sheet**. Your choice will affect how your duplicate app is created, and whether the data between the two apps is linked.
+
+## Keeping or Copying the Data
+
+### Reasons to Keep the Data
+
+When you **keep the same sheet**, your apps’ [data sources](/essentials/data-sources) will be linked. When rows are added or data in [Basic Columns](/essentials/basic-columns) is modified in the original app, these changes will also appear in the duplicated app, and vice versa.
+
+Keeping the same data is helpful for:
+
+- Creating a complementary app that uses the same data sources. For example, create an app for Managers and an app for Employees where data is shared but presented in different ways.
+- Creating multiple versions of apps that share the same data sources. For example, if users are actively using an app, you can keep the same sheet and work on a new version while users continue to add content to the original. Rows that are added to the original will also appear in the new version so that the data is current when you are ready to publish it.
+
+### Reasons to Copy the Data
+
+When you **copy the sheet**, Glide will create a copy of each table that was used in your original app and save it to the appropriate data source. For example, if your app uses [Google Sheets](/essentials/data-sources/google-sheets) as its data source and you select copy the sheet, your duplicated app will create a copy of your original Google Sheets file and automatically save it to your Google account.
+
+Copying the data is helpful for:
+
+- Creating a backup (or snapshot) of the current app and its data
+- Creating a new app that is similar to the original but not linked in any way
+
+## Basic Columns vs. Computed Columns
+
+### When copying the data
+
+- Since your duplicated app is using a copy of your data sources, any changes you make to Basic or [Computed Columns](/automation/computed-columns) in your new app will have no effect on the original app. You can add, edit, or delete columns in your duplicated app without worrying about the original app.
+
+### When keeping the data
+
+- Since your apps are connected to the same data sources, any changes you make to Basic Columns will be reflected in each app that is linked to the data source. For example, if you edit a Text column in your duplicated app, the change will also be reflected in your original app since the apps share the same data.
+- Computed Columns are initially identical between the original and the duplicated app. However, changes made to Computed Columns in one app only take effect in that app. For example, if an app is duplicated and it contains a Rollup column, the duplicated app will initially contain the same Rollup column with the same configuration. If that Rollup column is removed from the new app, it will remain in the original, and vice versa.
+
+
+## Create a New App From Data
+
+If you’ve already built an app as a Classic App, you can begin the process of converting to an App from your dashboard. 
+
+To create a New App from data:
+
+1. From your dashboard, click the three-dot menu in the top right corner of the Classic App you’d like to build as an App.
+2. Select **New App from data.**
+
+
+
+![Creating a new app from data.](https://images.ctfassets.net/yreygbm72t08/1Ax9ssStnAeBcDKvSOuzuh/e888213d6e32372edddb5911e3e9b074/image.png)
+
+
+
+While this function will copy all of your data and create a new app, it will not replicate the old user interface, actions, or logic you may have built in the original app. 
+
+
+

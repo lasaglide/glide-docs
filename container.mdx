@@ -1,0 +1,110 @@
+---
+title: "Container"
+description: "Group components together in a custom container. "
+---
+
+# Container
+
+Group components together in a custom container. 
+
+### Container Body Text 1
+
+The **Container** component acts as a parent inside which you can add child Components. This allows you to style, arrange, and add conditions to groups of [Components](/components).
+
+## 
+Adding and Setting Up the Container Component
+
+
+
+### Container Arcade
+
+### Container Body Text 2
+
+1. In your [Layout Editor](/intro-to-layout) of your app, select the tab you want to edit.
+2. Click on the plus (+) symbol in the **Components**.
+3. Select the **Container** component.
+
+The Container component allows you to create column layouts and arrange components side-by-side. For example, the app below shows a side-by-side layout using two columns.
+
+
+
+![A side-by-side layout using two columns.](https://images.ctfassets.net/yreygbm72t08/18262FMdtMlpewqcm4lAUG/446a7f78fc7af818b6a657ca34c21d7a/CleanShot_2024-10-03_at_2_.17.59_2x.png)
+
+
+
+When you choose a layout that is more than one column you'll see sections underneath the Container Component with dividers. This shows you the different sections for your container which will change depending on the number of columns you have.
+
+
+
+![Sections in a container component. ](https://images.ctfassets.net/yreygbm72t08/4JQvbiKqd2z0BSdB4qV4CY/4b14f6c1eaf5c74f83b9f929947f48e5/CleanShot_2024-10-03_at_2_.20.14_2x.png)
+
+
+
+### Design
+
+In the **General** tab on the right side of the Layout Editor, locate the **Design** section. The Container component allows you to configure the following design options:
+
+
+
+![Design options in the container component. ](https://images.ctfassets.net/yreygbm72t08/76BtRRINxjBJ3RghCAkv6j/0f1c37596bc687bf2aab1ecbe8b9750f/CleanShot_2024-10-03_at_2_.22.36_2x.png)
+
+
+
+- **Background for your Container**: None, Card, Accent, Dark, Highlight, or Image.
+- **Padding**: Normal, Large, or XLarge
+- **Width**: Large, Medium, or Small
+
+### Conditions
+
+Sometimes you want to set the same [Visibility Condition](/visibility-conditions) on multiple components. Rather than creating the same condition on each individual component, you can group them all into a container and set one condition on that container. For example, in the app below there are two containers. One container is set to be visible if a user is an admin and the other is visible to all users.
+
+
+
+![Adding conditions to the container component. ](https://images.ctfassets.net/yreygbm72t08/3FMPwvTc5MwdCBudEJQrKB/d77d1f63c063c8cba53c3eab3a44db34/CleanShot_2024-10-03_at_2_.26.23_2x.png)
+
+
+
+## Tabs Component for Nesting Containers
+
+If you have existing containers that you want to nest into a tabbed view, you can use the Tabs component to create this functionality in Glide. The Tabs Container component itself cannot hold containers. To create a tabbed view with existing containers and the Tabs component, you will need to set up the Tabs component in addition to making visibility adjustments to the existing containers.
+
+### Setting up the Tabs Component
+
+
+
+### Feature in Beta
+
+This feature is in beta. Features in beta can be unpredictable and may change as development continues. The Glide Support team does not provide help with these features. Please post any questions in the [Community forum](https://community.glideapps.com/). 
+
+### Tabs Component - Arcade 1
+
+### Container Body Text 3
+
+1. In the **Data Editor,** create a column to store your tab names.
+2. In the **Layout Editor**, select the screen you want to edit. This screen should already have the containers you want to add to the tabbed view.
+3. Click on the plus symbol in the **Components** panel.
+4. Select **Tabs.**
+5. For the **Selected tabs** field, choose the column you made in step one that stores the tab names.
+6. Choose Line or Button style. This will either underline the Tab name in the interface or put a shaded box around it.
+7. Toggle **Full width on mobile** to spread tabs evenly out across the width of a mobile device. This will create padding and center the tabs on the screen, rather than aligning them to the left.
+8. Click the default Tab to customize its configuration. You can choose a Name, a Display as name, an icon, and enable badge functionality. If no Display as data is provided, then the Name field will be used as the public name of the tab. - **Note: each tab name you enter will be stored in the column you selected for the Selected tab field**
+9. Set visibility conditions for the tab as needed.
+10. Add additional tabs by selecting **+ Add item.**
+
+### Configuring Visibility Conditions to Nest Containers
+
+
+
+### Tabs container - Arcade 2
+
+### Container Body Text 4
+
+1. Make note of the column name that stores your tab names. You will need this information for this setup.
+2. In the **Layout Editor, s**elect the existing container you want to appear in the first tab.
+3. In the component **Options menu,** add a visibility condition.
+4. The default condition will be **Show component when.** Now, select the column that stores the tab names you created.
+5. Select **is** and then enter the specific tab name that should hold that container. The value you enter is case sensitive and must match the tab name exactly.
+6. Click away to save the configuration.
+
+
+

@@ -1,0 +1,93 @@
+---
+title: "App Interaction"
+description: "Trigger multi-step actions with a single user interaction."
+---
+
+# App Interaction
+
+Trigger multi-step actions with a single user interaction.
+
+### App Interaction Workflows
+
+### App Interaction Workflows - Block 1
+
+**App Interaction Workflows** are triggered by a user doing something within the app, like clicking a button or submitting a form. New workflows can be created in the [**Worfklow Editor.**](/getting-started/introduction-to-workflows#the-workflow-editor)
+
+## Creating App Interaction Workflows
+
+To add new actions to the workflow, hover just underneath a step and click the plus (+) button.
+
+
+
+![App Interaction Workflows - Image 2](https://images.ctfassets.net/yreygbm72t08/7IZZKQmSSJKXpjYywshBpg/34cbd12340cab9317617468df710bb5d/CleanShot_2024-11-18_at_2_.58.32_2x.png)
+
+
+
+To edit, click on the step and adjust the fields as needed.
+
+
+
+![App Interaction Workflows - Image 3](https://images.ctfassets.net/yreygbm72t08/4vmUmY1Dcw0vX9zPjtZZqx/858dc140711ccef18810b578b498d420/CleanShot_2024-11-18_at_3_.27.19_2x.png)
+
+
+
+To reorder steps in a workflow, click and drag the step you want to move.
+
+### App Interaction Workflows - Arcade 1
+
+### App Interaction Workflows - Block 2
+
+To delete action steps, open the action and click the trash icon.
+
+
+
+![App Interaction Workflows - Deleting an action](https://images.ctfassets.net/yreygbm72t08/ba0PTGg00MBzGxy32JjDa/c1d053f67fb16b18c865e3d675a77615/CleanShot_2024-11-18_at_3_.30.00_2x.png)
+
+
+
+## **Data Source**
+
+The [**data source**](/essentials/data-sources) you choose for a workflow determines which screens you can use that workflow on.
+
+For instance, suppose you want to create an action where a user can tap a button on an inventory item and automatically send an email to an admin. The email should indicate that the stock level is low and include the current stock level.
+
+For this particular action to work, it needs to know what stock item it is and the current stock level. So this action must be made with the Inventory table as the source.
+
+This also means that this action cannot be triggered on a screen that has a different table. For example, it would not make sense to trigger this action on a Team Member’s profile.
+
+This means that although actions are reusable, they are only reusable on screens that have the same data source.
+
+## **Reusing Workflows**
+
+Once you create a workflow, you can reuse it across your app so long as any other screen(s) where you use it share the same data source as the original workflow. You can search through your existing actions in the upper left of the Workflow Editor.
+
+## **Conditions**
+
+There may be times when you'll want to create multiple scenarios, where each scenario triggers a unique action depending on conditions you set. Therefore, the second dimension in building custom actions is working with [**Conditions**](https://www.glideapps.com/docs/getting-started/use-cases/conditions-filtering-and-visibility). To add a condition to one of your sequences, click the plus icon at the top of a sequence.
+
+
+
+![App Interaction Workflows - Adding a condition](https://images.ctfassets.net/yreygbm72t08/43OrZwdDIMGtlFIk8mEwpl/6210363e84a545a994aee1a302aaff53/CleanShot_2024-11-18_at_3_.30.56_2x.png)
+
+
+
+The conditions you set determine when the following action sequence will run. If the condition is not met, the action sequence won't run.
+
+If you want the action to do something even if the condition is not met, you'll need to create an alternate action to run instead.
+
+To do this, add an Else statement to your condition. With an else statement, if the first condition in the Action Editor is not met, the actions under the Else section will be triggered.
+
+You can add multiple conditions to your action.
+
+
+
+![App Interaction Workflows - Adding multiple conditions](https://images.ctfassets.net/yreygbm72t08/79ytR1DKgYOygytiDyqTjI/ec6bcfe8beebb2e8d86d8e7b617dd677/CleanShot_2024-11-18_at_3_.31.54_2x.png)
+
+
+
+## **View Logs**
+
+If you are having trouble with your action or want to inspect its activity, you can look at the **View Logs** screen in the Workflow Editor. You can find this by clicking on the three dots next to the next to the action title when open in the editor.
+
+Here, you’ll see all the times your action has fired in the last 90 days and information about the run. You can view more details about the run by clicking on any of the items in the list. Clicking the curly brackets {} will display the data sent when the action ran.
+

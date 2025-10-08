@@ -1,0 +1,124 @@
+---
+title: "Make"
+description: "Integrate 1600+ tools with your app."
+---
+
+# Make
+
+Integrate 1600+ tools with your app.
+
+### Make Video
+
+### Make - Block 1
+
+[**Make**](https://www.make.com/en/register?promo=glide-app-partner-program) is a platform that lets you design, build, and automate anything—from simple tasks to complex workflows—in minutes. With Make, you can send information between Glide and [thousands of apps](https://www.make.com/en/integrations?addOnApps=1&nativeApps=1&utm_source=glide-app&utm_medium=partner&utm_campaign=glide-app-partner-program) to enjoy enhanced team productivity and customer satisfaction.
+
+This connection between Glide and Make can be used to send data out to Make from Glide via Trigger webhook, or to reach into Glide from Make with a scenario. If you want to make changes to data in Glide, then you’ll need to use the Make integration.
+
+### Learn About Make
+
+If you’re new to Make, we recommend checking out [Make Academy](https://academy.make.com/) before getting started.
+
+### Make - Block 2
+
+In order for Make to automate tasks, we have to first create a scenario. This is a series of steps (or modules) that tell how data from Glide should be transferred and transformed to any third party apps.
+
+A basic scenario has two steps:
+
+- a **Trigger**
+- and an **Action**
+
+Not sure where to start? Make has some prebuilt Glide integrations. [**Check them out here**](https://www.make.com/en/integrations/glide?utm_source=glide-app&utm_medium=partner&utm_campaign=glide-app-partner-program)**.**
+
+The actions available via the Make integration are **Add Row, Delete Row, Edit Row, Get All Rows,** or **Get Row.** To use more than one of these actions, set up a unique scenario for each one.
+
+## Adding the Integration
+
+
+
+### Make Arcade - 1 (New)
+
+### Make - Block 3
+
+1. If you do not already have a [Make account](https://www.make.com/en) create one.
+2. In Glide, click the **Settings** icon in the upper-right corner.
+3. Navigate to the **Integrations** tab and then select Make.
+4. Click the **Add **button.
+5. The integration menu will now show a hidden **API Key.**
+6. Select **Copy to Clipboard** when you’re ready to set up the Make scenario.
+
+## Trigger Webhook with Make Connection
+
+The [Trigger Webhook](/automation/actions/webhook) action can be used to send data to Make for any connection you’ve set up between Glide and Make. To create a Make connection with Trigger Webhook:
+
+### Layout Editor
+
+
+
+### Make - Arcade 2 (New)
+
+### Make - Block 4
+
+1. Click on the plus (**+**) sign in the **Components** panel to add a new component that supports actions, or select an existing component to add an action.
+2. In the **General** tab on the right side of the Layout Editor, navigate to the **Actions** section and search for **Trigger Webhook** or navigate to **Integrations → Trigger Webhook.**
+3. Select the icon and title for your action.
+4. Add the Make URL for the specific scenario you want to connect.
+5. Add as many values as needed. No specific values are required.
+6. Add conditions to the action, if desired. These will limit when the action is allowed to trigger.
+7. Click away to save the configuration.
+
+### Workflow Editor
+
+
+
+### Make - Arcade 3 ( New)
+
+### Make - Block 5
+
+1. Select the (**+**) plus symbol or the **+ New Workflow** button.
+2. Select as the data source for the action the data source of the screen where the action is triggered.
+3. Search for **Trigger Webhook** or navigate to **Integrations → Trigger Webhook.**
+4. Add the Make URL for the specific scenario you want to connect.
+5. Add values to the request body as needed. These can be entered manually, or come from a column in your data.
+6. Name the action.
+7. Click away to save the configuration.
+
+In the Workflow Editor, you can view the run history of the workflow. Clicking into any specific run and opening the **Data sent** window will show the JSON that was sent through the Make connection.
+
+## Creating the Make Scenario
+
+After you’ve connected the Make integration with the steps above, you can create a scenario. 
+
+### Configuring the Trigger
+
+
+
+### Make - Arcade 4 (New)
+
+### Make - Block 6
+
+1. In your Make dashboard, select **+ Create a new scenario**.
+2. Click the large plus symbol and search for **Webhooks**.
+3. Select **Custom webhook**.
+4. Click **Create a webhook.**
+5. Name your webhook.
+6. Make will generate the webhook URL for you. Copy this URL for your Trigger Webhook action in Glide.
+
+### Configuring the Make Action
+
+
+
+### Make Arcade - 5
+
+### Make - Block 7
+
+1. In the same scenario you started above, select the plus to **add another module**.
+2. Search for **Glide.**
+3. Select which Action to perform: **Add Row, Delete Row, Edit Row, Get All Rows,** or **Get Row.**
+4. Name the connection and enter the API key from your Glide app settings where you enabled the Make integration.
+5. The configuration menu will show fields where you can select which **App, Table,** and **Row ID** to use for the scenario. These options will fill in automatically from Glide. - If you are using the **Edit Row** or **Delete Row** event, you’ll need to have a Row ID column in your Glide table and provide that column data in the Make configuration.
+6. Fill in the values as needed. These can be columns from your data in Glide, or custom values entered manually.
+7. Select **OK** to save your configuration.
+
+
+

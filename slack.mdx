@@ -1,0 +1,144 @@
+---
+title: "Slack"
+description: "Send custom messages to Slack."
+---
+
+# Slack
+
+Send custom messages to Slack.
+
+### Slack
+
+### Slack - Block 1
+
+[Slack](https://slack.com/) is an instant messaging platform for business collaboration. With the Slack integration, you can send messages to channels in your workspace from a Glide app.
+
+### Don't see the Slack integration?
+
+You may need to upgrade your plan. [Browse Glide's plans and find the right fit for you.](https://www.glideapps.com/pricing)
+
+### Adding + Configuring Integration Header
+
+## Adding and Configuring the Action
+
+
+
+### Adding Slack Arcade
+
+### Slack - Block 2
+
+1. In **Glide**, click the **Settings **menu.
+2. Find the [Integrations](/introduction-to-integrations) section and then select [Slack](https://slack.com/).
+3. Click the **Add **button.
+4. Sign into your Slack workspace and select **Allow **to approve the integration. Make sure that you are connecting the correct Slack workspace by checking the name of the workspace in the upper-right corner.
+5. Confirm that **Glide **is listed under **Apps **in your Slack workspace.
+6. To send messages to a Slack channel, you need to first add the Glide integration. Click
+7.  **View all members **at the top right and then select **Integrations**.
+8. Click **Add an app**, and choose Glide.
+9. Give your Slack bot a name and choose an image for it. You can use a URL of an image or an emoji as the avatar. If not set, your app's name and icon will be used.
+
+## Send Message to Channel
+
+The **Send message to channel** action is used to post a message in a channel in your Slack workspace. Just tell Glide which channel to post in and what the text of the message should be.
+
+The action can be added to a component that supports [actions ](/actions)(e.g., a button), added to a workflow in the [Workflow Editor](/getting-started/introduction-to-workflows#the-workflow-editor), or triggered after a form is submitted.
+
+### Send Channel Message arcade
+
+### Slack - Block 3
+
+1. Click on the plus (+) sign in the **Components **panel and select the Component you want to trigger the action.
+2. In the **General** tab on the right side of the Layout Editor, navigate to the **Actions **section and search for **Send message to channel**.
+3. Select the icon and descriptive text to use in your app.
+4. Add the channel name where the message should be sent. 
+5. Add the message text. This can be a custom value or a dynamic message from a template column. - You can optionally add **Conditions** for certain criteria to be met before a user can trigger this action.
+6. Exit the configuration to save your settings. 
+
+## Slack Blocks
+
+[Slack blocks](https://api.slack.com/block-kit) allow you to create visually structured messages that include interactive elements like text, images, and buttons. Each block type offers different content options that you can mix and match to build messages according to your needs.
+
+This feature can be used within the "Send message to channel" action. Build the blocks you need from the Slack’s Block Kit Builder, copy the block code, and paste it into the Block field in Glide.
+
+
+
+### Slack - Arcade 3
+
+### Slack - Block 4
+
+
+
+1. Configure the **Send message to channel** as explained in the previous section.
+2. Copy the Block you want to use from the Slack Blocks library and enter it into the Block field. It’s important to remember that the JSON object needs to be an array.
+
+
+
+### Ready to automate?
+
+You can use a [Template Column](/template-column) to create customized Slack notifications for different users.
+
+### Slack - Block 5
+
+## Use Cases
+
+Slack notifications can give your team real-time updates to what’s going on in your Glide app. Here are a few examples of businesses are leveraging Slack.
+
+1. **Customer Feedback:** Alert the customer service team when there is new customer feedback.
+2. **Order Updates:** Notify the operations team when an order is placed, shipped, or delivered.
+3. **New Hire Onboarding:** Send a welcome message when a new employee starts working.
+4. **Task Assignments:** Send notifications to development team when new tasks are created.
+
+## Accelerating Order Processing with Slack Notifications
+
+StickerStar, a custom sticker design company, has seen rapid growth recently. With this expansion, they've faced some criticisms regarding order processing times. To address this, they've created a Glide app for workflow management to start automating some routine tasks.
+
+
+
+![StickerStar project management in Glide. ](https://images.ctfassets.net/yreygbm72t08/3trDEbzlQZCrPMb2tTPG5R/46f76c85dcb3f124be2adb4e231a4a93/CleanShot_2024-10-28_at_2_.11.57_2x.png)
+
+
+
+However, StickerStar wanted to further shrink the gap between an order being placed and it being processed.
+
+Given that their team operates remotely and uses Slack for communication, it was a natural move to leverage Glide's Slack integration. This way, they could receive an instant notification every time a new order was placed through Glide, reducing bottlenecks in communication. They’ve also used the Slack workflow builder to create workflows and add steps after messages are sent. Admins set up these custom workflows so slack users could trigger more steps with simple actions, like emoji reactions, directly in the slack app.
+
+### Setting Up the Slack Notification
+
+After linking their Slack workspace with their Glide app, the next step was to get a custom action added to the sticker order form.
+
+
+
+![Custom action workflow for slack messages. ](https://images.ctfassets.net/yreygbm72t08/6U9DgizpOAUxqfYAwnOfAo/6d47b92da85d298c9cef69eff9e14a56/CleanShot_2024-10-28_at_2_.13.43_2x.png)
+
+
+
+Now, with each new order placed in Glide, a corresponding notification is sent to StickerStar's Slack channel. This message could also be used to request approval, allowing admins with permission to react with an emoji and let the order fulfillment proceed.
+
+### Adding Order Details to the Notification
+
+But why stop there? Let’s enhance these notifications by including specific order details.
+
+So, in the Orders table, we’ll add a new template column that includes:
+
+- The name of the person who placed the order
+- A description of the order
+- Pricing for the order
+- The shipping destination
+- A link to the order in Glide
+
+
+
+![Configuring the template column for the slack message. ](https://images.ctfassets.net/yreygbm72t08/217zCv00pnbTGS0FFVMjmO/aed38e40b3e5a9156f486ec3fbaba49d/CleanShot_2024-10-28_at_2_.15.14_2x.png)
+
+
+
+Following this, we just need to update the Slack notification action to use this template column.
+
+Now, each time a new order comes through Glide, StickerStar team members get a detailed Slack notification, allowing them to process orders faster and more efficiently. This workflow automation can be enhanced by Slack’s workflow builder, with connectors to tools like Salesforce.
+
+
+
+### Integrations Learn More Block
+
+To learn more generally about Integrations in Glide, including how they affect your app’s usage, check out our [Introduction to Integrations](/automation/integrations).
+
