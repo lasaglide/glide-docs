@@ -16,10 +16,22 @@
       "url": "https://community.glideapps.com"
     }
   ],
-  "navigation": {
-    "Getting Started": [
-      "quick-start"
-    ]
-  },
+  "tabs": [
+    {
+      "name": "Documentation",
+      "url": "/"
+    }
+  ],
+  "navigation": [
+    {
+      "group": "Getting Started",
+      "pages": [
+        "index",
+        "quick-start",
+        "introduction-to-components",
+        "introduction-to-actions"
+      ]
+    }
+  ],
   "theme": "mint"
 }
