@@ -20,5 +20,6 @@
     "Getting Started": [
       "quick-start"
     ]
-  }
+  },
+  "theme": "mint"
 }
