@@ -16,13 +16,9 @@
       "url": "https://community.glideapps.com"
     }
   ],
-  "navigation": [
-    {
-      "group": "Getting Started",
-      "pages": [
-        "quick-start"
-      ]
-    }
-  ],
-  "theme": "mint"
+  "navigation": {
+    "Getting Started": [
+      "quick-start"
+    ]
+  }
 }
